@@ -7,10 +7,19 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<h1>
+    This is a header
+</h1>
+<ul>
+    <li><a href="index.jsp">Home</a></li>
+    <li><a href="index.jsp">About</a></li>
+</ul>
+$END$
+</body>
+
 </html>
