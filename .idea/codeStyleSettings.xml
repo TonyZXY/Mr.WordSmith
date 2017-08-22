@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <JavaCodeStyleSettings>
+          <option name="SPACE_BEFORE_OPENING_ANGLE_BRACKET_IN_TYPE_PARAMETER" value="true" />
+        </JavaCodeStyleSettings>
+        <MarkdownNavigatorCodeStyleSettings>
+          <option name="RIGHT_MARGIN" value="72" />
+        </MarkdownNavigatorCodeStyleSettings>
+        <codeStyleSettings language="JAVA">
+          <option name="SPACE_AROUND_METHOD_REF_DBL_COLON" value="true" />
+          <option name="SPACE_BEFORE_COMMA" value="true" />
+          <option name="SPACE_BEFORE_SEMICOLON" value="true" />
+          <option name="SPACE_WITHIN_BRACES" value="true" />
+          <option name="SPACE_AFTER_TYPE_CAST" value="false" />
+          <option name="SPACE_BEFORE_CATCH_LBRACE" value="false" />
+        </codeStyleSettings>
+      </value>
+    </option>
+    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
+  </component>
+</project>
