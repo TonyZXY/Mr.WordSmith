@@ -7,7 +7,8 @@
 --%>
 <%@page import="java.sql.*" %>
 <%@page import="java.util.Date" %>
-<% Class.forName("com.mysql.jdbc.Driver");%>
+<% Class.forName("com.mysql.jdbc.Driver");
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,7 +17,8 @@
 <body>
 	<h1>Register</h1>
 	<%!
-        public class Actor {
+         public class Actor {
+            
             String URL = "jdbc:mysql://localhost:";
             String USERNAME = "root";
             String PASSWORD = "12345678";
