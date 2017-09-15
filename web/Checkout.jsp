@@ -38,7 +38,7 @@
     <a><strong>MR.</strong>wordsmith</a>
 
     <div class="w3-right s3">
-        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
+        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right s3">
         <a href="#login" class="w3-button w3-block"><b>Account</b></a>
