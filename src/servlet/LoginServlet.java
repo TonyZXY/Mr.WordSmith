@@ -16,6 +16,7 @@ public class LoginServlet extends HttpServlet {
         System.out.println(username+" "+ password);
 
 
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
