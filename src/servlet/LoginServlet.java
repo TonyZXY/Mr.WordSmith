@@ -3,7 +3,6 @@ package servlet;
 import dto.User;
 import model.Login;
 
-import javax.jms.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +26,7 @@ public class LoginServlet extends HttpServlet {
         }else {
             request.getSession().setAttribute("message","Invalid Username or Password");
             response.sendRedirect("Login.jsp");
+            return;
         }
     }
 
