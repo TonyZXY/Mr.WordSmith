@@ -1,5 +1,9 @@
 package servlet;
 
+import dto.User;
+import model.Login;
+
+import javax.jms.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,10 +17,17 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("UserName");
         String password = request.getParameter("Password");
 
+
         System.out.println(username+" "+ password);
-
-
-
+        if(Login.Authenticate(username,password)){
+            User user = Login.getUser();
+            request.getSession().setAttribute("user",user);
+            response.sendRedirect("index.jsp");
+            return;
+        }else {
+            request.getSession().setAttribute("message","Invalid Username or Password");
+            response.sendRedirect("Login.jsp");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

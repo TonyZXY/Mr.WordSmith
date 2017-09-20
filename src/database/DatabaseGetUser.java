@@ -16,7 +16,15 @@ public class DatabaseGetUser {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * From Users "+" WHERE email = '"+userNameEmail+"';");
             if(resultSet.next()){
-
+                user.setUserID(resultSet.getString("user_id"));
+                user.setFirstName(resultSet.getString("first_name"));
+                user.setLastName(resultSet.getString("last_name"));
+                user.setEmail(resultSet.getString("email"));
+                user.setAddress(resultSet.getString("address"));
+                user.setPhone(resultSet.getString("phone"));
+                user.setBirthday(resultSet.getDate("birthday"));
+                user.setPassword(resultSet.getString("password"));
+                user.setSubs(resultSet.getBoolean("sub"));
             }
         }catch (Exception e){
             e.printStackTrace();

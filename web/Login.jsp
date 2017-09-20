@@ -1,3 +1,4 @@
+<%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: Yuqi Qiu / 3537646
@@ -30,6 +31,10 @@
     <![endif]-->
 </head>
 <body>
+<%
+    User user = (User)session.getAttribute("user");
+
+%>
 
 <!-- Links (sit on top) -->
 
@@ -87,7 +92,7 @@
     <!-- login -->
     <div class="w3-row">
         <div class="w3-col w3-container" style="width:50%">
-            <form class="w3-container w3-border-right">
+            <form class="w3-container w3-border-right" action="Login" method="post">
                 <br><br><br><br>
                 <h3>
                     <center>Have an account already?</center>
@@ -98,12 +103,12 @@
                 <br><br>
                 <p>
                     <label>Email</label>
-                    <input class="w3-input" type="text"></p>
+                    <input class="w3-input" name="UserName" type="text"></p>
                 <p>
                     <label>Password</label>
-                    <input class="w3-input" type="password"></p>
+                    <input class="w3-input" name="Password" type="password"></p>
                 <p>
-                    <button class="w3-btn w3-black">Login</button>
+                    <button class="w3-btn w3-black" type="submit">Login</button>
                 </p>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
