@@ -18,7 +18,4 @@ public class RegisterServlet extends HttpServlet {
         String phoneNumber = request.getParameter("PhoneNumber");
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }

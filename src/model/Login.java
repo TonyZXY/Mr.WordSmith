@@ -8,10 +8,6 @@ import java.util.Objects;
 
 public class Login {
 
-    public static User getUser() {
-        return user;
-    }
-
     private static User user;
 
     public static boolean Authenticate(String username, String password) {
@@ -19,5 +15,7 @@ public class Login {
         return Objects.equals(password, user.getPassword());
     }
 
-
+    public static User getUser() {
+        return user;
+    }
 }

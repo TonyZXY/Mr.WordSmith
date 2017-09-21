@@ -13,7 +13,18 @@ public class User {
     private boolean subs;
     private String password;
 
-
+    /**
+     * This class is an Data Transfer Object that transfer the User detail in the application.
+     * @param firstName String user's first name
+     * @param lastName String user's last name
+     * @param userID String user's ID number (will be generate by system)
+     * @param email String user's email address
+     * @param address String user's address
+     * @param birthday Date user's birthday
+     * @param phone String user's phone number
+     * @param subs boolean user's subscription info
+     * @param password String user's password
+     */
     public User(String firstName, String lastName, String userID, String email, String address, Date birthday, String phone, boolean subs, String password) {
         this.address = address;
         this.birthday = birthday;
@@ -26,6 +37,10 @@ public class User {
         this.password = password;
     }
 
+    /**
+     * Override constructor method.
+     * generate a User object with no info.
+     */
     public User(){
     }
 

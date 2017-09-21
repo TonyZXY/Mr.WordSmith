@@ -7,9 +7,9 @@ import java.sql.*;
 public class DatabaseTest {
 
 
-    public static final String CONN_STRING = "jdbc:mysql://localhost/Mr.Wordsmith?autoReconnect=true&useSSL=false";
-    public static final String USER_NAME = "root";
-    public static final String PASSWORD = "zxy19910313";
+    private static final String CONN_STRING = "jdbc:mysql://localhost/Mr.Wordsmith?autoReconnect=true&useSSL=false";
+    private static final String USER_NAME = "root";
+    private static final String PASSWORD = "zxy19910313";
 
 
     public static void main(String[] args) {
