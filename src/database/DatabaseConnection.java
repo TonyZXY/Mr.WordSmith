@@ -27,8 +27,9 @@ public class DatabaseConnection {
 
     private boolean openConnection(){
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return true;

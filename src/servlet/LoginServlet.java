@@ -23,8 +23,11 @@ public class LoginServlet extends HttpServlet {
         System.out.println(username + " " + password);
         if (Login.Authenticate(username, password)) {
             User user = Login.getUser();
+            System.out.println("user got in servlet");
             request.getSession().setAttribute("user", user);
+            System.out.println("attribute added");
             response.sendRedirect("index.jsp");
+            System.out.println("redirect sent");
             return;
         } else {
             request.getSession().setAttribute("message", "Invalid Username or Password");

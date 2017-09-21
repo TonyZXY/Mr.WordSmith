@@ -107,6 +107,15 @@
                 <p>
                     <label>Password</label>
                     <input class="w3-input" name="Password" type="password"></p>
+                    <%
+                        String message = null;
+                        String display = "";
+                        message = (String)session.getAttribute("message");
+                        if(message!=null){
+                            display = "<label class=\"w3-red\"> "+message+"<label>";
+                        }
+                    %>
+                <%=display%>
                 <p>
                     <button class="w3-btn w3-black" type="submit">Login</button>
                 </p>

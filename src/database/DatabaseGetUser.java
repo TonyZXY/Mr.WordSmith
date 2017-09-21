@@ -25,6 +25,8 @@ public class DatabaseGetUser {
                 user.setBirthday(resultSet.getDate("birthday"));
                 user.setPassword(resultSet.getString("password"));
                 user.setSubs(resultSet.getBoolean("sub"));
+                System.out.println(user.getUserID());
+                System.out.println("user got from database");
             }
         }catch (Exception e){
             e.printStackTrace();
