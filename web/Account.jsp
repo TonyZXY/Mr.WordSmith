@@ -85,9 +85,9 @@
         <h5 class="w3-bar-item w3-center"><Strong>My Account</strong></h5>
         <div class="w3-panel w3-border-bottom w3-border-light-grey" style="margin-top: 10px;margin-bottom: 10px">
         </div>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My profile')">My profile</button>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My important date')">My important date</button>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My order')">My order</button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My profile')">My Profile</button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My important date')">My Important dates</button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My order')">My Order</button>
 
     </div>
 
