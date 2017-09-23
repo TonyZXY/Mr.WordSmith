@@ -112,8 +112,8 @@
             <h4><center>Subscribe</center></h4>
         </div>
         <div class="w3-container w3-light-gray">
-            <center><p>Enter your e-mail now.</p>
-                <p>You will get <strong><big><a class="w3-text-red">15% off</a></big></strong> on your first order.</p>
+            <center><p>Join our mailing list now.</p>
+                <p> Have your <strong><big><a class="w3-text-red">15% off</a></big></strong> on the first order.</p>
                 <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p></center>
             <center><p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black">Subscribe</button></p></center>
         </div>
@@ -123,7 +123,7 @@
 </div>
 
 
-<!-- products-->
+<!-- Product-->
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><strong>Products</strong></span>
@@ -181,7 +181,7 @@
     <div class="w3-col w3-container" style="width:5%"><p></p></div>
 </div>
 
-<!-- Blog-->
+<!-- Blog -->
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><strong>Blog</strong></span>
