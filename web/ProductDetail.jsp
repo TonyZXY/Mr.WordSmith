@@ -40,7 +40,7 @@
 </head>
 <body>
 
-<!-- Links (sit on top) -->
+<!-- Links (sit----------------- on------------- top) -->
 
 <div class="w3-row w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-col m3" ><a style="margin-left: 80px;margin-top: 50px"><strong>MR.</strong>wordsmith</a></div>
@@ -137,7 +137,7 @@
                         <p id="caption"></p>
                     </div>
                 </div>
-                <!-- line -->
+                <!-------- liiiiiiiiiiiiiine ---------------------->
                 <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px">
                 </div>
                 <div class="w3-row-padding">
@@ -157,7 +157,7 @@
         </div>
 
     </div>
-    <!-- product description bar-->
+    <!---------------- Product description bar--------------->
     <div class="w3-padding w3-black" style="margin-top: 80px">
         <center><a class="w3-large">Product Descriotion</a></center>
     </div>
@@ -176,16 +176,12 @@
 
 
 
-    <!-- line -->
+    <!-- line -------------------------------->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
     </div>
 
-
-
-
-
-
-    <!-- Footer -->
+  
+    <!---------------------------- Footer -------------------------->
     <footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
         <div class="w3-row-padding">
             <div class="w3-col s4">
@@ -225,13 +221,7 @@
         </div>
     </footer>
 
-
-
 </div>
-
-
-
-
 
 </body>
 </html>
