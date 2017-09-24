@@ -142,7 +142,8 @@
                     <input class="w3-input" type="text" name="LastName"></p>
                 <p>
                     <label>Email</label>
-                    <input class="w3-input" type="text" name="Email"></p>
+                    <input class="w3-input" type="email" name="Email" required="required" pattern="[^ @]*@[^ @]*">
+                </p>
                 <p>
                     <label>Address</label>
                     <input class="w3-input" type="text" name="Address"></p>
@@ -154,21 +155,22 @@
                     <input class="w3-input" type="password" name="Password" id="setpwd"></p>
                 <p>
                     <label>Confirm Password</label>
-                    <input class="w3-input" type="password" id="cfmpwd"required="required" oninput="validatePassword(this)"></p>
-                <script language='javascript' type='text/javascript' >
-                    var password = document.getElementById("setpwd")
-                        , confirm_password = document.getElementById("cfmpwd");
-                    function validatePassword(){
-                        if(password.value != confirm_password.value) {
-                            confirm_password.setCustomValidity("Passwords Don't Match");
-                        } else {
-                            confirm_password.setCustomValidity('');
-                        }
-                    }
+                    <input class="w3-input" type="password" id="cfmpwd"required="required" oninput="validatePassword(this)">
 
-                    password.onchange = validatePassword;
-                    confirm_password.onkeyup = validatePassword;
-                </script>
+                    <script language='javascript' type='text/javascript'>
+
+                        var pwd = document.getElementById("setpwd")
+                            , confirmpwd = document.getElementById("cfmpwd");
+
+                        function validatePassword(){
+
+                            if(pwd.value != confirmpwd.value) {
+                                confirmpwd.setCustomValidity("Passwords Don't Match");
+                            } else {
+                                confirmpwd.setCustomValidity('');
+                            }
+                        }
+                    </script></p>
 
                 <%
                     String RegisterMessage = null;
@@ -234,9 +236,6 @@
 
 
 </div>
-
-
-
 </body>
 </html>
 
