@@ -32,7 +32,7 @@
 </head>
 <body>
 <%
-    User user = (User)session.getAttribute("user");
+    User user = (User) session.getAttribute("user");
 
 %>
 
@@ -107,20 +107,20 @@
                 <p>
                     <label>Password</label>
                     <input class="w3-input" name="Password" type="password"></p>
-                    <%
-                        String LoginMessage = null;
-                        String LoginDisplay = "";
-                        LoginMessage = (String)session.getAttribute("message");
-                        if(LoginMessage!=null){
-                            LoginDisplay = "<label class=\"w3-red\"> "+LoginMessage+"<label>";
-                        }
-                    %>
+                <%
+                    String LoginMessage = null;
+                    String LoginDisplay = "";
+                    LoginMessage = (String) session.getAttribute("message");
+                    if (LoginMessage != null) {
+                        LoginDisplay = "<label class=\"w3-red\"> " + LoginMessage + "<label>";
+                    }
+                %>
                 <%=LoginDisplay%>
                 <p>
                     <button class="w3-btn w3-black" type="submit">Login</button>
                 </p>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                
+
             </form>
         </div>
         <!-- register -->
@@ -142,14 +142,17 @@
                     <input class="w3-input" type="text" name="LastName"></p>
                 <p>
                     <label>Email</label>
-                    <input class="w3-input" type="email" name="Email" required="required" pattern="[^ @]*@[^ @]*">
-                </p>
+
+                    <input class="w3-input" type="email" name="Email" required="required" pattern="[^ @]*@[^ @]*"></p>
+                <p>
+                    <label>Phone Number</label>
+                    <input class="w3-input" type="number" name="Phone"></p>
                 <p>
                     <label>Address</label>
                     <input class="w3-input" type="text" name="Address"></p>
                 <p>
                     <label>Date of birth</label>
-                    <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday"required="required"></p>
+                    <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday" required="required"></p>
                 <p>
                     <label>Password</label>
                     <input class="w3-input" type="password" name="Password" id="setpwd"></p>
@@ -159,27 +162,29 @@
 
                     <script language='javascript' type='text/javascript'>
 
-                        var pwd = document.getElementById("setpwd")
-                            , confirmpwd = document.getElementById("cfmpwd");
+                        var pwd = document.getElementById("setpwd"),
+                        confirm_pwd = document.getElementById("cfmpwd");
 
-                        function validatePassword(){
+                        function validatePassword() {
 
-                            if(pwd.value != confirmpwd.value) {
-                                confirmpwd.setCustomValidity("Passwords Don't Match");
-                            } else {
-                                confirmpwd.setCustomValidity('');
-                            }
+                        if (pwd.value != confirm_pwd.value) {
+                            confirm_pwd.setCustomValidity("Passwords Don't Match");
+                        } else {
+                            confirm_pwd.setCustomValidity('');
                         }
-                    </script></p>
+                    }
+                    </script>
+                </p>
 
                 <%
                     String RegisterMessage = null;
                     String RegisterDisplay = "";
-                    RegisterMessage = (String)session.getAttribute("RegisterMessage");
-                    if(RegisterMessage!=null){
-                        RegisterDisplay = "<label class=\"w3-red\"> "+RegisterMessage+"<label>";
+                    RegisterMessage = (String) session.getAttribute("RegisterMessage");
+                    if (RegisterMessage != null) {
+                        RegisterDisplay = "<label class=\"w3-red\"> " + RegisterMessage + "<label>";
                     }
                 %>
+
                 <%=RegisterDisplay%>
                 <p>
                     <button class="w3-btn w3-black" type="submit">Register</button>
@@ -236,6 +241,7 @@
 
 
 </div>
+
 </body>
 </html>
 
