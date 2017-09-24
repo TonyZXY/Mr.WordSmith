@@ -169,7 +169,7 @@
                     password.onchange = validatePassword;
                     confirm_password.onkeyup = validatePassword;
                 </script>
-                
+
                 <%
                     String RegisterMessage = null;
                     String RegisterDisplay = "";
