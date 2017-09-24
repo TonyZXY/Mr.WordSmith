@@ -62,9 +62,8 @@
 
   
   
-<!----- function bar ------------>
-  <!----- function bar ------------>
-
+<!-- function bar-->
+ <!-- function bar-->
 <div class="w3-bar-item" style="max-width:100%;margin-top:0px;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
@@ -87,7 +86,8 @@
 
   
   
-<!-- title --------------------->
+<!-- title -->
+  <!-- title -->
 <div class="w3-row w3-container">
     <div class="w3-left w3-padding-32">
         <span class="w3-xlarge w3-border-dark-grey w3-padding-16"  style="margin-left: 100px">Products</span>
@@ -98,9 +98,8 @@
   
   
 
-    <!-- -------------------Products--------------------->
-  <!-- -------------------Products--------------------->
-    <!-- -------------------Products--------------------->
+    <!--Products -->
+  <!--Products -->
     <div class="w3-row-padding">
         <div class="w3-center w3-padding-32">
             <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">All Products</span>
@@ -138,14 +137,14 @@
     </div>
     <br><br><br><br><br><br><br>
 
-
-
-
-    <!-- --------------------line------------------ -->
+    <!-- line -->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
     </div>
 
-    <!----------------- Footer ---------------->
+  
+  
+  
+    <!--- Footer -->
     <footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
         <div class="w3-row-padding">
             <div class="w3-col s4">
