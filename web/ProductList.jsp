@@ -22,18 +22,14 @@
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
 
     <script>var __adobewebfontsappname__="dreamweaver"</script>
-   
     <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
-    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-   
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    
     <!--[if lt IE 9]>
-    
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+  
 </head>
 <body>
 
@@ -45,6 +41,9 @@
     <a><strong>MR.</strong>wordsmith</a>
     <div class="w3-right s3">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
+      
+      
+      
     </div>
     <div class="w3-right s3">
         <a href="Login.jsp" class="w3-button w3-block"><b>Login/ Register</b></a>
@@ -63,7 +62,6 @@
   
   
 <!-- function bar-->
- <!-- function bar-->
 <div class="w3-bar-item" style="max-width:100%;margin-top:0px;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
@@ -82,12 +80,9 @@
             <a href="AboutUs.jsp" class="w3-button w3-block">AboutUs</a>
         </div>
     </div>
-</div>
-
-  
+</div>  
   
 <!-- title -->
-  <!-- title -->
 <div class="w3-row w3-container">
     <div class="w3-left w3-padding-32">
         <span class="w3-xlarge w3-border-dark-grey w3-padding-16"  style="margin-left: 100px">Products</span>
@@ -97,9 +92,8 @@
     </div>
   
   
-
     <!--Products -->
-  <!--Products -->
+
     <div class="w3-row-padding">
         <div class="w3-center w3-padding-32">
             <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">All Products</span>
@@ -142,9 +136,7 @@
     </div>
 
   
-  
-  
-    <!--- Footer -->
+   <!--- Footer -->
     <footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
         <div class="w3-row-padding">
             <div class="w3-col s4">
@@ -166,8 +158,6 @@
                 <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
                 <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
                  <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-
-
             </div>
 
             <div class="w3-col s4 w3-justify">
@@ -183,7 +173,6 @@
             </div>
         </div>
     </footer>
-
 
 
 </div>
