@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * This class is to create a Connection that need to be used
+ * by the whole application.
+ */
 public class DatabaseConnection {
     private final String USERNAME = "root";
     private final String PASSWORD = "zxy19910313";

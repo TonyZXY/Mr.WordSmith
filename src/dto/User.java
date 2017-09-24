@@ -20,7 +20,7 @@ public class User {
      * @param userID String user's ID number (will be generate by system)
      * @param email String user's email address
      * @param address String user's address
-     * @param birthday Date user's birthday
+     * @param birthday String user's birthday
      * @param phone String user's phone number
      * @param subs boolean user's subscription info
      * @param password String user's password

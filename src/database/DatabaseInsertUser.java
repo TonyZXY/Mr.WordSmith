@@ -8,6 +8,10 @@ public class DatabaseInsertUser {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
 
 
+    /**
+     * This method is to insert User data into database
+     * @param user User object that need to passed in
+     */
     public static void insertUser(User user){
         try{
             double userID = 1000001;

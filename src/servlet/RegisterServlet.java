@@ -9,11 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Date;
 
+/**
+ * This class is to receive request for register
+ * and call other method to check register valid or not
+ * then send redirect to login with the message.
+ */
 @WebServlet(name = "RegisterServlet", urlPatterns = "/Register")
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //get message passed from page
         String email = request.getParameter("Email");
         String password = request.getParameter("Password");
         String firstName = request.getParameter("FirstName");
@@ -24,6 +29,7 @@ public class RegisterServlet extends HttpServlet {
 
         System.out.println(email+" "+ password+" "+firstName+" "+lastName+" "+birthday+" "+address);
 
+        //generate a data transport object User to pass message
         User user = new User();
         user.setEmail(email);
         user.setFirstName(firstName);
@@ -31,11 +37,17 @@ public class RegisterServlet extends HttpServlet {
         user.setPassword(password);
         user.setBirthday(birthday);
         user.setAddress(address);
+        //TODO-modifyed
+        //user's phone number need to be get from register page
         user.setPhone("01231251412");
+
+        //call method to check the user email is in database or not
         if(Register.RegisterCheck(user)){
+            //if no, register successful, and ask user to log in. but no success page displayed
             request.getSession().setAttribute("RegisterMessage","");
             response.sendRedirect("Login.jsp");
         }else {
+            //if yes, ask user log in using their email. and alert user using message.
             request.getSession().setAttribute("RegisterMessage","Email already registered, please Login.");
             response.sendRedirect("Login.jsp");
         }

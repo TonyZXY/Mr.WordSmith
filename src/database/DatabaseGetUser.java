@@ -10,6 +10,12 @@ public class DatabaseGetUser {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
 
 
+    /**
+     * This method is to get user information from database and generate a User Object
+     * to store the data in order to pass the data to other classes
+     * @param userNameEmail email input
+     * @return User Object getting from database
+     */
     public static User getUser(String userNameEmail){
         User user = new User();
         try {
