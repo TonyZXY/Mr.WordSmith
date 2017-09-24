@@ -18,39 +18,39 @@ public class DatabaseConnection {
 
     private Connection connection = null;
 
-    private DatabaseConnection(){
+    private DatabaseConnection() {
 
     }
 
-    public static DatabaseConnection getInstence(){
-        if(instence ==null){
+    public static DatabaseConnection getInstence() {
+        if (instence == null) {
             instence = new DatabaseConnection();
         }
         return instence;
     }
 
-    private boolean openConnection(){
+    private boolean openConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            connection = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return true;
     }
 
-    public Connection getConnection(){
-        if(connection ==null){
-            if(openConnection()){
+    public Connection getConnection() {
+        if (connection == null) {
+            if (openConnection()) {
                 System.out.println("Connection Opened");
                 return connection;
-            }else
+            } else
                 return null;
         }
         return connection;
     }
 
-    public void close(){
+    public void close() {
         System.out.println("Closing Connection");
         try {
             connection.close();

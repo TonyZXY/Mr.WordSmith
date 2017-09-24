@@ -27,7 +27,7 @@ public class RegisterServlet extends HttpServlet {
         String phoneNumber = request.getParameter("PhoneNumber");
         String address = request.getParameter("Address");
 
-        System.out.println(email+" "+ password+" "+firstName+" "+lastName+" "+birthday+" "+address);
+        System.out.println(email + " " + password + " " + firstName + " " + lastName + " " + birthday + " " + address);
 
         //generate a data transport object User to pass message
         User user = new User();
@@ -42,13 +42,13 @@ public class RegisterServlet extends HttpServlet {
         user.setPhone("01231251412");
 
         //call method to check the user email is in database or not
-        if(Register.RegisterCheck(user)){
+        if (Register.RegisterCheck(user)) {
             //if no, register successful, and ask user to log in. but no success page displayed
-            request.getSession().setAttribute("RegisterMessage","");
+            request.getSession().setAttribute("RegisterMessage", "");
             response.sendRedirect("Login.jsp");
-        }else {
+        } else {
             //if yes, ask user log in using their email. and alert user using message.
-            request.getSession().setAttribute("RegisterMessage","Email already registered, please Login.");
+            request.getSession().setAttribute("RegisterMessage", "Email already registered, please Login.");
             response.sendRedirect("Login.jsp");
         }
     }
