@@ -1,6 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
+<<<<<<< HEAD
   User:
+=======
+  User: s3607997
+>>>>>>> 35f551ae575b79c5817bfdd737a85bf542f91f94
   Date: 22/8/17
   Time: 2:04 PM
   To change this template use File | Settings | File Templates.
@@ -14,7 +18,7 @@
 <body>
 <div class="container">
     <div class="header">
-        This is about us
+        About Us
     </div>
 </div>
 </body>

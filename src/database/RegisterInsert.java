@@ -14,7 +14,7 @@ public class RegisterInsert {
     private static Statement statement = null;
     private static ResultSet resultSet = null;
 
-    public static void Insert(User user){
+    public static void Insert(User user) {
         try {
             statement = connection.createStatement();
 

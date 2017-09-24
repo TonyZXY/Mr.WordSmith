@@ -4,48 +4,53 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * This class is to create a Connection that need to be used
+ * by the whole application.
+ */
 public class DatabaseConnection {
     private final String USERNAME = "root";
     private final String PASSWORD = "zxy19910313";
-    private final String CONN_STRING = "jdbc:mysql://localhost/Mr.Wordsmith";
+    private final String CONN_STRING = "jdbc:mysql://localhost/Mr.Wordsmith?autoReconnect=true&useSSL=false";
 
 
     private static DatabaseConnection instence = null;
 
     private Connection connection = null;
 
-    private DatabaseConnection(){
+    private DatabaseConnection() {
 
     }
 
-    public static DatabaseConnection getInstence(){
-        if(instence ==null){
+    public static DatabaseConnection getInstence() {
+        if (instence == null) {
             instence = new DatabaseConnection();
         }
         return instence;
     }
 
-    private boolean openConnection(){
+    private boolean openConnection() {
         try {
-            connection = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
-        } catch (SQLException e) {
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return true;
     }
 
-    public Connection getConnection(){
-        if(connection ==null){
-            if(openConnection()){
+    public Connection getConnection() {
+        if (connection == null) {
+            if (openConnection()) {
                 System.out.println("Connection Opened");
                 return connection;
-            }else
+            } else
                 return null;
         }
         return connection;
     }
 
-    public void close(){
+    public void close() {
         System.out.println("Closing Connection");
         try {
             connection.close();

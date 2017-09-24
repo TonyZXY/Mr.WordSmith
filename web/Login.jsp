@@ -1,9 +1,10 @@
+<%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: Yuqi Qiu / 3537646
   Date: 19/9/17
   Time: 11:03 AM
-  To change this template use File | Settings | File Templates.
+  To change this template update new version| Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en-US">
@@ -30,6 +31,10 @@
     <![endif]-->
 </head>
 <body>
+<%
+    User user = (User)session.getAttribute("user");
+
+%>
 
 <!-- Links (sit on top) -->
 
@@ -87,7 +92,7 @@
     <!-- login -->
     <div class="w3-row">
         <div class="w3-col w3-container" style="width:50%">
-            <form class="w3-container w3-border-right">
+            <form class="w3-container w3-border-right" action="Login" method="post">
                 <br><br><br><br>
                 <h3>
                     <center>Have an account already?</center>
@@ -98,20 +103,29 @@
                 <br><br>
                 <p>
                     <label>Email</label>
-                    <input class="w3-input" type="text"></p>
+                    <input class="w3-input" name="UserName" type="text"></p>
                 <p>
                     <label>Password</label>
-                    <input class="w3-input" type="password"></p>
+                    <input class="w3-input" name="Password" type="password"></p>
+                    <%
+                        String LoginMessage = null;
+                        String LoginDisplay = "";
+                        LoginMessage = (String)session.getAttribute("message");
+                        if(LoginMessage!=null){
+                            LoginDisplay = "<label class=\"w3-red\"> "+LoginMessage+"<label>";
+                        }
+                    %>
+                <%=LoginDisplay%>
                 <p>
-                    <button class="w3-btn w3-black">Login</button>
+                    <button class="w3-btn w3-black" type="submit">Login</button>
                 </p>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+                
             </form>
         </div>
         <!-- register -->
         <div class="w3-col w3-container" style="width:45%">
-            <form class="w3-container">
+            <form class="w3-container" action="Register" method="post">
                 <br><br><br><br>
                 <h3>
                     <center>Don't have an account</center>
@@ -122,27 +136,36 @@
                 <br><br>
                 <p>
                     <label>Firstname</label>
-                    <input class="w3-input" type="text"></p>
+                    <input class="w3-input" type="text" name="FirstName"></p>
                 <p>
                     <label>Lastname</label>
-                    <input class="w3-input" type="text"></p>
+                    <input class="w3-input" type="text" name="LastName"></p>
                 <p>
                     <label>Email</label>
-                    <input class="w3-input" type="text"></p>
+                    <input class="w3-input" type="text" name="Email"></p>
                 <p>
                     <label>Address</label>
-                    <input class="w3-input" type="text"></p>
+                    <input class="w3-input" type="text" name="Address"></p>
                 <p>
                     <label>Date of birth</label>
-                    <input class="w3-input" type="text" placeholder="DD/MM"></p>
+                    <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday"></p>
                 <p>
                     <label>Password</label>
-                    <input class="w3-input" type="password"></p>
+                    <input class="w3-input" type="password" name="Password"></p>
                 <p>
                     <label>Confirm Password</label>
-                    <input class="w3-input" type="text"></p>
+                    <input class="w3-input" type="password"></p>
+                <%
+                    String RegisterMessage = null;
+                    String RegisterDisplay = "";
+                    RegisterMessage = (String)session.getAttribute("RegisterMessage");
+                    if(RegisterMessage!=null){
+                        RegisterDisplay = "<label class=\"w3-red\"> "+RegisterMessage+"<label>";
+                    }
+                %>
+                <%=RegisterDisplay%>
                 <p>
-                    <button class="w3-btn w3-black">Register</button>
+                    <button class="w3-btn w3-black" type="submit">Register</button>
                 </p>
             </form>
         </div>
