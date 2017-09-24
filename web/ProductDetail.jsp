@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
   User: Siya Yu
-  Date: 10/9/17
+  Date: 24/9/17
   Time: 1:41 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -22,13 +22,20 @@
 
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
     <script>var __adobewebfontsappname__="dreamweaver"</script>
+  
     <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+  
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
+
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
+  
     <script>
         function onClick(element) {
             document.getElementById("img01").src = element.src;
@@ -40,12 +47,13 @@
 </head>
 <body>
 
-<!-- Links (sit on top) -->
+<!-- Links (sit----------------- on------------- top) -->
 
 <div class="w3-row w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-col m3" ><a style="margin-left: 80px;margin-top: 50px"><strong>MR.</strong>wordsmith</a></div>
 
     <div class="w3-col m6" ><p></p></div>
+  
     <div class="w3-col m3">
         <div class="w3-right s3"><a href="Bag.jsp" class="w3-button w3-block"><strong>Bag</strong></a></div>
         <div class="w3-right s3">
@@ -67,6 +75,7 @@
 <!-- function bar -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
+      
         <div class="w3-col " style="width:20%">
             <a href="index.jsp" class="w3-button w3-block">Home</a>
         </div>
@@ -116,13 +125,10 @@
                 <div class="w3-row-padding">
                     <div class="w3-quarter">
                         <img src="http://data.whicdn.com/images/165675048/large.jpg" style="width:100%" onclick="onClick(this)" alt="" class="w3-hover-opacity">
-
                     </div>
-
                     <div class="w3-quarter">
                         <img src="http://data.whicdn.com/images/165675048/large.jpg" style="width:100%" onclick="onClick(this)" alt="" class="w3-hover-opacity">
                     </div>
-
                     <div class="w3-quarter">
                         <img src="http://data.whicdn.com/images/165675048/large.jpg" style="width:100%" onclick="onClick(this)" alt="" class="w3-hover-opacity">
                     </div>
@@ -137,7 +143,7 @@
                         <p id="caption"></p>
                     </div>
                 </div>
-                <!-- line -->
+                <!-------- liiiiiiiiiiiiiine ---------------------->
                 <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px">
                 </div>
                 <div class="w3-row-padding">
@@ -157,7 +163,7 @@
         </div>
 
     </div>
-    <!-- product description bar-->
+    <!---------------- Product description bar--------------->
     <div class="w3-padding w3-black" style="margin-top: 80px">
         <center><a class="w3-large">Product Descriotion</a></center>
     </div>
@@ -176,16 +182,12 @@
 
 
 
-    <!-- line -->
+    <!-- line -------------------------------->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
     </div>
 
-
-
-
-
-
-    <!-- Footer -->
+  
+    <!---------------------------- Footer -------------------------->
     <footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
         <div class="w3-row-padding">
             <div class="w3-col s4">
@@ -225,13 +227,7 @@
         </div>
     </footer>
 
-
-
 </div>
-
-
-
-
 
 </body>
 </html>
