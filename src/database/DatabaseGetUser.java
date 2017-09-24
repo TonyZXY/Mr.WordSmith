@@ -22,11 +22,12 @@ public class DatabaseGetUser {
                 user.setEmail(resultSet.getString("email"));
                 user.setAddress(resultSet.getString("address"));
                 user.setPhone(resultSet.getString("phone"));
-                user.setBirthday(resultSet.getDate("birthday"));
+                user.setBirthday(resultSet.getString("birthday"));
                 user.setPassword(resultSet.getString("password"));
                 user.setSubs(resultSet.getBoolean("sub"));
                 System.out.println(user.getUserID());
                 System.out.println("user got from database");
+
             }
         }catch (Exception e){
             e.printStackTrace();

@@ -8,7 +8,7 @@ public class User {
     private String userID;
     private String email;
     private String address;
-    private Date birthday;
+    private String birthday;
     private String phone;
     private boolean subs;
     private String password;
@@ -25,7 +25,7 @@ public class User {
      * @param subs boolean user's subscription info
      * @param password String user's password
      */
-    public User(String firstName, String lastName, String userID, String email, String address, Date birthday, String phone, boolean subs, String password) {
+    public User(String firstName, String lastName, String userID, String email, String address, String birthday, String phone, boolean subs, String password) {
         this.address = address;
         this.birthday = birthday;
         this.email = email;
@@ -85,11 +85,11 @@ public class User {
         this.address = address;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
