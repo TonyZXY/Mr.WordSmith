@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
 
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-    <script>var __adobewebfontsappname__="dreamweaver"</script>
+    <script>var __adobewebfontsappname__ = "dreamweaver"</script>
     <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,10 +31,24 @@
     <![endif]-->
 </head>
 <style>
-    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-    .mySlides {display:none}
-    .w3-tag, .fa {cursor:pointer}
-    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    html, body, h1, h2, h3, h4 {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    .w3-tag, .fa {
+        cursor: pointer
+    }
+
+    .w3-tag {
+        height: 15px;
+        width: 15px;
+        padding: 0;
+        margin-top: 6px
+    }
 </style>
 <body>
 
@@ -49,18 +63,19 @@
     <div class="w3-right s3">
         <%
             User user = null;
-            user = (User)session.getAttribute("user");
+            user = (User) session.getAttribute("user");
             String link;
-            if(user!=null){
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n "+ user.getFirstName();
-            }else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+            if (user != null) {
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
+    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+       style="margin-left: 10px; margin-right: 20px "></i>
     <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
     <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
@@ -92,14 +107,19 @@
 <!-- subscribe -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:50px">
     <div class="w3-row w3-large">
-        <center><div class="w3-col " style="width:50%">
-            <a>Enter your e-mail now! You will get <strong><big><a class="w3-text-red">15% off</a></big></strong> on your first order.</a>
-        </div></center>
+        <center>
+            <div class="w3-col " style="width:50%">
+                <a>Enter your e-mail now! You will get <strong><big><a class="w3-text-red">15% off</a></big></strong> on
+                    your first order.</a>
+            </div>
+        </center>
         <div class="w3-col" style="width:30%">
             <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email Address">
         </div>
         <div class="w3-col" style="width:20%">
-            <center><button href="#login" class="w3-btn w3-black">Subscribe</button></center>
+            <center>
+                <button href="#login" class="w3-btn w3-black">Subscribe</button>
+            </center>
         </div>
 
     </div>
@@ -110,16 +130,16 @@
 <div class="w3-content w3-display-container">
 
     <div class="w3-display-container mySlides">
-        <img src="../images/Ad 2.jpg" style="width:100%">
+        <img src="images/Ad 2.jpg" style="width:100%">
 
     </div>
 
     <div class="w3-display-container mySlides">
-        <img src="../images/Ad 3.jpg" style="width:100%">
+        <img src="images/Ad 3.jpg" style="width:100%">
 
     </div>
     <div class="w3-display-container mySlides">
-        <img src="../images/Ad 7.jpg" style="width:100%">
+        <img src="images/Ad 7.jpg" style="width:100%">
 
     </div>
 
@@ -158,9 +178,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 1</center></b></p>
+                    <p><b>
+                        <center>product 1</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -168,9 +190,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 2</center></b></p>
+                    <p><b>
+                        <center>product 2</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -178,16 +202,17 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 3</center></b></p>
+                    <p><b>
+                        <center>product 3</center>
+                    </b></p>
                 </div>
 
             </ul>
         </div>
     </div>
 </div>
-
 
 
 <!-- Ins-->
@@ -200,9 +225,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Ad 1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Ad 1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 1</center></b></p>
+                    <p><b>
+                        <center>product 1</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -210,9 +237,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Ad 5.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Ad 5.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 2</center></b></p>
+                    <p><b>
+                        <center>product 2</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -220,9 +249,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Ad 8.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Ad 8.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 3</center></b></p>
+                    <p><b>
+                        <center>product 3</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -240,9 +271,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Ad 6.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Ad 6.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 1</center></b></p>
+                    <p><b>
+                        <center>product 1</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -250,9 +283,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Ad 4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Ad 4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 2</center></b></p>
+                    <p><b>
+                        <center>product 2</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -260,9 +295,11 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="../images/Ad 7.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <img src="images/Ad 7.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
-                    <p><b><center>product 3</center></b></p>
+                    <p><b>
+                        <center>product 3</center>
+                    </b></p>
                 </div>
 
             </ul>
@@ -279,12 +316,14 @@
 
 <!-- Footer -->
 <div class="w3-row w3-section">
-    <center><div class="w3-third w3-container w3-white w3-large" style="height:250px">
-        <h2>Contact Info</h2>
-        <p><i class="fa fa-map-marker" style="width:30px"></i> Mr. wordSmith</p>
-        <p><i class="fa fa-phone" style="width:30px"></i> Phone: +61 044783254</p>
-        <p><i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com</p>
-    </div></center>
+    <center>
+        <div class="w3-third w3-container w3-white w3-large" style="height:250px">
+            <h2>Contact Info</h2>
+            <p><i class="fa fa-map-marker" style="width:30px"></i> Mr. wordSmith</p>
+            <p><i class="fa fa-phone" style="width:30px"></i> Phone: +61 044783254</p>
+            <p><i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com</p>
+        </div>
+    </center>
     <div class="w3-third w3-center w3-large w3-white" style="height:250px">
         <h2>About Us</h2>
         <p><a href="#aboutus">About us</a></p>
@@ -312,12 +351,16 @@
     function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
-        x[slideIndex-1].style.display = "block";
+        x[slideIndex - 1].style.display = "block";
     }
 </script>
 
@@ -334,8 +377,10 @@
             x[i].style.display = "none";
         }
         myIndex++;
-        if (myIndex > x.length) {myIndex = 1}
-        x[myIndex-1].style.display = "block";
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
         setTimeout(carousel, 5000); // Change image every 2 seconds
     }
 </script>
