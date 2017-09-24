@@ -148,13 +148,28 @@
                     <input class="w3-input" type="text" name="Address"></p>
                 <p>
                     <label>Date of birth</label>
-                    <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday"></p>
+                    <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday"required="required"></p>
                 <p>
                     <label>Password</label>
                     <input class="w3-input" type="password" name="Password" id="setpwd"></p>
                 <p>
                     <label>Confirm Password</label>
-                    <input class="w3-input" type="password" id="cfmpwd"></p>
+                    <input class="w3-input" type="password" id="cfmpwd"required="required" oninput="validatePassword(this)"></p>
+                <script language='javascript' type='text/javascript' >
+                    var password = document.getElementById("setpwd")
+                        , confirm_password = document.getElementById("cfmpwd");
+                    function validatePassword(){
+                        if(password.value != confirm_password.value) {
+                            confirm_password.setCustomValidity("Passwords Don't Match");
+                        } else {
+                            confirm_password.setCustomValidity('');
+                        }
+                    }
+
+                    password.onchange = validatePassword;
+                    confirm_password.onkeyup = validatePassword;
+                </script>
+                
                 <%
                     String RegisterMessage = null;
                     String RegisterDisplay = "";
@@ -219,22 +234,7 @@
 
 
 </div>
-<script>
-    var password = document.getElementById("setpwd")
-        , confirm_password = document.getElementById("cfmpwd");
 
-    function validatePassword(){
-        if(password.value != confirm_password.value) {
-            confirm_password.setCustomValidity("Passwords Don't Match");
-        } else {
-            confirm_password.setCustomValidity('');
-        }
-    }
-
-    password.onchange = validatePassword;
-    confirm_password.onkeyup = validatePassword;
-
-</script>
 
 
 </body>
