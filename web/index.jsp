@@ -1,4 +1,7 @@
-<%@ page import="dto.User" %><%--
+<%@ page import="dto.User" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="dto.Product" %>
+<%@ page import="database.DatabaseGetProduct" %><%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 24/9/17
@@ -167,7 +170,8 @@
    <div class="w3-col w3-container" style="width:10%"><p></p></div>
 </div>-->
 <%
-
+    HashMap<String, Product> products = DatabaseGetProduct.getProducts();
+    
 %>
 
 <!-- products-->
@@ -386,7 +390,6 @@
         setTimeout(carousel, 5000); // Change image every 2 seconds
     }
 </script>
-
 
 
 </body>
