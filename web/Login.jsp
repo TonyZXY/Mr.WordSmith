@@ -146,7 +146,7 @@
                     <input class="w3-input" type="email" name="Email" required="required" pattern="[^ @]*@[^ @]*"></p>
                 <p>
                     <label>Phone Number</label>
-                    <input class="w3-input" type="number" name="Phone"></p>
+                    <input class="w3-input" type="number" name="PhoneNumber"></p>
                 <p>
                     <label>Address</label>
                     <input class="w3-input" type="text" name="Address"></p>
@@ -158,21 +158,22 @@
                     <input class="w3-input" type="password" name="Password" id="setpwd"></p>
                 <p>
                     <label>Confirm Password</label>
-                    <input class="w3-input" type="password" id="cfmpwd"required="required" oninput="validatePassword(this)">
+                    <input class="w3-input" type="password" id="cfmpwd" required="required"
+                           oninput="validatePassword(this)">
 
                     <script language='javascript' type='text/javascript'>
 
                         var pwd = document.getElementById("setpwd"),
-                        confirm_pwd = document.getElementById("cfmpwd");
+                            confirm_pwd = document.getElementById("cfmpwd");
 
                         function validatePassword() {
 
-                        if (pwd.value != confirm_pwd.value) {
-                            confirm_pwd.setCustomValidity("Passwords Don't Match");
-                        } else {
-                            confirm_pwd.setCustomValidity('');
+                            if (pwd.value != confirm_pwd.value) {
+                                confirm_pwd.setCustomValidity("Passwords Don't Match");
+                            } else {
+                                confirm_pwd.setCustomValidity('');
+                            }
                         }
-                    }
                     </script>
                 </p>
 

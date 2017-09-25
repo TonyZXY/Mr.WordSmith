@@ -166,7 +166,9 @@
 </div>
    <div class="w3-col w3-container" style="width:10%"><p></p></div>
 </div>-->
+<%
 
+%>
 
 <!-- products-->
 <div class="w3-row-padding">

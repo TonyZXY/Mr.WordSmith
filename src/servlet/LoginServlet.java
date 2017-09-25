@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
             System.out.println("redirect sent");
             return;
         } else {
+            request.getSession().setAttribute("RegisterMessage","");
             request.getSession().setAttribute("message", "Invalid Username or Password");
             response.sendRedirect("Login.jsp");
             return;
