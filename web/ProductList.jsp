@@ -101,11 +101,13 @@
         <div class="w3-col w3-container" style="width:5%"><p></p></div>
         <%=ProductPicProductListPage.getProductView()%>
         <%--<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">--%>
+            <%--<a href="ProductDetail.jsp?pid=1">--%>
             <%--<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
             <%--<div class="w3-container w3-white">--%>
                 <%--<p><b><center>product 1</center></b></p>--%>
                 <%--<center><p>$ 40</p></center>--%>
             <%--</div>--%>
+            <%--</a>--%>
         <%--</div>--%>
         <%--<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">--%>
             <%--<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
