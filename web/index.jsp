@@ -110,23 +110,26 @@
 
 <!-- subscribe -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:50px">
-    <div class="w3-row w3-large">
+   
+  <div class="w3-row w3-large">
         <center>
             <div class="w3-col " style="width:50%">
                 <a>Enter your e-mail now! You will get <strong><big><a class="w3-text-red">15% off</a></big></strong> on
                     your first order.</a>
             </div>
         </center>
+    <form>
         <div class="w3-col" style="width:30%">
             <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email Address">
         </div>
         <div class="w3-col" style="width:20%">
             <center>
-                <button class="w3-btn w3-black">Subscribe</button>
+                <a href="login.jsp" class="w3-btn w3-black">Subscribe</a>
             </center>
         </div>
 
     </div>
+  </form>
 </div>
 
 
