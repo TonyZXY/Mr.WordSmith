@@ -1,4 +1,6 @@
-<%@ page import="dto.User" %><%--
+<%@ page import="dto.User" %>
+<%@ page import="dto.Product" %>
+<%@ page import="database.DatabaseGetProduct" %><%--
   Created by IntelliJ IDEA.
   User: Siya Yu
   Date: 10/9/17
@@ -9,6 +11,7 @@
 <%
     String string = request.getParameter("pid");
 
+    Product product = DatabaseGetProduct.getProduct(string);
 %>
 <html>
 <head>
@@ -84,7 +87,7 @@
             <a href="index.jsp" class="w3-button w3-block">Home</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="../../../../Downloads/drive-download-20170918T044436Z-001/ProductList.jsp" class="w3-button w3-block">Shop</a>
+            <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="#Blog" class="w3-button w3-block">Blog</a>
@@ -111,13 +114,13 @@
     <div class="w3-row-padding" style="margin-top: 20px">
         <div class="w3-col w3-container" style="width: 20%"><p></p></div>
         <div class="w3-col w3-container " style="width: 30%">
-            <img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg" style="width:75%; margin-top: 50px">
-
+            <%--<img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg" style="width:75%; margin-top: 50px">--%>
+            <%="<img src=\""+product.getProductImg1()+"\" style=\"width:75%; margin-top: 50px\">"%>
         </div>
         <div class="w3-col w3-container" style="width:50%">
             <div class="w3-container">
-                <h4><strong>Diary-daily</strong></h4><br>
-                <h8><small><a class="w3-text-gray">product code: MWE001   Size: A5</a></small></h8>
+                <h4><strong><%=product.getProductName()%></strong></h4><br>
+                <h8><small><a class="w3-text-gray">product code: <%=product.getProductID()%>   Size: A5</a></small></h8>
             </div>
             <br>
             <div class="w3-container">
@@ -128,16 +131,15 @@
                 <!-- Photo grid (modal) -->
                 <div class="w3-row-padding">
                     <div class="w3-quarter">
-                        <img src="http://data.whicdn.com/images/165675048/large.jpg" style="width:100%" onclick="onClick(this)" alt="" class="w3-hover-opacity">
-
+                        <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
                     </div>
 
                     <div class="w3-quarter">
-                        <img src="http://data.whicdn.com/images/165675048/large.jpg" style="width:100%" onclick="onClick(this)" alt="" class="w3-hover-opacity">
+                        <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
                     </div>
 
                     <div class="w3-quarter">
-                        <img src="http://data.whicdn.com/images/165675048/large.jpg" style="width:100%" onclick="onClick(this)" alt="" class="w3-hover-opacity">
+                        <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
                     </div>
                 </div>
 
@@ -161,7 +163,7 @@
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
-                    <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$49.95 AUD</strong></a>
+                    <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
                     <a class="w3-container" style="width: 60%"><p></p></a>
                 </div><br><br>
                 <button type="button" style="width: 30%; margin-left: 150px" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black w3-large">Add To Bag</button>
@@ -176,7 +178,7 @@
     </div>
     <div class="w3-container" style="margin-left: 350px;margin-top: 50px;margin-bottom: 50px">
 
-        <h3><strong>Daily Diary</strong></h3><br>
+        <h3><strong><%=product.getProductName()%></strong></h3><br>
         <p>Premium quaility;</p>
         <p>Calendar year.</p>
         <p>Off-white 250 GSM paper</p>
