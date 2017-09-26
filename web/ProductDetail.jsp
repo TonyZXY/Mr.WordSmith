@@ -174,12 +174,12 @@
     </div>
     <!-- product description bar-->
     <div class="w3-padding w3-black" style="margin-top: 80px">
-        <center><a class="w3-large">Product Descriotion</a></center>
+        <center><a class="w3-large">Product Description</a></center>
     </div>
     <div class="w3-container" style="margin-left: 350px;margin-top: 50px;margin-bottom: 50px">
 
         <h3><strong><%=product.getProductName()%></strong></h3><br>
-        <p>Premium quaility;</p>
+        <p>Premium quality;</p>
         <p>Calendar year.</p>
         <p>Off-white 250 GSM paper</p>
         <p>Lined</p>
@@ -233,7 +233,7 @@
                 <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
                 <br>
                 <h4><strong>We accept</strong></h4>
-                <p><i class="fa fa-fw fa-cc-paypal"></i> Paypal</p>
+                <p><i class="fa fa-fw fa-cc-paypal"></i> PayPal</p>
                 <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
 
             </div>
