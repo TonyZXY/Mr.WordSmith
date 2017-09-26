@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String string = request.getParameter("pid");
+
+%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -50,6 +54,7 @@
         <div class="w3-right s3"><a href="Bag.jsp" class="w3-button w3-block"><strong>Bag</strong></a></div>
         <div class="w3-right s3">
             <a href="Account.jsp" class="w3-button w3-block"><b>Account</b></a>
+            <%=string%>
         </div>
         <br>
         <br>
