@@ -110,27 +110,26 @@
 
 <!-- subscribe -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:50px">
-    <div class="w3-row w3-large">
+   
+  <div class="w3-row w3-large">
         <center>
             <div class="w3-col " style="width:50%">
                 <a>Enter your e-mail now! You will get <strong><big><a class="w3-text-red">15% off</a></big></strong> on
                     your first order.</a>
             </div>
         </center>
+    <form>
         <div class="w3-col" style="width:30%">
-            <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email Address">
+            <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email Address" name="inputEmail">
         </div>
         <div class="w3-col" style="width:20%">
             <center>
-<<<<<<< HEAD
-                <button class="w3-btn w3-black">Subscribe</button>
-=======
-                <button href="Login.jsp" class="w3-btn w3-black">Subscribe</button>
->>>>>>> 52bee1746c6cca2100cefa4dd75c32dfc27c312e
+                <a href="Login.jsp" class="w3-btn w3-black">Subscribe</a>
             </center>
         </div>
 
     </div>
+  </form>
 </div>
 
 
@@ -174,10 +173,6 @@
 </div>
    <div class="w3-col w3-container" style="width:10%"><p></p></div>
 </div>-->
-<%
-    HashMap<String, Product> products = DatabaseGetProduct.getProducts();
-
-%>
 
 <!-- products-->
 <div class="w3-row-padding">
@@ -188,6 +183,8 @@
     <div class="w3-row-padding" id="plans">
 
         <%=ProductPicHomePage.getProducts()%>
+
+        <%--This part code used to demo the static page of the home page product part--%>
         <%--<div class="w3-third w3-margin-bottom">--%>
             <%--<a href="ProductDetail.jsp?pid=1">--%>
                 <%--<ul class="w3-ul w3-border w3-center w3-hover-shadow">--%>

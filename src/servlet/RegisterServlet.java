@@ -37,16 +37,15 @@ public class RegisterServlet extends HttpServlet {
         user.setPassword(password);
         user.setBirthday(birthday);
         user.setAddress(address);
-        //TODO-modifyed
-        //user's phone number need to be get from register page
-        user.setPhone("01231251412");
+        user.setPhone(phoneNumber);
 
         //call method to check the user email is in database or not
         if (Register.RegisterCheck(user)) {
             //if no, register successful, and ask user to log in. but no success page displayed
             request.getSession().setAttribute("RegisterMessage", "");
             request.getSession().setAttribute("message","");
-            response.sendRedirect("Login.jsp");
+            request.getSession().setAttribute("user", user);
+            response.sendRedirect("index.jsp");
         } else {
             //if yes, ask user log in using their email. and alert user using message.
             request.getSession().setAttribute("message","");

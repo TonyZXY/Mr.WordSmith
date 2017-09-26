@@ -120,11 +120,11 @@
         </center>
     <form>
         <div class="w3-col" style="width:30%">
-            <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email Address">
+            <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email Address" name="inputEmail">
         </div>
         <div class="w3-col" style="width:20%">
             <center>
-                <a href="login.jsp" class="w3-btn w3-black">Subscribe</a>
+                <a href="Login.jsp" class="w3-btn w3-black">Subscribe</a>
             </center>
         </div>
 
@@ -173,10 +173,6 @@
 </div>
    <div class="w3-col w3-container" style="width:10%"><p></p></div>
 </div>-->
-<%
-    HashMap<String, Product> products = DatabaseGetProduct.getProducts();
-
-%>
 
 <!-- products-->
 <div class="w3-row-padding">

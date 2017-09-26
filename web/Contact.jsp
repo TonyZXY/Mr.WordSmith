@@ -1,4 +1,4 @@
-<%--
+<%@ page import="dto.User" %><%--
   Created by IntelliJ IDEA.
   User: s3607997
   Date: 10/9/17
@@ -40,7 +40,15 @@
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right s3">
-        <a href="Login.jsp" class="w3-button w3-block"><b>Login/ Register</b></a>
+        <%
+            User user = null;
+            user = (User) session.getAttribute("user");
+            String link;
+            if (user != null) {
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+        %>
+        <%=link%>
     </div>
     <br>
     <br>
