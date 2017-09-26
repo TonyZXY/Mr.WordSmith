@@ -184,6 +184,8 @@
     <div class="w3-row-padding" id="plans">
 
         <%=ProductPicHomePage.getProducts()%>
+
+        <%--This part code used to demo the static page of the home page product part--%>
         <%--<div class="w3-third w3-margin-bottom">--%>
             <%--<a href="ProductDetail.jsp?pid=1">--%>
                 <%--<ul class="w3-ul w3-border w3-center w3-hover-shadow">--%>
