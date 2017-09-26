@@ -1,7 +1,8 @@
 <%@ page import="dto.User" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="dto.Product" %>
-<%@ page import="database.DatabaseGetProduct" %><%--
+<%@ page import="database.DatabaseGetProduct" %>
+<%@ page import="model.ProductPicHomePage" %><%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 24/9/17
@@ -182,43 +183,43 @@
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
 
-        <div class="w3-third w3-margin-bottom">
-            <a href="ProductDetail.jsp?pid=1">
-                <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                    <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                    <div class="w3-container w3-white">
-                        <p><b>
-                            <center>product 1</center>
-                        </b></p>
-                    </div>
+        <%=ProductPicHomePage.getProducts()%>
+        <%--<div class="w3-third w3-margin-bottom">--%>
+            <%--<a href="ProductDetail.jsp?pid=1">--%>
+                <%--<ul class="w3-ul w3-border w3-center w3-hover-shadow">--%>
+                    <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+                    <%--<div class="w3-container w3-white">--%>
+                        <%--<p><b>--%>
+                            <%--<center>product 1</center>--%>
+                        <%--</b></p>--%>
+                    <%--</div>--%>
+                <%--</ul>--%>
+            <%--</a>--%>
+        <%--</div>--%>
 
-                </ul>
-            </a>
-        </div>
+        <%--<div class="w3-third w3-margin-bottom">--%>
+            <%--<ul class="w3-ul w3-border w3-center w3-hover-shadow">--%>
+                <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+                <%--<div class="w3-container w3-white">--%>
+                    <%--<p><b>--%>
+                        <%--<center>product 2</center>--%>
+                    <%--</b></p>--%>
+                <%--</div>--%>
 
-        <div class="w3-third w3-margin-bottom">
-            <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>
-                        <center>product 2</center>
-                    </b></p>
-                </div>
+            <%--</ul>--%>
+        <%--</div>--%>
 
-            </ul>
-        </div>
+        <%--<div class="w3-third w3-margin-bottom">--%>
+            <%--<ul class="w3-ul w3-border w3-center w3-hover-shadow">--%>
+                <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+                <%--<div class="w3-container w3-white">--%>
+                    <%--<p><b>--%>
+                        <%--<center>product 3</center>--%>
+                    <%--</b></p>--%>
+                <%--</div>--%>
 
-        <div class="w3-third w3-margin-bottom">
-            <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-                <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>
-                        <center>product 3</center>
-                    </b></p>
-                </div>
-
-            </ul>
-        </div>
+            <%--</ul>--%>
+        <%--</div>--%>
     </div>
 </div>
 
