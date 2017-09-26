@@ -58,7 +58,7 @@
 <!-- Links (sit on top) -->
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <a><strong>MR.</strong>wordsmith</a>
+    <a href="index.jsp"><strong>MR.</strong>wordsmith</a>
 
     <div class="w3-right s3">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
@@ -121,7 +121,7 @@
         </div>
         <div class="w3-col" style="width:20%">
             <center>
-                <button href="#login" class="w3-btn w3-black">Subscribe</button>
+                <button class="w3-btn w3-black">Subscribe</button>
             </center>
         </div>
 
@@ -183,15 +183,17 @@
     <div class="w3-row-padding" id="plans">
 
         <div class="w3-third w3-margin-bottom">
-            <ul class="w3-ul w3-border w3-center w3-hover-shadow" href="ProductDetail.jsp?pid=1">
-                <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                <div class="w3-container w3-white">
-                    <p><b>
-                        <center>product 1</center>
-                    </b></p>
-                </div>
+            <a href="ProductDetail.jsp?pid=1">
+                <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+                    <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                    <div class="w3-container w3-white">
+                        <p><b>
+                            <center>product 1</center>
+                        </b></p>
+                    </div>
 
-            </ul>
+                </ul>
+            </a>
         </div>
 
         <div class="w3-third w3-margin-bottom">
