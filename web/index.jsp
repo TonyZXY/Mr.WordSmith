@@ -171,7 +171,7 @@
 </div>-->
 <%
     HashMap<String, Product> products = DatabaseGetProduct.getProducts();
-    
+
 %>
 
 <!-- products-->
@@ -183,7 +183,7 @@
     <div class="w3-row-padding" id="plans">
 
         <div class="w3-third w3-margin-bottom">
-            <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+            <ul class="w3-ul w3-border w3-center w3-hover-shadow" href="ProductDetail.jsp?pid=1">
                 <img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
                 <div class="w3-container w3-white">
                     <p><b>
