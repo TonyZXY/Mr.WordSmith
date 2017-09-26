@@ -37,7 +37,9 @@ public class RegisterServlet extends HttpServlet {
         user.setPassword(password);
         user.setBirthday(birthday);
         user.setAddress(address);
-        user.setPhone(phoneNumber);
+        //TODO-modifyed
+        //user's phone number need to be get from register page
+        user.setPhone("01231251412");
 
         //call method to check the user email is in database or not
         if (Register.RegisterCheck(user)) {

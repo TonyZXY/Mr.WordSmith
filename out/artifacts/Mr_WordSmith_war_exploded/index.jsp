@@ -122,7 +122,11 @@
         </div>
         <div class="w3-col" style="width:20%">
             <center>
+<<<<<<< HEAD
                 <button class="w3-btn w3-black">Subscribe</button>
+=======
+                <button href="Login.jsp" class="w3-btn w3-black">Subscribe</button>
+>>>>>>> 52bee1746c6cca2100cefa4dd75c32dfc27c312e
             </center>
         </div>
 

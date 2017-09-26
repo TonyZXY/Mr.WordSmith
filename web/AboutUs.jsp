@@ -38,10 +38,10 @@
     <a><strong>MR.</strong>wordsmith</a>
 
     <div class="w3-right s3">
-        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
+        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right s3">
-        <a href="Login.jsp" class="w3-button w3-block"><b>Log in/ Regester</b></a>
+        <a href="#login" class="w3-button w3-block"><b>Log in/ Regester</b></a>
     </div>
     <br>
     <br>
@@ -59,19 +59,19 @@
 <div class="w3-bar-item" style="max-width:100%;margin-top:0px;margin-bottom:20px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
-            <a href="index.jsp" class="w3-button w3-block">Home</a>
+            <a href="#" class="w3-button w3-block">Home</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
+            <a href="#shop" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="#Blog" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
+            <a href="#contact" class="w3-button w3-block">Contact</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="AboutUs.jsp" class="w3-button w3-block">AboutUs</a>
+            <a href="#AboutUs" class="w3-button w3-block">AboutUs</a>
         </div>
     </div>
 </div>
@@ -112,7 +112,7 @@
 
         <div class="w3-col s4">
             <h4><strong>About</strong></h4>
-            <p><a href="AboutUs.jsp">About us</a></p>
+            <p><a href="#aboutus">About us</a></p>
             <p><a href="#">Shipping & Delivery</a></p>
 
             <p><a href="#">Help</a></p>
