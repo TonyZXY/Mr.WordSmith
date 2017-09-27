@@ -59,7 +59,9 @@
 <!-- Links (sit on top) -->
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <a href="index.jsp"><strong>MR.</strong>wordsmith</a>
+    <div class="w3-third">
+        <img src="../../4.0/images/icon.jpg" style="width: 15%;margin-left: 10%">
+    </div>
 
     <div class="w3-right s3">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
@@ -110,7 +112,7 @@
 
 <!-- subscribe -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:50px">
-   
+
   <div class="w3-row w3-large">
         <center>
             <div class="w3-col " style="width:50%">
@@ -328,19 +330,19 @@
 <div class="w3-row w3-section">
     <center>
         <div class="w3-third w3-container w3-white w3-large" style="height:250px">
-            <h2>Contact Info</h2>
-            <p><i class="fa fa-map-marker" style="width:30px"></i> Mr. wordSmith</p>
-            <p><i class="fa fa-phone" style="width:30px"></i> Phone: +61 044783254</p>
-            <p><i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com</p>
+            <h2>ABOUT US</h2>
+            <p><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
+            <p><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
+            <p><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
         </div>
     </center>
     <div class="w3-third w3-center w3-large w3-white" style="height:250px">
-        <h2>About Us</h2>
-        <p><a href="#aboutus">About us</a></p>
-        <p><a href="#">Shipping & Delivery</a></p>
+        <a href="Contact.jsp"><h2>CONTACT US</h2></a>
+        <p>- FAQ</p>
+        <p>- Privacy policy</p>
     </div>
     <div class="w3-third w3-center w3-large" style="height:250px">
-        <h2>Follow Us</h2>
+        <br><br>
         <i class="w3-xlarge fa fa-facebook-official"></i><br>
         <i class="w3-xlarge fa fa-pinterest-p"></i><br>
         <i class="w3-xlarge fa fa-twitter"></i><br>
