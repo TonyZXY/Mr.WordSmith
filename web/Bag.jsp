@@ -88,14 +88,14 @@
     <!-- line-->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px">
     </div>
+       <div class="w3-row">
 
-    <div class="w3-row">
-        <div class="w3-col w3-container" style="margin-top: 80px; width: 10%"><p></p></div>
-        <div class="w3-col w3-container" style="margin-top: 50px; width: 80%">
-            <!-- line-->
+           <div class="w3-col w3-container" style="margin-top: 80px; width: 10%"><p></p></div>
+           <div class="w3-col w3-container" style="margin-top: 50px; width: 80%">
+               <!-- line-->
             <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 10px;margin-bottom: 10px">
             </div>
-            <!-- 1/3 form-->
+               <!-- 1/3 form-->
             <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
                 <a><strong>Product Details</strong></a>
             </div>
@@ -109,6 +109,7 @@
             <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 30px;margin-bottom: 10px">
             </div>
             <!-- 1/3 details -->
+
             <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 20px">
                 <img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg"
                      style="width:50%; margin-top: 20px" class="w3-hover-opacity" type="button">
@@ -128,11 +129,10 @@
                     </li>
                 </ul>
             </div>
-
-
             <!-- line-->
             <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 30px;margin-bottom: 10px">
             </div>
+
             <!-- 1/3 details -->
             <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 20px">
                 <img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg"
@@ -154,7 +154,7 @@
                 </ul>
             </div>
 
-            <!-- line-->
+              <!-- line-->
             <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 50px;margin-bottom: 10px">
             </div>
             <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
@@ -172,6 +172,9 @@
         </div>
 
     </div>
+
+-->
+
 
 </div>
 
