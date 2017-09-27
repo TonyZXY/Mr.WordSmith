@@ -1,25 +1,19 @@
-<%@ page import="database.DatabaseGetProduct" %>
-<%@ page import="dto.Product" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Siya Yu
-  Date: 10/9/17
-  Time: 1:41 PM
+  User: tonyzheng
+  Date: 27/9/17
+  Time: 7:55 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    String string = request.getParameter("pid");
-
-    Product product = DatabaseGetProduct.getProduct(string);
-%>
-<html>
+<!doctype html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mr.wordSmith</title>
-    <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+    <link href="2.0/login page 2.0/css/singlePageTemplate.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -68,7 +62,6 @@
 <body>
 
 <!-- Links (sit on top) -->
-
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
@@ -78,7 +71,7 @@
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right">
-        <a href="#login" class="w3-button w3-block"><b>Login/ Register</b></a>
+        <a href="Login.jsp" class="w3-button w3-block"><b>Login / Register</b></a>
     </div>
     <br>
     <br>
@@ -94,7 +87,7 @@
 
 
 <!-- function bar -->
-<div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:10px">
+<div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
             <a href="index.jsp" class="w3-button w3-block">Home</a>
@@ -109,7 +102,7 @@
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="AboutUs.jsp" class="w3-button w3-block">AboutUs</a>
+            <a href="AboutUs.jsp" class="w3-button w3-block">About Us</a>
         </div>
     </div>
 </div>
@@ -117,8 +110,7 @@
 <!-- title -->
 <div class="w3-row w3-container">
     <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16"
-              style="margin-left: 100px"><%=product.getProductName()%></span>
+        <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Login/ Register</span>
     </div>
 </div>
 <!-- line-->
@@ -131,89 +123,118 @@
     <div class="w3-row-padding">
 
         <!-- Left Column -->
-        <div class="w3-third">
+        <div class="w3-half">
 
-            <div class="w3-white w3-text-grey">
-                <div class="w3-display-container">
-                    <%--<img src="2.0/images/Product 1 - Front.png" style="width:100%" alt="Avatar">--%>
-                    <%="<img src=\"" + product.getProductImg1() + "\" style=\"width:100%\" alt=\"Avatar\">"%>
+            <!-- login -->
+            <div class="w3-row">
+                <div class="w3-col w3-container">
+                    <form class="w3-container" action="Login" method="post">
+                        <br><br><br><br>
+                        <h3>
+                            <center>Have an account already?</center>
+                        </h3>
+                        <h5>
+                            <center>Happy to see you!</center>
+                        </h5>
+                        <br><br>
+                        <p>
+                            <label>Email</label>
+                            <input class="w3-input" name="UserName" required="required" type="text"></p>
+                        <p>
+                            <label>Password</label>
+                            <input class="w3-input" name="Password" required="required" type="password"></p>
+
+                        <%
+                            String LoginMessage = null;
+                            String LoginDisplay = "";
+                            LoginMessage = (String) session.getAttribute("message");
+                            if (LoginMessage != null) {
+                                LoginDisplay = "<label class=\"w3-red\"> " + LoginMessage + "<label>";
+                            }
+                        %>
+                        <%=LoginDisplay%>
+
+                        <p>
+                            <button class="w3-btn w3-black" type="submit">Login</button>
+                        </p>
+                        <br><br>
+
+                    </form>
                 </div>
-                <div class="w3-container">
-                </div>
+                <br>
             </div>
-            <br>
 
             <!-- End Left Column -->
         </div>
 
         <!-- Right Column -->
-        <div class="w3-twothird">
+        <div class="w3-half">
 
-            <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-                <h4 class="w3-padding-16"><%=product.getProductName()%>
-                </h4>
-                <small><a class="w3-text-gray">Product code: <%=product.getProductID()%> Size: A5</a></small>
-                <br><br>
-                <p>Shades</p>
-                <hr>
-                <div class="w3-container">
-                    <!-- Photo grid (modal) -->
-                    <div class="w3-row-padding">
+            <!-- register -->
+            <div class="w3-col w3-container">
+                <form class="w3-container" action="Register" method="post">
+                    <br><br><br><br>
+                    <h3>
+                        <center>Don't have an account</center>
+                    </h3>
+                    <h5>
+                        <center>Join us!</center>
+                    </h5>
+                    <br><br>
+                    <p>
+                        <label>Firstname</label>
+                        <input class="w3-input" type="text" name="FirstName" required="required"></p>
+                    <p>
+                        <label>Lastname</label>
+                        <input class="w3-input" type="text" name="LastName" required="required"></p>
+                    <p>
+                        <label>Email</label>
+                        <input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">
+                    </p>
+                    <p>
+                        <label>Address</label>
+                        <input class="w3-input" type="text" name="Address" required="required"></p>
+                    <p>
+                        <label>Date of birth</label>
+                        <input class="w3-input" type="text" placeholder="DD-MM" name="Birthday" required="required"></p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input class="w3-input" type="tel" required="required" name="PhoneNumber"></p>
+                    <p>
+                        <label>Password</label>
+                        <input class="w3-input" type="password" name="Password" id="setpwd"></p>
+                    <p>
+                        <label>Confirm Password</label>
+                        <input class="w3-input" type="password" id="cfmpwd" required="required"
+                               oninput="validatePassword(this)">
+                        <script language='javascript' type='text/javascript'>
 
+                            var pwd = document.getElementById("setpwd")
+                                , confirmpwd = document.getElementById("cfmpwd");
 
-                        <div class="w3-quarter">
-                            <%--<img src="2.0/images/Product 1 - Back.png" style="width:100%" onclick="onClick(this)" alt=""--%>
-                            <%--class="w3-hover-opacity">--%>
-                            <%="<img src=\"" + product.getProductImg2() + "\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\"\n" +
-                                    " class=\"w3-hover-opacity\">"%>
-                        </div>
+                            function validatePassword() {
 
-                        <div class="w3-quarter">
-                            <%--<img src="2.0/images/Notes Pages.jpg" style="width:100%" onclick="onClick(this)" alt=""--%>
-                            <%--class="w3-hover-opacity">--%>
-                            <%="<img src=\"" + product.getProductImg2() + "\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\"\n" +
-                                    " class=\"w3-hover-opacity\">"%>
-                        </div>
-                    </div>
-                    <!-- Modal for full size images on click-->
-                    <div id="modal01" class="w3-modal w3-black" style="padding-top:0"
-                         onclick="this.style.display='none'">
-                        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-                        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                            <img id="img01" class="w3-image">
-                            <p id="caption"></p>
-                        </div>
-                    </div>
-
-
-                    <br>
-                    <hr>
-
-                    <div class="w3-container">
-                        <br><br>
-                        <h5 class="w3-quarter">Quantity</h5>
-
-                        <select class="w3-select w3-quarter " name="option" style="height: 40px">
-                            <option value="" disabled selected>select Quantity</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <h5 class="w3-quarter"></h5>
-                        <a class="w3-xlarge w3-quarter"><strong>A$ <%=product.getPrice()%></strong></a></div>
-
-
-                    <br><br><br>
-                    <center>
-                        <button class="w3-button w3-black w3-border w3-border-gray w3-round-large">
-                            <center>Add to bag</center>
-                        </button>
-                    </center>
-                    <br>
-
-                </div>
-                <br><br>
-
+                                if (pwd.value != confirmpwd.value) {
+                                    confirmpwd.setCustomValidity("Passwords Don't Match");
+                                } else {
+                                    confirmpwd.setCustomValidity('');
+                                }
+                            }
+                        </script>
+                    </p>
+                    <%
+                        String RegisterMessage = null;
+                        String RegisterDisplay = "";
+                        RegisterMessage = (String) session.getAttribute("RegisterMessage");
+                        if (RegisterMessage != null) {
+                            RegisterDisplay = "<label class=\"w3-red\"> " + RegisterMessage + "<label>";
+                        }
+                    %>
+                    <%=RegisterDisplay%>
+                    <p>
+                        <button class="w3-btn w3-black" type="submit">Register</button>
+                    </p>
+                </form>
             </div>
 
             <!-- End Right Column -->
@@ -224,24 +245,6 @@
 
     <!-- End Page Container -->
 </div>
-
-
-<!-- product description bar-->
-<div class="w3-padding w3-black" style="margin-top: 50px">
-    <center><a class="w3-large">Product Descriotion</a></center>
-</div>
-<div class="w3-container" style="margin-bottom: 50px">
-    <center>
-
-        <h3><strong>Daily Diary</strong></h3><br>
-        <p>Premium quaility;</p>
-        <p>Calendar year.</p>
-        <p>Off-white 250 GSM paper</p>
-        <p>Lined</p>
-        <p>Size: A5</p>
-        <p>Shade: Black</p></center>
-</div>
-<br><br><br>
 
 
 <!-- line -->
@@ -277,3 +280,14 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
