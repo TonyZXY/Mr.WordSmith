@@ -58,10 +58,8 @@
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-
         <img src="../images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
-
     <div class="w3-right s3">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
@@ -325,7 +323,6 @@
 
 <!-- Footer -->
 <div class="w3-row w3-section">
-
     <div class="w3-row w3-section">
         <center><div class="w3-third w3-container w3-white w3-large" style="height:250px"><br>
             <p2><b>ABOUT US</b></p2>

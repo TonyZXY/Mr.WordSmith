@@ -1,6 +1,6 @@
-<%@ page import="database.DatabaseGetProduct" %>
+<%@ page import="dto.User" %>
 <%@ page import="dto.Product" %>
-<%--
+<%@ page import="database.DatabaseGetProduct" %><%--
   Created by IntelliJ IDEA.
   User: Siya Yu
   Date: 10/9/17
@@ -28,7 +28,7 @@
 
 
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-    <script>var __adobewebfontsappname__ = "dreamweaver"</script>
+    <script>var __adobewebfontsappname__="dreamweaver"</script>
     <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,51 +45,38 @@
         }
     </script>
 </head>
-<style>
-    html, body, h1, h2, h3, h4 {
-        font-family: "Lato", sans-serif
-    }
-
-    .mySlides {
-        display: none
-    }
-
-    .w3-tag, .fa {
-        cursor: pointer
-    }
-
-    .w3-tag {
-        height: 15px;
-        width: 15px;
-        padding: 0;
-        margin-top: 6px
-    }
-</style>
 <body>
 
 <!-- Links (sit on top) -->
 
-<div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
-    </div>
+<div class="w3-row w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
+    <div class="w3-col m3" ><a style="margin-left: 80px;margin-top: 50px"><strong>MR.</strong>wordsmith</a></div>
 
-    <div class="w3-right">
-        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
+    <div class="w3-col m6" ><p></p></div>
+    <div class="w3-col m3">
+        <div class="w3-right s3"><a href="Bag.jsp" class="w3-button w3-block"><strong>Bag</strong></a></div>
+        <div class="w3-right s3">
+            <%
+                User user = null;
+                user = (User) session.getAttribute("user");
+                String link;
+                if (user != null) {
+                    link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+                } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+            %>
+            <%=link%>
+            <%=string%>
+        </div>
+        <br>
+        <br>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+        <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
+        <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
     </div>
-    <div class="w3-right">
-        <a href="#login" class="w3-button w3-block"><b>Login/ Register</b></a>
-    </div>
-    <br>
-    <br>
-    <br>
-    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
-       style="margin-left: 10px; margin-right: 20px "></i>
-    <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-    <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
 </div>
 
 
@@ -117,162 +104,148 @@
 <!-- title -->
 <div class="w3-row w3-container">
     <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16"
-              style="margin-left: 100px"><%=product.getProductName()%></span>
+        <span class="w3-xlarge w3-border-dark-grey w3-padding-16"  style="margin-left: 100px">Product</span>
     </div>
-</div>
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
-</div>
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <!-- line-->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px">
+    </div>
 
-    <!-- The Grid -->
-    <div class="w3-row-padding">
-
-        <!-- Left Column -->
-        <div class="w3-third">
-
-            <div class="w3-white w3-text-grey">
-                <div class="w3-display-container">
-                    <%--<img src="2.0/images/Product 1 - Front.png" style="width:100%" alt="Avatar">--%>
-                    <%="<img src=\"" + product.getProductImg1() + "\" style=\"width:100%\" alt=\"Avatar\">"%>
-                </div>
-                <div class="w3-container">
-                </div>
+    <!-- product picture-->
+    <div class="w3-row-padding" style="margin-top: 20px">
+        <div class="w3-col w3-container" style="width: 20%"><p></p></div>
+        <div class="w3-col w3-container " style="width: 30%">
+            <%--<img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg" style="width:75%; margin-top: 50px">--%>
+            <%="<img src=\""+product.getProductImg1()+"\" style=\"width:75%; margin-top: 50px\">"%>
+        </div>
+        <div class="w3-col w3-container" style="width:50%">
+            <div class="w3-container">
+                <h4><strong><%=product.getProductName()%></strong></h4><br>
+                <h8><small><a class="w3-text-gray">product code: <%=product.getProductID()%>   Size: A5</a></small></h8>
             </div>
             <br>
-
-            <!-- End Left Column -->
-        </div>
-
-        <!-- Right Column -->
-        <div class="w3-twothird">
-
-            <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-                <h4 class="w3-padding-16"><%=product.getProductName()%>
-                </h4>
-                <small><a class="w3-text-gray">Product code: <%=product.getProductID()%> Size: A5</a></small>
-                <br><br>
+            <div class="w3-container">
                 <p>Shades</p>
-                <hr>
-                <div class="w3-container">
-                    <!-- Photo grid (modal) -->
-                    <div class="w3-row-padding">
-
-
-                        <div class="w3-quarter">
-                            <%--<img src="2.0/images/Product 1 - Back.png" style="width:100%" onclick="onClick(this)" alt=""--%>
-                            <%--class="w3-hover-opacity">--%>
-                            <%="<img src=\"" + product.getProductImg2() + "\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\"\n" +
-                                    " class=\"w3-hover-opacity\">"%>
-                        </div>
-
-                        <div class="w3-quarter">
-                            <%--<img src="2.0/images/Notes Pages.jpg" style="width:100%" onclick="onClick(this)" alt=""--%>
-                            <%--class="w3-hover-opacity">--%>
-                            <%="<img src=\"" + product.getProductImg2() + "\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\"\n" +
-                                    " class=\"w3-hover-opacity\">"%>
-                        </div>
-                    </div>
-                    <!-- Modal for full size images on click-->
-                    <div id="modal01" class="w3-modal w3-black" style="padding-top:0"
-                         onclick="this.style.display='none'">
-                        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-                        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                            <img id="img01" class="w3-image">
-                            <p id="caption"></p>
-                        </div>
-                    </div>
-
-
-                    <br>
-                    <hr>
-
-                    <div class="w3-container">
-                        <br><br>
-                        <h5 class="w3-quarter">Quantity</h5>
-
-                        <select class="w3-select w3-quarter " name="option" style="height: 40px">
-                            <option value="" disabled selected>select Quantity</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <h5 class="w3-quarter"></h5>
-                        <a class="w3-xlarge w3-quarter"><strong>A$ <%=product.getPrice()%></strong></a></div>
-
-
-                    <br><br><br>
-                    <center>
-                        <button class="w3-button w3-black w3-border w3-border-gray w3-round-large">
-                            <center>Add to bag</center>
-                        </button>
-                    </center>
-                    <br>
-
+                <!-- line -->
+                <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 10px;margin-bottom: 20px; margin-right: 100px">
                 </div>
-                <br><br>
+                <!-- Photo grid (modal) -->
+                <div class="w3-row-padding">
+                    <div class="w3-quarter">
+                        <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
+                    </div>
 
+                    <div class="w3-quarter">
+                        <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
+                    </div>
+
+                    <div class="w3-quarter">
+                        <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
+                    </div>
+                </div>
+
+
+                <!-- Modal for full size images on click-->
+                <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+                    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+                    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                        <img id="img01" class="w3-image">
+                        <p id="caption"></p>
+                    </div>
+                </div>
+                <!-- line -->
+                <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px">
+                </div>
+                <div class="w3-row-padding">
+                    Quantity
+                    <select class="w3-select " name="option" style="width: 20%;margin-left: 10px">
+                        <option value="" disabled selected>select Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
+                    <a class="w3-container" style="width: 60%"><p></p></a>
+                </div><br><br>
+                <button type="button" style="width: 30%; margin-left: 150px" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black w3-large">Add To Bag</button>
             </div>
 
-            <!-- End Right Column -->
         </div>
 
-        <!-- End Grid -->
     </div>
+    <!-- product description bar-->
+    <div class="w3-padding w3-black" style="margin-top: 80px">
+        <center><a class="w3-large">Product Description</a></center>
+    </div>
+    <div class="w3-container" style="margin-left: 350px;margin-top: 50px;margin-bottom: 50px">
 
-    <!-- End Page Container -->
-</div>
-
-
-<!-- product description bar-->
-<div class="w3-padding w3-black" style="margin-top: 50px">
-    <center><a class="w3-large">Product Descriotion</a></center>
-</div>
-<div class="w3-container" style="margin-bottom: 50px">
-    <center>
-
-        <h3><strong>Daily Diary</strong></h3><br>
-        <p>Premium quaility;</p>
+        <h3><strong><%=product.getProductName()%></strong></h3><br>
+        <p>Premium quality;</p>
         <p>Calendar year.</p>
         <p>Off-white 250 GSM paper</p>
         <p>Lined</p>
         <p>Size: A5</p>
-        <p>Shade: Black</p></center>
-</div>
-<br><br><br>
+        <p>Shade: Black</p>
+    </div>
+    <br><br><br>
 
 
-<!-- line -->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
-</div>
 
 
-<!-- Footer -->
-<div class="w3-row w3-section">
-    <center>
-        <div class="w3-third w3-container w3-white w3-large" style="height:250px">
-            <h2>ABOUT US</h2>
-            <p><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
-            <p><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
-            <p><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
+    <!-- line -->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
+        <div class="w3-row-padding">
+            <div class="w3-col s4">
+                <img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" class="w3-round" alt="Norway">
+                <h4>Mr.wordSmith</h4>
+            </div>
+
+            <div class="w3-col s4">
+                <h4><strong>About</strong></h4>
+                <p><a href="AboutUs.jsp">About us</a></p>
+                <p><a href="#">Shipping & Delivery</a></p>
+
+                <p><a href="#">Help</a></p>
+
+                <br><br><br>
+                <i class="fa fa-facebook-official w3-hover-opacity w3-large" style="margin-right: 10px"></i>
+                <i class="fa fa-instagram w3-hover-opacity w3-large" style="margin-right: 10px"></i>
+                <i class="fa fa-twitter w3-hover-opacity w3-large" style="margin-right: 10px"></i>
+                <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+                <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+                 <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
+
+
+            </div>
+
+            <div class="w3-col s4 w3-justify">
+                <h4><strong>Company</strong></h4>
+                <p><i class="fa fa-fw fa-map-marker"></i> Mr.wordSmith</p>
+                <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
+                <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
+                <br>
+                <h4><strong>We accept</strong></h4>
+                <p><i class="fa fa-fw fa-cc-paypal"></i> PayPal</p>
+                <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+
+            </div>
         </div>
-    </center>
-    <div class="w3-third w3-center w3-large w3-white" style="height:250px">
-        <a href="Contact.jsp"><h2>CONTACT US</h2></a>
-        <p>- FAQ</p>
-        <p>- Privacy policy</p>
-    </div>
-    <div class="w3-third w3-center w3-large" style="height:250px">
-        <br><br>
-        <i class="w3-xlarge fa fa-facebook-official"></i><br>
-        <i class="w3-xlarge fa fa-pinterest-p"></i><br>
-        <i class="w3-xlarge fa fa-twitter"></i><br>
-        <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
-        <i class="w3-xlarge fa fa-linkedin"></i>
-    </div>
+    </footer>
+
+
+
 </div>
+
+
+
 
 
 </body>
