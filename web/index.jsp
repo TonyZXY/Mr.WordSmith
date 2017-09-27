@@ -1,8 +1,6 @@
 <%@ page import="dto.User" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="dto.Product" %>
-<%@ page import="database.DatabaseGetProduct" %>
-<%@ page import="model.ProductPicHomePage" %><%--
+<%@ page import="model.ProductPicHomePage" %>
+<%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 24/9/17
@@ -59,8 +57,9 @@
 <!-- Links (sit on top) -->
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <a href="index.jsp"><strong>MR.</strong>wordsmith</a>
-
+    <div class="w3-third">
+        <img src="../images/icon.jpg" style="width: 15%;margin-left: 10%">
+    </div>
     <div class="w3-right s3">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
@@ -103,19 +102,18 @@
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="AboutUs.jsp" class="w3-button w3-block">AboutUs</a>
+            <a href="AboutUs.jsp" class="w3-button w3-block">About Us</a>
         </div>
     </div>
 </div>
 
 <!-- subscribe -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:50px">
-   
+
   <div class="w3-row w3-large">
         <center>
             <div class="w3-col " style="width:50%">
-                <a>Enter your e-mail now! You will get <strong><big><a class="w3-text-red">15% off</a></big></strong> on
-                    your first order.</a>
+                <i><p style="font-family:Times;text-align:center"> Get a <b> 15%-Off</b> on the first order by joining our mailing list! </p></i>
             </div>
         </center>
     <form>
@@ -127,8 +125,7 @@
                 <a href="Login.jsp" class="w3-btn w3-black">Subscribe</a>
             </center>
         </div>
-
-    </div>
+  </div>
   </form>
 </div>
 
@@ -177,7 +174,7 @@
 <!-- products-->
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
-        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><strong>Products</strong></span>
+        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><strong> New arrivals </strong></span>
     </div>
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
@@ -326,31 +323,30 @@
 
 <!-- Footer -->
 <div class="w3-row w3-section">
-    <center>
-        <div class="w3-third w3-container w3-white w3-large" style="height:250px">
-            <h2>Contact Info</h2>
-            <p><i class="fa fa-map-marker" style="width:30px"></i> Mr. wordSmith</p>
-            <p><i class="fa fa-phone" style="width:30px"></i> Phone: +61 044783254</p>
-            <p><i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com</p>
+    <div class="w3-row w3-section">
+        <center><div class="w3-third w3-container w3-white w3-large" style="height:250px"><br>
+            <p2><b>ABOUT US</b></p2>
+            <p text-align="right"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
+            <p text-align="right"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
+            <p text-align="right"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p><br><br>
+        </div></center>
+        <div class="w3-third w3-center w3-large w3-white" style="height:250px"><br>
+            <a href="#aboutus"><p2><b>CONTACT US</b></p2></a>
+            <p>- FAQ</p>
+            <p>- Privacy policy</p><br><br>
         </div>
-    </center>
-    <div class="w3-third w3-center w3-large w3-white" style="height:250px">
-        <h2>About Us</h2>
-        <p><a href="#aboutus">About us</a></p>
-        <p><a href="#">Shipping & Delivery</a></p>
+        <div class="w3-third w3-center w3-large" style="height:250px">
+            <br><br><br>
+            <i class="w3-xlarge fa fa-facebook-official"></i><br>
+            <i class="w3-xlarge fa fa-pinterest-p"></i><br>
+            <i class="w3-xlarge fa fa-twitter"></i><br>
+            <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
+            <i class="w3-xlarge fa fa-linkedin"></i><br><br>
+        </div>
     </div>
-    <div class="w3-third w3-center w3-large" style="height:250px">
-        <h2>Follow Us</h2>
-        <i class="w3-xlarge fa fa-facebook-official"></i><br>
-        <i class="w3-xlarge fa fa-pinterest-p"></i><br>
-        <i class="w3-xlarge fa fa-twitter"></i><br>
-        <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
-        <i class="w3-xlarge fa fa-linkedin"></i>
-    </div>
-</div>
 
 
-<script>
+    <script>
     var slideIndex = 1;
     showDivs(slideIndex);
 
