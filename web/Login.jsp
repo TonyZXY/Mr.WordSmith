@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: tonyzheng
+  Date: 27/9/17
+  Time: 7:55 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -56,14 +64,14 @@
 <!-- Links (sit on top) -->
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-        <img src="4.0/images/icon.jpg" style="width: 15%;margin-left: 10%">
+        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
 
     <div class="w3-right">
-        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
+        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right">
-        <a href="#login" class="w3-button w3-block"><b>Account</b></a>
+        <a href="Login.jsp" class="w3-button w3-block"><b>Login / Register</b></a>
     </div>
     <br>
     <br>
@@ -82,19 +90,19 @@
 <div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
-            <a href="#" class="w3-button w3-block">Home</a>
+            <a href="index.jsp" class="w3-button w3-block">Home</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#shop" class="w3-button w3-block">Shop</a>
+            <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="#Blog" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#contact" class="w3-button w3-block">Contact</a>
+            <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#AboutUs" class="w3-button w3-block">About Us</a>
+            <a href="AboutUs.jsp" class="w3-button w3-block">About Us</a>
         </div>
     </div>
 </div>
@@ -120,7 +128,7 @@
             <!-- login -->
             <div class="w3-row">
                 <div class="w3-col w3-container">
-                    <form class="w3-container">
+                    <form class="w3-container" action="Login" method="post">
                         <br><br><br><br>
                         <h3>
                             <center>Have an account already?</center>
@@ -131,12 +139,23 @@
                         <br><br>
                         <p>
                             <label>Email</label>
-                            <input class="w3-input" type="text"></p>
+                            <input class="w3-input" name="UserName" required="required" type="text"></p>
                         <p>
                             <label>Password</label>
-                            <input class="w3-input" type="text"></p>
+                            <input class="w3-input" name="Password" required="required" type="password"></p>
+
+                        <%
+                            String LoginMessage = null;
+                            String LoginDisplay = "";
+                            LoginMessage = (String) session.getAttribute("message");
+                            if (LoginMessage != null) {
+                                LoginDisplay = "<label class=\"w3-red\"> " + LoginMessage + "<label>";
+                            }
+                        %>
+                        <%=LoginDisplay%>
+
                         <p>
-                            <button class="w3-btn w3-black">Login</button>
+                            <button class="w3-btn w3-black" type="submit">Login</button>
                         </p>
                         <br><br>
 
@@ -153,7 +172,7 @@
 
             <!-- register -->
             <div class="w3-col w3-container">
-                <form class="w3-container">
+                <form class="w3-container" action="Register" method="post">
                     <br><br><br><br>
                     <h3>
                         <center>Don't have an account</center>
@@ -164,27 +183,56 @@
                     <br><br>
                     <p>
                         <label>Firstname</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="FirstName" required="required"></p>
                     <p>
                         <label>Lastname</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="LastName" required="required"></p>
                     <p>
                         <label>Email</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">
+                    </p>
                     <p>
                         <label>Address</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="Address" required="required"></p>
                     <p>
                         <label>Date of birth</label>
-                        <input class="w3-input" type="text" placeholder="DD/MM"></p>
+                        <input class="w3-input" type="text" placeholder="DD-MM" name="Birthday" required="required"></p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input class="w3-input" type="tel" required="required" name="PhoneNumber"></p>
                     <p>
                         <label>Password</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="password" name="Password" id="setpwd"></p>
                     <p>
                         <label>Confirm Password</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="password" id="cfmpwd" required="required"
+                               oninput="validatePassword(this)">
+                        <script language='javascript' type='text/javascript'>
+
+                            var pwd = document.getElementById("setpwd")
+                                , confirmpwd = document.getElementById("cfmpwd");
+
+                            function validatePassword() {
+
+                                if (pwd.value != confirmpwd.value) {
+                                    confirmpwd.setCustomValidity("Passwords Don't Match");
+                                } else {
+                                    confirmpwd.setCustomValidity('');
+                                }
+                            }
+                        </script>
+                    </p>
+                    <%
+                        String RegisterMessage = null;
+                        String RegisterDisplay = "";
+                        RegisterMessage = (String) session.getAttribute("RegisterMessage");
+                        if (RegisterMessage != null) {
+                            RegisterDisplay = "<label class=\"w3-red\"> " + RegisterMessage + "<label>";
+                        }
+                    %>
+                    <%=RegisterDisplay%>
                     <p>
-                        <button class="w3-btn w3-black">Register</button>
+                        <button class="w3-btn w3-black" type="submit">Register</button>
                     </p>
                 </form>
             </div>
@@ -215,7 +263,7 @@
         </div>
     </center>
     <div class="w3-third w3-center w3-large w3-white" style="height:250px">
-        <a href="#aboutus"><h2>CONTACT US</h2></a>
+        <a href="Contact.jsp"><h2>CONTACT US</h2></a>
         <p>- FAQ</p>
         <p>- Privacy policy</p>
     </div>
@@ -232,6 +280,7 @@
 
 </body>
 </html>
+
 
 
 
