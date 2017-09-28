@@ -1,4 +1,3 @@
-<%@ page import="dto.User" %>
 <%@ page import="model.ProductPicHomePage" %>
 <%--
   Created by IntelliJ IDEA.
@@ -55,30 +54,21 @@
 <body>
 
 <!-- Links (sit on top) -->
-
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-        <img src="../images/icon.jpg" style="width: 15%;margin-left: 10%">
+        <img src="4.0/images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
-    <div class="w3-right s3">
-        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
+
+    <div class="w3-right">
+        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
     </div>
-    <div class="w3-right s3">
-        <%
-            User user = null;
-            user = (User) session.getAttribute("user");
-            String link;
-            if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
-            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
-        %>
-        <%=link%>
+    <div class="w3-right">
+        <a href="#login" class="w3-button w3-block"><b>Account</b></a>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
-       style="margin-left: 10px; margin-right: 20px "></i>
+    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
     <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
     <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
@@ -108,25 +98,25 @@
 </div>
 
 <!-- subscribe -->
-<div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:50px">
+<div class="w3-bar-item" style="max-width:100%;margin-top:15px;margin-bottom:45px">
 
   <div class="w3-row w3-large">
-        <center>
-            <div class="w3-col " style="width:50%">
-                <i><p style="font-family:Times;text-align:center"> Get a <b> 15%-Off</b> on the first order by joining our mailing list! </p></i>
-            </div>
-        </center>
+
+      <div class="w3-col " style="width:50%;align-content: center">
+          <i><p><b>  </b></p></i>
+      </div>
     <form>
-        <div class="w3-col" style="width:30%">
-            <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email Address" name="inputEmail">
+        <div class="w3-col" style="width:30%;align-content: center">
+            <input class="w3-input w3-border w3-round" style="height: 80%" type="text" placeholder="Email address" name="inputEmail">
         </div>
-        <div class="w3-col" style="width:20%">
+        <div class="w3-col" style="width:10%;align-content: center">
             <center>
                 <a href="Login.jsp" class="w3-btn w3-black">Subscribe</a>
             </center>
         </div>
   </div>
   </form>
+    <i><p style="font-family:Times;text-align:center" ><b>* Get a 15%-Off on the first order by joining our mailing list today! *</b></p></i>
 </div>
 
 
@@ -174,7 +164,7 @@
 <!-- products-->
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
-        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><strong> New arrivals </strong></span>
+        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>Shop new arrivals</b></span></i>
     </div>
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
@@ -225,7 +215,7 @@
 <!-- Ins-->
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
-        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><strong>Follow us on Instagram</strong></span>
+        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>Follow our Instagram </b></span></i>
     </div>
     <!-- Grid -->
     <div class="w3-row-padding">
@@ -271,7 +261,7 @@
 <!-- Blog-->
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
-        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"><strong>Blog</strong></span>
+        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>Blog</b></span></i>
     </div>
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
@@ -313,37 +303,35 @@
         </div>
     </div>
 
-</div>
+</div><br><br>
 
 
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
-</div>
 
 
 <!-- Footer -->
-<div class="w3-row w3-section">
-    <div class="w3-row w3-section">
-        <center><div class="w3-third w3-container w3-white w3-large" style="height:250px"><br>
-            <p2><b>ABOUT US</b></p2>
-            <p text-align="right"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
-            <p text-align="right"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
-            <p text-align="right"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p><br><br>
+<div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
+    <div class="w3-row w3-section"style="background-color:#F8F8F8">
+        <center><div class="w3-third w3-container w3-large" style="height:250px; background-color:#F8F8F8"><br>
+            <a href="#aboutus"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
+            <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
+            <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
+            <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
         </div></center>
-        <div class="w3-third w3-center w3-large w3-white" style="height:250px"><br>
-            <a href="#aboutus"><p2><b>CONTACT US</b></p2></a>
-            <p>- FAQ</p>
-            <p>- Privacy policy</p><br><br>
+        <div class="w3-third w3-center w3-large " style="height:250px; background-color:#F8F8F8"><br>
+            <a href="#contact"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
+            <p style="font-size:70%"> FAQ</p>
+            <p style="font-size:70%"> Privacy policy</p>
         </div>
-        <div class="w3-third w3-center w3-large" style="height:250px">
-            <br><br><br>
+        <div class="w3-third w3-center w3-large" style="height:250px; background-color:#F8F8F8">
+            <br><br>
             <i class="w3-xlarge fa fa-facebook-official"></i><br>
             <i class="w3-xlarge fa fa-pinterest-p"></i><br>
             <i class="w3-xlarge fa fa-twitter"></i><br>
             <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
-            <i class="w3-xlarge fa fa-linkedin"></i><br><br>
+            <i class="w3-xlarge fa fa-linkedin"></i>
         </div>
     </div>
+
 
 
     <script>
