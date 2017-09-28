@@ -1,6 +1,6 @@
-<%@ page import="dto.User" %>
+<%@ page import="database.DatabaseGetProduct" %>
 <%@ page import="dto.Product" %>
-<%@ page import="database.DatabaseGetProduct" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Siya Yu
   Date: 10/9/17
@@ -14,6 +14,7 @@
     Product product = DatabaseGetProduct.getProduct(string);
 %>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,38 +49,27 @@
 <body>
 
 <!-- Links (sit on top) -->
-
-<div class="w3-row w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <div class="w3-col m3" ><a style="margin-left: 80px;margin-top: 50px"><strong>MR.</strong>wordsmith</a></div>
-
-    <div class="w3-col m6" ><p></p></div>
-    <div class="w3-col m3">
-        <div class="w3-right s3"><a href="Bag.jsp" class="w3-button w3-block"><strong>Bag</strong></a></div>
-        <div class="w3-right s3">
-            <%
-                User user = null;
-                user = (User) session.getAttribute("user");
-                String link;
-                if (user != null) {
-                    link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
-                } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
-            %>
-            <%=link%>
-            <%=string%>
-        </div>
-        <br>
-        <br>
-        <br>
-        <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
-        <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-        <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-        <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-        <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+<div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
+    <div class="w3-third">
+        <img src="4.0/images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
+
+    <div class="w3-right">
+        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
+    </div>
+    <div class="w3-right">
+        <a href="#login" class="w3-button w3-block"><b>Account</b></a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
+    <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+    <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
+    <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+    <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
 </div>
-
-
 <!-- function bar -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
@@ -156,13 +146,7 @@
                 <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px">
                 </div>
                 <div class="w3-row-padding">
-                    Quantity
-                    <select class="w3-select " name="option" style="width: 20%;margin-left: 10px">
-                        <option value="" disabled selected>select Quantity</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                    <p>Quantity    <input type="number"input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10"/></p>
                     <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
                     <a class="w3-container" style="width: 60%"><p></p></a>
                 </div><br><br>
@@ -173,14 +157,14 @@
 
     </div>
     <!-- product description bar-->
-    <div class="w3-padding w3-black" style="margin-top: 80px">
+    <div class="w3-padding w3-black" style="margin-top: 80px;max-width:100%">
         <center><a class="w3-large">Product Description</a></center>
     </div>
-    <div class="w3-container" style="margin-left: 350px;margin-top: 50px;margin-bottom: 50px">
+    <div class="w3-container" style="margin-left: 100px;margin-top: 50px;margin-bottom: 50px">
 
         <h3><strong><%=product.getProductName()%></strong></h3><br>
-        <p>Premium quality;</p>
-        <p>Calendar year.</p>
+        <p>Premium quality </p>
+        <p>Calendar year</p>
         <p>Off-white 250 GSM paper</p>
         <p>Lined</p>
         <p>Size: A5</p>
@@ -188,61 +172,29 @@
     </div>
     <br><br><br>
 
-
-
-
-    <!-- line -->
-    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
-    </div>
-
-
-
-
-
-
     <!-- Footer -->
-    <footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
-        <div class="w3-row-padding">
-            <div class="w3-col s4">
-                <img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" class="w3-round" alt="Norway">
-                <h4>Mr.wordSmith</h4>
+    <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
+        <div class="w3-row w3-section"style="background-color:#F8F8F8">
+            <center><div class="w3-third w3-container w3-large" style="height:250px; background-color:#F8F8F8"><br>
+                <a href="#aboutus"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
+                <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
+                <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
+                <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
+            </div></center>
+            <div class="w3-third w3-center w3-large " style="height:250px; background-color:#F8F8F8"><br>
+                <a href="#contact"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
+                <p style="font-size:70%"> FAQ</p>
+                <p style="font-size:70%"> Privacy policy</p>
             </div>
-
-            <div class="w3-col s4">
-                <h4><strong>About</strong></h4>
-                <p><a href="AboutUs.jsp">About us</a></p>
-                <p><a href="#">Shipping & Delivery</a></p>
-
-                <p><a href="#">Help</a></p>
-
-                <br><br><br>
-                <i class="fa fa-facebook-official w3-hover-opacity w3-large" style="margin-right: 10px"></i>
-                <i class="fa fa-instagram w3-hover-opacity w3-large" style="margin-right: 10px"></i>
-                <i class="fa fa-twitter w3-hover-opacity w3-large" style="margin-right: 10px"></i>
-                <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
-                <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-                 <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-
-
-            </div>
-
-            <div class="w3-col s4 w3-justify">
-                <h4><strong>Company</strong></h4>
-                <p><i class="fa fa-fw fa-map-marker"></i> Mr.wordSmith</p>
-                <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-                <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
-                <br>
-                <h4><strong>We accept</strong></h4>
-                <p><i class="fa fa-fw fa-cc-paypal"></i> PayPal</p>
-                <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
-
+            <div class="w3-third w3-center w3-large" style="height:250px; background-color:#F8F8F8">
+                <br><br>
+                <i class="w3-xlarge fa fa-facebook-official"></i><br>
+                <i class="w3-xlarge fa fa-pinterest-p"></i><br>
+                <i class="w3-xlarge fa fa-twitter"></i><br>
+                <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
+                <i class="w3-xlarge fa fa-linkedin"></i>
             </div>
         </div>
-    </footer>
-
-
-
-</div>
 
 
 
