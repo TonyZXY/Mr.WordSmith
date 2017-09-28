@@ -1,4 +1,4 @@
-<%--
+<%@ page import="dto.User" %><%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 10/9/17
@@ -6,7 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    User user=null;
+    user = (User)session.getAttribute("user");
+    if(user!=null){
 
+    }
+%>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
@@ -41,9 +47,15 @@
 
     <div class="w3-col m6"><p></p></div>
     <div class="w3-col m3">
-        <div class="w3-right s3"><a href="#bag" class="w3-button w3-block"><strong>Bag</strong></a></div>
+        <div class="w3-right s3"><a href="Bag.jsp" class="w3-button w3-block"><strong>Bag</strong></a></div>
         <div class="w3-right s3">
-            <a href="Account.jsp" class="w3-button w3-block"><b>Account</b></a>
+            <%
+                String link;
+                if (user != null) {
+                    link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+                } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+            %>
+            <%=link%>
         </div>
         <br>
         <br>
