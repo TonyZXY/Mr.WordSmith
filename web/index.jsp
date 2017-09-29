@@ -1,5 +1,5 @@
 <%@ page import="dto.User" %>
-<%@ page import="model.ProductPicHomePage" %>
+<%@ page import="view.ProductPicHomePage" %>
 <%--
   Created by IntelliJ IDEA.
   User: tonyzheng

@@ -1,4 +1,7 @@
-<%@ page import="dto.User" %><%--
+<%@ page import="dto.User" %>
+<%@ page import="database.DatabaseGetBagItems" %>
+<%@ page import="dto.Item" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 10/9/17
@@ -10,7 +13,7 @@
     User user=null;
     user = (User)session.getAttribute("user");
     if(user!=null){
-
+        ArrayList<Item> bag= DatabaseGetBagItems.getBag(user.getUserID());
     }
 %>
 <html lang="en-US">
@@ -184,8 +187,6 @@
         </div>
 
     </div>
-
--->
 
 
 </div>

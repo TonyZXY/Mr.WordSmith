@@ -1,4 +1,4 @@
-<%@ page import="model.ProductPicProductListPage" %>
+<%@ page import="view.ProductPicProductListPage" %>
 <%@ page import="dto.User" %><%--
   Created by IntelliJ IDEA.
   User: Siya Yu
