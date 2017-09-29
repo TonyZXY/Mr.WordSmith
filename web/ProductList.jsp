@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 <%@ page import="view.ProductPicProductListPage" %>
 <%@ page import="dto.User" %><%--
-=======
-<%@ page import="model.ProductPicProductListPage" %>
-<%--
->>>>>>> 25e7d8e3480f1c4a7630d928e1be759a8058d159
   Created by IntelliJ IDEA.
   User: Siya Yu
   Date: 10/9/17
