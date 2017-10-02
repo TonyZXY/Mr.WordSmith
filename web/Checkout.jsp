@@ -224,18 +224,18 @@
 <!-- Footer -->
 <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
     <div class="w3-row w3-section"style="background-color:#F8F8F8">
-        <center><div class="w3-third w3-container w3-large" style="height:250px; background-color:#F8F8F8"><br>
+        <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
             <a href="#aboutus"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
             <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
             <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
             <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
         </div></center>
-        <div class="w3-third w3-center w3-large " style="height:250px; background-color:#F8F8F8"><br>
+        <div class="w3-third w3-center w3-large " style="height:250px"><br>
             <a href="#contact"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
             <p style="font-size:70%"> FAQ</p>
             <p style="font-size:70%"> Privacy policy</p>
         </div>
-        <div class="w3-third w3-center w3-large" style="height:250px; background-color:#F8F8F8">
+        <div class="w3-third w3-center w3-large" style="height:250px">
             <br><br>
             <i class="w3-xlarge fa fa-facebook-official"></i><br>
             <i class="w3-xlarge fa fa-pinterest-p"></i><br>
@@ -244,6 +244,7 @@
             <i class="w3-xlarge fa fa-linkedin"></i>
         </div>
     </div>
+</div>
 
 
 <!-- Active Accordions -->
