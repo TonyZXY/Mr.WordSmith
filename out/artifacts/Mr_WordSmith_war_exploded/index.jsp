@@ -1,4 +1,5 @@
-<%@ page import="model.ProductPicHomePage" %>
+<%@ page import="dto.User" %>
+<%@ page import="view.ProductPicHomePage" %>
 <%--
   Created by IntelliJ IDEA.
   User: tonyzheng
@@ -367,7 +368,7 @@
         var i;
         var x = document.getElementsByClassName("mySlides");
         for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+            x[i].style.display = "none"\
         }
         myIndex++;
         if (myIndex > x.length) {

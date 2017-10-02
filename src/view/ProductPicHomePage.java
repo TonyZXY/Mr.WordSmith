@@ -1,4 +1,4 @@
-package model;
+package view;
 
 import database.DatabaseGetProduct;
 import dto.Product;
