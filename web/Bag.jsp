@@ -212,9 +212,6 @@
 
         function update() {
 
-            var total = calcSubTotal('Prod1') + calcSubTotal('Prod2') + calcSubTotal('Prod3');
-
-            var quantity = parseInt(document.getElementById('Prod1Qty').value) + parseInt(document.getElementById('Prod2Qty').value) + parseInt(document.getElementById('Prod3Qty').value);
             var total = calcSubTotal('Prod1')+calcSubTotal('Prod2');
 
             var quantity = parseInt(document.getElementById('Prod1Qty').value)+parseInt(document.getElementById('Prod2Qty').value);
