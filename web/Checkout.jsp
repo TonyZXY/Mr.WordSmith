@@ -1,3 +1,4 @@
+<%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: tonyzheng
@@ -20,6 +21,10 @@
                                 </div>
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    User user = null;
+    user = (User)session.getAttribute("user");
+%>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -74,17 +79,23 @@
         <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right">
-        <a href="#login" class="w3-button w3-block"><b>Account</b></a>
+        <%
+            String link;
+            if (user != null) {
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+        %>
+        <%=link%>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
-    <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-    <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+
+</div>
 </div>
 <!-- function bar -->
 <div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
@@ -106,16 +117,14 @@
         </div>
     </div>
 </div>
-
 <!-- title -->
 <div class="w3-row w3-container">
     <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16"  style="margin-left: 100px">Checkout</span>
+        <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Checkout</span>
     </div>
-</div>
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
-</div>
+    <!-- line-->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px"></div>
+
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
@@ -237,11 +246,12 @@
         </div>
         <div class="w3-third w3-center w3-large" style="height:250px">
             <br><br>
-            <i class="w3-xlarge fa fa-facebook-official"></i><br>
-            <i class="w3-xlarge fa fa-pinterest-p"></i><br>
-            <i class="w3-xlarge fa fa-twitter"></i><br>
-            <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
-            <i class="w3-xlarge fa fa-linkedin"></i>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+            <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
+
+
         </div>
     </div>
 </div>
