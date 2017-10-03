@@ -1,6 +1,6 @@
-<%@ page import="dto.User" %>
 <%@ page import="database.DatabaseGetBagItems" %>
 <%@ page import="dto.Item" %>
+<%@ page import="dto.User" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: tonyzheng
@@ -45,13 +45,15 @@
 
 <!-- Links (sit on top) -->
 
-<div class="w3-row w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <div class="w3-col m3"><a style="margin-left: 80px;margin-top: 50px"><strong>MR.</strong>wordsmith</a></div>
+<div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
+    <div class="w3-third">
+        <img src="4.0/images/icon.jpg" style="width: 15%;margin-left: 10%">
+    </div>
 
-    <div class="w3-col m6"><p></p></div>
-    <div class="w3-col m3">
-        <div class="w3-right s3"><a href="Bag.jsp" class="w3-button w3-block"><strong>Bag</strong></a></div>
-        <div class="w3-right s3">
+    <div class="w3-right">
+        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
+    </div>
+    <div class="w3-right">
             <%
                 String link;
                 if (user != null) {
@@ -103,142 +105,118 @@
     <!-- line-->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px">
     </div>
+
        <div class="w3-row">
 
-           <div class="w3-col w3-container" style="margin-top: 80px; width: 10%"><p></p></div>
-           <div class="w3-col w3-container" style="margin-top: 50px; width: 80%">
-               <!-- line-->
-            <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 10px;margin-bottom: 10px">
-            </div>
-               <!-- 1/3 form-->
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <a><strong>Product Details</strong></a>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <a><strong>Quantity</strong></a>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <a><strong>Total Price</strong></a>
-            </div>
-            <!-- line-->
-            <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 30px;margin-bottom: 10px">
-            </div>
-            <!-- 1/3 details -->
-
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 20px">
-                <img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg"
-                     style="width:50%; margin-top: 20px" class="w3-hover-opacity" type="button">
-                <div class="w3-button" style="margin-left: 10px"> remove</div>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <ul class="w3-ul w3-border" style="width: 20%; margin-top: 25px">
-                    <li>
-                        <a type="text">1</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <ul class="w3-ul" style="width: 20%; margin-top: 25px">
-                    <li>
-                        <a type="text">$49.95</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- line-->
-            <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 30px;margin-bottom: 10px">
-            </div>
+           <div class="w3-col w3-container" style="margin-top: 30px; width: 90%;align: center">
 
             <!-- 1/3 details -->
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 20px">
-                <img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg"
-                     style="width:50%; margin-top: 20px" class="w3-hover-opacity" type="button">
-                <div class="w3-button" style="margin-left: 10px"> remove</div>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <ul class="w3-ul w3-border" style="width: 20%; margin-top: 25px">
-                    <li>
-                        <a type="text">1</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <ul class="w3-ul" style="width: 20%; margin-top: 25px">
-                    <li>
-                        <a type="text">$49.95</a>
-                    </li>
-                </ul>
-            </div>
+               <form action="" method="post">
 
-              <!-- line-->
-            <div class="w3-panel w3-border-bottom w3-border-gray" style="margin-top: 50px;margin-bottom: 10px">
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <a><strong></strong></a>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <a><strong></strong></a>
-            </div>
-            <div class="w3-col w3-container" style="width: 33.3%; margin-bottom: 10px">
-                <div class="w3-large" style="margin-top: 20px"><strong>Substotal</strong><a style="margin-left: 20px">$99.9</a>
-                </div>
-            </div>
+                   <table cellspacing="5" cellpadding="5" align="center"><br>
+                       <tr><th> Product </th><th>Description</th><th> Price </th><th> Quantity </th><th> Subtotal </th></tr>
+                       <tr></tr>
+                       <tr height="45%">
+                           <td width="25%"align="center"><img src="https://78.media.tumblr.com/69bcfcbbfc74ae89d1c2ff9281298a17/tumblr_ox6yb7jq3c1tmp67mo1_1280.png"width="65%"></td>
+                           <td style="font-size: small" width="25%"align="left">
+                               Name:<input type="hidden" name="Prod1name" id="Prod1name" value="Prod1name"/><br>
+                               Product code:<input type="hidden" name="Prod1name" id="Prod1code" value="Prod1code"/><br>
+                               Shade:<input type="hidden" name="Prod1shade" id="Prod1shade" value="Prod1shade"/></td>
+                           <td width="15%"align="center" style="font-size: small">10<input style="font-size: small"type="hidden"name="Prod1Price" id="Prod1Price" value="10"/></td>
+                           <td width="15%"align="center"><input style="font-size: small"id="Prod1Qty" name="Prod1Qty" type="number" value="0" min="0" max="10" onchange="update()"/></td>
+                           <td width="15%"align="center"><p id="Prod1SubTol" style="font-size: small">0</p><input id="Prod1Tol" name="Prod1Tol" type="hidden"value="0"/></td>
+                           <td width="10%" ><input class="w3-button"value="REMOVE"style="font-size: small" ></td>
+                       </tr>
+
+                       <tr height="45%">
+                           <td width="25%"height ="35%" align="center"><img src=""></td>
+                           <td style="font-size: small" width="25%" align="left">
+                               Name:<input type="hidden" name="Prod2name" id="Prod2name" value="Prod2name"/><br>
+                               Product code:<input type="hidden" name="Prod2name" id="Prod2code" value="Prod2code"/><br>
+                               Shade:<input type="hidden" name="Prod2shade" id="Prod2shade" value="Prod2shade"/></td>
+                           <td width="15%"  align="center"><input style="font-size: small"type="hidden" name="Prod2Price" id="Prod2Price" value=""/></td>
+                           <td width="15%"align="center"><input style="font-size: small"id="Prod2Qty" name="Prod2Qty" type="number" value="0" min="0" max="10" onchange="update()"/></td>
+                           <td width="15%" align="center"><p style="font-size: small"id="Prod2SubTol">0</p><input id="Prod2Tol" name="Prod2Tol" type="hidden"value="0"/></td>
+                           <td width="10%"><input class="w3-button"value="REMOVE"style="font-size: small" ></td>
+                       </tr>
+                       <tr>
+                           <th></th><th></th><th>Total</th>
+                       <th><p id="Qty" >0</p><input id="TolQty" name="Tol" type="hidden" value="0"/></th>
+                       <th><p id="Price" >0</p><input id="TolPrice" name="TolPrice" type="hidden" value="0" /></th>
+                       </tr>
+
+                       <tr>
+                           <td></td><td></td><td></td><td></td><td></td><td><button align="right"class="w3-btn w3-black" type="submit">Checkout</button></td>
+                       </tr>
+                   </table>
+
+               </form>
+
+           </div>
+       </div><br><br><br><br><br>
+
+    <script type="text/javascript">
+
+        var calcSubTotal = function(ProdName) {
+
+            var quantity = parseInt(document.getElementById(ProdName+'Qty').value);
+
+            if(quantity > 0){
+
+                var price = parseInt(document.getElementById(ProdName+'Price').value);
+                var subtotal = price * quantity;
+
+                document.getElementById(ProdName+"SubTol").innerHTML = subtotal;
+                document.getElementById(ProdName+"Tol").value = subtotal;
+
+                return subtotal;
+            }
+            document.getElementById(ProdName+"SubTol").innerHTML = 0;
+            document.getElementById(ProdName+"Tol").value = 0;
+
+            return 0;
+        }
+
+        function update(){
+
+            var total = calcSubTotal('Prod1')+calcSubTotal('Prod2')+calcSubTotal('Prod3');
+
+            var quantity = parseInt(document.getElementById('Prod1Qty').value)+parseInt(document.getElementById('Prod2Qty').value)+parseInt(document.getElementById('Prod3Qty').value);
+
+            document.getElementById("Qty").innerHTML = quantity;
+            document.getElementById("TolQty").value = quantity;
 
 
-        </div>
 
-    </div>
-
-
-</div>
-
-<br><br><br><br><br>
-
-
-<!-- line -->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
-</div>
-
+            document.getElementById("Price").innerHTML = total;
+            document.getElementById("TolPrice").value = total;
+        }
+    </script>
 
 <!-- Footer -->
-<footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
-    <div class="w3-row-padding">
-        <div class="w3-col s4">
-            <img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980"
-                 class="w3-round" alt="Norway">
-            <h4>Mr.wordSmith</h4>
+<div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
+    <div class="w3-row w3-section"style="background-color:#F8F8F8">
+        <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
+            <a href="#aboutus"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
+            <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
+            <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
+            <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
+        </div></center>
+        <div class="w3-third w3-center w3-large " style="height:250px"><br>
+            <a href="#contact"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
+            <p style="font-size:70%"> FAQ</p>
+            <p style="font-size:70%"> Privacy policy</p>
         </div>
-
-        <div class="w3-col s4">
-            <h4><strong>About</strong></h4>
-            <p><a href="AboutUs.jsp">About us</a></p>
-            <p><a href="#">Shipping & Delivery</a></p>
-
-            <p><a href="#">Help</a></p>
-
-            <br><br><br>
-            <i class="fa fa-facebook-official w3-hover-opacity w3-large" style="margin-right: 10px"></i>
-            <i class="fa fa-instagram w3-hover-opacity w3-large" style="margin-right: 10px"></i>
-            <i class="fa fa-twitter w3-hover-opacity w3-large" style="margin-right: 10px"></i>
-            <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
-            <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-             <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-
-
-        </div>
-
-        <div class="w3-col s4 w3-justify">
-            <h4><strong>Company</strong></h4>
-            <p><i class="fa fa-fw fa-map-marker"></i> Mr.wordSmith</p>
-            <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-            <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
-            <br>
-            <h4><strong>We accept</strong></h4>
-            <p><i class="fa fa-fw fa-cc-paypal"></i> Paypal</p>
-            <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
-
+        <div class="w3-third w3-center w3-large" style="height:250px">
+            <br><br>
+            <i class="w3-xlarge fa fa-facebook-official"></i><br>
+            <i class="w3-xlarge fa fa-pinterest-p"></i><br>
+            <i class="w3-xlarge fa fa-twitter"></i><br>
+            <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
+            <i class="w3-xlarge fa fa-linkedin"></i>
         </div>
     </div>
-</footer>
+</div>
 
 
 </body>
