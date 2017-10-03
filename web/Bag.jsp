@@ -182,9 +182,6 @@
 
             document.getElementById("Qty").innerHTML = quantity;
             document.getElementById("TolQty").value = quantity;
-
-
-ß
             document.getElementById("Price").innerHTML = total;
             document.getElementById("TolPrice").value = total;
         }
