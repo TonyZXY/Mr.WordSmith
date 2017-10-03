@@ -1,3 +1,4 @@
+<%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: keqinzheng
@@ -6,6 +7,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    User user = null;
+    user = (User)session.getAttribute("user");
+%>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -33,7 +38,6 @@
 <body>
 
 <!-- Links (sit on top) -->
-
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
         <img src="4.0/images/icon.jpg" style="width: 15%;margin-left: 10%">
@@ -43,17 +47,23 @@
         <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right">
-        <a href="#login" class="w3-button w3-block"><b>Account</b></a>
+        <%
+            String link;
+            if (user != null) {
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+        %>
+        <%=link%>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
-    <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-    <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+
+</div>
 </div>
 
 
@@ -94,38 +104,36 @@
 
 <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
     <img src="https://78.media.tumblr.com/437298bdc84379ff011473ce2b64d0e6/tumblr_owzhpf0Pqo1tmp67mo1_1280.jpg" style="max-width: 35%;align:center"><br><br><br>
-    <h2 align="center">BRANDING</h2><br>
+    <h2 align="center">Branding</h2><br>
     <p align="left" style="font-family:Times">Your branding is the difference between success and failure Your branding is just as important as your product (if not more so)!In an increasingly saturated marketplace, it is more important than ever to have a unique and engaging presence. Strategic design and branding can help cut through the clutter and showcase your product in the best possible light.</p>
     <br>
-    <h2 align="center">GRAPHIC DESIGN</h2><br>
+    <h2 align="center">Graphic design</h2><br>
     <p align="left" style="font-family:Times">Not just a skill but an art form.This is how you visually communicate with your audience, your brand cannot function without excellent graphic design!We meticulously navigate every stage of the creative process to ensure we produce premium quality outputs that pinpoint the very essence of your brand. It's an exciting process, just ask us!</p>
 </div>
 
 <!-- Footer -->
 <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
     <div class="w3-row w3-section"style="background-color:#F8F8F8">
-        <center><div class="w3-third w3-container w3-large" style="height:250px; background-color:#F8F8F8"><br>
+        <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
             <a href="#aboutus"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
             <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
             <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
             <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
         </div></center>
-        <div class="w3-third w3-center w3-large " style="height:250px; background-color:#F8F8F8"><br>
+        <div class="w3-third w3-center w3-large " style="height:250px"><br>
             <a href="#contact"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
             <p style="font-size:70%"> FAQ</p>
             <p style="font-size:70%"> Privacy policy</p>
         </div>
-        <div class="w3-third w3-center w3-large" style="height:250px; background-color:#F8F8F8">
+        <div class="w3-third w3-center w3-large" style="height:250px">
             <br><br>
-            <i class="w3-xlarge fa fa-facebook-official"></i><br>
-            <i class="w3-xlarge fa fa-pinterest-p"></i><br>
-            <i class="w3-xlarge fa fa-twitter"></i><br>
-            <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
-            <i class="w3-xlarge fa fa-linkedin"></i>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+            <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
         </div>
     </div>
 </div>
-
 
 
 

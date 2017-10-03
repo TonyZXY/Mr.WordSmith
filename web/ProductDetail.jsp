@@ -1,5 +1,7 @@
 <%@ page import="database.DatabaseGetProduct" %>
 <%@ page import="dto.Product" %>
+<%@ page import="dto.User" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Siya Yu
@@ -10,8 +12,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String string = request.getParameter("pid");
-
     Product product = DatabaseGetProduct.getProduct(string);
+%>
+<%  User user=null;
+    user = (User)session.getAttribute("user");
 %>
 <html>
 
@@ -49,6 +53,7 @@
 <body>
 
 <!-- Links (sit on top) -->
+
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
         <img src="4.0/images/icon.jpg" style="width: 15%;margin-left: 10%">
@@ -58,17 +63,23 @@
         <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right">
-        <a href="#login" class="w3-button w3-block"><b>Account</b></a>
+        <%
+            String link;
+            if (user != null) {
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+        %>
+        <%=link%>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i>
-    <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-    <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+
+</div>
 </div>
 <!-- function bar -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:10px">
@@ -146,11 +157,11 @@
                 <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px">
                 </div>
                 <div class="w3-row-padding">
-                    <p>Quantity    <input type="number"input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10"/></p>
+                    <p>Quantity<input type="number"input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10"/></p>
                     <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
                     <a class="w3-container" style="width: 60%"><p></p></a>
                 </div><br><br>
-                <button type="button" style="width: 30%; margin-left: 150px" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black w3-large">Add To Bag</button>
+                <button type="button" style="width:30%; margin-left:0px" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black">Add To Bag</button>
             </div>
 
         </div>
@@ -160,41 +171,43 @@
     <div class="w3-padding w3-black" style="margin-top: 80px;max-width:100%">
         <center><a class="w3-large">Product Description</a></center>
     </div>
-    <div class="w3-container" style="margin-left: 100px;margin-top: 50px;margin-bottom: 50px">
+    <div class="w3-container" style="margin-left: 100px;margin-top: 50px;margin-bottom: 50px" >
 
-        <h3><strong><%=product.getProductName()%></strong></h3><br>
-        <p>Premium quality </p>
-        <p>Calendar year</p>
-        <p>Off-white 250 GSM paper</p>
-        <p>Lined</p>
-        <p>Size: A5</p>
-        <p>Shade: Black</p>
+        <p style="font-size: small"><strong><%=product.getProductName()%></strong></p><br>
+        <p style="font-size: small">Premium quality </p>
+        <p style="font-size: small">Calendar year</p>
+        <p style="font-size: small">Off-white 250 GSM paper</p>
+        <p style="font-size: small">Lined</p>
+        <p style="font-size: small">Size: A5</p>
+        <p style="font-size: small">Shade: Black</p>
     </div>
     <br><br><br>
 
     <!-- Footer -->
     <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
         <div class="w3-row w3-section"style="background-color:#F8F8F8">
-            <center><div class="w3-third w3-container w3-large" style="height:250px; background-color:#F8F8F8"><br>
+            <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
                 <a href="#aboutus"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
                 <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
                 <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
                 <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
             </div></center>
-            <div class="w3-third w3-center w3-large " style="height:250px; background-color:#F8F8F8"><br>
+            <div class="w3-third w3-center w3-large " style="height:250px"><br>
                 <a href="#contact"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
                 <p style="font-size:70%"> FAQ</p>
                 <p style="font-size:70%"> Privacy policy</p>
             </div>
-            <div class="w3-third w3-center w3-large" style="height:250px; background-color:#F8F8F8">
+            <div class="w3-third w3-center w3-large" style="height:250px">
                 <br><br>
-                <i class="w3-xlarge fa fa-facebook-official"></i><br>
-                <i class="w3-xlarge fa fa-pinterest-p"></i><br>
-                <i class="w3-xlarge fa fa-twitter"></i><br>
-                <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
-                <i class="w3-xlarge fa fa-linkedin"></i>
+                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
+
+
             </div>
         </div>
+    </div>
 
 
 
