@@ -15,6 +15,7 @@
     user = (User)session.getAttribute("user");
 %>
 
+
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -128,8 +129,6 @@
 
     </div>
 </div>
-
-
 <!-- Slideshow -->
 <div class="w3-content w3-display-container">
 
@@ -137,16 +136,12 @@
         <img src="images/Ad 2.jpg" style="width:100%">
 
     </div>
-
     <div class="w3-display-container mySlides">
         <img src="images/Ad 3.jpg" style="width:100%">
-
     </div>
     <div class="w3-display-container mySlides">
         <img src="images/Ad 7.jpg" style="width:100%">
-
     </div>
-
 
     <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
     <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
@@ -219,7 +214,6 @@
 
             <%--</ul>--%>
         <%--</div>--%>
-
     </div>
 </div>
 
@@ -278,10 +272,6 @@
         </div>
     </div>
 </div><br><br>
-
-
-
-
 
 
 <!-- Footer -->
