@@ -32,6 +32,7 @@ public class DatabaseGetProduct {
     }
 
 
+
     public static ArrayList getProductList(){
         ArrayList<Product> products = new ArrayList<>();
         try{

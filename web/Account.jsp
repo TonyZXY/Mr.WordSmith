@@ -1,5 +1,6 @@
 <%@ page import="dto.User" %>
 <%@ page import="view.EventViewAccountPage" %>
+<%@ page import="view.OrderListViewAccountPage" %>
 <%--
   Created by IntelliJ IDEA.
   User: Yuqi Qiu / 3537646
@@ -259,46 +260,47 @@
                             <td style="font-size: small" width="30%">Address it could be very long and please test this line before used</td>
                             <td style="font-size: small" width="35%">$5000</td>
                         </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o2summary"
-                                                                            id="o2summary" value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o2number" id="o2number"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o2time" id="o2time"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="35%"><input type="hidden" name="o2total" id="o2total"
-                                                                            value=""/></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o3summary"
-                                                                            id="o3summary" value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o3number" id="o3number"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o3time" id="o3time"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="35%"><input type="hidden" name="o3total" id="o3total"
-                                                                            value=""/></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o4summary"
-                                                                            id="o4summary" value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o4number" id="o4number"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o4time" id="o4time"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="35%"><input type="hidden" name="o4total" id="o4total"
-                                                                            value=""/></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o5summary"
-                                                                            id="o5summary" value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o5number" id="o5number"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o5time" id="o5time"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="35%"><input type="hidden" name="o5total" id="o5total"
-                                                                            value=""/></td>
-                        </tr>
+                        <%=OrderListViewAccountPage.getOrderListView(user)%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o2summary"--%>
+                                                                            <%--id="o2summary" value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o2number" id="o2number"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o2time" id="o2time"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="35%"><input type="hidden" name="o2total" id="o2total"--%>
+                                                                            <%--value=""/></td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o3summary"--%>
+                                                                            <%--id="o3summary" value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o3number" id="o3number"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o3time" id="o3time"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="35%"><input type="hidden" name="o3total" id="o3total"--%>
+                                                                            <%--value=""/></td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o4summary"--%>
+                                                                            <%--id="o4summary" value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o4number" id="o4number"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o4time" id="o4time"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="35%"><input type="hidden" name="o4total" id="o4total"--%>
+                                                                            <%--value=""/></td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o5summary"--%>
+                                                                            <%--id="o5summary" value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o5number" id="o5number"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="o5time" id="o5time"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="35%"><input type="hidden" name="o5total" id="o5total"--%>
+                                                                            <%--value=""/></td>--%>
+                        <%--</tr>--%>
                     </table>
                 </form>
             </div>
