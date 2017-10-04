@@ -217,10 +217,7 @@
             var quantity = parseInt(document.getElementById('Prod1Qty').value)+parseInt(document.getElementById('Prod2Qty').value);
             document.getElementById("Qty").innerHTML = quantity;
             document.getElementById("TolQty").value = quantity;
-<<<<<<< HEAD
-=======
-
->>>>>>> c24c1a479f25fdec142bbb0197296913ff901fab
+            
             document.getElementById("Price").innerHTML = total;
             document.getElementById("TolPrice").value = total;
         }
