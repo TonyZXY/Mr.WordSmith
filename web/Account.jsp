@@ -111,25 +111,34 @@
             <form action="" method="">
                 <table cellspacing="2" cellpadding="1">
                     <tr>
-                        <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden" name="firstname" id="firstname"
-                                                                        value=""/></td>
+                        <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden"
+                                                                                                name="firstname"
+                                                                                                id="firstname"
+                                                                                                value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden" name="lastname" id="lastname"
-                                                                       value=""/></td>
+                        <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden"
+                                                                                              name="lastname"
+                                                                                              id="lastname"
+                                                                                              value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden" name="dob" id="dob" value=""/>
+                        <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden"
+                                                                                                  name="dob" id="dob"
+                                                                                                  value=""/>
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email" id="email" value=""/></td>
+                        <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email"
+                                                                                       id="email" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone" id="phone" value=""/></td>
+                        <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone"
+                                                                                       id="phone" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address" id="address" value=""/>
+                        <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address"
+                                                                                           id="address" value=""/>
                         </td>
                     </tr>
                 </table>
@@ -139,7 +148,7 @@
 
         <div id="My profile" class="w3-container name" style="display:none">
             <div class="w3-col w3-container" style="width:70%">
-                <form class="w3-container" style="font-size: small"><br>
+                <form class="w3-container" style="font-size: small" action="UpdateAccountDetails" method="post"><br>
                     <h5 style="text-align:left"><b>My Profile</b></h5>
                     <p> Edit your details here</p><br>
                     <p>
@@ -147,19 +156,19 @@
                         <input class="w3-input" type="text" name="FN"></p>
                     <p>
                         <label>Last Name</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="LN"></p>
                     <p>
                         <label>Date Of Birth</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" placeholder="DD-MM" type="text" name="DoB"></p>
                     <p>
                         <label>Email</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="EM"></p>
                     <p>
                         <label>Phone</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="PN"></p>
                     <p>
                         <label>Address</label>
-                        <input class="w3-input" type="text"></p>
+                        <input class="w3-input" type="text" name="AD"></p>
                     <p>
                         <button class="w3-btn w3-black" type="submit">Save</button>
                     </p>
