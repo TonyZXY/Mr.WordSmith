@@ -1,4 +1,5 @@
 <%@ page import="dto.User" %>
+<%@ page import="view.EventViewAccountPage" %>
 <%--
   Created by IntelliJ IDEA.
   User: Yuqi Qiu / 3537646
@@ -161,9 +162,6 @@
                         <label>Date Of Birth</label>
                         <input class="w3-input" placeholder="DD-MM" type="text" name="DoB"></p>
                     <p>
-                        <label>Email</label>
-                        <input class="w3-input" type="text" name="EM"></p>
-                    <p>
                         <label>Phone</label>
                         <input class="w3-input" type="text" name="PN"></p>
                     <p>
@@ -188,52 +186,52 @@
 
                         <th>Date</th>
                         <th>Event</th>
-                        <tr>
-                            <td style="font-size: small" width="25%"><input type="hidden" name="e1date" id="e1date"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="40"><input type="hidden" name=id="e1event" value=""/>
-                            </td>
-                            <td><input class="w3-button" width="10%" value="REMOVE"></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="e2date" id="e2date"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="40%"><input type="hidden" name=id="e2event" value=""/>
-                            </td>
-                            <td><input class="w3-button" width="10%" value="REMOVE"></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="e3date" id="e3date"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="40%"><input type="hidden" name=id="e3event"
-                                                                            value="e3event"/></td>
-                            <td><input class="w3-button" width="10%" value="REMOVE"></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="e4date" id="e4date"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="40%"><input type="hidden" name=id="e4event" value=""/>
-                            </td>
-                            <td><input class="w3-button" width="10%" value="REMOVE"></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="e5date" id="e5date"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="40%"><input type="hidden" name=id="e5event" value=""/>
-                            </td>
-                            <td><input class="w3-button" width="20%" value="REMOVE"></td>
-                        </tr>
+                        <%=EventViewAccountPage.eventView(user)%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="25%">Date</td>--%>
+                            <%--<td style="font-size: small" width="40">Message</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="e2date" id="e2date"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="40%"><input type="hidden" name=id="e2event" value=""/>--%>
+                            <%--</td>--%>
+                            <%--<td><input class="w3-button" width="10%" value="REMOVE"></td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="e3date" id="e3date"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="40%"><input type="hidden" name=id="e3event"--%>
+                                                                            <%--value="e3event"/></td>--%>
+                            <%--<td><input class="w3-button" width="10%" value="REMOVE"></td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="e4date" id="e4date"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="40%"><input type="hidden" name=id="e4event" value=""/>--%>
+                            <%--</td>--%>
+                            <%--<td><input class="w3-button" width="10%" value="REMOVE"></td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%"><input type="hidden" name="e5date" id="e5date"--%>
+                                                                            <%--value=""/></td>--%>
+                            <%--<td style="font-size: small" width="40%"><input type="hidden" name=id="e5event" value=""/>--%>
+                            <%--</td>--%>
+                            <%--<td><input class="w3-button" width="20%" value="REMOVE"></td>--%>
+                        <%--</tr>--%>
                     </table>
                     <br>
-                    <p style="font-size: small">
-                        <label>Date</label>
-                        <input class="w3-input" type="text" placeholder="DD/MM"></p>
-                    <p style="font-size: small">
-                        <label>Event</label>
-                        <input class="w3-input" type="text"></p>
-                    <p>
-                        <button class="w3-btn w3-black">Add</button>
-                    </p>
+                    <form action="" method="post">
+                        <p style="font-size: small">
+                            <label>Date</label>
+                            <input class="w3-input" type="text" placeholder="DD/MM"></p>
+                        <p style="font-size: small">
+                            <label>Event</label>
+                            <input class="w3-input" type="text"></p>
+                        <p>
+                            <button class="w3-btn w3-black">Add</button>
+                        </p>
+                    </form>
                 </form>
             </div>
         </div>
@@ -251,19 +249,15 @@
 
                     <table cellspacing="10" cellpadding="5" style="font-size: small">
 
-                        <th>Summary</th>
-                        <th>Order number</th>
+                        <th>Order ID</th>
                         <th>Order Placed</th>
+                        <th>Order Address</th>
                         <th>Total</th>
                         <tr>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o1summary"
-                                                                            id="o1summary" value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o1number" id="o1number"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="30%"><input type="hidden" name="o1time" id="o1time"
-                                                                            value=""/></td>
-                            <td style="font-size: small" width="35%"><input type="hidden" name="o1total" id="o1total"
-                                                                            value=""/></td>
+                            <td style="font-size: small" width="30%">ID</td>
+                            <td style="font-size: small" width="30%">Time</td>
+                            <td style="font-size: small" width="30%">Address it could be very long and please test this line before used</td>
+                            <td style="font-size: small" width="35%">$5000</td>
                         </tr>
                         <tr>
                             <td style="font-size: small" width="30%"><input type="hidden" name="o2summary"
