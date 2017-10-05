@@ -61,7 +61,7 @@
         <h5 class="w3-bar-item w3-center"><Strong>Admin</strong></h5>
         <div class="w3-panel w3-border-bottom w3-border-light-grey" style="margin-top: 10px;margin-bottom: 10px">
         </div>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'Sales Report')" >Sales Report</button>
+        <a href="AboutUs.jsp" class="w3-bar-item w3-btn tablink w3-center">Sales Report</a>
         <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'Stock control')" >Stock control</button>
 
     </div>
