@@ -11,10 +11,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     User user = null;
+    ArrayList<Item> bag = new ArrayList<>();
     user = (User) session.getAttribute("user");
     if (user != null) {
-        ArrayList<Item> bag = DatabaseGetBagItems.getBag(user.getUserID());
+        bag = DatabaseGetBagItems.getBag(user.getUserID());
+        session.setAttribute("bagItem", bag);
     }
+    session.setAttribute("Redirect", null);
+
+
 %>
 <html lang="en-US">
 <head>
@@ -65,10 +70,16 @@
     <br>
     <br>
     <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+            class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+            style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right"
+                                                            style="margin-left: 10px" target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+       target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                           style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i
+            class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
 </div>
 </div>
@@ -103,8 +114,22 @@
     <!-- line-->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px"></div>
 
+        <%
+        String view;
+        if(user ==null){
+            session.setAttribute("Redirect","Bag.jsp");
+            view = "";
+        }
+        else {
+            view = "";
+        }
 
+        %>
 
+        <%=view%>
+
+    <%--TODO
+        need to do a check login function, when no user object, display ask user to login, else display bag items--%>
     <div class="w3-row">
         <div class="w3-col w3-container" style="margin-top: 30px; width: 90%;align: center">
 
@@ -127,7 +152,6 @@
                         <td style="font-size: small" width="25%" align="left">
                             Name:<input type="hidden" name="Prod1name" id="Prod1name" value="Prod1name"/><br>
                             Product code:<input type="hidden" name="Prod1name" id="Prod1code" value="Prod1code"/><br>
-                            Shade:<input type="hidden" name="Prod1shade" id="Prod1shade" value="Prod1shade"/></td>
                         <td width="15%" align="center" style="font-size: small">10<input style="font-size: small"
                                                                                          type="hidden" name="Prod1Price"
                                                                                          id="Prod1Price" value="10"/>
@@ -145,7 +169,6 @@
                         <td style="font-size: small" width="25%" align="left">
                             Name:<input type="hidden" name="Prod2name" id="Prod2name" value="Prod2name"/><br>
                             Product code:<input type="hidden" name="Prod2name" id="Prod2code" value="Prod2code"/><br>
-                            Shade:<input type="hidden" name="Prod2shade" id="Prod2shade" value="Prod2shade"/></td>
                         <td width="15%" align="center"><input style="font-size: small" type="hidden" name="Prod2Price"
                                                               id="Prod2Price" value=""/></td>
                         <td width="15%" align="center"><input style="font-size: small" id="Prod2Qty" name="Prod2Qty"
@@ -205,9 +228,9 @@
 
         function update() {
 
-            var total = calcSubTotal('Prod1')+calcSubTotal('Prod2');
+            var total = calcSubTotal('Prod1') + calcSubTotal('Prod2');
 
-            var quantity = parseInt(document.getElementById('Prod1Qty').value)+parseInt(document.getElementById('Prod2Qty').value);
+            var quantity = parseInt(document.getElementById('Prod1Qty').value) + parseInt(document.getElementById('Prod2Qty').value);
             document.getElementById("Qty").innerHTML = quantity;
             document.getElementById("TolQty").value = quantity;
 
@@ -218,25 +241,37 @@
 
     <!-- Footer -->
 
-<!-- Footer -->
-    <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
-        <div class="w3-row w3-section"style="background-color:#F8F8F8">
-            <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
-                <a href="AboutUs.jsp"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
-                <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
-                <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
-                <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
-            </div></center>
+    <!-- Footer -->
+    <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
+        <div class="w3-row w3-section" style="background-color:#F8F8F8">
+            <center>
+                <div class="w3-third w3-container w3-large" style="height:250px"><br>
+                    <a href="AboutUs.jsp"><i>
+                        <p2 style="font-family:Times"><b>About Us</b></p2>
+                    </i></a><br><br>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO
+                        Box 210, Abbotsford, VIC 3067</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61
+                        0425752986</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i>
+                        customercare@mrwordsmith.com.au</p>
+                </div>
+            </center>
             <div class="w3-third w3-center w3-large " style="height:250px"><br>
-                <a href="Contact.jsp"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
+                <a href="Contact.jsp"><i>
+                    <p2 style="font-family:Times"><b>Contact Us</b></p2>
+                </i></a><br><br>
                 <p style="font-size:70%"> FAQ</p>
                 <p style="font-size:70%"> Privacy policy</p>
             </div>
             <div class="w3-third w3-center w3-large" style="height:250px">
                 <br><br>
-                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                        class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                   target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                   target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                 <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
             </div>
         </div>
