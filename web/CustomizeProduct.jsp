@@ -61,6 +61,66 @@
         padding: 0;
         margin-top: 6px
     }
+
+    .options {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        vertical-align: middle;
+    }
+    label {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 10px;
+        line-height: 36px;
+        cursor: pointer;
+    }
+    label::before {
+        content: " ";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #3c3c3c;
+        border-radius: 4px;
+        z-index: -1;
+    }
+    input[type="radio"] + label::before {
+        border-radius: 18px;
+    }
+    /* Checked */
+    input[type="checkbox"]:checked + label,
+    input[type="radio"]:checked + label {
+        padding-left: 10px;
+        color: #fff;
+    }
+    input[type="checkbox"]:checked + label::before,
+    input[type="radio"]:checked + label::before {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #3c3c3c;
+    }
+    /* Transition */
+    label,
+    label::before {
+        -webkit-transition: .25s all ease;
+        transition: .25s all ease;
+    }
+
 </style>
 
 <body>
@@ -171,176 +231,89 @@
                         </div>
                     </div>
                     <!-- line -->
-                    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px">
-                    </div>
+                    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
                     <div class="w3-row-padding">
                         <p>Quantity    <input type="number"input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10"/></p>
                         <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
                         <a class="w3-container" style="width: 60%"><p></p></a>
                     </div>
-                    <button type="button" style="width:30%; margin-left:0px" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-black">Add To Bag</button>
+                    <center><button class="w3-button w3-black w3-border w3-border-gray w3-round-large" style="width: 30%" onclick="document.getElementById('subscribe').style.display='block'"><center>Add to bag</center></button></center>
+
                 </div>
 
             </div>
 
-        </div><br>
+        </div><br><br>
         <!-- Right Column -->
         <div class="w3-two">
 
             <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-                <center><h4 class="w3-text-grey w3-padding-16" style ="text-align: center"> Custom your layout  </h4></center>
+                <center><h4 class="w3-text-grey w3-padding-16">Custom your layout</h4></center>
+                <center>
+                    <div class="w3-container"><center>
 
+                        <div class="options">
+                            <form>
+                                <div class="w3-half"align="center"><input id="option1" type="radio" value="weeklylayouta" name="layout" style="text-align: left;width: 50%" checked><label for="option1">Weekly Layout A</label></div>
+                                <div class="w3-half"align="center"><input id="option2" type="radio" value="weeklylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option2">Weekly Layout B</label></div>
+                                <div class="w3-half"align="center"><input id="option3" type="radio" value="weeklylayoutc" name="layout" style="text-align: left;width: 50%"><label for="option3">Weekly Layout C</label></div>
+                                <div class="w3-half"align="center"><input id="option4" type="radio" value="weeklylayoutd" name="layout" style="text-align: left;width: 50%"><label for="option4">Weekly Layout D</label></div>
+                                <div class="w3-half"align="center"><input id="option5" type="radio" value="dailylayouta" name="layout" style="text-align: left;width: 50%"><label for="option5">Daily Layout A</label></div>
+                                <div class="w3-half"align="center"><input id="option6" type="radio" value="dailylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option6">Daily Layout B</label></div>
+                            </form>
+                        </div>
+
+                    </center></div><br>
+                    <hr>
+
+                    <div class="w3-container w3-white"><center>
+                        <h4 class="w3-text-grey w3-padding-16"><center>Custom your display elements</center></h4><br>
+
+                        <div class="w3-container">
+                            <div class="options" style="align-content:center;text-align: left">
+                                <form><center>
+                                    <div class="w3-half"align="center"><input id="optionA" type="checkbox"  name="layout" ><label for="optionA">Lined</label></div>
+                                    <div class="w3-half"align="center"><input id="optionB" type="checkbox"  name="layout" ><label for="optionB">Non-lined</label></div>
+                                    <div class="w3-half"align="center"><input id="optionC" type="checkbox"  name="layout" ><label for="optionC">Page number</label></div>
+                                    <div class="w3-half"align="center"><input id="optionD" type="checkbox"  name="layout" ><label for="optionD">Public holiday </label></div>
+                                    <div class="w3-half"align="center"><input id="optionJ" type="checkbox"  name="layout" ><label for="optionJ">Local holiday </label></div>
+                                    <div class="w3-half"align="center"><input id="optionE" type="checkbox"  name="layout" ><label for="optionE">Moon cycle</label></div>
+                                    <div class="w3-half"align="center"><input id="optionF" type="checkbox"  name="layout" ><label for="optionF">Sunrise,Sunset</label></div>
+                                    <div class="w3-half"align="center"><input id="optionG" type="checkbox"  name="layout" ><label for="optionG">Page of password</label></div>
+                                    <div class="w3-half"align="center"><input id="optionH" type="checkbox"  name="layout" ><label for="optionH">Page of extra note</label></div>
+                                    <div class="w3-half"align="center"><input id="optionI" type="checkbox"  name="layout" ><label for="optionI">Page of Social media handles</label></div>
+                                </center></form>
+                            </div>
+                        </div>
+                    </center></div>
+                </form><br><br>
+
+                <br><hr>
                 <div class="w3-container">
+                    <center><button class="w3-button w3-white w3-border w3-border-gray w3-round-large"  onclick="document.getElementById('id01').style.display='block'">Preview</button>
+                    </center></div>
+                <!-- modal preview-->
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:800px">
 
-                        <div class="w3-container">
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Weekly Layout A
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Weekly Layout B
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Weekly Layout C
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Weekly Layout D
-                            </button><br><br>
+                        <div class="w3-center"><br>
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
 
-                        </div><div><p> <br> </p></div><br>
-
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Daily Layout A
-                            </button><br><br>
                         </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Daily Layout B
-                            </button><br><br><br>
-                        </div><div><p></p></div><center></center>
+
+                        <form class="w3-container" action="/action_page.php">
+                            <div class="w3-section">
+                                <img src="2.0/images/Daily View - Layout 1 (with all options).jpg" style="width: 100%">
+                                <br>
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
-
-                <div class="w3-container w3-white">
-                    <center><h4 class="w3-text-grey w3-padding-16" style ="text-align: center"> Custom your display element  </h4></center>
-
-                    <div class="w3-container">
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Lined
-                            </button><br>
-                        </div>
-                        <div class="w3-half" align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Non-lined
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Page number
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Moon cycle
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Public holiday
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Sunrise,Sunset
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Page of To-do list
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Page of personal info
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Page of password
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Page of extra note
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">Page of social media handles
-                            </button>
-                        </div>
-                        <div class="w3-half"align="center">
-                            <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                    style="width: 50%">None
-                            </button><br><br>
-                        </div><br><br>
-
-                        <div class="w3-container">
-
-                            <center><button class="w3-btn w3-black" style="width: 10%;margin-right: 30px"><center>Preview</center></button>
-
-                        </div>
-                        <br><br><br>
+                </center><br><br>
 
 
-                </div>
+                <hr>
 
                 <!-- End Right Column -->
             </div>

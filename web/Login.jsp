@@ -1,3 +1,4 @@
+<%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: tonyzheng
@@ -6,6 +7,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    User user = null;
+    user = (User)session.getAttribute("user");
+%>
+
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -68,18 +75,23 @@
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right">
-        <a href="Login.jsp" class="w3-button w3-block"><b>Login / Register</b></a>
+        <%
+            String link;
+            if (user != null) {
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
+        %>
+        <%=link%>
     </div>
     <br>
     <br>
     <br>
-    <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
-       style="margin-left: 10px; margin-right: 20px "></i>
-    <i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <!-- <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>  -->
-    <i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
-    <i class="fa fa-linkedin w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+
+</div>
 </div>
 
 
@@ -127,11 +139,11 @@
                 <div class="w3-col w3-container">
                     <form class="w3-container" action="Login" method="post">
                         <br><br><br><br>
-                        <h3>
-                            <center>Have an account already?</center>
+                        <h3 style="font-family: Times">
+                            <i><b><center>Have an account already?</center></b></i>
                         </h3>
-                        <h5>
-                            <center>Happy to see you!</center>
+                        <h5 style="font-family: Times">
+                            <i><center>Happy to see you!</center></i>
                         </h5>
                         <br><br>
                         <p>
@@ -171,12 +183,12 @@
             <div class="w3-col w3-container">
                 <form class="w3-container" action="Register" method="post">
                     <br><br><br><br>
-                    <h3>
-                        <center>Don't have an account</center>
-                    </h3>
-                    <h5>
-                        <center>Join us!</center>
-                    </h5>
+                    <h3 style="font-family: Times">
+                    <i><b><center>Don't have an account?</center></b></i>
+                        </h3>
+                    <h5 style="font-family: Times">
+                        <i><center>Join us!</center></i>
+                    </h5 >
                     <br><br>
                     <p>
                         <label>Firstname</label>
@@ -253,33 +265,29 @@
 </div>
 
 
-<!-- line -->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px">
-</div>
-
-
 <!-- Footer -->
-<div class="w3-row w3-section">
-    <center>
-        <div class="w3-third w3-container w3-white w3-large" style="height:250px">
-            <h2>ABOUT US</h2>
-            <p><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
-            <p><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
-            <p><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
+<div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
+    <div class="w3-row w3-section"style="background-color:#F8F8F8">
+        <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
+            <a href="AboutUs.jsp"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
+            <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
+            <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
+            <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
+        </div></center>
+        <div class="w3-third w3-center w3-large " style="height:250px"><br>
+            <a href="Contact.jsp"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
+            <p style="font-size:70%"> FAQ</p>
+            <p style="font-size:70%"> Privacy policy</p>
         </div>
-    </center>
-    <div class="w3-third w3-center w3-large w3-white" style="height:250px">
-        <a href="Contact.jsp"><h2>CONTACT US</h2></a>
-        <p>- FAQ</p>
-        <p>- Privacy policy</p>
-    </div>
-    <div class="w3-third w3-center w3-large" style="height:250px">
-        <br><br>
-        <i class="w3-xlarge fa fa-facebook-official"></i><br>
-        <i class="w3-xlarge fa fa-pinterest-p"></i><br>
-        <i class="w3-xlarge fa fa-twitter"></i><br>
-        <!-- <i class="w3-xlarge fa fa-flickr"></i><br> -->
-        <i class="w3-xlarge fa fa-linkedin"></i>
+        <div class="w3-third w3-center w3-large" style="height:250px">
+            <br><br>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+            <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
+
+
+        </div>
     </div>
 </div>
 
