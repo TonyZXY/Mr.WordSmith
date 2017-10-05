@@ -19,9 +19,9 @@ public class DatabaseGetBagItems {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM bagtables WHERE bag_id ='"+userID+"';");
             while (resultSet.next()){
-                items.add(new Item(DatabaseGetProduct.getProduct("MWE001"),resultSet.getInt("MWE001")));
-                items.add(new Item(DatabaseGetProduct.getProduct("MWE002"),resultSet.getInt("MWE002")));
-                items.add(new Item(DatabaseGetProduct.getProduct("MWE003"),resultSet.getInt("MWE003")));
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE001"),resultSet.getInt("pro_1")));
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE002"),resultSet.getInt("pro_2")));
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE003"),resultSet.getInt("pro_3")));
 //                items.add(new Item(DatabaseGetProduct.getProduct("MWE004"),
 //                        CustomizedProduct.getNumberFromID(resultSet.getString("cus_pro"))));
             }
