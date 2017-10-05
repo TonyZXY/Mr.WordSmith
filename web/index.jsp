@@ -1,5 +1,6 @@
 <%@ page import="dto.User" %>
 <%@ page import="view.ProductPicHomePage" %>
+<%@ page import="view.SubViewHomePage" %>
 <%--
   Created by IntelliJ IDEA.
   User: tonyzheng
@@ -119,30 +120,40 @@
 </div>
 
 <!-- subscribe -->
-<div class="w3-bar-item" style="max-width:100%;margin-top:15px" align="center">
-    <div class="w3-row w3-large">
-        <center>
-            <div class="w3-col " style="width:50%">
-                <i><b><p></p></b></i>
-            </div>
-        </center>
-        <form action="Sub" method="post">
-            <div class="w3-col" style="width:25%">
-                <input class="w3-input w3-border w3-round" style="height: 80%" name="email" type="text"
-                       placeholder="Email Address">
-            </div>
-            <div class="w3-col" style="width:10%">
-                <center>
-                    <button class="w3-btn w3-black" type="submit">Subscribe</button>
-                </center>
-            </div>
-        </form>
-        <br><br>
-        <b><i><p style="font-family:Times" align="center">- Get a 15%-off on the 1st order by joining our mailing list!
-            - </p></i></b>
+<%
+    String view;
+    if(user == null){
+    view = SubViewHomePage.view();
+}else {
+        view = "";
+    }
+%>
+<%=view%>
 
-    </div>
-</div>
+<%--<div class="w3-bar-item" style="max-width:100%;margin-top:15px" align="center">--%>
+    <%--<div class="w3-row w3-large">--%>
+        <%--<center>--%>
+            <%--<div class="w3-col " style="width:50%">--%>
+                <%--<i><b><p></p></b></i>--%>
+            <%--</div>--%>
+        <%--</center>--%>
+        <%--<form action="Sub" method="post">--%>
+            <%--<div class="w3-col" style="width:25%">--%>
+                <%--<input class="w3-input w3-border w3-round" style="height: 80%" name="email" type="text"--%>
+                       <%--placeholder="Email Address">--%>
+            <%--</div>--%>
+            <%--<div class="w3-col" style="width:10%">--%>
+                <%--<center>--%>
+                    <%--<button class="w3-btn w3-black" type="submit">Subscribe</button>--%>
+                <%--</center>--%>
+            <%--</div>--%>
+        <%--</form>--%>
+        <%--<br><br>--%>
+        <%--<b><i><p style="font-family:Times" align="center">- Get a 15%-off on the 1st order by joining our mailing list!--%>
+            <%--- </p></i></b>--%>
+
+    <%--</div>--%>
+<%--</div>--%>
 <!-- Slideshow -->
 <div class="w3-content w3-display-container">
 
@@ -339,7 +350,7 @@
     <div class="w3-row w3-section" style="background-color:#F8F8F8">
         <center>
             <div class="w3-third w3-container w3-large" style="height:250px"><br>
-                <a href="#aboutus"><i>
+                <a href="AboutUs.jsp"><i>
                     <p2 style="font-family:Times"><b>About Us</b></p2>
                 </i></a><br><br>
                 <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box
