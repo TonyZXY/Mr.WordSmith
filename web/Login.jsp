@@ -186,7 +186,19 @@
                         <input class="w3-input" type="text" name="LastName" required="required"></p>
                     <p>
                         <label>Email</label>
-                        <input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">
+                        <%
+                            String Email;
+                            if(session.getAttribute("EmailInput")!=null){
+                                Email = "<input class=\"w3-input\" type=\"text\" name=\"Email\" value=\""+
+                                        session.getAttribute("EmailInput")+"\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                            }else {
+                                Email = "<input class=\"w3-input\" type=\"text\" name=\"Email\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                            }
+                            session.removeAttribute("EmailInput");
+                        %>
+                        <%=Email%>
+                        <%--<input class="w3-input" type="text" name="Email" value="" required="required" pattern="[^ @]*@[^ @]*">--%>
+                        <%--<input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">--%>
                     </p>
                     <p>
                         <label>Address</label>
