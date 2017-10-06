@@ -3,8 +3,10 @@ package database;
 import dto.Event;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 
 public class DatabaseInsertNewEvent {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
@@ -14,8 +16,9 @@ public class DatabaseInsertNewEvent {
             int eventID = 10000001;
             ResultSet resultSet = connection.createStatement().executeQuery("SELECT max(reminder_id) FROM reminder_list;");
             if (resultSet.next()) {
-                eventID = resultSet.getInt("reminder_id") + 1;
+                eventID = resultSet.getInt(1) + 1;
             }
+
 
             String query = "INSERT INTO reminder_list (reminder_id,userid,time,message) VALUES (?,?,?,?)";
 
@@ -27,6 +30,7 @@ public class DatabaseInsertNewEvent {
 
             statement.execute();
 
+            System.out.println("Statement");
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -20,9 +20,12 @@ public class AddNewEventServlet extends HttpServlet {
         String EventTime = request.getParameter("time");
         String message = request.getParameter("message");
         event.setDate(EventTime);
+        System.out.println(EventTime);
         event.setMessage(message);
+        System.out.println(message);
 
         DatabaseInsertNewEvent.addNewEvent(userID,event);
+        System.out.println("Servlet sent to database");
 
         response.sendRedirect("Account.jsp");
     }
