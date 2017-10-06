@@ -28,6 +28,7 @@ public class DatabaseGetBagItems {
         }catch (Exception e){
             e.printStackTrace();
         }
+
         return items;
     }
 }

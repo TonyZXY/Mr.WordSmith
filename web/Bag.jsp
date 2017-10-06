@@ -17,7 +17,7 @@
         bag = DatabaseGetBagItems.getBag(user.getUserID());
         session.setAttribute("bagItem", bag);
     }
-    session.setAttribute("Redirect", null);
+    session.removeAttribute("Redirect");
 
 
 %>
@@ -134,8 +134,7 @@
         <div class="w3-col w3-container" style="margin-top: 30px; width: 90%;align: center">
 
             <!-- 1/3 details -->
-            <form action="" method="post">
-
+            <form name="Update" action="" method="post">
                 <table cellspacing="5" cellpadding="5" align="center"><br>
                     <tr>
                         <th> Product</th>
@@ -150,31 +149,36 @@
                                 src="https://78.media.tumblr.com/69bcfcbbfc74ae89d1c2ff9281298a17/tumblr_ox6yb7jq3c1tmp67mo1_1280.png"
                                 width="65%"></td>
                         <td style="font-size: small" width="25%" align="left">
-                            Name:<input type="hidden" name="Prod1name" id="Prod1name" value="Prod1name"/><br>
-                            Product code:<input type="hidden" name="Prod1name" id="Prod1code" value="Prod1code"/><br>
-                        <td width="15%" align="center" style="font-size: small">10<input style="font-size: small"
+                            Name:<%=bag.get(1).getProduct().getProductName()%><input type="hidden" name="Prod1name"
+                                                                                     id="Prod1name"
+                                                                                     value="Prod1name"/><br>
+                            Product code:<%=bag.get(1).getProduct().getProductID()%><input type="hidden"
+                                                                                           name="Prod1name"
+                                                                                           id="Prod1code"
+                                                                                           value="Prod1code"/><br>
+                        <td width="15%" align="center" style="font-size: small">$ <%=bag.get(1).getProduct().getPrice()%><input style="font-size: small"
                                                                                          type="hidden" name="Prod1Price"
                                                                                          id="Prod1Price" value="10"/>
                         </td>
-                        <td width="15%" align="center"><input style="font-size: small" id="Prod1Qty" name="Prod1Qty"
+                        <td width="15%" align="center"><%=bag.get(1).getNumber()%><input style="font-size: small" id="Prod1Qty" name="Prod1Qty"
                                                               type="number" value="0" min="0" max="10"
-                                                              onchange="update()"/></td>
-                        <td width="15%" align="center"><p id="Prod1SubTol" style="font-size: small">0</p><input
+                                                              /></td>
+                        <td width="15%" align="center"><p id="Prod1SubTol" style="font-size: small">product total price</p><input
                                 id="Prod1Tol" name="Prod1Tol" type="hidden" value="0"/></td>
-                        <td width="10%"><input class="w3-button" value="REMOVE" style="font-size: small"></td>
+                        <td width="10%"><input type="hidden" name="productID" value=<%=bag.get(1).getProduct().getProductID()%>><button class="w3-button" formaction="RemoveBagItem" formmethod="post" style="font-size: small" type="submit">REMOVE</button></form></td>
                     </tr>
 
                     <tr height="45%">
                         <td width="25%" height="35%" align="center"><img src=""></td>
                         <td style="font-size: small" width="25%" align="left">
-                            Name:<input type="hidden" name="Prod2name" id="Prod2name" value="Prod2name"/><br>
-                            Product code:<input type="hidden" name="Prod2name" id="Prod2code" value="Prod2code"/><br>
-                        <td width="15%" align="center"><input style="font-size: small" type="hidden" name="Prod2Price"
+                            Name:product 2<input type="hidden" name="Prod2name" id="Prod2name" value="Prod2name"/><br>
+                            Product code: product 2<input type="hidden" name="Prod2name" id="Prod2code" value="Prod2code"/><br>
+                        <td width="15%" align="center"> product 2 price<input style="font-size: small" type="hidden" name="Prod2Price"
                                                               id="Prod2Price" value=""/></td>
-                        <td width="15%" align="center"><input style="font-size: small" id="Prod2Qty" name="Prod2Qty"
+                        <td width="15%" align="center"> product 2 quantity<input style="font-size: small" id="Prod2Qty" name="Prod2Qty"
                                                               type="number" value="0" min="0" max="10"
-                                                              onchange="update()"/></td>
-                        <td width="15%" align="center"><p style="font-size: small" id="Prod2SubTol">0</p><input
+                                                              /></td>
+                        <td width="15%" align="center">product total price<p style="font-size: small" id="Prod2SubTol">0</p><input
                                 id="Prod2Tol" name="Prod2Tol" type="hidden" value="0"/></td>
                         <td width="10%"><input class="w3-button" value="REMOVE" style="font-size: small"></td>
                     </tr>
