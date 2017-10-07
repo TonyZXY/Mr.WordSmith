@@ -22,8 +22,8 @@ public class DatabaseGetBagItems {
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE001"),resultSet.getInt("MWE001")));
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE002"),resultSet.getInt("MWE002")));
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE003"),resultSet.getInt("MWE003")));
-//                items.add(new Item(DatabaseGetProduct.getProduct("MWE004"),
-//                        CustomizedProduct.getNumberFromID(resultSet.getString("cus_pro"))));
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE004"),
+                        CustomizedProduct.getNumberFromIDs(resultSet.getString("MWE004"))));
             }
         }catch (Exception e){
             e.printStackTrace();

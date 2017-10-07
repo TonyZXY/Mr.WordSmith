@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class CustomizedProduct {
-    private static ArrayList<String> customizedID = new ArrayList<>();
-    public static int getNumberFromID(String string){
+    public static int getNumberFromIDs(String string){
+        ArrayList<String> customizedID = new ArrayList<>();
         StringTokenizer st = new StringTokenizer(string,",");
         String s;
         while ((s = st.nextToken()) !=null){

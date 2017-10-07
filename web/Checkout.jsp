@@ -143,28 +143,28 @@
                 <div class="w3-row-padding" >
                     <div class="w3-half">
                         <label>First Name</label>
-                        <input class="w3-input w3-border" type="text" >
+                        <input class="w3-input w3-border" type="text" name="FN" >
                     </div>
                     <div class="w3-half">
                         <label>Last Name</label>
-                        <input class="w3-input w3-border" type="text" >
+                        <input class="w3-input w3-border" type="text" name="LN" >
                     </div>
                 </div><br>
                 <div class="w3-row-padding">
                     <div class="w3-half">
                         <label>Contact Phone</label>
-                        <input class="w3-input w3-border" type="text" >
+                        <input class="w3-input w3-border" type="text" name="PN" >
                     </div>
                     <div class="w3-half">
                         <label>Postcode</label>
-                        <input class="w3-input w3-border" type="text" >
+                        <input class="w3-input w3-border" type="text" name="PC" >
                     </div>
                 </div><br>
 
                 <div class="w3-row-padding">
                     <div class="w3-half">
                     <label>Shipping Address</label>
-                    <input class="w3-input w3-border" type="text" >
+                    <input class="w3-input w3-border" type="text" name="SA" >
                     </div>
 
                 </div>
