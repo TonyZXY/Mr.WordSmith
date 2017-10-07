@@ -17,6 +17,7 @@ public class DatabaseGetBagItems {
         ArrayList<Item> items = new ArrayList<>();
         try {
             Statement statement = connection.createStatement();
+<<<<<<< HEAD
             ResultSet resultSet = statement.executeQuery("SELECT * FROM bagtables WHERE bag_id ='" + userID + "';");
             while (resultSet.next()) {
 
@@ -25,6 +26,15 @@ public class DatabaseGetBagItems {
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE003"), resultSet.getInt("MWE003")));
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE004"),
                         CustomizedProduct.getNumberFromIDs(resultSet.getString("MWE004"))));
+=======
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM bagtables WHERE bag_id ='"+userID+"';");
+            while (resultSet.next()){
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE001"),resultSet.getInt("MWE001")));
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE002"),resultSet.getInt("MWE002")));
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE003"),resultSet.getInt("MWE003")));
+//                items.add(new Item(DatabaseGetProduct.getProduct("MWE004"),
+//                        CustomizedProduct.getNumberFromID(resultSet.getString("cus_pro"))));
+>>>>>>> parent of ba31e67... make changes
             }
         } catch (Exception e) {
             e.printStackTrace();
