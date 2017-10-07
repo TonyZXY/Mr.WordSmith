@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Order {
     private int orderID;
-    private ArrayList<Item> orderList = new ArrayList<>();
+    private ArrayList<Item> orderList;
     private String payment;
     private double discount;
     private String shippingTime;
