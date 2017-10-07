@@ -32,9 +32,14 @@ public class DatabaseGetBagItems {
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE001"),resultSet.getInt("MWE001")));
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE002"),resultSet.getInt("MWE002")));
                 items.add(new Item(DatabaseGetProduct.getProduct("MWE003"),resultSet.getInt("MWE003")));
+<<<<<<< HEAD
 //                items.add(new Item(DatabaseGetProduct.getProduct("MWE004"),
 //                        CustomizedProduct.getNumberFromID(resultSet.getString("cus_pro"))));
 >>>>>>> parent of ba31e67... make changes
+=======
+                items.add(new Item(DatabaseGetProduct.getProduct("MWE004"),
+                        CustomizedProduct.getNumberFromIDs(resultSet.getString("MWE004"))));
+>>>>>>> parent of e71a67d... Merge branch 'master' of https://github.com/TonyZXY/Mr.WordSmith
             }
         } catch (Exception e) {
             e.printStackTrace();
