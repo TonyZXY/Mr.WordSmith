@@ -115,37 +115,39 @@
     <!-- line-->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px"></div>
 
-        <%
-        String view;
-        if(user ==null){
-            session.setAttribute("Redirect","Bag.jsp");
-            view = "";
-        }
-        else {
-            view = "";
-        }
 
-        %>
-
-        <%=view%>
 
     <%--TODO
         need to do a check login function, when no user object, display ask user to login, else display bag items--%>
     <div class="w3-row">
         <div class="w3-col w3-container" style="margin-top: 30px; width: 90%;align: center">
 
+            <%
+                String view;
+                if(user ==null){
+                    session.setAttribute("Redirect","Bag.jsp");
+                    view = "Please <a href=\"Login.jsp\">Login</a> before checking shopping bag";
+                }
+                else {
+                    view = BagProductView.getBagView(bag);
+                }
+
+            %>
+
+            <%=view%>
+
             <!-- 1/3 details -->
-            <form name="Update" method="post">
-                <table cellspacing="5" cellpadding="5" align="center"><br>
-                    <tr>
-                        <th> Product</th>
-                        <th>Description</th>
-                        <th> Price</th>
-                        <th> Quantity</th>
-                        <th> Subtotal</th>
-                    </tr>
-                    <tr></tr>
-                    <%=BagProductView.getBagView(bag)%>
+            <%--<form name="Update" method="post">--%>
+                <%--<table cellspacing="5" cellpadding="5" align="center"><br>--%>
+                    <%--<tr>--%>
+                        <%--<th> Product</th>--%>
+                        <%--<th>Description</th>--%>
+                        <%--<th> Price</th>--%>
+                        <%--<th> Quantity</th>--%>
+                        <%--<th> Subtotal</th>--%>
+                    <%--</tr>--%>
+                    <%--<tr></tr>--%>
+                    <%--<%=BagProductView.getBagView(bag)%>--%>
                     <%--<tr height="45%">--%>
                         <%--<td width="25%" align="center"><img--%>
                                 <%--src="https://78.media.tumblr.com/69bcfcbbfc74ae89d1c2ff9281298a17/tumblr_ox6yb7jq3c1tmp67mo1_1280.png"--%>
@@ -192,21 +194,21 @@
                         <%--<th><p id="Price">0</p><input id="TolPrice" name="TolPrice" type="hidden" value="0"/></th>--%>
                     <%--</tr>--%>
 
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <button align="right" class="w3-btn w3-black" formaction="UpdateBagItem" formmethod="post" type="submit">Update</button>
-                        </td>
-                        <td>
-                            <button align="right" class="w3-btn w3-black" formaction="CheckOut" formmethod="post" type="submit">Checkout</button>
-                        </td>
-                    </tr>
-                </table>
+                    <%--<tr>--%>
+                        <%--<td></td>--%>
+                        <%--<td></td>--%>
+                        <%--<td></td>--%>
+                        <%--<td></td>--%>
+                        <%--<td>--%>
+                            <%--<button align="right" class="w3-btn w3-black" formaction="UpdateBagItem" formmethod="post" type="submit">Update</button>--%>
+                        <%--</td>--%>
+                        <%--<td>--%>
+                            <%--<button align="right" class="w3-btn w3-black" formaction="CheckOut" formmethod="post" type="submit">Checkout</button>--%>
+                        <%--</td>--%>
+                    <%--</tr>--%>
+                <%--</table>--%>
 
-            </form>
+            <%--</form>--%>
 
         </div>
     </div>
