@@ -1,6 +1,8 @@
 package model;
 
+import database.DatabaseProduct;
 import dto.CustomizedProduct;
+import dto.User;
 
 public class CustomizeProductAddition {
     public static CustomizedProduct AddNewCustomizeProduct(String[] strings){
@@ -57,9 +59,14 @@ public class CustomizeProductAddition {
                 case "14":
                     product.setOption14(true);
                     break;
-
             }
         }
         return product;
+    }
+
+    public static void customizeAdd(User user,String[] string){
+        CustomizedProduct customizedProduct = AddNewCustomizeProduct(string);
+
+        DatabaseProduct.AddCustomizeProductToBag(user,customizedProduct);
     }
 }
