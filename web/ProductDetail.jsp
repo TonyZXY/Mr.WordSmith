@@ -177,10 +177,22 @@
                         <a class="w3-container" style="width: 60%"><p></p></a>
                     </div>
                     <br><br>
-                    <button type="submit" style="width:30%; margin-left:0px"
-                            onclick="document.getElementById('subscribe').style.display='block'"
-                            class="w3-button w3-block w3-black">Add To Bag
-                    </button>
+                    <%
+                        String button ;
+                        if(user==null){
+                            button = "<button href=\"Login.jsp\" style=\"width:30%; margin-left:0px\"\n" +
+                                    "                            onclick=\"document.getElementById('subscribe').style.display='block'\"\n" +
+                                    "                            class=\"w3-button w3-block w3-black\">Add To Bag\n" +
+                                    "                    </button>";
+                            session.setAttribute("Redirect","ProductDetail.jsp?pid="+string);
+                        }else {
+                            button="<button type=\"submit\" style=\"width:30%; margin-left:0px\"\n" +
+                                    "                            onclick=\"document.getElementById('subscribe').style.display='block'\"\n" +
+                                    "                            class=\"w3-button w3-block w3-black\">Add To Bag\n" +
+                                    "                    </button>";
+                        }
+                    %>
+                    <%=button%>
                 </form>
             </div>
 
