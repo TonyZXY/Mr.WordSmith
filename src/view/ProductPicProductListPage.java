@@ -1,6 +1,6 @@
 package view;
 
-import database.DatabaseGetProduct;
+import database.DatabaseProduct;
 import dto.Product;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ public class ProductPicProductListPage {
 
     public static String getProductView() {
         String view = "";
-        ArrayList<Product> products = DatabaseGetProduct.getProductList();
+        ArrayList<Product> products = DatabaseProduct.getProductList();
 
         for (Product p : products) {
             if (!Objects.equals(p.getProductID(), "MWE004")) {

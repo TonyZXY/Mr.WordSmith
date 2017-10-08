@@ -1,6 +1,6 @@
 package view;
 
-import database.DatabaseGetOrderList;
+import database.DatabaseOrderList;
 import dto.Item;
 import dto.Order;
 import dto.User;
@@ -13,7 +13,7 @@ public class OrderListViewAccountPage {
 
     public static String getOrderListView(User user) {
         String view = "";
-        ArrayList<Order> orders = DatabaseGetOrderList.getOrderList(user);
+        ArrayList<Order> orders = DatabaseOrderList.getOrderList(user);
         DecimalFormat df = new DecimalFormat("0.00");
 
         for (Order order : orders

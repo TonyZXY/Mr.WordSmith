@@ -1,6 +1,6 @@
 package view;
 
-import database.DatabaseGetEvents;
+import database.DatabaseEvents;
 import dto.Event;
 import dto.User;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class EventViewAccountPage {
     public static String eventView(User user){
         String view = "";
-        ArrayList<Event> events = DatabaseGetEvents.getEvent(user);
+        ArrayList<Event> events = DatabaseEvents.getEvent(user);
         for (Event event:events) {
             view += "<tr>\n" +
                     "                            <td style=\"font-size: small\" width=\"25%\">"+event.getDate()+"</td>\n" +

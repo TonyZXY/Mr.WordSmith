@@ -1,6 +1,6 @@
 package servlet;
 
-import database.DatabaseUpdateBagItem;
+import database.DatabaseBagItems;
 import dto.User;
 
 import javax.servlet.ServletException;
@@ -17,7 +17,7 @@ public class RemoveBagItemServlet extends HttpServlet {
         System.out.println(productID);
         User user = (User) request.getSession().getAttribute("user");
 
-        DatabaseUpdateBagItem.updateBagItem(productID,0,user);
+        DatabaseBagItems.updateBagItem(productID,0,user);
 
 
         response.sendRedirect("Bag.jsp");

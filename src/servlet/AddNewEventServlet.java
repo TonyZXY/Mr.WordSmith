@@ -1,6 +1,6 @@
 package servlet;
 
-import database.DatabaseInsertNewEvent;
+import database.DatabaseEvents;
 import dto.Event;
 import dto.User;
 
@@ -24,7 +24,7 @@ public class AddNewEventServlet extends HttpServlet {
         event.setMessage(message);
         System.out.println(message);
 
-        DatabaseInsertNewEvent.addNewEvent(userID,event);
+        DatabaseEvents.addNewEvent(userID,event);
         System.out.println("Servlet sent to database");
 
         response.sendRedirect("Account.jsp");

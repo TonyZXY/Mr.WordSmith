@@ -1,16 +1,15 @@
 package view;
 
-import database.DatabaseGetProduct;
+import database.DatabaseProduct;
 import dto.Product;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class ProductPicHomePage {
 
     public static String getProducts() {
         String view = "";
-        ArrayList<Product> products = DatabaseGetProduct.getProductList();
+        ArrayList<Product> products = DatabaseProduct.getProductList();
 
 
         for (int i=0;i<3;i++) {

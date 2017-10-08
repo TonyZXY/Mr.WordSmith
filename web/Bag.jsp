@@ -1,4 +1,4 @@
-<%@ page import="database.DatabaseGetBagItems" %>
+<%@ page import="database.DatabaseBagItems" %>
 <%@ page import="dto.Item" %>
 <%@ page import="dto.User" %>
 <%@ page import="java.util.ArrayList" %>
@@ -15,7 +15,7 @@
     ArrayList<Item> bag = new ArrayList<>();
     user = (User) session.getAttribute("user");
     if (user != null) {
-        bag = DatabaseGetBagItems.getBag(user.getUserID());
+        bag = DatabaseBagItems.getBag(user.getUserID());
         session.setAttribute("bagItem", bag);
     }
     session.removeAttribute("Redirect");

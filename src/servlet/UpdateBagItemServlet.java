@@ -1,6 +1,6 @@
 package servlet;
 
-import database.DatabaseUpdateBagItem;
+import database.DatabaseBagItems;
 import dto.Item;
 import dto.User;
 
@@ -28,7 +28,7 @@ public class UpdateBagItemServlet extends HttpServlet {
             System.out.println(item.getNumber());
         }
 
-        DatabaseUpdateBagItem.updateBagItems(items,user);
+        DatabaseBagItems.updateBagItems(items,user);
 
 
         response.sendRedirect("Bag.jsp");

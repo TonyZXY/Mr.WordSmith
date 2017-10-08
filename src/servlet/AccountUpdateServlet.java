@@ -1,6 +1,6 @@
 package servlet;
 
-import database.DatabaseUpdateUserDetail;
+import database.DatabaseUser;
 import dto.User;
 
 import javax.servlet.ServletException;
@@ -48,7 +48,7 @@ public class AccountUpdateServlet extends HttpServlet {
 
         //@TODO
 
-        DatabaseUpdateUserDetail.updateUserDetail(user);
+        DatabaseUser.updateUserDetail(user);
 
         request.getSession().removeAttribute("user");
 

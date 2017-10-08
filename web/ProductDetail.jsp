@@ -1,4 +1,4 @@
-<%@ page import="database.DatabaseGetProduct" %>
+<%@ page import="database.DatabaseProduct" %>
 <%@ page import="dto.Product" %>
 <%@ page import="dto.User" %>
 
@@ -12,7 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String string = request.getParameter("pid");
-    Product product = DatabaseGetProduct.getProduct(string);
+    Product product = DatabaseProduct.getProduct(string);
 %>
 <% User user = null;
     user = (User) session.getAttribute("user");

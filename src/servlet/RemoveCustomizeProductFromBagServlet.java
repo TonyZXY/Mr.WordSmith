@@ -1,6 +1,6 @@
 package servlet;
 
-import database.DatabaseUpdateCustomizeProductBag;
+import database.DatabaseBagItems;
 import dto.User;
 
 import javax.servlet.ServletException;
@@ -16,7 +16,7 @@ public class RemoveCustomizeProductFromBagServlet extends HttpServlet {
         String id = request.getParameter("customizedID");
         User user = (User)request.getSession().getAttribute("user");
 
-        DatabaseUpdateCustomizeProductBag.RemoveCustomizedProduct(user,id);
+        DatabaseBagItems.RemoveCustomizedProduct(user,id);
 
         response.sendRedirect("Bag.jsp");
     }

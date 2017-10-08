@@ -1,7 +1,7 @@
 package model;
 
 
-import database.DatabaseGetUser;
+import database.DatabaseUser;
 import dto.User;
 
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class Login {
      * @return boolean that represent user login successful or not
      */
     public static boolean Authenticate(String username, String password) {
-        user = DatabaseGetUser.getUser(username);
+        user = DatabaseUser.getUser(username);
         System.out.println("user name got");
         System.out.println(user.getPassword());
         System.out.println(password);

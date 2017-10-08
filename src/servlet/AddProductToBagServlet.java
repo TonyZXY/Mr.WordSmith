@@ -1,6 +1,6 @@
 package servlet;
 
-import database.DatabaseAddBagItem;
+import database.DatabaseBagItems;
 import dto.User;
 
 import javax.servlet.ServletException;
@@ -26,7 +26,7 @@ public class AddProductToBagServlet extends HttpServlet {
             response.sendRedirect(link);
         } else {
 
-            DatabaseAddBagItem.AddBagItem(user, productID, Integer.valueOf(quantity));
+            DatabaseBagItems.AddBagItem(user, productID, Integer.valueOf(quantity));
 
             String link = "ProductDetail.jsp?pid=" + productID;
             response.sendRedirect(link);
