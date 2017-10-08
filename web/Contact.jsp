@@ -43,7 +43,7 @@
     </div>
 
     <div class="w3-right">
-        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
+        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
     <div class="w3-right">
         <%
@@ -76,7 +76,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#Blog" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>

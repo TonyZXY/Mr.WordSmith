@@ -78,7 +78,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#Blog" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
@@ -116,7 +116,7 @@
                         <tr>
                             <td width="25%" style="align: center"><img src="https://78.media.tumblr.com/74b2d410edd7fbd702c74918a47e51ef/tumblr_oxcab4OSWe1tmp67mo1_1280.jpg" style="width:60%;align:right" alt="Avatar"></td>
                             <td width="50%"style="text-align: left"><b><p> Use promo code to apply your student discount </p></b>
-                                <a herf="Blog article.jsp"><p style="font-size: small;text-align: left"> We offer a 20%-off for uni students,check out more details here </p></a>
+                                <a href="BlogArticle.jsp"><p style="font-size: small;text-align: left"> We offer a 20%-off for uni students,check out more details here </p></a>
                                 <p style="font-size: small;text-align: left">publish on</p></td>
 
                         </tr>

@@ -1,29 +1,19 @@
 <%@ page import="dto.User" %>
+<%@ page import="dto.Item" %>
+<%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 14/9/17
   Time: 3:10 PM
-  To change this template use File | Settings | File Templates.          <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-                            <center><h4 class="w3-text-grey w3-padding-16">- Step 1 -</h4></center>
-                            <div class="w3-container">
-                                <div class="w3-container">
-                                    <div class="w3-half">
-                                        <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                                style="width: 80%">Layout A
-                                        </button><br>
-                                    </div>
-                                    <div class="w3-half">
-                                        <button class="w3-button w3-white w3-border w3-border-gray w3-round-large"
-                                                style="width: 80%">Layout B
-                                        </button>
-                                    </div><div><p></p></div>
-                                </div>
+  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     User user = null;
-    user = (User)session.getAttribute("user");
+    user = (User) session.getAttribute("user");
+    ArrayList<Item> bag = (ArrayList<Item>) session.getAttribute("bagItem");
+
 %>
 <!doctype html>
 <html lang="en-US">
@@ -41,7 +31,7 @@
 
 
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-    <script>var __adobewebfontsappname__="dreamweaver"</script>
+    <script>var __adobewebfontsappname__ = "dreamweaver"</script>
     <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,10 +52,24 @@
     </script>
 </head>
 <style>
-    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-    .mySlides {display:none}
-    .w3-tag, .fa {cursor:pointer}
-    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    html, body, h1, h2, h3, h4 {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    .w3-tag, .fa {
+        cursor: pointer
+    }
+
+    .w3-tag {
+        height: 15px;
+        width: 15px;
+        padding: 0;
+        margin-top: 6px
+    }
 </style>
 <body>
 
@@ -90,12 +94,17 @@
     <br>
     <br>
     <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+            class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+            style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right"
+                                                            style="margin-left: 10px" target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+       target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                           style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i
+            class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
-</div>
 </div>
 <!-- function bar -->
 <div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
@@ -107,7 +116,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#Blog" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
@@ -125,153 +134,183 @@
     <!-- line-->
     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px"></div>
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-    <!-- The Grid -->
-    <div class="w3-row-padding">
-
-        <!-- Left Column -->
-        <div class="w3-half">
-
-            <!-- shipping details -->
-            <div class="w3-container">
-                <div class="w3-col w3-container"><p></p></div>
-                <h5><b>1. Shipping Details</b></h5>
-            </div><br>
+        <!-- The Grid -->
+        <div class="w3-row-padding">
             <form>
-                <div class="w3-row-padding" >
-                    <div class="w3-half">
-                        <label>First Name</label>
-                        <input class="w3-input w3-border" type="text" >
-                    </div>
-                    <div class="w3-half">
-                        <label>Last Name</label>
-                        <input class="w3-input w3-border" type="text" >
-                    </div>
-                </div><br>
-                <div class="w3-row-padding">
-                    <div class="w3-half">
-                        <label>Contact Phone</label>
-                        <input class="w3-input w3-border" type="text" >
-                    </div>
-                    <div class="w3-half">
-                        <label>Postcode</label>
-                        <input class="w3-input w3-border" type="text" >
-                    </div>
-                </div><br>
 
-                <div class="w3-row-padding">
-                    <div class="w3-half">
-                    <label>Shipping Address</label>
-                    <input class="w3-input w3-border" type="text" >
+                <!-- Left Column -->
+                <div class="w3-half">
+
+                    <!-- shipping details -->
+                    <div class="w3-container">
+                        <div class="w3-col w3-container"><p></p></div>
+                        <h5><b>1. Shipping Details</b></h5>
+                    </div>
+                    <br>
+
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>First Name</label>
+                            <input class="w3-input w3-border" type="text" name="FN">
+                        </div>
+                        <div class="w3-half">
+                            <label>Last Name</label>
+                            <input class="w3-input w3-border" type="text" name="LN">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Contact Phone</label>
+                            <input class="w3-input w3-border" type="text" name="PN">
+                        </div>
+                        <div class="w3-half">
+                            <label>Postcode</label>
+                            <input class="w3-input w3-border" type="text" name="postCode">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Shipping Address</label>
+                            <input class="w3-input w3-border" type="text" name="address">
+                        </div>
+
                     </div>
 
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                    <!-- End Left Column -->
                 </div>
-            </form><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-            <!-- End Left Column -->
+                <!-- Right Column -->
+                <div class="w3-half">
+                    <div class="w3-container">
+                        <div class="w3-col w3-container"><p></p></div>
+                        <h5><b>2. Payment Method</b></h5>
+                    </div>
+                    <br>
+                    <div class="w3-container">
+                        <!-- paypal and card-->
+                        <div class="w3-container w3-half">
+                            <a href="#paypal" onclick="myFunction('Demo1')" class="w3-bar-item w3-btn w3-block"><img
+                                    src="images/B1.jpg" style="width: 60%"></a>
+                            <div id="Demo1" class="w3-hide w3-container">
+                                <br>
+                                <a herf="#paypal" class="w3-btn w3-black" style="width: 50%;align:center"><b>Paypal</b></a>
+                                <button formaction="" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
+                                <br>
+                                <hr>
+                                <br>
+                                <div class="w3-row-padding">
+                                    <form>
+                                        <label>Card Number</label>
+                                        <input class="w3-input w3-border" type="text"><br>
+                                        <label>Expiry Date</label>
+                                        <input class="w3-input w3-border" type="text"><br>
+                                        <label>CVV</label>
+                                        <input class="w3-input w3-border" type="text"><br>
+                                        <label>Name on Card</label>
+                                        <input class="w3-input w3-border" type="text">
+                                    </form>
+                                    <br>
+                                    <center><a class="w3-btn w3-black" style="width: 50%"><b>Pay card</b></a></center>
+                                    <center><button formmethod="post" formaction="" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- afterpay -->
+                        <div class="w3-container w3-half">
+                            <a href="#afterpay" onclick="myFunction('Demo2')" class="w3-btn w3-bar-item w3-block"><img
+                                    src="images/B2.jpg" style="width: 60%"></a>
+                            <div id="Demo2" class="w3-hide w3-container">
+                                <br>
+                                <div class="w3-justify">
+                                    <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay
+                                        in 4
+                                        equal fortnightly payments with no interest.</b><br><br>Available to customers
+                                        in
+                                        Australia with a debit or credit card. When you click 'Place Order' with
+                                        Afterpay,
+                                        you will be redirected to Afterpay to complete your order.</p>
+                                </div>
+                                <br><br>
+                                <center><a class="w3-btn w3-black" style="width: 50%"><b>Afterpay</b></a></center>
+                                <center><button formaction="" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- End Right Column -->
+                </div>
+            </form>
+
+            <!-- End Grid -->
         </div>
 
-        <!-- Right Column -->
-        <div class="w3-half">
-            <div class="w3-container">
-                <div class="w3-col w3-container"><p></p></div>
-                <h5><b>2. Payment Method</b></h5>
-            </div><br>
-            <div class="w3-container">
-                <!-- paypal and card-->
-                <div class="w3-container w3-half">
-                    <a href="#paypal" onclick="myFunction('Demo1')" class="w3-bar-item w3-btn w3-block"><img src="../images/B1.jpg" style="width: 60%"></a>
-                    <div id="Demo1" class="w3-hide w3-container">
-                        <br>
-                        <a herf="#paypal" class="w3-btn w3-black"style="width: 50%;align:center"><b>Paypal</b></a>
-                        <br><hr><br>
-                        <div class="w3-row-padding">
-                            <form>
-                                <label>Card Number</label>
-                                <input class="w3-input w3-border" type="text" ><br>
-                                <label>Expiry Date</label>
-                                <input class="w3-input w3-border" type="text" ><br>
-                                <label>CVV</label>
-                                <input class="w3-input w3-border" type="text" ><br>
-                                <label>Name on Card</label>
-                                <input class="w3-input w3-border" type="text" >
-                            </form>
-                            <br>
-                            <center><a class="w3-btn w3-black" style="width: 50%"><b>Pay card</b></a></center>
+        <!-- End Page Container -->
+    </div>
 
-                        </div>
-                    </div>
+
+    <!-- Footer -->
+    <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
+        <div class="w3-row w3-section" style="background-color:#F8F8F8">
+            <center>
+                <div class="w3-third w3-container w3-large" style="height:250px"><br>
+                    <a href="AboutUs.jsp"><i>
+                        <p2 style="font-family:Times"><b>About Us</b></p2>
+                    </i></a><br><br>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO
+                        Box 210, Abbotsford, VIC 3067</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61
+                        0425752986</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i>
+                        customercare@mrwordsmith.com.au</p>
                 </div>
-                <!-- afterpay -->
-                <div class="w3-container w3-half">
-                    <a href="#afterpay"  onclick="myFunction('Demo2')" class="w3-btn w3-bar-item w3-block"><img src="../images/B2.jpg" style="width: 60%"></a>
-                    <div id="Demo2" class="w3-hide w3-container">
-                        <br>
-                        <div class="w3-justify">
-                            <p style="text-align: left"> <b>With Afterpay you can recieve your order now and pay in 4 equal fortnightly payments with no interest.</b><br><br>Available to customers in Australia with a debit or credit card. When you click 'Place Order' with Afterpay, you will be redirected to Afterpay to complete your order.</p>
-                        </div>
-                        <br><br>
-                        <center><a class="w3-btn w3-black" style="width: 50%"><b>Afterpay</b></a></center>
-                    </div>
-                </div>
+            </center>
+            <div class="w3-third w3-center w3-large " style="height:250px"><br>
+                <a href="Contact.jsp"><i>
+                    <p2 style="font-family:Times"><b>Contact Us</b></p2>
+                </i></a><br><br>
+                <p style="font-size:70%"> FAQ</p>
+                <p style="font-size:70%"> Privacy policy</p>
             </div>
+            <div class="w3-third w3-center w3-large" style="height:250px">
+                <br><br>
+                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                        class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                   target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                   target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
 
 
-            <!-- End Right Column -->
-        </div>
-
-        <!-- End Grid -->
-    </div>
-
-    <!-- End Page Container -->
-</div>
-
-
-
-<!-- Footer -->
-<div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
-    <div class="w3-row w3-section"style="background-color:#F8F8F8">
-        <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
-            <a href="AboutUs.jsp"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
-            <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
-            <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
-            <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
-        </div></center>
-        <div class="w3-third w3-center w3-large " style="height:250px"><br>
-            <a href="Contact.jsp"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
-            <p style="font-size:70%"> FAQ</p>
-            <p style="font-size:70%"> Privacy policy</p>
-        </div>
-        <div class="w3-third w3-center w3-large" style="height:250px">
-            <br><br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
-            <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
-
-
+            </div>
         </div>
     </div>
-</div>
 
 
-<!-- Active Accordions -->
-<script>
-    function myFunction(id) {
-        var x = document.getElementById(id);
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-            x.previousElementSibling.className =
-                x.previousElementSibling.className.replace("w3-black", "w3-red");
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-            x.previousElementSibling.className =
-                x.previousElementSibling.className.replace("w3-red", "w3-black");
+    <!-- Active Accordions -->
+    <script>
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace("w3-black", "w3-red");
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace("w3-red", "w3-black");
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>

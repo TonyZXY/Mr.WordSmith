@@ -12,6 +12,7 @@
 <%
     String string = request.getParameter("pid");
     Product product = DatabaseProduct.getProduct(string);
+    session.removeAttribute("Redirect");
 %>
 <%
     User user = null;
@@ -164,7 +165,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
@@ -188,7 +189,7 @@
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
     <!-- The Grid -->
-    <form action="AddCustomizeProductToBag" method="post">
+    <form >
     <div class="w3-row-padding">
         <div class="w3-row-padding" style="margin-top: 20px">
             <div class="w3-col w3-container" style="width: 20%"><p></p></div>
@@ -238,7 +239,16 @@
                         <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
                         <a class="w3-container" style="width: 60%"><p></p></a>
                     </div>
-                    <center><button class="w3-button w3-black w3-border w3-border-gray w3-round-large" type="submit" style="width: 30%" onclick="document.getElementById('subscribe').style.display='block'"><center>Add to bag</center></button></center>
+                    <%
+                        String addButton;
+                        if(user==null){
+                            addButton = "<center><a href = \"Login.jsp\" class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" style=\"width: 30%\"><center>Login</center></a></center>";
+                            session.setAttribute("Redirect","CustomizeProduct.jsp?pid=MWE004");
+                        }else {
+                            addButton = "<center><button class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button></center>";
+                        }
+                    %>
+                    <%=addButton%>
 
                 </div>
 
