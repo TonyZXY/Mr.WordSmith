@@ -1,5 +1,6 @@
 package dto;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 public class Order {
@@ -9,8 +10,35 @@ public class Order {
     private double discount;
     private String shippingTime;
     private String shippingAddress;
-    private String Time;
+    private Date Time;
     private String contactNumber;
+    private String firstName;
+    private String lastName;
+    private String postCode;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPostCode() {
+        return postCode;
+    }
+
+    public void setPostCode(String postCode) {
+        this.postCode = postCode;
+    }
 
     public String getPayment() {
         return payment;
@@ -44,11 +72,11 @@ public class Order {
         this.shippingAddress = shippingAddress;
     }
 
-    public String getTime() {
+    public Date getTime() {
         return Time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Date time) {
         Time = time;
     }
 
@@ -60,7 +88,7 @@ public class Order {
         this.contactNumber = contactNumber;
     }
 
-    public Order(int orderID, ArrayList<Item> orderList, String payment, double discount, String shippingTime, String shippingAddress, String time, String contactNumber) {
+    public Order(int orderID, ArrayList<Item> orderList, String payment, double discount, String shippingTime, String shippingAddress, Date time, String contactNumber) {
         this.orderID = orderID;
         this.orderList = orderList;
         this.payment = payment;

@@ -29,7 +29,7 @@ public class DatabaseOrderList {
                 order.setPayment(resultSet.getString("payment"));
                 order.setShippingAddress(resultSet.getString("shipping_address"));
                 order.setShippingTime(resultSet.getString("shipping_time"));
-                order.setTime(resultSet.getString("time"));
+                order.setTime(resultSet.getDate("time"));
                 String productID = resultSet.getString("product_id");
                 int quantity = resultSet.getInt("quantity");
                 order.getOrderList().add(new Item(productHashMap.get(productID),quantity));
@@ -65,5 +65,25 @@ public class DatabaseOrderList {
             e.printStackTrace();
         }
         return orders;
+    }
+
+    public static boolean getDiscount(User user){
+        boolean discount = true;
+        try{
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT order_id FROM order_list WHERE user_id = '"+user.getUserID()+"';");
+            while (resultSet.next()){
+                if(resultSet.getString(1)!=null){
+                    discount = false;
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return discount;
+    }
+
+    public static void placeOrder(User user,Order order){
+
     }
 }

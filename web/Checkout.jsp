@@ -201,25 +201,23 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <a herf="#paypal" class="w3-btn w3-black" style="width: 50%;align:center"><b>Paypal</b></a>
-                                <button formaction="" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
+                                <button formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
                                 <br>
                                 <hr>
                                 <br>
                                 <div class="w3-row-padding">
                                     <form>
                                         <label>Card Number</label>
-                                        <input class="w3-input w3-border" type="text"><br>
+                                        <input class="w3-input w3-border" type="text" name="cardNumber"><br>
                                         <label>Expiry Date</label>
-                                        <input class="w3-input w3-border" type="text"><br>
+                                        <input class="w3-input w3-border" type="text" name="Date"><br>
                                         <label>CVV</label>
-                                        <input class="w3-input w3-border" type="text"><br>
+                                        <input class="w3-input w3-border" type="text" name="CVV"><br>
                                         <label>Name on Card</label>
-                                        <input class="w3-input w3-border" type="text">
+                                        <input class="w3-input w3-border" type="text" name="name">
                                     </form>
                                     <br>
-                                    <center><a class="w3-btn w3-black" style="width: 50%"><b>Pay card</b></a></center>
-                                    <center><button formmethod="post" formaction="" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
+                                    <center><button formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
                                 </div>
                             </div>
                         </div>
@@ -239,8 +237,7 @@
                                         you will be redirected to Afterpay to complete your order.</p>
                                 </div>
                                 <br><br>
-                                <center><a class="w3-btn w3-black" style="width: 50%"><b>Afterpay</b></a></center>
-                                <center><button formaction="" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
+                                <center><button formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
                             </div>
                         </div>
                     </div>
