@@ -5,16 +5,15 @@ import dto.Order;
 import dto.Product;
 import dto.User;
 
-import javax.print.DocFlavor;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class DatabaseGetOrderList {
+public class DatabaseOrderList {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
-    private static HashMap<String,Product> productHashMap = DatabaseGetProduct.getProducts();
+    private static HashMap<String,Product> productHashMap = DatabaseProduct.getProducts();
 
 
     public static Order getOrderFromDatabase(String orderID){

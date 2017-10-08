@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class DatabaseGetProduct {
+public class DatabaseProduct {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
 
     public static HashMap getProducts(){
