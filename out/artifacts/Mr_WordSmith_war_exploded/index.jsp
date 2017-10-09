@@ -14,6 +14,7 @@
 <%
     User user = null;
     user = (User) session.getAttribute("user");
+    session.setAttribute("Redirect","index.jsp");
 %>
 
 
