@@ -8,6 +8,13 @@ import java.util.Objects;
 
 public class ProductPicProductListPage {
 
+    /**
+     * This method used to generate product List view in ProductList.jsp
+     * call from ProductList.jsp
+     * getting data from Database
+     *
+     * @return String view
+     */
     public static String getProductView() {
         String view = "";
         ArrayList<Product> products = DatabaseProduct.getProductList();
@@ -23,8 +30,8 @@ public class ProductPicProductListPage {
                         "            </div>\n" +
                         "            </a>\n" +
                         "        </div>";
-            }else {
-                view+="<div class=\"w3-col w3-container w3-margin-bottom\" style=\"width: 22.5%\">\n" +
+            } else {
+                view += "<div class=\"w3-col w3-container w3-margin-bottom\" style=\"width: 22.5%\">\n" +
                         "            <a href=\"CustomizeProduct.jsp?pid=MWE004\">\n" +
                         "            <img src=\"" + p.getProductImg1() + "\" alt=\"Norway\" style=\"width:100%\" class=\"w3-hover-opacity\">\n" +
                         "            <div class=\"w3-container w3-white\">\n" +

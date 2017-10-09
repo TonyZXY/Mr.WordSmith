@@ -1,9 +1,14 @@
 package view;
 
 
-
 public class SubViewHomePage {
-    public static String view(){
+    /**
+     * This method use to generate the Subscript part in the home page
+     * Call from index.jsp when no user logged in.
+     *
+     * @return String view
+     */
+    public static String view() {
         return "<div class=\"w3-bar-item\" style=\"max-width:100%;margin-top:15px\" align=\"center\">\n" +
                 "    <div class=\"w3-row w3-large\">\n" +
                 "        <center>\n" +
