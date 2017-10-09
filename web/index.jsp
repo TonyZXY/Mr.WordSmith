@@ -46,15 +46,12 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
-
     .mySlides {
         display: none
     }
-
     .w3-tag, .fa {
         cursor: pointer
     }
-
     .w3-tag {
         height: 15px;
         width: 15px;
@@ -187,7 +184,6 @@
         <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p></center>
         <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button></p>
       </div>
-
 </div>
    <div class="w3-col w3-container" style="width:10%"><p></p></div>
 </div>-->
@@ -388,11 +384,9 @@
 <script>
     var slideIndex = 1;
     showDivs(slideIndex);
-
     function plusDivs(n) {
         showDivs(slideIndex += n);
     }
-
     function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides");
@@ -414,7 +408,6 @@
 <script>
     var myIndex = 0;
     carousel();
-
     function carousel() {
         var i;
         var x = document.getElementsByClassName("mySlides");
@@ -433,4 +426,3 @@
 
 </body>
 </html>
-
