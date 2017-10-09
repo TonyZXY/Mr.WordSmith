@@ -1,9 +1,11 @@
 package servlet;
 
+import database.DatabaseBagItems;
 import database.DatabaseOrderList;
 import dto.Item;
 import dto.Order;
 import dto.User;
+import model.PlaceOrder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,8 +24,8 @@ public class PlaceOrderServlet extends HttpServlet {
         String payment = request.getParameter("payment");
 
         System.out.println(payment);
-        ArrayList<Item> bag = (ArrayList<Item>)request.getSession().getAttribute("bagItem");
         User user = (User)request.getSession().getAttribute("user");
+        ArrayList<Item> bag = DatabaseBagItems.getBagForCheckOut(user);
         Double discount = 1.0;
         if(DatabaseOrderList.getDiscount(user)){
             discount = 0.85;
@@ -52,7 +54,10 @@ public class PlaceOrderServlet extends HttpServlet {
         order.setDiscount(discount);
         order.setPayment(payment);
 
+        PlaceOrder.placeOrder(order,user);
 
+
+        response.sendRedirect("Bag.jsp");
 
 
     }

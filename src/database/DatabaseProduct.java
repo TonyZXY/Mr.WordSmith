@@ -87,6 +87,7 @@ public class DatabaseProduct {
             ResultSet resultSet = connection.createStatement().executeQuery("SELECT max(customized_id) FROM customized;");
             if (resultSet.next()) {
                 customizedID = resultSet.getInt(1) + 1;
+                System.out.println(customizedID);
             }
 
             String sql = "INSERT INTO customized (customized_id,uid,option1,option2,option3,option4,option5," +
@@ -159,6 +160,7 @@ public class DatabaseProduct {
             String custList;
             while (select.next()) {
                 custList = select.getString(1);
+                System.out.println(custList);
                 if (!Objects.equals(custList, "")) {
                     custList += "," + customizedID;
                     Statement update = connection.createStatement();
@@ -171,6 +173,15 @@ public class DatabaseProduct {
             }
 
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void updateOrderID(int customizeID,int orderID){
+        try{
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("UPDATE customized SET orderid ='"+orderID+"' WHERE customized_id ='"+customizeID+"';");
+        }catch (Exception e){
             e.printStackTrace();
         }
     }

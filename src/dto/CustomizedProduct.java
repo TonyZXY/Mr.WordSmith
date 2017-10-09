@@ -7,9 +7,9 @@ public class CustomizedProduct {
     public static int getNumberFromIDs(String string) {
         StringTokenizer st = new StringTokenizer(string, ",");
         ArrayList<String> customizedID = new ArrayList<>();
-        String s;
-        while ((s = st.nextToken()) != null) {
-            customizedID.add(s);
+        while (st.hasMoreTokens()) {
+            customizedID.add(st.nextToken());
+            System.out.println(customizedID.size());
         }
         return customizedID.size();
     }

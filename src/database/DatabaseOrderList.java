@@ -6,6 +6,7 @@ import dto.Product;
 import dto.User;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -83,7 +84,40 @@ public class DatabaseOrderList {
         return discount;
     }
 
-    public static void placeOrder(User user,Order order){
+    public static int getMaxOrderID(){
+        int i = 1000000001;
+        try{
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT max(order_id) FROM order_list;");
+            while (resultSet.next()){
+                i = resultSet.getInt(1);
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return i+1;
+    }
 
+    public static void insertOrder(Order order,User user){
+        try{
+            String sql = "insert into order_list (product_id,user_id,order_id,quantity,payment,order_discount,shipping_address,time,contact_number,first_name,last_name) values (?,?,?,?,?,?,?,?,?,?,?);";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            for(Item item:order.getOrderList()){
+                statement.setString(1,item.getProduct().getProductID());
+                statement.setInt(2,Integer.valueOf(user.getUserID()));
+                statement.setInt(3,order.getOrderID());
+                statement.setInt(4,item.getNumber());
+                statement.setString(5,order.getPayment());
+                statement.setDouble(6,order.getDiscount());
+                statement.setString(7,order.getShippingAddress());
+                statement.setDate(8,order.getTime());
+                statement.setString(9,String.valueOf(order.getContactNumber()));
+                statement.setString(10,order.getFirstName());
+                statement.setString(11,order.getLastName());
+                statement.execute();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

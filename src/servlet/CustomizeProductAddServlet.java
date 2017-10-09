@@ -19,7 +19,7 @@ public class CustomizeProductAddServlet extends HttpServlet {
 
         CustomizeProductAddition.customizeAdd(user, selected);
 
-        response.sendRedirect("CustomizeProduct.jsp?pit=MWE004");
+        response.sendRedirect("CustomizeProduct.jsp?pid=MWE004");
 
 
         for (String aSelected : selected) {

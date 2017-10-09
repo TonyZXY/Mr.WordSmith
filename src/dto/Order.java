@@ -4,17 +4,17 @@ import java.sql.Date;
 import java.util.ArrayList;
 
 public class Order {
-    private int orderID;
-    private ArrayList<Item> orderList = new ArrayList<>();
-    private String payment;
-    private double discount;
-    private String shippingTime;
-    private String shippingAddress;
-    private Date Time;
-    private String contactNumber;
-    private String firstName;
-    private String lastName;
-    private String postCode;
+    private int orderID; //
+    private ArrayList<Item> orderList = new ArrayList<>(); //
+    private String payment; //
+    private double discount; //
+    private String shippingTime;  //null
+    private String shippingAddress; //
+    private Date Time; //
+    private String contactNumber;  //
+    private String firstName;  //
+    private String lastName;  //
+    private String postCode;  //
 
     public String getFirstName() {
         return firstName;
