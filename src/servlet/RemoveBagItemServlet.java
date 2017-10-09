@@ -14,7 +14,6 @@ import java.io.IOException;
 public class RemoveBagItemServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String productID = request.getParameter("productID");
-        System.out.println(productID);
         User user = (User) request.getSession().getAttribute("user");
 
         DatabaseBagItems.updateBagItem(productID,0,user);

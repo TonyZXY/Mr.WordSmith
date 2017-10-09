@@ -27,7 +27,6 @@ public class RegisterServlet extends HttpServlet {
         String phoneNumber = request.getParameter("PhoneNumber");
         String address = request.getParameter("Address");
 
-        System.out.println(email + " " + password + " " + firstName + " " + lastName + " " + birthday + " " + address + " " + phoneNumber);
 
         //generate a data transport object User to pass message
         User user = new User();

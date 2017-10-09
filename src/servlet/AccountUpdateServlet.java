@@ -23,15 +23,12 @@ public class AccountUpdateServlet extends HttpServlet {
         String address = request.getParameter("AD");
         if(!Objects.equals(FN, "")){
             user.setFirstName(FN);
-            System.out.println(FN);
         }
         if(!Objects.equals(LN, "")){
             user.setLastName(LN);
-            System.out.println(LN);
         }
         if(!Objects.equals(DoB, "")){
             user.setBirthday(DoB);
-            System.out.println(DoB);
         }
 //        if(!Objects.equals(Email, "")){
 //            user.setEmail(Email);
@@ -39,11 +36,9 @@ public class AccountUpdateServlet extends HttpServlet {
 //        }
         if(!Objects.equals(Phone, "")){
             user.setPhone(Phone);
-            System.out.println(LN);
         }
         if(!Objects.equals(address, "")){
             user.setAddress(address);
-            System.out.println(address);
         }
 
         //@TODO

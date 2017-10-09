@@ -16,8 +16,6 @@ public class AddProductToBagServlet extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
         String productID = request.getParameter("pid");
         String quantity = request.getParameter("ProdQty");
-        System.out.println(productID);
-        System.out.println(quantity);
         if (user == null) {
             String link = "Login.jsp";
             String redirect = "ProductDetail.jsp?pid=" + productID;

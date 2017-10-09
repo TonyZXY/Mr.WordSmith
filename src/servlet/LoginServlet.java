@@ -20,17 +20,13 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("UserName");
         String password = request.getParameter("Password");
 
-        System.out.println(username + " " + password);
         if (Login.Authenticate(username, password)) {
             User user = Login.getUser();
-            System.out.println("user got in servlet");
             request.getSession().setAttribute("user", user);
-            System.out.println("attribute added");
             if(request.getSession().getAttribute("Redirect")!=null){
                 response.sendRedirect((String)request.getSession().getAttribute("Redirect"));
             }else {
                 response.sendRedirect("index.jsp");
-                System.out.println("redirect sent");
                 return;
             }
         } else {

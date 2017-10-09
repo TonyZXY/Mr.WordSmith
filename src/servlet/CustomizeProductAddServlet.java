@@ -22,9 +22,6 @@ public class CustomizeProductAddServlet extends HttpServlet {
         response.sendRedirect("CustomizeProduct.jsp?pid=MWE004");
 
 
-        for (String aSelected : selected) {
-            System.out.println(aSelected);
-        }
     }
 
 }

@@ -44,7 +44,6 @@ public class DatabaseEvents {
 
             statement.execute();
 
-            System.out.println("Statement");
         }catch (Exception e){
             e.printStackTrace();
         }

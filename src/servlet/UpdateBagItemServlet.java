@@ -24,9 +24,6 @@ public class UpdateBagItemServlet extends HttpServlet {
                 item.setNumber(number);
             }
         }
-        for (Item item:items){
-            System.out.println(item.getNumber());
-        }
 
         DatabaseBagItems.updateBagItems(items,user);
 

@@ -30,7 +30,6 @@ public class DatabaseBagItems {
                 if (((ids = resultSet.getString("MWE004")) != null)) {
                     StringTokenizer st = new StringTokenizer(ids, ",");
                     ArrayList<String> idList = new ArrayList<>();
-                    System.out.println(ids);
                     while (st.hasMoreTokens()) {
                         idList.add(st.nextToken());
                     }

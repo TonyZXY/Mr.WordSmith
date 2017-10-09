@@ -23,7 +23,6 @@ public class PlaceOrderServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String payment = request.getParameter("payment");
 
-        System.out.println(payment);
         User user = (User)request.getSession().getAttribute("user");
         ArrayList<Item> bag = DatabaseBagItems.getBagForCheckOut(user);
         Double discount = 1.0;
