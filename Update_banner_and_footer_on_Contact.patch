@@ -2,7 +2,7 @@ Index: web/Contact.jsp
 	IDEA additional info:
 	Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 	<+>UTF-8
-	===========================================================================
+	==========================================================================
 	--- web/Contact.jsp	(revision 628f17077c33494edf48170c99586ae9c8fec869)
 	+++ web/Contact.jsp	(revision )
 	@@ -1,4 +1,4 @@
@@ -34,7 +34,7 @@ Index: web/Contact.jsp
 	-            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
 	-        %>
 	-        <%=link%>
-	+
+	+ 
 	+    <div class="w3-right">
 	+        <a href="#bag" class="w3-button w3-block"><b>Bag</b></a>
 	+    </div>
