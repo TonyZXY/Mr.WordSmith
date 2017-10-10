@@ -116,15 +116,15 @@
         <!-- Left Column -->
         <div class="w3-col w3-container" style="width:10%"></div>
 
-        <div class="w3-col w3-container" style="width:60%">
+        <div class="w3-col w3-container" style="width:80%">
             <div class="w3-container w3-white">
                 <div class="w3-container">
-                    <table>
+                    <table align="left">
                         <tr>
                             <td width="25%" style="align: center"><img src="https://78.media.tumblr.com/74b2d410edd7fbd702c74918a47e51ef/tumblr_oxcab4OSWe1tmp67mo1_1280.jpg" style="width:60%;align:right" alt="Avatar"></td>
-                            <td width="50%"style="text-align: left"><b><p> Use promo code to apply your student discount </p></b>
-                                <a href="BlogArticle.jsp"><p style="font-size: small;text-align: left"> We offer a 20%-off for uni students,check out more details here </p></a>
-                                </td>
+                            <td width="60%"style="text-align: left"><b><p> Use promo-code to apply your student discount </p></b>
+                                <a href="BlogArticle.jsp"><p style="text-align: left;font-family: Times"><i> We offer a 10%-off for uni students,check on more details here.</i></p></a>
+                            </td>
 
                         </tr>
                     </table>
@@ -149,7 +149,6 @@
 
 
 <!-- Footer -->
-<footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
 <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
     <div class="w3-row w3-section"style="background-color:#F8F8F8">
         <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
@@ -172,7 +171,6 @@
         </div>
     </div>
 </div>
-</footer>
 </body>
 </html>
 
