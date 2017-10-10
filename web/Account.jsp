@@ -40,6 +40,11 @@
     <div class="w3-third">
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
+    <!-- logout -->
+    <div class="w3-right s3">
+        <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
+    </div>
+
 
     <div class="w3-right">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
@@ -49,6 +54,7 @@
             String link;
             if (user != null) {
                 link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
+
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -56,20 +62,13 @@
     <br>
     <br>
     <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
-            class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
-            style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right"
-                                                            style="margin-left: 10px" target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
-       target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
-                           style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i
-            class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
 </div>
 </div>
-
 <!-- function bar -->
 <div class="w3-bar-item" style="max-width:1686px;margin-top:0px;margin-bottom:20px">
     <div class="w3-row w3-large w3-black">
@@ -96,12 +95,9 @@
     <div class=" w3-col w3-bar-block w3-white " style="width:25%">
         <h5 class="w3-bar-item w3-center"><Strong>My Account</strong></h5>
         <div class="w3-panel w3-border-bottom w3-border-light-grey" style="margin-top: 10px;margin-bottom: 10px"></div>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My profile')">My Profile
-        </button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My profile')">My Profile</button>
         <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My order')">My Order</button>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My important date')">Important
-            Dates
-        </button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My important date')">Important Dates</button>
     </div>
 
     <!-- information -->
@@ -113,34 +109,23 @@
             <form action="" method="">
                 <table cellspacing="2" cellpadding="1">
                     <tr>
-                        <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden"
-                                                                                                name="firstname"
-                                                                                                id="firstname"
-                                                                                                value=""/></td>
+                        <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden" name="firstname" id="firstname" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden"
-                                                                                              name="lastname"
-                                                                                              id="lastname"
-                                                                                              value=""/></td>
+                        <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden" name="lastname" id="lastname" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden"
-                                                                                                  name="dob" id="dob"
-                                                                                                  value=""/>
+                        <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden" name="dob" id="dob" value=""/>
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email"
-                                                                                       id="email" value=""/></td>
+                        <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email" id="email" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone"
-                                                                                       id="phone" value=""/></td>
+                        <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone" id="phone" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address"
-                                                                                           id="address" value=""/>
+                        <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address" id="address" value=""/>
                         </td>
                     </tr>
                 </table>
@@ -169,6 +154,15 @@
                         <label>Address</label>
                         <input class="w3-input" type="text" name="AD"></p>
                     <p>
+                    <p>
+                        <label>Change Password</label>
+                        <input class="w3-input" type="text" name="PWD"></p>
+                    <p>
+                    <p>
+                        <label>Confirm Password</label>
+                        <input class="w3-input" type="text" name="CPWD"></p>
+                    <p>
+
                         <button class="w3-btn w3-black" type="submit">Save</button>
                     </p>
                 </form>
@@ -334,12 +328,9 @@
         </div>
         <div class="w3-third w3-center w3-large" style="height:250px">
             <br><br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
-                    class="w3-xlarge fa fa-facebook-official"></i><br></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
-               target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
-               target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
             <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
 
 
