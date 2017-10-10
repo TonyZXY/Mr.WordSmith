@@ -1,5 +1,5 @@
-<%@ page import="dto.User" %>
 <%@ page import="dto.Item" %>
+<%@ page import="dto.User" %>
 <%@ page import="java.util.ArrayList" %>
 <%--  
   Created by IntelliJ IDEA.
@@ -78,6 +78,11 @@
     <div class="w3-third">
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
+    <!-- logout -->
+    <div class="w3-right s3">
+        <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
+    </div>
+
 
     <div class="w3-right">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
@@ -87,6 +92,7 @@
             String link;
             if (user != null) {
                 link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
+
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -94,17 +100,12 @@
     <br>
     <br>
     <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
-            class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
-            style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right"
-                                                            style="margin-left: 10px" target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
-       target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
-                           style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i
-            class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
+</div>
 </div>
 <!-- function bar -->
 <div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
@@ -228,13 +229,7 @@
                             <div id="Demo2" class="w3-hide w3-container">
                                 <br>
                                 <div class="w3-justify">
-                                    <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay
-                                        in 4
-                                        equal fortnightly payments with no interest.</b><br><br>Available to customers
-                                        in
-                                        Australia with a debit or credit card. When you click 'Place Order' with
-                                        Afterpay,
-                                        you will be redirected to Afterpay to complete your order.</p>
+                                    <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay in 4 equal fortnightly payments with no interest.</b><br><br>Available to customers in Australia with a debit or credit card. When you click 'Place Order' with Afterpay, you will be redirected to Afterpay to complete your order.</p>
                                 </div>
                                 <br><br>
                                 <center><button formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
