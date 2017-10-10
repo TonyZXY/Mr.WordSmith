@@ -12,6 +12,7 @@
     User user = null;
     user = (User)session.getAttribute("user");
 %>
+
 <!doctype html>
 <html lang="en-US">
 <head>
