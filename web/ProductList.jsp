@@ -54,10 +54,10 @@
         <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
     </div>
 
+
     <div class="w3-right">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
-
     <div class="w3-right">
         <%
             String link;
@@ -78,8 +78,9 @@
 
 </div>
 </div>
+
 <!-- function bar -->
-<div class="w3-bar-item" style="max-width:100%;margin-top:0px;margin-bottom:10px">
+<div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
             <a href="index.jsp" class="w3-button w3-block">Home</a>
@@ -104,9 +105,10 @@
     <div class="w3-left w3-padding-32">
         <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Shop</span>
     </div>
-    <!-- line-->
-    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 10px">
-    </div>
+</div>
+<!-- line-->
+<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
+</div>
 
     <!-- products-->
     <div class="w3-row-padding">
@@ -200,6 +202,7 @@
 </div>
 
     <!-- Footer -->
+<footer>
     <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
         <div class="w3-row w3-section" style="background-color:#F8F8F8">
             <center>
@@ -229,6 +232,7 @@
             </div>
         </div>
     </div>
+</footer>
 
 
 

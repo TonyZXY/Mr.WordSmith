@@ -52,7 +52,6 @@
     </script>
 </head>
 <body>
-
 <!-- Links (sit on top) -->
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
@@ -87,8 +86,9 @@
 
 </div>
 </div>
+
 <!-- function bar -->
-<div class="w3-bar-item" style="max-width:100%;margin-top:20px;margin-bottom:10px">
+<div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
             <a href="index.jsp" class="w3-button w3-block">Home</a>
@@ -103,7 +103,7 @@
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="AboutUs.jsp" class="w3-button w3-block">AboutUs</a>
+            <a href="AboutUs.jsp" class="w3-button w3-block">About Us</a>
         </div>
     </div>
 </div>
@@ -113,8 +113,10 @@
     <div class="w3-left w3-padding-32">
         <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Product</span>
     </div>
-    <!-- line-->
-    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px"></div>
+</div>
+<!-- line-->
+<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
+</div>
 
     <!-- product picture-->
     <div class="w3-row-padding" style="margin-top: 20px">
@@ -216,6 +218,7 @@
     <br><br><br>
 
     <!-- Footer -->
+<footer>
     <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
         <div class="w3-row w3-section" style="background-color:#F8F8F8">
             <center>
@@ -245,6 +248,7 @@
             </div>
         </div>
     </div>
+</footer>
 
 
 </body>

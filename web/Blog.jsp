@@ -74,9 +74,8 @@
 </div>
 </div>
 
-
 <!-- function bar -->
-<div class="w3-bar-item" style="max-width:100%;margin-top:0px;margin-bottom:20px">
+<div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
             <a href="index.jsp" class="w3-button w3-block">Home</a>
@@ -91,20 +90,19 @@
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="AboutUs.jsp" class="w3-button w3-block">AboutUs</a>
+            <a href="AboutUs.jsp" class="w3-button w3-block">About Us</a>
         </div>
     </div>
 </div>
 
-<!-- Header -->
-
+<!-- title -->
 <div class="w3-row w3-container">
     <div class="w3-left w3-padding-32">
         <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Blog</span>
     </div>
 </div>
 <!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px">
+<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
 </div>
 
 
@@ -149,6 +147,7 @@
 
 
 <!-- Footer -->
+<footer>
 <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
     <div class="w3-row w3-section"style="background-color:#F8F8F8">
         <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
@@ -171,6 +170,8 @@
         </div>
     </div>
 </div>
+</footer>
+
 </body>
 </html>
 

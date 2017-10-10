@@ -95,8 +95,8 @@
 
 </div>
 </div>
-<!-- function bar -->
 
+<!-- function bar -->
 <div class="w3-bar-item" style="max-width:100%;margin-top:0px;">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">
@@ -343,6 +343,7 @@
 
 
 <!-- Footer -->
+<footer>
 <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
     <div class="w3-row w3-section" style="background-color:#F8F8F8">
         <center>
@@ -372,6 +373,7 @@
         </div>
     </div>
 </div>
+</footer>
 
 
 <script>
