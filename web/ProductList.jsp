@@ -149,6 +149,55 @@
         <div class="w3-col w3-container" style="width:5%"><p></p></div>
     </div>
     <br><br><br><br><br><br><br>
+  
+  
+  <!-- product list new -->
+  <div class="w3-row-padding">
+    <!-- Grid -->
+    <div class="w3-row-padding" id="plans">
+
+        <%=ProductPicHomePage.getProducts()%>
+
+        <%--This part code used to demo the static page of the home page product part--%>
+
+        <%--<div class="w3-third w3-margin-bottom">--%>
+        <%--<a href="ProductDetail.jsp?pid=1">--%>
+        <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
+        <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+        <%--<div class="w3-container w3-white">--%>
+        <%--<p><b>--%>
+        <%--<center>product 1</center>--%>
+        <%--</b></p>--%>
+        <%--</div>--%>
+        <%--</ul>--%>
+        <%--</a>--%>
+        <%--</div>--%>
+
+        <%--<div class="w3-third w3-margin-bottom">--%>
+        <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
+        <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+        <%--<div class="w3-container w3-white">--%>
+        <%--<p><b>--%>
+        <%--<center>product 2</center>--%>
+        <%--</b></p>--%>
+        <%--</div>--%>
+
+        <%--</ul>--%>
+        <%--</div>--%>
+
+        <%--<div class="w3-third w3-margin-bottom">--%>
+        <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
+        <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+        <%--<div class="w3-container w3-white">--%>
+        <%--<p><b>--%>
+        <%--<center>product 3</center>--%>
+        <%--</b></p>--%>
+        <%--</div>--%>
+
+        <%--</ul>--%>
+        <%--</div>--%>
+    </div>
+</div>
 
     <!-- Footer -->
     <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
