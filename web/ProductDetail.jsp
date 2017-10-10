@@ -54,11 +54,15 @@
 <body>
 
 <!-- Links (sit on top) -->
-
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
+    <!-- logout -->
+    <div class="w3-right s3">
+        <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
+    </div>
+
 
     <div class="w3-right">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
@@ -68,6 +72,7 @@
             String link;
             if (user != null) {
                 link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
+
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -75,16 +80,10 @@
     <br>
     <br>
     <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
-            class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
-            style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right"
-                                                            style="margin-left: 10px" target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
-       target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
-                           style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i
-            class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
 </div>
 </div>
@@ -115,8 +114,7 @@
         <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Product</span>
     </div>
     <!-- line-->
-    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px">
-    </div>
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 50px;margin-bottom: 50px"></div>
 
     <!-- product picture-->
     <div class="w3-row-padding" style="margin-top: 20px">
@@ -225,12 +223,9 @@
                     <a href="AboutUs.jsp"><i>
                         <p2 style="font-family:Times"><b>About Us</b></p2>
                     </i></a><br><br>
-                    <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO
-                        Box 210, Abbotsford, VIC 3067</p>
-                    <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61
-                        0425752986</p>
-                    <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i>
-                        customercare@mrwordsmith.com.au</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
                 </div>
             </center>
             <div class="w3-third w3-center w3-large " style="height:250px"><br>
@@ -242,14 +237,10 @@
             </div>
             <div class="w3-third w3-center w3-large" style="height:250px">
                 <br><br>
-                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
-                        class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
-                   target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
-                   target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                 <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
-
 
             </div>
         </div>
