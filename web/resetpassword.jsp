@@ -98,34 +98,6 @@
 </style>
 <body>
 
-<!-- Links (sit on top) -->
-<div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
-    </div>
-
-    <div class="w3-right">
-        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
-    </div>
-    <div class="w3-right">
-        <%
-            String link;
-            if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
-            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
-        %>
-        <%=link%>
-    </div>
-    <br>
-    <br>
-    <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-
-</div>
-</div>
 
 
 <!-- Links (sit on top) -->
