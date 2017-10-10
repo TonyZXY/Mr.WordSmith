@@ -14,6 +14,16 @@ public class Product {
     private String productImg4;
     private String productImg5;
 
+    public String getCustomizeID() {
+        return customizeID;
+    }
+
+    public void setCustomizeID(String customizeID) {
+        this.customizeID = customizeID;
+    }
+
+    private String customizeID;
+
     public Product() {
 
     }

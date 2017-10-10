@@ -1,7 +1,6 @@
 package model;
 
-import database.DatabaseGetUser;
-import database.DatabaseInsertUser;
+import database.DatabaseUser;
 import dto.User;
 
 public class Register {
@@ -14,9 +13,9 @@ public class Register {
      * @return boolean that user info is in or not in the database
      */
     public static boolean RegisterCheck(User user) {
-        User userDB = DatabaseGetUser.getUser(user.getEmail());
+        User userDB = DatabaseUser.getUser(user.getEmail());
         if (userDB.getEmail() == null) {
-            DatabaseInsertUser.insertUser(user);
+            DatabaseUser.insertUser(user);
             return true;
         } else return false;
 

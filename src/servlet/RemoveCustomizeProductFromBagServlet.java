@@ -10,17 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "RemoveBagItemServlet", urlPatterns = "/RemoveBagItem")
-public class RemoveBagItemServlet extends HttpServlet {
+@WebServlet(name = "RemoveCustomizeProductFromBagServlet",urlPatterns = "/RemoveCustomizedBagItem")
+public class RemoveCustomizeProductFromBagServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String productID = request.getParameter("productID");
-        User user = (User) request.getSession().getAttribute("user");
+        String id = request.getParameter("customizedID");
+        User user = (User)request.getSession().getAttribute("user");
 
-        DatabaseBagItems.updateBagItem(productID,0,user);
-
+        DatabaseBagItems.RemoveCustomizedProduct(user,id);
 
         response.sendRedirect("Bag.jsp");
-
     }
 
 }

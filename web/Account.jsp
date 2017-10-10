@@ -48,7 +48,7 @@
         <%
             String link;
             if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -80,7 +80,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#Blog" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a></div>
@@ -252,14 +252,14 @@
                         <th>Order Placed</th>
                         <th>Order Address</th>
                         <th>Total</th>
-                        <tr>
-                            <td style="font-size: small" width="30%">ID</td>
-                            <td style="font-size: small" width="30%">Time</td>
-                            <td style="font-size: small" width="30%">Address it could be very long and please test this
-                                line before used
-                            </td>
-                            <td style="font-size: small" width="35%">$5000</td>
-                        </tr>
+                        <%--<tr>--%>
+                            <%--<td style="font-size: small" width="30%">ID</td>--%>
+                            <%--<td style="font-size: small" width="30%">Time</td>--%>
+                            <%--<td style="font-size: small" width="30%">Address it could be very long and please test this--%>
+                                <%--line before used--%>
+                            <%--</td>--%>
+                            <%--<td style="font-size: small" width="35%">$5000</td>--%>
+                        <%--</tr>--%>
                         <%=OrderListViewAccountPage.getOrderListView(user)%>
                         <%--<tr>--%>
                         <%--<td style="font-size: small" width="30%"><input type="hidden" name="o2summary"--%>

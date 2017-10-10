@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: tonyzheng
+  Date: 5/10/17
+  Time: 10:47 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -62,13 +70,13 @@
         <center>
             <div class="w3-container w3-card-2 w3-white w3-margin-bottom" style="width: 70%">
                 <center><img src="images/icon.jpg" style="width: 15%;margin-top: 5%"></center>
-                <form>
+                <form action="AdminLogin" method="post">
                     <br>
-                    <input class="w3-input w3-border" type="text" placeholder="Enter Admin Number" style="width: 80%">
+                    <input class="w3-input w3-border" type="text" placeholder="Enter Stuff Number" style="width: 80%" name="id">
                     <br>
-                    <input class="w3-input w3-border" type="text" placeholder="Enter your pass word" style="width: 80%"><br>
+                    <input class="w3-input w3-border" type="password" placeholder="Enter your password" style="width: 80%" name="password"><br>
                     <p>
-                        <a herf="#" class="w3-btn w3-black" style="width: 70%">LOGIN</a></p>
+                        <button type="submit" class="w3-btn w3-black" style="width: 70%">LOGIN</button></p>
                     <p>
                         <a herf="#" class="w3-btn" style="width:70%">Cancel</a>
                     </p>
@@ -82,4 +90,5 @@
 
 </body>
 </html>
+
 

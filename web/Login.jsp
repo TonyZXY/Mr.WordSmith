@@ -78,7 +78,7 @@
         <%
             String link;
             if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -105,7 +105,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#Blog" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
@@ -198,7 +198,19 @@
                         <input class="w3-input" type="text" name="LastName" required="required"></p>
                     <p>
                         <label>Email</label>
-                        <input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">
+                        <%
+                            String Email;
+                            if(session.getAttribute("EmailInput")!=null){
+                                Email = "<input class=\"w3-input\" type=\"text\" name=\"Email\" value=\""+
+                                        session.getAttribute("EmailInput")+"\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                            }else {
+                                Email = "<input class=\"w3-input\" type=\"text\" name=\"Email\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                            }
+                            session.removeAttribute("EmailInput");
+                        %>
+                        <%=Email%>
+                        <%--<input class="w3-input" type="text" name="Email" value="" required="required" pattern="[^ @]*@[^ @]*">--%>
+                        <%--<input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">--%>
                     </p>
                     <p>
                         <label>Address</label>
@@ -251,7 +263,7 @@
 
     <!-- End Page Container -->
 </div>
-
+  
 
 <!-- Footer -->
 <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >

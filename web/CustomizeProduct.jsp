@@ -1,17 +1,18 @@
 <%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
+  User: siyayu
   Date: 24/9/17
   Time: 1:10 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="database.DatabaseGetProduct" %>
+<%@ page import="database.DatabaseProduct" %>
 <%@ page import="dto.Product" %>
 <%@ page import="dto.User" %>
 <%
     String string = request.getParameter("pid");
-    Product product = DatabaseGetProduct.getProduct(string);
+    Product product = DatabaseProduct.getProduct(string);
+    session.removeAttribute("Redirect");
 %>
 <%
     User user = null;
@@ -138,7 +139,7 @@
         <%
             String link;
             if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ");
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -164,7 +165,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
@@ -188,6 +189,7 @@
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
     <!-- The Grid -->
+    <form >
     <div class="w3-row-padding">
         <div class="w3-row-padding" style="margin-top: 20px">
             <div class="w3-col w3-container" style="width: 20%"><p></p></div>
@@ -233,11 +235,20 @@
                     <!-- line -->
                     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
                     <div class="w3-row-padding">
-                        <p>Quantity    <input type="number"input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10"/></p>
+                        <p>Quantity     1 </p>
                         <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
                         <a class="w3-container" style="width: 60%"><p></p></a>
                     </div>
-                    <center><button class="w3-button w3-black w3-border w3-border-gray w3-round-large" style="width: 30%" onclick="document.getElementById('subscribe').style.display='block'"><center>Add to bag</center></button></center>
+                    <%
+                        String addButton;
+                        if(user==null){
+                            addButton = "<center><a href = \"Login.jsp\" class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" style=\"width: 30%\"><center>Login</center></a></center>";
+                            session.setAttribute("Redirect","CustomizeProduct.jsp?pid=MWE004");
+                        }else {
+                            addButton = "<center><button class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" formaction=\"AddCustomizeProductToBag\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button></center>";
+                        }
+                    %>
+                    <%=addButton%>
 
                 </div>
 
@@ -250,17 +261,16 @@
             <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
                 <center><h4 class="w3-text-grey w3-padding-16">Custom your layout</h4></center>
                 <center>
+
                     <div class="w3-container"><center>
 
                         <div class="options">
-                            <form>
-                                <div class="w3-half"align="center"><input id="option1" type="radio" value="weeklylayouta" name="layout" style="text-align: left;width: 50%" checked><label for="option1">Weekly Layout A</label></div>
-                                <div class="w3-half"align="center"><input id="option2" type="radio" value="weeklylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option2">Weekly Layout B</label></div>
-                                <div class="w3-half"align="center"><input id="option3" type="radio" value="weeklylayoutc" name="layout" style="text-align: left;width: 50%"><label for="option3">Weekly Layout C</label></div>
-                                <div class="w3-half"align="center"><input id="option4" type="radio" value="weeklylayoutd" name="layout" style="text-align: left;width: 50%"><label for="option4">Weekly Layout D</label></div>
-                                <div class="w3-half"align="center"><input id="option5" type="radio" value="dailylayouta" name="layout" style="text-align: left;width: 50%"><label for="option5">Daily Layout A</label></div>
-                                <div class="w3-half"align="center"><input id="option6" type="radio" value="dailylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option6">Daily Layout B</label></div>
-                            </form>
+                                <div class="w3-half" align="center"><input id="option1" type="radio" value="weeklylayouta" name="layout" style="text-align: left;width: 50%" checked><label for="option1">Weekly Layout A</label></div>
+                                <div class="w3-half" align="center"><input id="option2" type="radio" value="weeklylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option2">Weekly Layout B</label></div>
+                                <div class="w3-half" align="center"><input id="option3" type="radio" value="weeklylayoutc" name="layout" style="text-align: left;width: 50%"><label for="option3">Weekly Layout C</label></div>
+                                <div class="w3-half" align="center"><input id="option4" type="radio" value="weeklylayoutd" name="layout" style="text-align: left;width: 50%"><label for="option4">Weekly Layout D</label></div>
+                                <div class="w3-half" align="center"><input id="option5" type="radio" value="dailylayouta" name="layout" style="text-align: left;width: 50%"><label for="option5">Daily Layout A</label></div>
+                                <div class="w3-half" align="center"><input id="option6" type="radio" value="dailylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option6">Daily Layout B</label></div>
                         </div>
 
                     </center></div><br>
@@ -272,16 +282,16 @@
                         <div class="w3-container">
                             <div class="options" style="align-content:center;text-align: left">
                                 <form><center>
-                                    <div class="w3-half"align="center"><input id="optionA" type="checkbox"  name="layout" ><label for="optionA">Lined</label></div>
-                                    <div class="w3-half"align="center"><input id="optionB" type="checkbox"  name="layout" ><label for="optionB">Non-lined</label></div>
-                                    <div class="w3-half"align="center"><input id="optionC" type="checkbox"  name="layout" ><label for="optionC">Page number</label></div>
-                                    <div class="w3-half"align="center"><input id="optionD" type="checkbox"  name="layout" ><label for="optionD">Public holiday </label></div>
-                                    <div class="w3-half"align="center"><input id="optionJ" type="checkbox"  name="layout" ><label for="optionJ">Local holiday </label></div>
-                                    <div class="w3-half"align="center"><input id="optionE" type="checkbox"  name="layout" ><label for="optionE">Moon cycle</label></div>
-                                    <div class="w3-half"align="center"><input id="optionF" type="checkbox"  name="layout" ><label for="optionF">Sunrise,Sunset</label></div>
-                                    <div class="w3-half"align="center"><input id="optionG" type="checkbox"  name="layout" ><label for="optionG">Page of password</label></div>
-                                    <div class="w3-half"align="center"><input id="optionH" type="checkbox"  name="layout" ><label for="optionH">Page of extra note</label></div>
-                                    <div class="w3-half"align="center"><input id="optionI" type="checkbox"  name="layout" ><label for="optionI">Page of Social media handles</label></div>
+                                    <div class="w3-half" align="center"><input id="optionA" type="checkbox"  name="layout" value="1"><label for="optionA">Lined</label></div>
+                                    <div class="w3-half" align="center"><input id="optionB" type="checkbox"  name="layout" value="2"><label for="optionB">Non-lined</label></div>
+                                    <div class="w3-half" align="center"><input id="optionC" type="checkbox"  name="layout" value="3"><label for="optionC">Page number</label></div>
+                                    <div class="w3-half" align="center"><input id="optionD" type="checkbox"  name="layout" value="4"><label for="optionD">Public holiday </label></div>
+                                    <div class="w3-half" align="center"><input id="optionJ" type="checkbox"  name="layout" value="5"><label for="optionJ">Local holiday </label></div>
+                                    <div class="w3-half" align="center"><input id="optionE" type="checkbox"  name="layout" value="6"><label for="optionE">Moon cycle</label></div>
+                                    <div class="w3-half" align="center"><input id="optionF" type="checkbox"  name="layout" value="7"><label for="optionF">Sunrise,Sunset</label></div>
+                                    <div class="w3-half" align="center"><input id="optionG" type="checkbox"  name="layout" value="8"><label for="optionG">Page of password</label></div>
+                                    <div class="w3-half" align="center"><input id="optionH" type="checkbox"  name="layout" value="9"><label for="optionH">Page of extra note</label></div>
+                                    <div class="w3-half" align="center"><input id="optionI" type="checkbox"  name="layout" value="10"><label for="optionI">Page of Social media handles</label></div>
                                 </center></form>
                             </div>
                         </div>

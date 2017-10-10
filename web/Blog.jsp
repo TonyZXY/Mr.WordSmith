@@ -1,4 +1,3 @@
-
 <%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
@@ -39,7 +38,7 @@
 </head>
 
 <body>
-
+      
 <!-- Links (sit on top) -->
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
@@ -53,7 +52,7 @@
         <%
             String link;
             if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n " + user.getFirstName();
+                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -80,7 +79,7 @@
             <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
         </div>
         <div class="w3-col" style="width:20%">
-            <a href="#Blog" class="w3-button w3-block">Blog</a>
+            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
         </div>
         <div class="w3-col" style="width:20%">
             <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
@@ -114,17 +113,17 @@
         <div class="w3-col w3-container" style="width:60%">
             <div class="w3-container w3-white">
                 <div class="w3-container">
-                <table>
-                    <tr>
-                        <td width="25%" style="align: center"><img src="https://78.media.tumblr.com/74b2d410edd7fbd702c74918a47e51ef/tumblr_oxcab4OSWe1tmp67mo1_1280.jpg" style="width:60%;align:right" alt="Avatar"></td>
-                        <td width="50%"style="text-align: left"><b><p> Use promo code to apply your student discount </p></b>
-                            <a herf="Blog article.jsp"><p style="font-size: small;text-align: left"> We offer a 20%-off for uni students,check out more details here </p></a>
-                            <p style="font-size: small;text-align: left">publish on</p></td>
+                    <table>
+                        <tr>
+                            <td width="25%" style="align: center"><img src="https://78.media.tumblr.com/74b2d410edd7fbd702c74918a47e51ef/tumblr_oxcab4OSWe1tmp67mo1_1280.jpg" style="width:60%;align:right" alt="Avatar"></td>
+                            <td width="50%"style="text-align: left"><b><p> Use promo code to apply your student discount </p></b>
+                                <a href="BlogArticle.jsp"><p style="font-size: small;text-align: left"> We offer a 20%-off for uni students,check out more details here </p></a>
+                                <p style="font-size: small;text-align: left">publish on</p></td>
 
-                    </tr>
-                </table>
-              </div>
-        </div><br>
+                        </tr>
+                    </table>
+                </div>
+            </div><br>
 
 
             <!-- End Left Column -->
@@ -132,13 +131,13 @@
 
         <!-- Right Column -->
 
-            <!-- End Right Column -->
-        </div>
-
-        <!-- End Grid -->
+        <!-- End Right Column -->
     </div>
 
-    <!-- End Page Container -->
+    <!-- End Grid -->
+</div>
+
+<!-- End Page Container -->
 </div><br><br><br><br>
 
 

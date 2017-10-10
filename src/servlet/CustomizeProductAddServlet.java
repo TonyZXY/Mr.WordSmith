@@ -1,7 +1,7 @@
 package servlet;
 
-import database.DatabaseBagItems;
 import dto.User;
+import model.CustomizeProductAddition;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,16 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "RemoveBagItemServlet", urlPatterns = "/RemoveBagItem")
-public class RemoveBagItemServlet extends HttpServlet {
+@WebServlet(name = "CustomizeProductAddServlet", urlPatterns = "/AddCustomizeProductToBag")
+public class CustomizeProductAddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String productID = request.getParameter("productID");
+
+        String[] selected = request.getParameterValues("layout");
         User user = (User) request.getSession().getAttribute("user");
 
-        DatabaseBagItems.updateBagItem(productID,0,user);
+        CustomizeProductAddition.customizeAdd(user, selected);
 
+        response.sendRedirect("CustomizeProduct.jsp?pid=MWE004");
 
-        response.sendRedirect("Bag.jsp");
 
     }
 
