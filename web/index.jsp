@@ -66,7 +66,12 @@
     <div class="w3-third">
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
-
+<!-- logout -->
+  <div class="w3-right s3">
+      <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
+    </div>
+  
+  
     <div class="w3-right">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
     </div>
