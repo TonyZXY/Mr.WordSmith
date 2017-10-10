@@ -90,4 +90,13 @@ public class DatabaseUser {
             e.printStackTrace();
         }
     }
+
+    public static void changePassword(User user){
+        try{
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("UPDATE users SET password ='"+user.getPassword()+"' WHERE user_id = '"+user.getUserID()+"';");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
