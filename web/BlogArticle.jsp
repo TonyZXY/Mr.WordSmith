@@ -50,6 +50,11 @@
     <div class="w3-third">
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
+    <!-- logout -->
+    <div class="w3-right s3">
+        <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
+    </div>
+
 
     <div class="w3-right">
         <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
@@ -59,6 +64,7 @@
             String link;
             if (user != null) {
                 link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
+
             } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
         %>
         <%=link%>
@@ -66,10 +72,10 @@
     <br>
     <br>
     <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
 </div>
 </div>
@@ -116,17 +122,25 @@
         <!-- Left Column -->
         <div class="w3-col w3-container" style="width:10%"></div>
 
-        <div class="w3-col w3-container" style="width:60%">
+        <div class="w3-col w3-container" style="width:80%">
             <div class="w3-container w3-white">
                 <div class="w3-container">
-                    <table>
-                        <tr><td width="25%" style="align: center"><img src="https://78.media.tumblr.com/74b2d410edd7fbd702c74918a47e51ef/tumblr_oxcab4OSWe1tmp67mo1_1280.jpg" style="width:60%;align:right" alt="Avatar"></td></tr>
+                    <table align="left">
                         <tr>
-                            <td width="50%"style="text-align: left"><b><br><p> Use promo code to apply your student discount </p></b><u><p style="font-size: small;text-align: left"> We offer a 20%-off for uni students,check out more details here </p></u><p style="font-size: small;text-align: left">Publish on: 05-10-17</p></td>
-                            <td width="70%"style="text-align: left"><p style="font-size: small;font-family: Times">We offer 10% student discount. If you're a student studying in Australia, you can get the discount by confirming your student status here or by registering with UNiDAYS here. If you confirm your student status , you should receive your unique student promo code instantly.To use your discount, simply enter your unique student code into the ‘Promo code or Student Code’ box at the checkout.Discount is not available on delivery charges, sale items and gift vouchers. Discount cannot be used in conjunction with any other offer.<p></td>
+                            <td width="40%" style="align: center"><img src="https://78.media.tumblr.com/74b2d410edd7fbd702c74918a47e51ef/tumblr_oxcab4OSWe1tmp67mo1_1280.jpg" style="width:60%;align:right" alt="Avatar"></td>
+                            <td width="60%"style="text-align:left "><b><br><h> Use promo code to apply your student discount </h></b><br><br>
+                                <p style="font-size: medium;font-family: Times">We offer 10% student discount. If you're a student studying in Australia, you can get the discount by confirming your student status here or by registering with UNiDAYS here.<br> If you confirm your student status , you should receive your unique student promo code instantly.To use your discount, simply enter your unique student code into the ‘Promo code or Student Code’ box at the checkout.Discount is not available on delivery charges, sale items and gift vouchers. Discount cannot be used in conjunction with any other offer.<p><br>
+                            </td>
                         </tr>
+                        <tr>
+                            <td></td>
+                            <td><b><a href="Blog.jsp"><p style="font-size: small">BACK</p></a></b></td>
+                        </tr>
+
                     </table>
+
                 </div>
+
             </div><br>
 
 
