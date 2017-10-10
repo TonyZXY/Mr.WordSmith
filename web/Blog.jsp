@@ -143,7 +143,7 @@
 
 
 <!-- Footer -->
-<footer>
+<footer class="w3-padding-64 w3-white w3-small w3-center" id="footer">
 <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
     <div class="w3-row w3-section"style="background-color:#F8F8F8">
         <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
