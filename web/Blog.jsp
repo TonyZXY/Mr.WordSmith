@@ -143,6 +143,7 @@
 
 
 <!-- Footer -->
+<footer>
 <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
     <div class="w3-row w3-section"style="background-color:#F8F8F8">
         <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
@@ -165,3 +166,4 @@
         </div>
     </div>
 </div>
+</footer>
