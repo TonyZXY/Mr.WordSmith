@@ -77,9 +77,6 @@
                     <input class="w3-input w3-border" type="password" placeholder="Enter your password" style="width: 80%" name="password"><br>
                     <p>
                         <button type="submit" class="w3-btn w3-black" style="width: 70%">LOGIN</button></p>
-                    <p>
-                        <a herf="#" class="w3-btn" style="width:70%">Cancel</a>
-                    </p>
                     <br>
                 </form>
             </div>

@@ -1,11 +1,14 @@
 package database;
 
-import dto.Staff;
+import dto.Product;
 import dto.Staff;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Create by Intellij IDEA
@@ -42,10 +45,49 @@ public class DatabaseStaff {
     }
 
 
-    private String getSalesReport = "SELECT SUM(quantity) FROM order_list WHERE (time BETWEEN time1 AND time2) AND product_id = 'pid'";
+    private String getSalesReportSQL = "SELECT SUM(quantity) FROM order_list WHERE (time BETWEEN time1 AND time2) AND product_id = 'pid'";
 
-    private String getOrderDetail = "SELECT * FROM order_list WHERE order_id = 'order_id'";
+    private String getOrderDetailSQL = "SELECT * FROM order_list WHERE order_id = 'order_id'";
 
-    private String getStockLevel = "SELECT * FROM products WHERE product_id = 'pid'";
+    private String getStockLevelSQL = "SELECT * FROM products WHERE product_id = 'pid'";
+
+
+    public static HashMap getSalesReport(Date start, Date end) {
+        HashMap<String, Integer> salesReport = new HashMap<>();
+        try {
+            ArrayList<Product> products = DatabaseProduct.getProductList();
+            for (Product p : products) {
+                String sql = "SELECT SUM(quantity) FROM order_list WHERE (TIME BETWEEN '" + start + "' AND '" + end + "') AND product_id = '" + p.getProductID() + "';";
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()) {
+                    salesReport.put(p.getProductID(), resultSet.getInt(1));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return salesReport;
+    }
+
+    public static void updateStockLevel(Product product, int number) {
+        try {
+            int num = product.getStock();
+            String sql = "UPDATE products SET stock ='" + (num + number) + "' WHERE product_id ='" + product.getProductID() + "';";
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void updateStaffDetail(Staff staff){
+
+    }
+
+    public static void insertNewStaff(Staff staff){
+
+    }
+
 }
 

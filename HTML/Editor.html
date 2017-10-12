@@ -6,29 +6,26 @@
 </head>
 <body>
 
-<tr height="45%">
-    <td width="25%" align="center"><img
-            src="images/Product 1 - Front.png"
-            width="65%"></td>
-    <td style="font-size: small" width="25%" align="left">
-        Name:Diary- daily<input type="hidden" name="Prod1name"
-                                id="Prod1name"
-                                value="Prod1name"/><br>
-        Product code:MWE001<input type="hidden"
-                                  name="Prod1name"
-                                  id="Prod1code"
-                                  value="Prod1code"/><br>
-        Customize ID: 123456788
+<div class="w3-container">
+    <table class="w3-table">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Quantities</th>
+        </tr>
+        <tr>
+            <td>D12DG--1</td>
+            <td>Note book</td>
+            <td>4565</td>
+        </tr>
+        <tr>
+            <td>D12DG--2</td>
+            <td>Daily Dairy</td>
+            <td>3589</td>
+        </tr>
+    </table>
+</div>
 
-    <td width="15%" align="center" style="font-size: small">$ 49.95<input style="font-size: small"
-                                                                          type="hidden" name="Prod1Price"
-                                                                          id="Prod1Price" value="10"/>
-    </td>
-    <td width="15%" align="center">1</td>
-    <td width="15%" align="center"><p id="Prod1SubTol" style="font-size: small">349.65</p><input
-            id="Prod1Tol" name="Prod1Tol" type="hidden" value="0"/></td>
-    <td width="10%"><input type="hidden" name="customizedID" value=MWE001><button class="w3-button" formaction="RemoveCustomizedBagItem" formmethod="post" style="font-size: small" type="submit">REMOVE</button></form></td>
-</tr>
 
 </body>
 </html>

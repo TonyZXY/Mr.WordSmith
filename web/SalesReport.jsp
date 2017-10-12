@@ -1,5 +1,7 @@
-<%@ page import="dto.Staff" %>
+
 <%@ page import="java.util.Objects" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="dto.Staff" %>
 <%--
   Created by IntelliJ IDEA.
   User: TonyZheng
@@ -10,7 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Staff staff = (Staff)session.getAttribute("staff");
-
+    
 %>
 <!doctype html>
 <html lang="en-US">
@@ -72,7 +74,7 @@
         </div>
         <%
             String link;
-            if(!Objects.equals(staff.getAdmin(), "Admin")){
+            if(!Objects.equals(staff., "Admin")){
                 link = "<div class=\"w3-col w3-third\">\n" +
                         "            <a href=\"UpdateProfile.jsp\" class=\"w3-button w3-block\">Update Profile</a>\n" +
                         "        </div>";
@@ -101,11 +103,11 @@
         <form class="w3-container">
             <br>
             From:
-            <input class="w3-input w3-border" type="date" placeholder="DD/MM/YYYY" style="width: 40%">
+            <input class="w3-input w3-border" type="date" placeholder="DD/MM/YYYY" style="width: 40%" name="start">
             To:
-            <input class="w3-input w3-border" type="date" placeholder="DD/MM/YYYY" style="width: 40%">
+            <input class="w3-input w3-border" type="date" placeholder="DD/MM/YYYY" style="width: 40%" name="end">
             <p>
-            <center></center><button class="w3-btn w3-black">COMFIRM</button></p>
+            <center></center><button class="w3-btn w3-black">CONFIRM</button></p>
         </form>
         <hr>
 
