@@ -59,38 +59,44 @@
         } else {
             links = "<div class=\"w3-right\">\n" +
                     "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                    "    </div>\n"+
-                    "<div class=\"w3-right\">"+
-                    "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                    "    </div>\n" +
+                    "<div class=\"w3-right\">" +
+                    "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
                     "</div>";
         }
     %>
     <%=links%>
     <%--<div class="w3-right s3">--%>
-        <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
+    <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
     <%--</div>--%>
 
 
     <%--<div class="w3-right">--%>
-        <%--<a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>--%>
+    <%--<a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>--%>
     <%--</div>--%>
     <%--<div class="w3-right">--%>
-        <%--<%--%>
-            <%--String link;--%>
-            <%--if (user != null) {--%>
-                <%--link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";--%>
+    <%--<%--%>
+    <%--String link;--%>
+    <%--if (user != null) {--%>
+    <%--link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";--%>
 
-            <%--} else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";--%>
-        <%--%>--%>
-        <%--<%=link%>--%>
+    <%--} else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";--%>
+    <%--%>--%>
+    <%--<%=link%>--%>
     <%--</div>--%>
     <br>
     <br>
     <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+            class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+            style="margin-left: 10px; margin-right: 20px "></i></a>
+    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right"
+                                                            style="margin-left: 10px" target="_blank "></i></a>
+    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+       target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                           style="margin-left: 10px"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i
+            class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
 </div>
 </div>
@@ -122,9 +128,13 @@
     <div class=" w3-col w3-bar-block w3-white " style="width:25%">
         <h5 class="w3-bar-item w3-center"><Strong>My Account</strong></h5>
         <div class="w3-panel w3-border-bottom w3-border-light-grey" style="margin-top: 10px;margin-bottom: 10px"></div>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My profile')">My Profile</button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My profile')">My Profile
+        </button>
         <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My order')">My Order</button>
-        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My important date')">Important Dates</button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'My important date')">Important
+            Dates
+        </button>
+        <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'Change Password')">Change Password</button>
     </div>
 
     <!-- information -->
@@ -133,30 +143,36 @@
         <div class="w3-padding" style="margin-left: 40px"><h4 style="font-family:Times"><i><b>Welcome
             Mr.wordSmith</b></i></h4></div>
         <div style="margin-left: 40px">
-            <form action="" method="">
-                <table cellspacing="2" cellpadding="1">
-                    <tr>
-                        <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden" name="firstname" id="firstname" value=""/></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden" name="lastname" id="lastname" value=""/></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden" name="dob" id="dob" value=""/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email" id="email" value=""/></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone" id="phone" value=""/></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address" id="address" value=""/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
+            <table cellspacing="2" cellpadding="1">
+                <tr>
+                    <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden"
+                                                                                            name="firstname"
+                                                                                            id="firstname" value=""/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden" name="lastname"
+                                                                                          id="lastname" value=""/></td>
+                </tr>
+                <tr>
+                    <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden" name="dob"
+                                                                                              id="dob" value=""/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email" id="email"
+                                                                                   value=""/></td>
+                </tr>
+                <tr>
+                    <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone" id="phone"
+                                                                                   value=""/></td>
+                </tr>
+                <tr>
+                    <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address"
+                                                                                       id="address" value=""/>
+                    </td>
+                </tr>
+            </table>
         </div>
 
 
@@ -181,13 +197,13 @@
                         <label>Address</label>
                         <input class="w3-input" type="text" name="AD"></p>
                     <p>
-                    <p>
-                        <label>Change Password</label>
-                        <input class="w3-input" type="text" name="PWD"></p>
-                    <p>
-                    <p>
-                        <label>Confirm Password</label>
-                        <input class="w3-input" type="text" name="CPWD"></p>
+                    <%--<p>--%>
+                        <%--<label>Change Password</label>--%>
+                        <%--<input class="w3-input" type="password" name="PWD"></p>--%>
+                    <%--<p>--%>
+                    <%--<p>--%>
+                        <%--<label>Confirm Password</label>--%>
+                        <%--<input class="w3-input" type="password" name="CPWD"></p>--%>
                     <p>
 
                         <button class="w3-btn w3-black" type="submit">Save</button>
@@ -274,12 +290,12 @@
                         <th>Order Address</th>
                         <th>Total</th>
                         <%--<tr>--%>
-                            <%--<td style="font-size: small" width="30%">ID</td>--%>
-                            <%--<td style="font-size: small" width="30%">Time</td>--%>
-                            <%--<td style="font-size: small" width="30%">Address it could be very long and please test this--%>
-                                <%--line before used--%>
-                            <%--</td>--%>
-                            <%--<td style="font-size: small" width="35%">$5000</td>--%>
+                        <%--<td style="font-size: small" width="30%">ID</td>--%>
+                        <%--<td style="font-size: small" width="30%">Time</td>--%>
+                        <%--<td style="font-size: small" width="30%">Address it could be very long and please test this--%>
+                        <%--line before used--%>
+                        <%--</td>--%>
+                        <%--<td style="font-size: small" width="35%">$5000</td>--%>
                         <%--</tr>--%>
                         <%=OrderListViewAccountPage.getOrderListView(user)%>
                         <%--<tr>--%>
@@ -326,30 +342,78 @@
                 </form>
             </div>
         </div>
+
+        <div id="Change Password" class="w3-container name" style="display:none">
+            <div class="w3-col w3-container" style="width:70%">
+                <div class="w3-padding" style="margin-left: 40px"></div>
+                <form class="w3-container" style="font-size: small" action="ChangePassword" method="post"><br>
+                    <h5 style="text-align:left"><b>Change Password</b></h5>
+                    <p> Edit your password here</p><br>
+                    <p><label>Current Password</label>
+                        <input class="w3-input" type="password" name="old" required="required">
+                    </p>
+                    <p>
+                        <label>Change Password</label>
+                        <input class="w3-input" type="password" name="new" id="setpwd" required="required"></p>
+                    <p>
+                    <p>
+                        <label>Confirm Password</label>
+                        <input class="w3-input" type="password" name="" id="cfmpwd" oninput="validatePassword(this)" required="required">
+                        <script language='javascript' type='text/javascript'>
+                            var pwd = document.getElementById("setpwd")
+                                , confirmpwd = document.getElementById("cfmpwd");
+                            function validatePassword() {
+                                if (pwd.value != confirmpwd.value) {
+                                    confirmpwd.setCustomValidity("Passwords Don't Match");
+                                } else {
+                                    confirmpwd.setCustomValidity('');
+                                }
+                            }
+                        </script></p>
+                    <p>
+
+
+                        <button class="w3-btn w3-black" type="submit">Save</button>
+                    </p>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
 
 <!-- Footer -->
 <footer>
-    <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
-        <div class="w3-row w3-section"style="background-color:#F8F8F8">
-            <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
-                <a href="AboutUs.jsp"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
-                <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
-                <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
-                <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
-            </div></center>
+    <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
+        <div class="w3-row w3-section" style="background-color:#F8F8F8">
+            <center>
+                <div class="w3-third w3-container w3-large" style="height:250px"><br>
+                    <a href="AboutUs.jsp"><i>
+                        <p2 style="font-family:Times"><b>About Us</b></p2>
+                    </i></a><br><br>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO
+                        Box 210, Abbotsford, VIC 3067</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61
+                        0425752986</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i>
+                        customercare@mrwordsmith.com.au</p>
+                </div>
+            </center>
             <div class="w3-third w3-center w3-large " style="height:250px"><br>
-                <a href="Contact.jsp"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
+                <a href="Contact.jsp"><i>
+                    <p2 style="font-family:Times"><b>Contact Us</b></p2>
+                </i></a><br><br>
                 <p style="font-size:70%"> FAQ</p>
                 <p style="font-size:70%"> Privacy policy</p>
             </div>
             <div class="w3-third w3-center w3-large" style="height:250px">
                 <br><br>
-                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                        class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                   target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                   target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                 <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
             </div>
         </div>

@@ -46,6 +46,7 @@ public class DatabaseUser {
             String Email = user.getEmail();
             String Phone = user.getPhone();
             String Address = user.getAddress();
+//            String password = user.getPassword();
 
             String sql = "UPDATE Users SET first_name ='"+FN+"', last_name ='"+LN+"', birthday ='"+DoB+"', address ='"+Address+"', phone ='"+Phone+"' WHERE user_id ='"+UserID+"';";
             Connection connection = DatabaseConnection.getInstence().getConnection();

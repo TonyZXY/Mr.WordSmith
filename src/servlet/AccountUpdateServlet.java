@@ -21,6 +21,7 @@ public class AccountUpdateServlet extends HttpServlet {
 //        String Email = request.getParameter("EM");
         String Phone = request.getParameter("PN");
         String address = request.getParameter("AD");
+//        String password = request.getParameter("PWD");
         if(!Objects.equals(FN, "")){
             user.setFirstName(FN);
         }
@@ -33,6 +34,9 @@ public class AccountUpdateServlet extends HttpServlet {
 //        if(!Objects.equals(Email, "")){
 //            user.setEmail(Email);
 //            System.out.println(Email);
+//        }
+//        if(!Objects.equals(password,"")){
+//            user.setPassword(password);
 //        }
         if(!Objects.equals(Phone, "")){
             user.setPhone(Phone);
