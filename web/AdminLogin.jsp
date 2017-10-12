@@ -79,9 +79,9 @@
             <p>Administration System</p>
             <form action="AdminLogin" method="post">
                 <br>
-                <input class="w3-input w3-border" type="text" placeholder="Staff ID" style="width: 80%" name="id">
+                <input class="w3-input w3-border" type="text" placeholder="Staff ID" style="width: 70%" name="id">
                 <br>
-                <input class="w3-input w3-border" type="password" placeholder="Password" style="width: 80%" name="password"><br>
+                <input class="w3-input w3-border" type="password" placeholder="Password" style="width: 70%" name="password"><br>
                 <p>
                     <button type="submit" class="w3-btn w3-black" style="width: 70%">LOGIN</button></p>
                 <p>
