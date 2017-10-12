@@ -18,7 +18,7 @@
         bag = DatabaseBagItems.getBag(user.getUserID());
         session.setAttribute("bagItem", bag);
     }
-    session.removeAttribute("Redirect");
+    session.setAttribute("Redirect","Bag.jsp");
 
 
 %>
@@ -55,24 +55,49 @@
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
     <!-- logout -->
-    <div class="w3-right s3">
-        <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
-    </div>
+    <%
+        String links;
+        if (user != null) {
+            links = "<div class=\"w3-right s3\">\n" +
+                    "        <form>\n" +
+                    "            <button formaction=\"Logout\" type=\"submit\" formmethod=\"post\" class=\"w3-button w3-block\"><b>Logout</b>\n" +
+                    "            </button>\n" +
+                    "        </form>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"w3-right\">\n" +
+                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"w3-right\">\n" +
+                    "        <a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a>" +
+                    "</div>";
+        } else {
+            links = "<div class=\"w3-right\">\n" +
+                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                    "    </div>\n"+
+                    "<div class=\"w3-right\">"+
+                    "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                    "</div>";
+        }
+    %>
+    <%=links%>
+    <%--<div class="w3-right s3">--%>
+        <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
+    <%--</div>--%>
 
 
-    <div class="w3-right">
-        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
-    </div>
-    <div class="w3-right">
-        <%
-            String link;
-            if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
+    <%--<div class="w3-right">--%>
+        <%--<a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>--%>
+    <%--</div>--%>
+    <%--<div class="w3-right">--%>
+        <%--<%--%>
+            <%--String link;--%>
+            <%--if (user != null) {--%>
+                <%--link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";--%>
 
-            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
-        %>
-        <%=link%>
-    </div>
+            <%--} else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";--%>
+        <%--%>--%>
+        <%--<%=link%>--%>
+    <%--</div>--%>
     <br>
     <br>
     <br>

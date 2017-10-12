@@ -1,7 +1,7 @@
 package servlet;
 
-import dto.Stuff;
-import model.StuffsFunc;
+import dto.Staff;
+import model.StaffsFunc;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,12 +16,11 @@ public class AdminLoginServlet extends HttpServlet {
         String userID = request.getParameter("id");
         String password = request.getParameter("password");
 
-        boolean login = StuffsFunc.login(userID, password);
+        boolean login = StaffsFunc.login(userID, password);
         if (login) {
-            Stuff stuff = StuffsFunc.getStuff();
-            request.getSession().setAttribute("stuff", stuff);
-
-            //TODO send Redirect
+            Staff staff = StaffsFunc.getStaff();
+            request.getSession().setAttribute("staff", staff);
+            response.sendRedirect("AdminDetail.jsp");
         } else {
             request.getSession().setAttribute("Login", "Invalid UserID or Password");
             response.sendRedirect("AdminLogin.jsp");

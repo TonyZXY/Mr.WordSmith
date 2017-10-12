@@ -1,9 +1,9 @@
-<%@ page import="dto.Staff" %>
-<%@ page import="java.util.Objects" %><%--
+<%@ page import="java.util.Objects" %>
+<%@ page import="dto.Staff" %><%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
-  Date: 5/10/17
-  Time: 10:50 AM
+  User: TonyZheng
+  Date: 12/10/17
+  Time: 1:13 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -51,9 +51,9 @@
     <br><br><br>
     <div class="w3-container w3-right">
         <form>
-        <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
-            Logout
-        </button>
+            <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
+                Logout
+            </button>
         </form>
     </div>
 </div>
@@ -66,7 +66,7 @@
             <a href="SalesReport.jsp" class="w3-button w3-block">Sale Report</a>
         </div>
         <div class="w3-col w3-third">
-            <a href="StockControl.jsp" class="w3-button w3-block">Stock Control</a>
+            <a class="w3-button w3-block">Stock Control</a>
         </div>
         <%
             String link;
@@ -88,10 +88,43 @@
     </div>
 </div>
 
-<div class="w3-padding-64">
-    <center><div class="w3-padding"><h4><strong>Welcome <%=staff.getFirst_name()%></strong></h4></div></center>
+
+<!-- imformation-->
+<div class="w3-container">
+    <div class="w3-container w3-quarter w3-text-white">
+        eeeee
+    </div>
+
+    <form class="w3-container w3-half">
+
+
+        <br>
+        <h5><center>Update stock level</center></h5><hr>
+        <table class="w3-table">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Current Quantities</th>
+                <th>Add Quantities</th>
+            </tr>
+            <tr>
+                <td>D12DG--1</td>
+                <td>Note Book</td>
+                <td>3245</td>
+                <td><input class="w3-input w3-border" type="number" style="width: auto"></td>
+            </tr>
+            <tr>
+                <td>D12DG--2</td>
+                <td>Dairy Daily</td>
+                <td>2548</td>
+                <td><input class="w3-input w3-border" type="number" style="width: auto"></td>
+            </tr>
+        </table><br><br>
+        <center><button class="w3-btn w3-black">CONFIRM</button></center>
+    </form>
 </div>
 
 
-</body>
-</html>
+<br>
+<br>
+<br>

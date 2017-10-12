@@ -106,24 +106,49 @@
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
     <!-- logout -->
-    <div class="w3-right s3">
-        <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
-    </div>
+    <%
+        String links;
+        if (user != null) {
+            links = "<div class=\"w3-right s3\">\n" +
+                    "        <form>\n" +
+                    "            <button formaction=\"Logout\" type=\"submit\" formmethod=\"post\" class=\"w3-button w3-block\"><b>Logout</b>\n" +
+                    "            </button>\n" +
+                    "        </form>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"w3-right\">\n" +
+                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"w3-right\">\n" +
+                    "        <a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a>" +
+                    "</div>";
+        } else {
+            links = "<div class=\"w3-right\">\n" +
+                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                    "    </div>\n"+
+                    "<div class=\"w3-right\">"+
+                    "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                    "</div>";
+        }
+    %>
+    <%=links%>
+    <%--<div class="w3-right s3">--%>
+        <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
+    <%--</div>--%>
 
 
-    <div class="w3-right">
-        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
-    </div>
-    <div class="w3-right">
-        <%
-            String link;
-            if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
+    <%--<div class="w3-right">--%>
+        <%--<a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>--%>
+    <%--</div>--%>
+    <%--<div class="w3-right">--%>
+        <%--<%--%>
+            <%--String link;--%>
+            <%--if (user != null) {--%>
+                <%--link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";--%>
 
-            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
-        %>
-        <%=link%>
-    </div>
+            <%--} else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";--%>
+        <%--%>--%>
+        <%--<%=link%>--%>
+    <%--</div>--%>
     <br>
     <br>
     <br>
@@ -177,7 +202,7 @@
             <!-- login -->
             <div class="w3-row">
                 <div class="w3-col w3-container">
-                    <form class="w3-container" action="" method="">
+                    <form class="w3-container" action="ResetPassword" method="post">
                         <br><br><br><br>
                         <h3 style="font-family: Times">
                             <i><b><center>Forgot your password ?</center></b></i>
@@ -188,7 +213,7 @@
                         <br><br>
                         <p>
                             <label>* Email Address</label>
-                            <input class="w3-input" name="email" required="required" type="text">
+                            <input class="w3-input" type="email" name="email" required="required" pattern="[^ @]*@[^ @]*">
                         </p>
                         <p>
                             <button class="w3-btn w3-black" type="submit">Send Email</button>

@@ -1,7 +1,7 @@
 package dto;
 
-public class Stuff {
-    private String stuffID;
+public class Staff {
+    private String staffID;
     private String password;
     private String email;
     private String address;
@@ -10,11 +10,11 @@ public class Stuff {
     private String phoneNumber;
     private String admin;
 
-    public Stuff() {
+    public Staff() {
     }
 
-    public Stuff(String stuffID, String password, String email, String address, String first_name, String last_name, String phoneNumber, String admin) {
-        this.stuffID = stuffID;
+    public Staff(String staffID, String password, String email, String address, String first_name, String last_name, String phoneNumber, String admin) {
+        this.staffID = staffID;
         this.password = password;
         this.email = email;
         this.address = address;
@@ -25,11 +25,11 @@ public class Stuff {
     }
 
     public String getStuffID() {
-        return stuffID;
+        return staffID;
     }
 
     public void setStuffID(String stuffID) {
-        this.stuffID = stuffID;
+        this.staffID = stuffID;
     }
 
     public String getPassword() {

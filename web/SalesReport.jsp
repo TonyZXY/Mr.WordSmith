@@ -1,14 +1,16 @@
 <%@ page import="dto.Staff" %>
-<%@ page import="java.util.Objects" %><%--
+<%@ page import="java.util.Objects" %>
+<%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
-  Date: 5/10/17
-  Time: 10:50 AM
+  User: TonyZheng
+  Date: 12/10/17
+  Time: 1:12 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Staff staff = (Staff)session.getAttribute("staff");
+
 %>
 <!doctype html>
 <html lang="en-US">
@@ -51,9 +53,9 @@
     <br><br><br>
     <div class="w3-container w3-right">
         <form>
-        <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
-            Logout
-        </button>
+            <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
+                Logout
+            </button>
         </form>
     </div>
 </div>
@@ -63,7 +65,7 @@
 <div class="w3-bar-item" style="max-width:100%;margin-top:0px;">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col w3-third">
-            <a href="SalesReport.jsp" class="w3-button w3-block">Sale Report</a>
+            <a class="w3-button w3-block">Sale Report</a>
         </div>
         <div class="w3-col w3-third">
             <a href="StockControl.jsp" class="w3-button w3-block">Stock Control</a>
@@ -88,10 +90,47 @@
     </div>
 </div>
 
-<div class="w3-padding-64">
-    <center><div class="w3-padding"><h4><strong>Welcome <%=staff.getFirst_name()%></strong></h4></div></center>
+
+<!-- imformation-->
+<div class="w3-container">
+    <div class="w3-container w3-quarter w3-text-white">
+        eeeee
+    </div>
+
+    <div class="w3-container w3-half">
+        <form class="w3-container">
+            <br>
+            From:
+            <input class="w3-input w3-border" type="date" placeholder="DD/MM/YYYY" style="width: 40%">
+            To:
+            <input class="w3-input w3-border" type="date" placeholder="DD/MM/YYYY" style="width: 40%">
+            <p>
+            <center></center><button class="w3-btn w3-black">COMFIRM</button></p>
+        </form>
+        <hr>
+
+        <div class="w3-container">
+            <table class="w3-table">
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Quantities</th>
+                </tr>
+                <tr>
+                    <td>D12DG--1</td>
+                    <td>Note book</td>
+                    <td>4565</td>
+                </tr>
+                <tr>
+                    <td>D12DG--2</td>
+                    <td>Daily Dairy</td>
+                    <td>3589</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <br>
+
+    </div>
 </div>
-
-
-</body>
-</html>

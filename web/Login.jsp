@@ -71,24 +71,49 @@
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
     <!-- logout -->
-    <div class="w3-right s3">
-        <a href="#bag" class="w3-button w3-block"><b>Logout</b></a>
-    </div>
+    <%
+        String links;
+        if (user != null) {
+            links = "<div class=\"w3-right s3\">\n" +
+                    "        <form>\n" +
+                    "            <button formaction=\"Logout\" type=\"submit\" formmethod=\"post\" class=\"w3-button w3-block\"><b>Logout</b>\n" +
+                    "            </button>\n" +
+                    "        </form>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"w3-right\">\n" +
+                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                    "    </div>\n" +
+                    "    <div class=\"w3-right\">\n" +
+                    "        <a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a>" +
+                    "</div>";
+        } else {
+            links = "<div class=\"w3-right\">\n" +
+                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                    "    </div>\n"+
+                    "<div class=\"w3-right\">"+
+                    "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                    "</div>";
+        }
+    %>
+    <%=links%>
+    <%--<div class="w3-right s3">--%>
+        <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
+    <%--</div>--%>
 
 
-    <div class="w3-right">
-        <a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>
-    </div>
-    <div class="w3-right">
-        <%
-            String link;
-            if (user != null) {
-                link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";
+    <%--<div class="w3-right">--%>
+        <%--<a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>--%>
+    <%--</div>--%>
+    <%--<div class="w3-right">--%>
+        <%--<%--%>
+            <%--String link;--%>
+            <%--if (user != null) {--%>
+                <%--link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";--%>
 
-            } else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";
-        %>
-        <%=link%>
-    </div>
+            <%--} else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";--%>
+        <%--%>--%>
+        <%--<%=link%>--%>
+    <%--</div>--%>
     <br>
     <br>
     <br>
@@ -154,12 +179,12 @@
                         <br><br>
                         <p>
                             <label>Email</label>
-                            <input class="w3-input" name="UserName" required="required" type="text"></p>
+                            <input class="w3-input" type="email" name="UserName" required="required" pattern="[^ @]*@[^ @]*"></p>
                         <p>
                             <label>Password</label>
                             <input class="w3-input" name="Password" required="required" type="password"></p>
                         <p>
-                            <u><a href="resetpassword.jsp"><label>Forgot your Password?</label></a></u>
+                            <u><a href="ResetPassword.jsp"><label>Forgot your Password?</label></a></u>
 
 
                         <%
@@ -210,10 +235,10 @@
                         <%
                             String Email;
                             if(session.getAttribute("EmailInput")!=null){
-                                Email = "<input class=\"w3-input\" type=\"text\" name=\"Email\" value=\""+
+                                Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" value=\""+
                                         session.getAttribute("EmailInput")+"\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
                             }else {
-                                Email = "<input class=\"w3-input\" type=\"text\" name=\"Email\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                                Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
                             }
                             session.removeAttribute("EmailInput");
                         %>
@@ -226,7 +251,7 @@
                         <input class="w3-input" type="text" name="Address" required="required"></p>
                     <p>
                         <label>Date of birth</label>
-                        <input class="w3-input" type="text" placeholder="DD-MM" name="Birthday" required="required"></p>
+                        <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday" required="required"></p>
                     <p>
                         <label>Phone Number</label>
                         <input class="w3-input" type="tel" required="required" name="PhoneNumber"></p>

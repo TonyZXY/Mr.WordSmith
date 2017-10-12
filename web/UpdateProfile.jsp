@@ -1,9 +1,8 @@
-<%@ page import="dto.Staff" %>
-<%@ page import="java.util.Objects" %><%--
+<%@ page import="dto.Staff" %><%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
-  Date: 5/10/17
-  Time: 10:50 AM
+  User: TonyZheng
+  Date: 12/10/17
+  Time: 1:49 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -51,9 +50,9 @@
     <br><br><br>
     <div class="w3-container w3-right">
         <form>
-        <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
-            Logout
-        </button>
+            <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
+                Logout
+            </button>
         </form>
     </div>
 </div>
@@ -68,30 +67,22 @@
         <div class="w3-col w3-third">
             <a href="StockControl.jsp" class="w3-button w3-block">Stock Control</a>
         </div>
-        <%
-            String link;
-            if(!Objects.equals(staff.getAdmin(), "Admin")){
-                link = "<div class=\"w3-col w3-third\">\n" +
-                        "            <a href=\"UpdateProfile.jsp\" class=\"w3-button w3-block\">Update Profile</a>\n" +
-                        "        </div>";
-            }else {
-                link = "<div class=\"w3-col w3-third\">\n" +
-                        "            <a href=\"StuffManagement.jsp\" class=\"w3-button w3-block\">Staff Management</a>\n" +
-                        "        </div>";
-            }
-        %>
-        <%=link%>
-        <%--<div class="w3-col w3-third">--%>
-            <%--<a href="StuffManagement.jsp" class="w3-button w3-block">Staff Management</a>--%>
-        <%--</div>--%>
-
+        <div class="w3-col w3-third">
+            <a class="w3-button w3-block">Update Profile</a>
+        </div>
     </div>
 </div>
 
-<div class="w3-padding-64">
-    <center><div class="w3-padding"><h4><strong>Welcome <%=staff.getFirst_name()%></strong></h4></div></center>
+<!-- imformation-->
+<div class="w3-container">
+
+    <form class="w3-container">
+
+
+        <!-- modal (add new staffs)-->
+
+    </form>
+
 </div>
-
-
 </body>
 </html>
