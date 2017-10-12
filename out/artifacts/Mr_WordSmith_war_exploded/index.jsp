@@ -128,7 +128,7 @@
 %>
 <%=view%>
 
-<%--<div class="w3-bar-item" style="max-width:100%;margin-top:15px" align="center">--%>
+<%-- <div class="w3-bar-item" style="max-width:100%;margin-top:15px" align="center"> --%>
 <%--<div class="w3-row w3-large">--%>
 <%--<center>--%>
 <%--<div class="w3-col " style="width:50%">--%>
@@ -147,7 +147,7 @@
 <%--</div>--%>
 <%--</form>--%>
 <%--<br><br>--%>
-<%--<b><i><p style="font-family:Times" align="center">- Get a 15%-off on the 1st order by joining our mailing list!--%>
+<%--<b><i><p style="font-family:Times" align="center">Get a 15%-off on the 1st order by joining our mailing list! SUBSCRIBE US-%>
 <%--- </p></i></b>--%>
 
 <%--</div>--%>
@@ -249,19 +249,19 @@
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-center w3-hover-shadow">
-                <img src="images/Ad 6.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <a href="BlogArticle.jsp"><img src="images/Ad 6.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
             </ul>
         </div>
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-center w3-hover-shadow">
-                <img src="images/Ad 4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <a href="BlogArticle.jsp"><img src="images/Ad 4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
             </ul>
         </div>
 
         <div class="w3-third w3-margin-bottom">
             <ul class="w3-ul w3-center w3-hover-shadow">
-                <img src="images/Ad 7.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                <a href="BlogArticle.jsp"><img src="images/Ad 7.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
             </ul>
         </div>
     </div>
