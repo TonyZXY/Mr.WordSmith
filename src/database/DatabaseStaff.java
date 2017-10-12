@@ -1,6 +1,7 @@
 package database;
 
-import dto.Stuff;
+import dto.Staff;
+import dto.Staff;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -14,30 +15,30 @@ import java.sql.Statement;
  */
 
 
-public class DatabaseStuff {
+public class DatabaseStaff {
 
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
 
 
-    public static Stuff getStuff(String id) {
-        Stuff stuff = new Stuff();
+    public static Staff getStuff(String id) {
+        Staff staff = new Staff();
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM stuffs WHERE stuff_id = '" + id + "';");
             if (resultSet.next()) {
-                stuff.setStuffID(id);
-                stuff.setPassword(resultSet.getString("password"));
-                stuff.setAddress(resultSet.getString("address"));
-                stuff.setAdmin(resultSet.getString("admin"));
-                stuff.setEmail(resultSet.getString("email"));
-                stuff.setFirst_name(resultSet.getString("first_name"));
-                stuff.setLast_name(resultSet.getString("last_name"));
-                stuff.setPhoneNumber(resultSet.getString("phone"));
+                staff.setStuffID(id);
+                staff.setPassword(resultSet.getString("password"));
+                staff.setAddress(resultSet.getString("address"));
+                staff.setAdmin(resultSet.getString("admin"));
+                staff.setEmail(resultSet.getString("email"));
+                staff.setFirst_name(resultSet.getString("first_name"));
+                staff.setLast_name(resultSet.getString("last_name"));
+                staff.setPhoneNumber(resultSet.getString("phone"));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return stuff;
+        return staff;
     }
 
 
