@@ -15,6 +15,8 @@ public class AdminLoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userID = request.getParameter("id");
         String password = request.getParameter("password");
+        System.out.println(userID);
+        System.out.println(password);
 
         boolean login = StaffsFunc.login(userID, password);
         if (login) {

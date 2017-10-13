@@ -1,4 +1,7 @@
-<%--
+<%@ page import="dto.Staff" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="database.DatabaseStaff" %>
+<%@ page import="view.StaffManagementView" %><%--
   Created by IntelliJ IDEA.
   User: TonyZheng
   Date: 12/10/17
@@ -6,6 +9,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    Staff staff = (Staff)session.getAttribute("staff");
+    ArrayList<Staff> staffs = DatabaseStaff.getAllStaff();
+
+%>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -83,16 +91,20 @@
             <tr>
                 <th>Staff ID</th>
                 <th>Name</th>
-                <th>Date of birth</th>
+                <th>Contact Number</th>
                 <th>Position</th>
-                <th>Remove</th>
+                <th> </th>
             </tr>
+
+            <%=StaffManagementView.getView(staffs)%>
             <tr>
-                <td>E58915</td>
-                <td>Tony</td>
-                <td>dd/mm/yyyy</td>
-                <td>xxxxxxxx</td>
-                <td><a class="w3-btn w3-black w3-round" style="width: auto">remove</a></td>
+                <form>
+                <td>ID</td>
+                <td>First Name</td>
+                <td>Phone</td>
+                <td>Admin</td>
+                <td><button class="w3-btn w3-black w3-round" style="width: auto" formmethod="post" formaction="RemoveStaff" name="id" value="">REMOVE</button></td>
+                </form>
             </tr>
             <tr>
                 <td>E55149</td>

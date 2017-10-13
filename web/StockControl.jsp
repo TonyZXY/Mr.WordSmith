@@ -1,5 +1,9 @@
 <%@ page import="java.util.Objects" %>
-<%@ page import="dto.Staff" %><%--
+<%@ page import="dto.Staff" %>
+<%@ page import="dto.Product" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="database.DatabaseProduct" %>
+<%@ page import="view.StockControlView" %><%--
   Created by IntelliJ IDEA.
   User: TonyZheng
   Date: 12/10/17
@@ -9,6 +13,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Staff staff = (Staff)session.getAttribute("staff");
+    ArrayList<Product> products = DatabaseProduct.getProductList();
+    Product p = DatabaseProduct.getProduct("MWE001");
 %>
 <!doctype html>
 <html lang="en-US">
@@ -107,20 +113,22 @@
                 <th>Current Quantities</th>
                 <th>Add Quantities</th>
             </tr>
-            <tr>
-                <td>D12DG--1</td>
-                <td>Note Book</td>
-                <td>3245</td>
-                <td><input class="w3-input w3-border" type="number" style="width: auto"></td>
-            </tr>
-            <tr>
-                <td>D12DG--2</td>
-                <td>Dairy Daily</td>
-                <td>2548</td>
-                <td><input class="w3-input w3-border" type="number" style="width: auto"></td>
-            </tr>
+            <%=StockControlView.getView(products)%>
+            <%--<tr>--%>
+                <%--<td>D12DG--1</td>--%>
+                <%--<td>Note Book</td>--%>
+                <%--<td>3245</td>--%>
+                <%--<td><input class="w3-input w3-border" type="number" style="width: auto"></td>--%>
+                <%--<td><button formaction="UpdateStockLevel" formmethod="post" type="submit" class="w3-btn w3-black" value="pid" name="Update">Update</button></td>--%>
+            <%--</tr>--%>
+            <%--<tr>--%>
+                <%--<td>D12DG--2</td>--%>
+                <%--<td>Dairy Daily</td>--%>
+                <%--<td>2548</td>--%>
+                <%--<td><input class="w3-input w3-border" type="number" style="width: auto"></td>--%>
+            <%--</tr>--%>
         </table><br><br>
-        <center><button class="w3-btn w3-black">CONFIRM</button></center>
+        <%--<center><button class="w3-btn w3-black">CONFIRM</button></center>--%>
     </form>
 </div>
 

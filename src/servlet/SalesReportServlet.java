@@ -1,6 +1,8 @@
 package servlet;
 
 import database.DatabaseStaff;
+import dto.Product;
+import model.StaffsFunc;
 
 import javax.jms.Session;
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import java.io.IOException;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
 
 /**
  * Create by Intellij IDEA
@@ -20,7 +23,7 @@ import java.text.SimpleDateFormat;
  * Date : 12/10/17
  */
 
-@WebServlet(name = "SalesReportServlet")
+@WebServlet(name = "SalesReportServlet",urlPatterns = "/SalesReport")
 public class SalesReportServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String start = request.getParameter("start");
@@ -29,6 +32,11 @@ public class SalesReportServlet extends HttpServlet {
         try {
             Date startDate = new Date(simpleDateFormat.parse(start).getTime());
             Date endDate = new Date(simpleDateFormat.parse(end).getTime());
+            HashMap<Product,Integer> report = StaffsFunc.getSalesReport(startDate,endDate);
+            System.out.println("Servlet sent");
+            request.getSession().setAttribute("report",report);
+            response.sendRedirect("SalesReport.jsp");
+            //TODO redirect sent
         } catch (ParseException e) {
             e.printStackTrace();
         }

@@ -53,20 +53,22 @@ public class DatabaseStaff {
 
 
     public static HashMap getSalesReport(Date start, Date end) {
-        HashMap<String, Integer> salesReport = new HashMap<>();
+        HashMap<Product, Integer> salesReport = new HashMap<>();
         try {
             ArrayList<Product> products = DatabaseProduct.getProductList();
             for (Product p : products) {
-                String sql = "SELECT SUM(quantity) FROM order_list WHERE (TIME BETWEEN '" + start + "' AND '" + end + "') AND product_id = '" + p.getProductID() + "';";
+                String sql = "SELECT SUM(quantity) FROM order_list WHERE (time BETWEEN '" + start + "' AND '" + end + "') AND product_id = '" + p.getProductID() + "';";
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(sql);
                 while (resultSet.next()) {
-                    salesReport.put(p.getProductID(), resultSet.getInt(1));
+                    salesReport.put(p, resultSet.getInt(1));
+                    System.out.println(resultSet.getInt(1));
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("Database sent");
         return salesReport;
     }
 
@@ -87,6 +89,37 @@ public class DatabaseStaff {
 
     public static void insertNewStaff(Staff staff){
 
+    }
+
+    public static ArrayList<Staff> getAllStaff(){
+        ArrayList<Staff> staffs = new ArrayList<>();
+        try{
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM stuffs;");
+            while (resultSet.next()){
+                Staff staff = new Staff();
+                staff.setStuffID(resultSet.getString("stuff_id"));
+                staff.setPassword(resultSet.getString("password"));
+                staff.setAddress(resultSet.getString("address"));
+                staff.setAdmin(resultSet.getString("admin"));
+                staff.setEmail(resultSet.getString("email"));
+                staff.setFirst_name(resultSet.getString("first_name"));
+                staff.setLast_name(resultSet.getString("last_name"));
+                staff.setPhoneNumber(resultSet.getString("phone"));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return staffs;
+    }
+
+    public static void removeStaff(String id){
+        try{
+            Statement statement = connection.createStatement();
+            statement.execute("DELETE FROM stuffs WHERE stuff_id = '"+id+"';");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }
