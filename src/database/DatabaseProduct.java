@@ -161,7 +161,7 @@ public class DatabaseProduct {
             while (select.next()) {
                 custList = select.getString(1);
                 System.out.println(custList);
-                if (!Objects.equals(custList, "")) {
+                if (!Objects.equals(custList, null)||!Objects.equals(custList,"")) {
                     custList += "," + customizedID;
                     Statement update = connection.createStatement();
                     update.executeUpdate("UPDATE bagTables SET MWE004 = '" + custList + "';");
