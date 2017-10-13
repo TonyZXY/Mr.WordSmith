@@ -21,8 +21,7 @@ public class DatabaseBagItems {
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM bagtables WHERE bag_id ='" + userID + "';");
-            while (resultSet.next()) {
-
+            if (resultSet.next()) {
                 items.add(new Item(DatabaseProduct.getProduct("MWE001"), resultSet.getInt("MWE001")));
                 items.add(new Item(DatabaseProduct.getProduct("MWE002"), resultSet.getInt("MWE002")));
                 items.add(new Item(DatabaseProduct.getProduct("MWE003"), resultSet.getInt("MWE003")));
@@ -40,6 +39,9 @@ public class DatabaseBagItems {
                     }
 //                    items.add(new Item(DatabaseProduct.getProduct("MWE004"),
 //                            CustomizedProduct.getNumberFromIDs(ids)));
+                }else {
+                    Statement statement1 = connection.createStatement();
+                    statement1.execute("INSERT INTO bagTables (bag_id,MWE004) VALUES ('"+userID+"','');");
                 }
 
             }
