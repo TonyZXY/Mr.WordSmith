@@ -64,7 +64,7 @@
     }
     .content-inside {
         padding: 20px;
-        padding-bottom: 50px;
+        padding-bottom: 60px;
     }
     .footer {
         height: 50px;

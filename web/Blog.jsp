@@ -38,7 +38,24 @@
     <![endif]-->
 </head>
 
+<style>
+
+html,body{
+font-family: "Lato", sans-serif;
+margin: 0;
+padding: 0;
+height: 100%;
+
+}
+.footer {
+height: 50px;
+margin-top: -50px;
+}
+</style>
+
 <body>
+
+
 
 <!-- Links (sit on top) -->
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
