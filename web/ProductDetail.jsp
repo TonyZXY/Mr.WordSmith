@@ -208,7 +208,7 @@
                         if(user==null){
                             button = "<button href=\"Login.jsp\" style=\"width:30%; margin-left:0px\"\n" +
                                     "                            onclick=\"document.getElementById('subscribe').style.display='block'\"\n" +
-                                    "                            class=\"w3-button w3-block w3-black\">Login\n" +
+                                    "                            class=\"w3-button w3-block w3-black\">Add To Bag\n" +
                                     "                    </button>";
                         }else {
                             button="<button type=\"submit\" style=\"width:30%; margin-left:0px\"\n" +

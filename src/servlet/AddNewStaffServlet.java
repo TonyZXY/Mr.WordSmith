@@ -17,7 +17,7 @@ import java.io.IOException;
  * Date : 13/10/17
  */
 
-@WebServlet(name = "AddNewStaffServlet",urlPatterns = "/AddNewStaff")
+@WebServlet(name = "AddNewStaffServlet",urlPatterns = "/AddNewStaffServlet")
 public class AddNewStaffServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Staff staff = new Staff();

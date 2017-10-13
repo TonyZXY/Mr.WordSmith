@@ -278,7 +278,7 @@
                     <%
                         String addButton;
                         if(user==null){
-                            addButton = "<center><a href = \"Login.jsp\" class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" style=\"width: 30%\"><center>Login</center></a></center>";
+                            addButton = "<center><a href = \"Login.jsp\" class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" style=\"width: 30%\"><center>Add To Bag</center></a></center>";
                         }else {
                             addButton = "<center><button class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" formaction=\"AddCustomizeProductToBag\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button></center>";
                         }

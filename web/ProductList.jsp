@@ -1,5 +1,7 @@
 <%@ page import="dto.User" %>
-<%@ page import="view.ProductPicProductListPage" %><%--
+<%@ page import="view.ProductPicProductListPage" %>
+<%@ page import="view.ProductPicHomePage" %>
+<%--
   Created by IntelliJ IDEA.
   User: Siya Yu
   Date: 10/9/17

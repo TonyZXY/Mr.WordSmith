@@ -16,6 +16,7 @@ public class ResetPasswordServlet extends HttpServlet {
         String email = request.getParameter("email");
         ResetPassword.resetPassword(email);
 
+
         response.sendRedirect("index.jsp");
     }
 
