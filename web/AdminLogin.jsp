@@ -71,28 +71,6 @@
 
 
 <!-- bar -->
-<<<<<<< HEAD
-<div class="w3-black w3-text-black">ss</div>
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px">
-    <center><img class="w3-image" src="images/Ad 4.jpg" alt="Hamburger Catering" width="1000" height="800"></center>
-    <div class="w3-display-middle w3-large">
-        <center>
-            <div class="w3-container w3-card-2 w3-white w3-margin-bottom" style="width: 70%">
-                <center><img src="images/icon.jpg" style="width: 15%;margin-top: 5%"></center>
-                <form action="AdminLogin" method="post">
-                    <br>
-                    <input class="w3-input w3-border" type="text" placeholder="Enter Stuff Number" style="width: 80%" name="id">
-                    <br>
-                    <input class="w3-input w3-border" type="password" placeholder="Enter your password" style="width: 80%" name="password"><br>
-                    <p>
-                        <button type="submit" class="w3-btn w3-black" style="width: 70%">LOGIN</button></p>
-                    <br>
-                </form>
-            </div>
-        </center>
-    </div>
-</header>
-=======
 
 <div class="w3-display-middle w3-large" style="max-width: 50%;max-height: 100%">
     <center>
@@ -106,16 +84,12 @@
                 <input class="w3-input w3-border" type="password" placeholder="Password" style="width: 70%" name="password"><br>
                 <p>
                     <button type="submit" class="w3-btn w3-black" style="width: 70%">LOGIN</button></p>
-                <p>
-                    <a herf="#" class="w3-btn" style="width:70%">Cancel</a>
-                </p>
                 <br>
             </form>
         </div>
     </center>
 </div>
 
->>>>>>> e98dc2f3bb7d9b6ae2c36a8683a6a630886f3f46
 
 
 </body>
