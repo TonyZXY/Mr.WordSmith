@@ -62,12 +62,17 @@
         padding: 0;
         margin-top: 6px
     }
+    .justify{
+        text-align: left;
+    }
 
     .options {
         position: relative;
         left: 50%;
         -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
+
+
 
     }
     input[type="checkbox"],
@@ -295,12 +300,16 @@
                     <div class="w3-container"><center>
 
                         <div class="options">
-                                <div class="w3-half" align="center"><input id="option1" type="radio" value="weeklylayouta" name="layout" style="text-align: left;width: 50%" checked><label for="option1">Weekly Layout A</label></div>
-                                <div class="w3-half" align="center"><input id="option2" type="radio" value="weeklylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option2">Weekly Layout B</label></div>
-                                <div class="w3-half" align="center"><input id="option3" type="radio" value="weeklylayoutc" name="layout" style="text-align: left;width: 50%"><label for="option3">Weekly Layout C</label></div>
-                                <div class="w3-half" align="center"><input id="option4" type="radio" value="weeklylayoutd" name="layout" style="text-align: left;width: 50%"><label for="option4">Weekly Layout D</label></div>
-                                <div class="w3-half" align="center"><input id="option5" type="radio" value="dailylayouta" name="layout" style="text-align: left;width: 50%"><label for="option5">Daily Layout A</label></div>
-                                <div class="w3-half" align="center"><input id="option6" type="radio" value="dailylayoutb" name="layout" style="text-align: left;width: 50%"><label for="option6">Daily Layout B</label></div>
+                                <div class="justify">
+
+                                <div class="w3-half" align="center"><input id="option1" type="radio" value="weeklylayouta" name="layout" style="text-align: justify;width: 50%" checked><label for="option1">Weekly Layout A</label></div>
+                                <div class="w3-half" align="center"><input id="option2" type="radio" value="weeklylayoutb" name="layout" style="text-align: justify;width: 50%"><label for="option2">Weekly Layout B</label></div>
+                                <div class="w3-half" align="center"><input id="option3" type="radio" value="weeklylayoutc" name="layout" style="text-align: justify;width: 50%"><label for="option3">Weekly Layout C</label></div>
+                                <div class="w3-half" align="center"><input id="option4" type="radio" value="weeklylayoutd" name="layout" style="text-align: justify;width: 50%"><label for="option4">Weekly Layout D</label></div>
+                                <div class="w3-half" align="center"><input id="option5" type="radio" value="dailylayouta" name="layout" style="text-align: justify;width: 50%"><label for="option5">Daily Layout A</label></div>
+                                <div class="w3-half" align="center"><input id="option6" type="radio" value="dailylayoutb" name="layout" style="text-align: justify;width: 50%"><label for="option6">Daily Layout B</label></div>
+
+                                </div>
                         </div>
 
                     </center></div><br>
@@ -316,12 +325,14 @@
                                     <div class="w3-half" align="center"><input id="optionB" type="checkbox"  name="layout" value="2"><label for="optionB">Non-lined</label></div>
                                     <div class="w3-half" align="center"><input id="optionC" type="checkbox"  name="layout" value="3"><label for="optionC">Page number</label></div>
                                     <div class="w3-half" align="center"><input id="optionD" type="checkbox"  name="layout" value="4"><label for="optionD">Public holiday </label></div>
-                                    <div class="w3-half" align="center"><input id="optionJ" type="checkbox"  name="layout" value="5"><label for="optionJ">Local holiday </label></div>
+                                    <div class="w3-half" align="center"><input id="optionK" type="checkbox"  name="layout" value="5"><label for="optionK">Local holiday </label></div>
                                     <div class="w3-half" align="center"><input id="optionE" type="checkbox"  name="layout" value="6"><label for="optionE">Moon cycle</label></div>
                                     <div class="w3-half" align="center"><input id="optionF" type="checkbox"  name="layout" value="7"><label for="optionF">Sunrise,Sunset</label></div>
                                     <div class="w3-half" align="center"><input id="optionG" type="checkbox"  name="layout" value="8"><label for="optionG">Page of password</label></div>
                                     <div class="w3-half" align="center"><input id="optionH" type="checkbox"  name="layout" value="9"><label for="optionH">Page of extra note</label></div>
                                     <div class="w3-half" align="center"><input id="optionI" type="checkbox"  name="layout" value="10"><label for="optionI">Page of Social media handles</label></div>
+                                    <div class="w3-half" align="center"><input id="optionJ" type="checkbox"  name="layout" value="11"><label for="optionJ">Page of personal info</label></div>
+                                    <div class="w3-half" align="center"><input id="optionL" type="checkbox"  name="layout" value="12"><label for="optionL">Page of To-do list</label></div>
                                 </center></form>
                             </div>
                         </div>

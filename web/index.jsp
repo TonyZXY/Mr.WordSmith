@@ -92,6 +92,7 @@
         }
     %>
     <%=links%>
+
   <%--<div class="w3-right s3">--%>
       <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
     <%--</div>--%>
