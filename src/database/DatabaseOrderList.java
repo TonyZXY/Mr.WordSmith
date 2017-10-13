@@ -115,6 +115,7 @@ public class DatabaseOrderList {
                 statement.setString(10,order.getFirstName());
                 statement.setString(11,order.getLastName());
                 statement.execute();
+                statement.executeUpdate("UPDATE products SET stock = stock - "+item.getNumber()+" WHERE product_id ='"+item.getProduct().getProductID()+"';");
             }
         }catch (Exception e){
             e.printStackTrace();

@@ -1,5 +1,12 @@
 package dto;
 
+/**
+ * Create by Intellij IDEA
+ * Project : Mr.WordSmith
+ * User : TonyZheng
+ * Date : 13/10/17
+ */
+
 public class Staff {
     private String staffID;
     private String password;

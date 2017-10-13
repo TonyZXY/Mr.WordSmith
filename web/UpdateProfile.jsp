@@ -76,9 +76,53 @@
 <!-- imformation-->
 <div class="w3-container">
 
-    <form class="w3-container">
+    <table cellspacing="2" cellpadding="1">
+        <tr>
+            <td style="font-size: small">First Name: <%=staff.getFirst_name()%><input type="hidden"
+                                                                                    name="firstname"
+                                                                                    id="firstname" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: small">Last Name: <%=staff.getLast_name()%><input type="hidden" name="lastname"
+                                                                                  id="lastname" value=""/></td>
+        </tr>
+        <tr>
+            <td style="font-size: small">Address: <%=staff.getAddress()%><input type="hidden" name="dob"
+                                                                                      id="dob" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: small">Email: <%=staff.getEmail()%><input type="hidden" name="email" id="email"
+                                                                           value=""/></td>
+        </tr>
+        <tr>
+            <td style="font-size: small">Phone: <%=staff.getPhoneNumber()%><input type="hidden" name="phone" id="phone"
+                                                                           value=""/></td>
+        </tr>
+        <tr>
+            <td style="font-size: small">Position: <%=staff.getAdmin()%><input type="hidden" name="address"
+                                                                               id="address" value=""/>
+            </td>
+        </tr>
+    </table>
 
+    <form class="w3-container" action="UpdateProfile" method="post">
 
+        <div class="w3-section">
+            <label><b>Email</b></label>
+            <input class="w3-input w3-border w3-margin-bottom" type="email" placeholder="Email" name="email" style="width: 80%">
+            <label><b>Address</b></label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Address" name="address" style="width: 80%">
+            <label><b>Phone Number</b></label>
+            <input class="w3-input w3-border w3-margin-bottom" type="tel" placeholder="Phone Number" name="phone" style="width: 80%">
+            <label><b>Password</b></label>
+            <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password" style="width: 80%">
+            <br>
+            <br>
+
+            <button class="w3-button w3-block w3-black w3-section w3-padding" type="submit" style="width: 50%">Update</button>
+        </div>
         <!-- modal (add new staffs)-->
 
     </form>

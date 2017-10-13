@@ -185,4 +185,13 @@ public class DatabaseProduct {
             e.printStackTrace();
         }
     }
+
+    public static void updateStockLevel(String pid,int num){
+        try{
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("UPDATE products SET stock = stock + "+num+" WHERE product_id = '"+pid+"';");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
