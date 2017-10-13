@@ -83,7 +83,13 @@ public class DatabaseStaff {
     }
 
     public static void updateStaffDetail(Staff staff){
-
+        try{
+            String sql = "UPDATE stuffs SET email = '"+staff.getEmail()+"', address = '"+staff.getAddress()+"', phone = '"+staff.getPhoneNumber()+"', password = '"+staff.getPassword()+"' WHERE stuff_id = '"+staff.getStuffID()+"';";
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static void insertNewStaff(Staff staff){

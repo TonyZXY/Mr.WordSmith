@@ -127,7 +127,7 @@
 
                         </div><br><br>
 
-                        <form class="w3-container" action="AddNewStaff">
+                        <form class="w3-container" action="AddNewStaff" method="post">
                             <div class="w3-section">
                                 <label><b>Staff ID</b></label>
                                 <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Staff ID" name="id" required="required" style="width: 80%">
@@ -142,7 +142,7 @@
                                 <label><b>Phone Number</b></label>
                                 <input class="w3-input w3-border w3-margin-bottom" type="tel" placeholder="Phone Number" name="phone" required="required" style="width: 80%">
                                 <label><b>Password</b></label>
-                                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required="required" style="width: 80%">
+                                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password" required="required" style="width: 80%">
                                 <select name="admin" id="">
                                     <option value="Staff">staff</option>
                                     <option value="Manager">manager</option>
