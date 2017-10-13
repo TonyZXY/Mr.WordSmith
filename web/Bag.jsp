@@ -2,13 +2,16 @@
 <%@ page import="dto.Item" %>
 <%@ page import="dto.User" %>
 <%@ page import="view.BagProductView" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+
+<%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 10/9/17
   Time: 1:42 PM
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -63,8 +66,8 @@
         min-height: 100%;
     }
     .content-inside {
-        padding: 20px;
-        padding-bottom: 60px;
+        padding: 5px;
+        padding-bottom: 50px;
     }
     .footer {
         height: 50px;
@@ -82,7 +85,8 @@
 <!-- Links (sit on top) -->
  <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
+        <img src="images/icon.jpg" style="width: 18%;margin-left: 10%"><br>
+
     </div>
     <!-- logout -->
     <%
