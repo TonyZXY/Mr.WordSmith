@@ -97,22 +97,22 @@
             </tr>
 
             <%=StaffManagementView.getView(staffs)%>
-            <tr>
-                <form>
-                <td>ID</td>
-                <td>First Name</td>
-                <td>Phone</td>
-                <td>Admin</td>
-                <td><button class="w3-btn w3-black w3-round" style="width: auto" formmethod="post" formaction="RemoveStaff" name="id" value="">REMOVE</button></td>
-                </form>
-            </tr>
-            <tr>
-                <td>E55149</td>
-                <td>Yoyo</td>
-                <td>dd/mm/yyyy</td>
-                <td>xxxxxxxx</td>
-                <td><a class="w3-btn w3-black w3-round" style="width: auto">remove</a></td>
-            </tr>
+            <%--<tr>--%>
+                <%--<form>--%>
+                <%--<td>ID</td>--%>
+                <%--<td>First Name</td>--%>
+                <%--<td>Phone</td>--%>
+                <%--<td>Admin</td>--%>
+                <%--<td><button class="w3-btn w3-black w3-round" style="width: auto" formmethod="post" formaction="RemoveStaff" name="id" value="">REMOVE</button></td>--%>
+                <%--</form>--%>
+            <%--</tr>--%>
+            <%--<tr>--%>
+                <%--<td>E55149</td>--%>
+                <%--<td>Yoyo</td>--%>
+                <%--<td>dd/mm/yyyy</td>--%>
+                <%--<td>xxxxxxxx</td>--%>
+                <%--<td><a class="w3-btn w3-black w3-round" style="width: auto">remove</a></td>--%>
+            <%--</tr>--%>
         </table><br><br>
         <!-- modal (add new staffs)-->
         <center>
@@ -134,7 +134,7 @@
                                 <label><b>First Name</b></label>
                                 <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="First Name" name="FirstName" required="required" style="width: 80%">
                                 <label><b>Last Name</b></label>
-                                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Last Name" name="LastName" id="" style="width: 80%">
+                                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Last Name" name="LastName" required="required" style="width: 80%">
                                 <label><b>Email</b></label>
                                 <input class="w3-input w3-border w3-margin-bottom" type="email" placeholder="Email" name="email" required="required" style="width: 80%">
                                 <label><b>Address</b></label>
@@ -142,7 +142,12 @@
                                 <label><b>Phone Number</b></label>
                                 <input class="w3-input w3-border w3-margin-bottom" type="tel" placeholder="Phone Number" name="phone" required="required" style="width: 80%">
                                 <label><b>Password</b></label>
-                                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required="required" style="width: 80%"><br>
+                                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required="required" style="width: 80%">
+                                <select name="admin" id="">
+                                    <option value="Staff">staff</option>
+                                    <option value="Manager">manager</option>
+                                </select>
+                                <br>
                                 <br>
 
                                 <button class="w3-button w3-block w3-black w3-section w3-padding" type="submit" style="width: 50%">Add</button>

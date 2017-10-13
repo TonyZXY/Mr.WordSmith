@@ -3,12 +3,11 @@ package database;
 import dto.Product;
 import dto.Staff;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.sql.Date;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static java.lang.Integer.*;
 
 /**
  * Create by Intellij IDEA
@@ -88,7 +87,21 @@ public class DatabaseStaff {
     }
 
     public static void insertNewStaff(Staff staff){
-
+        try{
+            String sql = "INSERT INTO stuffs (stuff_id,password,email,address,first_name,last_name,phone,admin) VALUES (?,?,?,?,?,?,?,?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1,Integer.valueOf(staff.getStuffID()));
+            statement.setString(2,staff.getPassword());
+            statement.setString(3,staff.getEmail());
+            statement.setString(4,staff.getAddress());
+            statement.setString(5,staff.getFirst_name());
+            statement.setString(6,staff.getLast_name());
+            statement.setString(7,staff.getPhoneNumber());
+            statement.setString(8,staff.getAdmin());
+            statement.execute();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static ArrayList<Staff> getAllStaff(){
