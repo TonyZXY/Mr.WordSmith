@@ -177,6 +177,7 @@
         <div class="w3-col w3-container" style="width:5%"><p></p></div>
     </div>
     <br><br><br><br><br><br><br>
+
   
   
   <!-- product list new -->
@@ -184,7 +185,7 @@
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
 
-        <%=ProductPicHomePage.getProducts()%>
+        <%=ProductPicProductListPage.getProductView()%>
 
         <%--This part code used to demo the static page of the home page product part--%>
 
