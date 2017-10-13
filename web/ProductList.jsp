@@ -1,5 +1,7 @@
 <%@ page import="dto.User" %>
-<%@ page import="view.ProductPicProductListPage" %><%--
+<%@ page import="view.ProductPicProductListPage" %>
+<%@ page import="view.ProductPicHomePage" %>
+<%--
   Created by IntelliJ IDEA.
   User: Siya Yu
   Date: 10/9/17
@@ -184,7 +186,7 @@
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
 
-        <%=ProductPicHomePage.getProducts()%>
+        <%=ProductPicProductListPage.getProductView()%>
 
         <%--This part code used to demo the static page of the home page product part--%>
 

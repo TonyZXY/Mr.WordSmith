@@ -125,6 +125,7 @@ public class DatabaseStaff {
                 staff.setFirst_name(resultSet.getString("first_name"));
                 staff.setLast_name(resultSet.getString("last_name"));
                 staff.setPhoneNumber(resultSet.getString("phone"));
+                staffs.add(staff);
             }
         }catch (Exception e){
             e.printStackTrace();
