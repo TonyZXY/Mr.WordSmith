@@ -251,7 +251,7 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <button formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
+                                <button onclick="document.getElementById('id04').style.display='block'"formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
                                 <br>
                                 <hr>
                                 <br>
@@ -267,7 +267,7 @@
                                         <input class="w3-input w3-border" type="text" name="name">
                                     </form>
                                     <br>
-                                    <center><button formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
+                                    <center><button onclick="document.getElementById('id04').style.display='block'"formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
                                 </div>
                             </div>
                         </div>
@@ -281,11 +281,26 @@
                                     <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay in 4 equal fortnightly payments with no interest.</b><br><br>Available to customers in Australia with a debit or credit card. When you click 'Place Order' with Afterpay, you will be redirected to Afterpay to complete your order.</p>
                                 </div>
                                 <br><br>
-                                <center><button formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
+                                <center><button onclick="document.getElementById('id04').style.display='block'" formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%" >AfterPay</button> </center>
                             </div>
                         </div>
                     </div>
+                    <!-- modal (order placed successfully)-->
+                    <div id="id04" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:800px">
+                            <div class="w3-center"><br>
+                                <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
+                            </div>
+                            <form class="w3-container" action="">
+                                <div class="w3-section">
+                                    <p>Your Order has been received ! Check your order details in My order</p><br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </center>
 
+                    <br><br>
 
                     <!-- End Right Column -->
                 </div>
@@ -299,6 +314,21 @@
 </div>
 </div>
 <br><br>
+
+<!-- modal (order placed successfully)-->
+<center>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
+
+                </div><br><br>
+                    <div class="w3-section">
+                    </div>
+            </div>
+        </div>
+</center>
     <!-- Footer -->
 <footer>
     <div class="footer">
