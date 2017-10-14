@@ -66,12 +66,12 @@
         min-height: 100%;
     }
     .content-inside {
-        padding: 5px;
-        padding-bottom: 50px;
+        padding: 20px;
+        padding-bottom: 40px;
     }
     .footer {
-        height: 50px;
-        margin-top: -50px;
+        height: 40px;
+        margin-top: -40px;
     }
 
 
