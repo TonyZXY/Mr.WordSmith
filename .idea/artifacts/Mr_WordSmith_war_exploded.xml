@@ -12,6 +12,7 @@
           <element id="library" level="project" name="mail" />
           <element id="library" level="project" name="activation" />
         </element>
+        <element id="library" level="project" name="Java EE 6-Java EE 6" />
       </element>
     </root>
   </artifact>

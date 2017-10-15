@@ -39,6 +39,12 @@
     .mySlides {display:none}
     .w3-tag, .fa {cursor:pointer}
     .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+
+
+
+
+
 </style>
 <body>
 
@@ -46,14 +52,12 @@
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 30%;margin-left: 10%">
+        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
     <br><br><br>
     <div class="w3-container w3-right">
         <form>
-        <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
-            Logout
-        </button>
+        <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">Logout</button>
         </form>
     </div>
 </div>
@@ -88,9 +92,60 @@
     </div>
 </div>
 
-<div class="w3-padding-64">
-    <center><div class="w3-padding"><h4><strong>Welcome <%=staff.getFirst_name()%></strong></h4></div></center>
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+        <!-- Left Column -->
+        <div class="w3-half">
+            <div class="w3-row">
+                <div class="w3-col w3-container" style="margin-top: 70px;margin-left:50%">
+                    <h4><strong>Welcome , <%=staff.getFirst_name()%></strong></h4>
+                <table cellspacing="2" cellpadding="1" style="align-content: center">
+                    <tr>
+                        <td style="font-size: small">First Name: <%=staff.getFirst_name()%><input type="hidden" name="firstname" id="firstname" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: small">Last Name: <%=staff.getLast_name()%><input type="hidden" name="lastname" id="lastname" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: small">Address: <%=staff.getAddress()%><input type="hidden" name="dob" id="dob" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: small">Email: <%=staff.getEmail()%><input type="hidden" name="email" id="email" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: small">Phone: <%=staff.getPhoneNumber()%><input type="hidden" name="phone" id="phone" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: small">Admin type: <%=staff.getAdmin()%><input type="hidden" name="address" id="address" value=""/></td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            <!-- End Left Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-half">
+
+                <div class="w3-col w3-container" style="margin-top: 70px;margin-right:30px">
+                    <img src="images/adminicon.jpg" style="width: 30%">
+                    </div>
+
+                </div>
+
+            <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
 </div>
+
 
 
 </body>

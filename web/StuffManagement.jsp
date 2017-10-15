@@ -1,7 +1,7 @@
-<%@ page import="dto.Staff" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="database.DatabaseStaff" %>
-<%@ page import="view.StaffManagementView" %><%--
+<%@ page import="dto.Staff" %>
+<%@ page import="view.StaffManagementView" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: TonyZheng
   Date: 12/10/17
@@ -64,7 +64,7 @@
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 30%;margin-left: 10%">
+        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
     <br><br><br>
     <div class="w3-container w3-right">
@@ -145,27 +145,28 @@
 
                     <form class="w3-container" action="AddNewStaffServlet" method="post">
                         <div class="w3-section">
-                            <label><b>Staff ID</b></label>
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Staff ID"
+
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="Staff ID"
                                    name="id" required="required" style="width: 80%">
-                            <label><b>First Name</b></label>
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="First Name"
+
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="First Name"
                                    name="FirstName" required="required" style="width: 80%">
-                            <label><b>Last Name</b></label>
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Last Name"
+
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="Last Name"
                                    name="LastName" required="required" style="width: 80%">
-                            <label><b>Email</b></label>
-                            <input class="w3-input w3-border w3-margin-bottom" type="email" placeholder="Email"
+
+                            <input class="w3-input w3-border w3-margin-bottom" type="email" width="40%"placeholder="Email"
                                    name="email" required="required" style="width: 80%">
-                            <label><b>Address</b></label>
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Address"
+
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="Address"
                                    name="address" required="required" style="width: 80%">
-                            <label><b>Phone Number</b></label>
-                            <input class="w3-input w3-border w3-margin-bottom" type="tel" placeholder="Phone Number"
+
+                            <input class="w3-input w3-border w3-margin-bottom" type="tel" width="40%"placeholder="Phone Number"
                                    name="phone" required="required" style="width: 80%">
-                            <label><b>Password</b></label>
-                            <input class="w3-input w3-border" type="password" placeholder="Enter Password"
+
+                            <input class="w3-input w3-border" type="password" width="40%"placeholder="Password"
                                    name="password" required="required" style="width: 80%">
+                            <br><label>*Admin type</label>
                             <select name="admin" id="">
                                 <option value="Staff">staff</option>
                                 <option value="Manager">manager</option>
@@ -175,10 +176,6 @@
                             <button class="w3-button w3-block w3-black w3-section w3-padding" type="submit" style="width: 50%">Add</button>
                         </div>
                     </form><br>
-
-                    <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-gray">Cancel</button>
-                    </div>
 
                 </div>
             </div>

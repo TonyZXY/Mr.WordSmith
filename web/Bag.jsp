@@ -2,15 +2,20 @@
 <%@ page import="dto.Item" %>
 <%@ page import="dto.User" %>
 <%@ page import="view.BagProductView" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+
+<%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 10/9/17
   Time: 1:42 PM
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
+
     User user = null;
     ArrayList<Item> bag = new ArrayList<>();
     user = (User) session.getAttribute("user");
@@ -19,7 +24,6 @@
         session.setAttribute("bagItem", bag);
     }
     session.setAttribute("Redirect","Bag.jsp");
-
 
 %>
 <html lang="en-US">
@@ -47,12 +51,42 @@
     <![endif]-->
 
 </head>
+
+<style>
+
+    html,body{
+
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+
+    }
+    .content {
+        min-height: 100%;
+    }
+    .content-inside {
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .footer {
+        height: 40px;
+        margin-top: -40px;
+    }
+
+
+</style>
+
 <body>
 
+<div class="content">
+ <div class="content-inside">
+
 <!-- Links (sit on top) -->
-<div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
+ <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
+        <img src="images/icon.jpg" style="width: 18%;margin-left: 10%"><br>
+
     </div>
     <!-- logout -->
     <%
@@ -263,32 +297,42 @@
     <%--}--%>
     <%--</script>--%>
 
-    <!-- Footer -->
+</div>
+</div>
 
     <!-- Footer -->
 <footer>
-    <div class="w3-row w3-section"style="background-color:#F8F8F8;margin-bottom:70px" >
-        <div class="w3-row w3-section"style="background-color:#F8F8F8">
-            <center><div class="w3-third w3-container w3-large" style="height:250px"><br>
-                <a href="AboutUs.jsp"><i><p2 style="font-family:Times"><b>About Us</b></p2></i></a><br><br>
-                <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>PO Box 210, Abbotsford, VIC 3067</p>
-                <p text-align="right"style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +61 0425752986</p>
-                <p text-align="right"style="font-size:70%"><i class="fa fa-envelope" style="width:30px"> </i> customercare@mrwordsmith.com.au</p>
-            </div></center>
+<div class="footer">
+    <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
+        <div class="w3-row w3-section" style="background-color:#F8F8F8">
+            <center>
+                <div class="w3-third w3-container w3-large" style="height:250px"><br>
+                    <a href="AboutUs.jsp"><i>
+                        <p2 style="font-family:Times"><b>About Us</b></p2>
+                    </i></a><br><br>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
+                    <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
+                </div>
+            </center>
             <div class="w3-third w3-center w3-large " style="height:250px"><br>
-                <a href="Contact.jsp"><i><p2 style="font-family:Times"><b>Contact Us</b></p2></i></a><br><br>
+                <a href="Contact.jsp"><i>
+                    <p2 style="font-family:Times"><b>Contact Us</b></p2>
+                </i></a><br><br>
                 <p style="font-size:70%"> FAQ</p>
                 <p style="font-size:70%"> Privacy policy</p>
             </div>
             <div class="w3-third w3-center w3-large" style="height:250px">
                 <br><br>
-                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>"target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                 <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
+
             </div>
         </div>
     </div>
+</div>
 </footer>
 
 

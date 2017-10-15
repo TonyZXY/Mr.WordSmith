@@ -1,8 +1,8 @@
-<%@ page import="java.util.Objects" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="dto.Staff" %>
 <%@ page import="dto.Product" %>
+<%@ page import="dto.Staff" %>
 <%@ page import="view.SalesReportView" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Objects" %>
 <%--
   Created by IntelliJ IDEA.
   User: TonyZheng
@@ -65,7 +65,7 @@
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
     <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 30%;margin-left: 10%">
+        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
     <br><br><br>
     <div class="w3-container w3-right">
@@ -111,7 +111,6 @@
 <!-- imformation-->
 <div class="w3-container">
     <div class="w3-container w3-quarter w3-text-white">
-        eeeee
     </div>
 
     <div class="w3-container w3-half">
@@ -123,7 +122,7 @@
             <input class="w3-input w3-border" type="date" placeholder="DD-MM-YYYY" style="width: 40%" name="end">
             <p>
             <center></center>
-            <button class="w3-btn w3-black" type="submit">CONFIRM</button>
+            <button class="w3-btn w3-black" type="submit">Search</button>
             </p>
         </form>
         <hr>

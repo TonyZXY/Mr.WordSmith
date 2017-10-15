@@ -55,15 +55,31 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
+    html,body{
 
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+
+    }
+    .content {
+        min-height: 100%;
+    }
+    .content-inside {
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .footer {
+        height: 40px;
+        margin-top: -40px;
+    }
     .mySlides {
         display: none
     }
-
     .w3-tag, .fa {
         cursor: pointer
     }
-
     .w3-tag {
         height: 15px;
         width: 15px;
@@ -71,86 +87,91 @@
         margin-top: 6px
     }
 </style>
+
 <body>
-<!-- Links (sit on top) -->
-<div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-    <div class="w3-third">
-        <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
-    </div>
-    <!-- logout -->
-    <%
-        String links;
-        if (user != null) {
-            links = "<div class=\"w3-right s3\">\n" +
-                    "        <form>\n" +
-                    "            <button formaction=\"Logout\" type=\"submit\" formmethod=\"post\" class=\"w3-button w3-block\"><b>Logout</b>\n" +
-                    "            </button>\n" +
-                    "        </form>\n" +
-                    "    </div>\n" +
-                    "    <div class=\"w3-right\">\n" +
-                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                    "    </div>\n" +
-                    "    <div class=\"w3-right\">\n" +
-                    "        <a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a>" +
-                    "</div>";
-        } else {
-            links = "<div class=\"w3-right\">\n" +
-                    "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                    "    </div>\n"+
-                    "<div class=\"w3-right\">"+
-                    "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
-                    "</div>";
-        }
-    %>
-    <%=links%>
-    <%--<div class="w3-right s3">--%>
-        <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
-    <%--</div>--%>
+<div class="content">
+    <div class="content-inside">
+        <!-- Links (sit on top) -->
+        <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
+            <div class="w3-third">
+                <img src="images/icon.jpg" style="width: 18%;margin-left: 10%">
+            </div>
+            <!-- logout -->
+            <%
+                String links;
+                if (user != null) {
+                    links = "<div class=\"w3-right s3\">\n" +
+                            "        <form>\n" +
+                            "            <button formaction=\"Logout\" type=\"submit\" formmethod=\"post\" class=\"w3-button w3-block\"><b>Logout</b>\n" +
+                            "            </button>\n" +
+                            "        </form>\n" +
+                            "    </div>\n" +
+                            "    <div class=\"w3-right\">\n" +
+                            "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                            "    </div>\n" +
+                            "    <div class=\"w3-right\">\n" +
+                            "        <a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a>" +
+                            "</div>";
+                } else {
+                    links = "<div class=\"w3-right\">\n" +
+                            "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                            "    </div>\n"+
+                            "<div class=\"w3-right\">"+
+                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                            "</div>";
+                }
+            %>
+            <%=links%>
 
-
-    <%--<div class="w3-right">--%>
-        <%--<a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>--%>
-    <%--</div>--%>
-    <%--<div class="w3-right">--%>
-        <%--<%--%>
+            <%--<div class="w3-right s3">--%>
+            <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
+            <%--</div>--%>
+            <%----%>
+            <%----%>
+            <%--<div class="w3-right">--%>
+            <%--<a href="Bag.jsp" class="w3-button w3-block"><b>Bag</b></a>--%>
+            <%--</div>--%>
+            <%--<div class="w3-right">--%>
+            <%--<%--%>
             <%--String link;--%>
             <%--if (user != null) {--%>
-                <%--link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";--%>
+            <%--link = "<a href=\"Account.jsp\" class=\"w3-button w3-block\"><b>My Account</b></a> \n ";--%>
 
             <%--} else link = "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>";--%>
-        <%--%>--%>
-        <%--<%=link%>--%>
-    <%--</div>--%>
-    <br>
-    <br>
-    <br>
-    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-    <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <%--%>--%>
+            <%--<%=link%>--%>
+            <%--</div>--%>
+            <br>
+            <br>
+            <br>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
+            <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
 
-</div>
-</div>
-<!-- function bar -->
-<div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
-    <div class="w3-row w3-large w3-black">
-        <div class="w3-col " style="width:20%">
-            <a href="index.jsp" class="w3-button w3-block">Home</a>
-        </div>
-        <div class="w3-col" style="width:20%">
-            <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
-        </div>
-        <div class="w3-col" style="width:20%">
-            <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
-        </div>
-        <div class="w3-col" style="width:20%">
-            <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
-        </div>
-        <div class="w3-col" style="width:20%">
-            <a href="AboutUs.jsp" class="w3-button w3-block">About Us</a>
         </div>
     </div>
-</div>
+
+    <!-- function bar -->
+    <div class="w3-bar-item" style="max-width:100%;margin-top:0px;">
+        <div class="w3-row w3-large w3-black">
+            <div class="w3-col " style="width:20%">
+                <a href="index.jsp" class="w3-button w3-block">Home</a>
+            </div>
+            <div class="w3-col" style="width:20%">
+                <a href="ProductList.jsp" class="w3-button w3-block">Shop</a>
+            </div>
+            <div class="w3-col" style="width:20%">
+                <a href="Blog.jsp" class="w3-button w3-block">Blog</a>
+            </div>
+            <div class="w3-col" style="width:20%">
+                <a href="Contact.jsp" class="w3-button w3-block">Contact</a>
+            </div>
+            <div class="w3-col" style="width:20%">
+                <a href="AboutUs.jsp" class="w3-button w3-block">About Us</a>
+            </div>
+        </div>
+    </div>
 
 <!-- title -->
 <div class="w3-row w3-container">
@@ -230,7 +251,7 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <button formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
+                                <button onclick="document.getElementById('id04').style.display='block'"formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
                                 <br>
                                 <hr>
                                 <br>
@@ -246,7 +267,7 @@
                                         <input class="w3-input w3-border" type="text" name="name">
                                     </form>
                                     <br>
-                                    <center><button formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
+                                    <center><button onclick="document.getElementById('id04').style.display='block'"formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
                                 </div>
                             </div>
                         </div>
@@ -260,11 +281,26 @@
                                     <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay in 4 equal fortnightly payments with no interest.</b><br><br>Available to customers in Australia with a debit or credit card. When you click 'Place Order' with Afterpay, you will be redirected to Afterpay to complete your order.</p>
                                 </div>
                                 <br><br>
-                                <center><button formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
+                                <center><button onclick="document.getElementById('id04').style.display='block'" formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%" >AfterPay</button> </center>
                             </div>
                         </div>
                     </div>
+                    <!-- modal (order placed successfully)-->
+                    <div id="id04" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:800px">
+                            <div class="w3-center"><br>
+                                <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
+                            </div>
+                            <form class="w3-container" action="">
+                                <div class="w3-section">
+                                    <p>Your Order has been received ! Check your order details in My order</p><br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </center>
 
+                    <br><br>
 
                     <!-- End Right Column -->
                 </div>
@@ -275,10 +311,27 @@
 
         <!-- End Page Container -->
     </div>
+</div>
+</div>
+<br><br>
 
+<!-- modal (order placed successfully)-->
+<center>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
 
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
+
+                </div><br><br>
+                    <div class="w3-section">
+                    </div>
+            </div>
+        </div>
+</center>
     <!-- Footer -->
-    <footer>
+<footer>
+    <div class="footer">
         <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
             <div class="w3-row w3-section" style="background-color:#F8F8F8">
                 <center>
@@ -308,8 +361,8 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+    </div>
+</footer>
 
     <!-- Active Accordions -->
     <script>
