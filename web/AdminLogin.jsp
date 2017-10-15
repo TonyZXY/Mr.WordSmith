@@ -30,6 +30,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <style>
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
