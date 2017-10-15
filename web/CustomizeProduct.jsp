@@ -422,6 +422,7 @@
         </div>
     </div>
 </footer>
+  
 <!-- Script -->
     <script>
         var slideIndex = 1;
