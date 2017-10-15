@@ -1,5 +1,5 @@
 package model;
-
+   
 import database.DatabaseBagItems;
 import database.DatabaseOrderList;
 import database.DatabaseProduct;
