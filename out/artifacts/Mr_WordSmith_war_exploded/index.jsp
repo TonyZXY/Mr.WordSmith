@@ -240,7 +240,7 @@
 <!-- products-->
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
-        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>New arrivals</b></span></i>
+        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>What's new</b></span></i>
     </div>
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
@@ -319,7 +319,7 @@
 
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
-        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>Follow our Instagram </b></span></i>
+        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>Follow us </b></span></i>
     </div>
     <!-- Grid -->
     <div class="w3-row-padding">

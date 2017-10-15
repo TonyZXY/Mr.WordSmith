@@ -107,7 +107,7 @@
             <th>Staff ID</th>
             <th>Name</th>
             <th>Contact Number</th>
-            <th>Position</th>
+            <th>Admin type</th>
             <th></th>
         </tr>
 
