@@ -83,8 +83,10 @@ public class DatabaseUser {
             statement.setString(7, user.getBirthday());
             statement.setString(8, user.getPassword());
             statement.setString(9, "1");
-
             statement.execute();
+
+            Statement statement1 = connection.createStatement();
+            statement1.execute("INSERT INTO bagTables VALUES ('"+userID+"',0,0,0,'',0,0,0,0,0,0,'');");
 
 
         } catch (SQLException e) {
