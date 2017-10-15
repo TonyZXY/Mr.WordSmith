@@ -56,7 +56,7 @@ public class PlaceOrderServlet extends HttpServlet {
         PlaceOrder.placeOrder(order,user);
 
 
-        response.sendRedirect("Bag.jsp");
+        response.sendRedirect("index.jsp");
 
 
     }

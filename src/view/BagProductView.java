@@ -93,17 +93,27 @@ public class BagProductView {
                 "                        <td></td>\n" +
                 "                        <td></td>\n" +
                 "                        <td></td>\n" +
-                "                        <td></td>\n" +
-                "                        <td>\n" +
-                "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"UpdateBagItem\" formmethod=\"post\" type=\"submit\">Update</button>\n" +
-                "                        </td>\n" +
-                "                        <td>\n" +
-                "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"CheckOut\" formmethod=\"post\" type=\"submit\">Checkout</button>\n" +
-                "                        </td>\n" +
-                "                    </tr>\n" +
-                "                </table>\n" +
-                "\n" +
-                "            </form>";
+                "                        <td></td>\n";
+        if(items.size()!=0){
+            view+=  "                        <td>\n" +
+                    "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"UpdateBagItem\" formmethod=\"post\" type=\"submit\">Update</button>\n" +
+                    "                        </td>\n" +
+                    "                        <td>\n" +
+                    "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"CheckOut\" formmethod=\"post\" type=\"submit\">Checkout</button>\n" +
+                    "                        </td>\n" +
+                    "                    </tr>\n" +
+                    "                </table>\n" +
+                    "\n" +
+                    "            </form>";
+        }else {
+            view+=  "                        <td>\n" +
+                    "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"UpdateBagItem\" formmethod=\"post\" type=\"submit\">Update</button>\n" +
+                    "                        </td>\n" +
+                    "                    </tr>\n" +
+                    "                </table>\n" +
+                    "\n" +
+                    "            </form>";
+        }
         return view;
     }
 }
