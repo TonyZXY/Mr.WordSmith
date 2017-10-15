@@ -258,13 +258,13 @@
                                 <div class="w3-row-padding">
                                     <form>
                                         <label>Card Number</label>
-                                        <input class="w3-input w3-border" type="text" name="cardNumber"><br>
+                                        <input class="w3-input w3-border" type="text" name="cardNumber" required="required" pattern=".*\S+.*"><br>
                                         <label>Expiry Date</label>
-                                        <input class="w3-input w3-border" type="text" name="Date"><br>
+                                        <input class="w3-input w3-border" type="text" name="Date" required="required"  pattern=".*\S+.*"><br>
                                         <label>CVV</label>
-                                        <input class="w3-input w3-border" type="text" name="CVV"><br>
+                                        <input class="w3-input w3-border" type="text" name="CVV"required="required" pattern=".*\S+.*"><br>
                                         <label>Name on Card</label>
-                                        <input class="w3-input w3-border" type="text" name="name">
+                                        <input class="w3-input w3-border" type="text" name="name"required="required"  pattern=".*\S+.*">
                                     </form>
                                     <br>
                                     <center><button onclick="document.getElementById('id04').style.display='block'"formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>

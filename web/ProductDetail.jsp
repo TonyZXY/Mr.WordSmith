@@ -180,8 +180,7 @@
     </div>
 </div>
 <!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
-</div>
+<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px"></div>
 
     <!-- product picture-->
     <div class="w3-row-padding" style="margin-top: 20px">
@@ -236,8 +235,7 @@
                 <form action="AddProduct" method="post">
                     <div class="w3-row-padding">
                         <input type="hidden" name="pid" value="<%=string%>">
-                        <p>Quantity<input type="number" input id="Prodty" name="ProdQty" type="number" value="0" min="0"
-                                          max="10"/></p>
+                        <p>Quantity &nbsp;<input type="number" input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10"/></p>
                         <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%>
                             AUD</strong></a>
                         <a class="w3-container" style="width: 60%"><p></p></a>
@@ -252,18 +250,31 @@
                                     "                    </button>";
                         }else {
                             button="<button type=\"submit\" style=\"width:30%; margin-left:0px\"\n" +
-                                    "                            onclick=\"document.getElementById('subscribe').style.display='block'\"\n" +
+                                    "                            onclick=\"document.getElementById('id05').style.display='block'\"\n" +
                                     "                            class=\"w3-button w3-block w3-black\">Add To Bag\n" +
                                     "                    </button>";
                         }
                     %>
                     <%=button%>
                 </form>
+                <!-- modal (order placed successfully)-->
+                <div id="id05" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:300px">
+                        <div class="w3-center"><br>
+                            <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
+                        </div>
+                        <form class="w3-container" action="">
+                            <div class="w3-section" align="center"><br><br>
+                                <img src="images/icon.jpg" style="width: 18%">
+                                <i><b><p style="font-family: Times"> Item added successfully!  </p></b></i><br><br><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </div>
+
     <!-- product description bar-->
     <div class="w3-padding w3-black" style="margin-top: 80px;max-width:100%">
         <center><a class="w3-large">Product Description</a></center>
