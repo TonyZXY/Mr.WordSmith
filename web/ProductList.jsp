@@ -1,5 +1,6 @@
 <%@ page import="dto.User" %>
 <%@ page import="view.ProductPicProductListPage" %>
+<%@ page import="view.ProductPicHomePage" %>
 <%--
   Created by IntelliJ IDEA.
   User: Siya Yu
@@ -176,46 +177,46 @@
 </div>
 
     <!-- products-->
-    <div class="w3-row-padding">
+    <%--<div class="w3-row-padding">--%>
 
-        <div class="w3-col w3-container" style="width:5%"><p></p></div>
+        <%--<div class="w3-col w3-container" style="width:5%"><p></p></div>--%>
 
-        <%=ProductPicProductListPage.getProductView()%>
-        <%--<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">--%>
-        <%--<a href="ProductDetail.jsp?pid=1">--%>
-        <%--<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
-        <%--<div class="w3-container w3-white">--%>
-        <%--<p><b><center>product 1</center></b></p>--%>
-        <%--<center><p>$ 40</p></center>--%>
-        <%--</div>--%>
-        <%--</a>--%>
-        <%--</div>--%>
+        <%--<%=ProductPicProductListPage.getProducts()%>--%>
+        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<a href="ProductDetail.jsp?pid=1">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<p><b><center>product 1</center></b></p>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
 
-        <%--<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">--%>
-        <%--<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
-        <%--<div class="w3-container w3-white">--%>
-        <%--<p><b><center>product 2</center></b></p>--%>
-        <%--<center><p>$ 40</p></center>--%>
+        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<p><b><center>product 2</center></b></p>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
 
-        <%--</div>--%>
-        <%--</div>--%>
-        <%--<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">--%>
-        <%--<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
-        <%--<div class="w3-container w3-white">--%>
-        <%--<p><b><center>product 3</center></b></p>--%>
-        <%--<center><p>$ 40</p></center>--%>
-        <%--</div>--%>
-        <%--</div>--%>
-        <%--<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">--%>
-        <%--<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
-        <%--<div class="w3-container w3-white">--%>
-        <%--<p><b><center>product 4</center></b></p>--%>
-        <%--<center><p>$ 40</p></center>--%>
-        <%--</div>--%>
-        <%--</div>--%>
-        <div class="w3-col w3-container" style="width:5%"><p></p></div>
-    </div>
-    <br><br><br><br><br><br><br>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<p><b><center>product 3</center></b></p>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<p><b><center>product 4</center></b></p>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--<div class="w3-col w3-container" style="width:5%"><p></p></div>--%>
+    <%--</div>--%>
+    <%--<br><br><br><br><br><br><br>--%>
 
   
   
@@ -224,7 +225,7 @@
     <!-- Grid -->
     <div class="w3-row-padding" id="plans">
 
-        <%=ProductPicProductListPage.getProductView()%>
+        <%=ProductPicProductListPage.getProducts()%>
 
         <%--This part code used to demo the static page of the home page product part--%>
 

@@ -204,22 +204,22 @@
                     <div class="w3-row-padding">
                         <div class="w3-half">
                             <label>First Name</label>
-                            <input class="w3-input w3-border" type="text" name="FN">
+                            <input class="w3-input w3-border" type="text" name="FN" required="required">
                         </div>
                         <div class="w3-half">
                             <label>Last Name</label>
-                            <input class="w3-input w3-border" type="text" name="LN">
+                            <input class="w3-input w3-border" type="text" name="LN" required="required">
                         </div>
                     </div>
                     <br>
                     <div class="w3-row-padding">
                         <div class="w3-half">
                             <label>Contact Phone</label>
-                            <input class="w3-input w3-border" type="text" name="PN">
+                            <input class="w3-input w3-border" type="text" name="PN" required="required">
                         </div>
                         <div class="w3-half">
                             <label>Postcode</label>
-                            <input class="w3-input w3-border" type="text" name="postCode">
+                            <input class="w3-input w3-border" type="text" name="postCode" required="required">
                         </div>
                     </div>
                     <br>
@@ -227,7 +227,7 @@
                     <div class="w3-row-padding">
                         <div class="w3-half">
                             <label>Shipping Address</label>
-                            <input class="w3-input w3-border" type="text" name="address">
+                            <input class="w3-input w3-border" type="text" name="address" required="required">
                         </div>
 
                     </div>
@@ -251,7 +251,7 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <button onclick="document.getElementById('id04').style.display='block'"formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
+                                <button onclick="document.getElementById('id04').style.display='block'" formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
                                 <br>
                                 <hr>
                                 <br>
