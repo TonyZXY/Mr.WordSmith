@@ -274,6 +274,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- product description bar-->
     <div class="w3-padding w3-black" style="margin-top: 80px;max-width:100%">
