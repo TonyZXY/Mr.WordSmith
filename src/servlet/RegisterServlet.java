@@ -43,8 +43,9 @@ public class RegisterServlet extends HttpServlet {
             //if no, register successful, and ask user to log in. but no success page displayed
             request.getSession().setAttribute("RegisterMessage", "");
             request.getSession().setAttribute("message","");
-            request.getSession().setAttribute("user", user);
-            response.sendRedirect("index.jsp");
+//            request.getSession().setAttribute("user", user);
+//            response.sendRedirect("index.jsp");
+            response.sendRedirect("Login.jsp");
         } else {
             //if yes, ask user log in using their email. and alert user using message.
             request.getSession().setAttribute("message","");

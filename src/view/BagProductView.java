@@ -21,6 +21,7 @@ public class BagProductView {
                 "                        <th> Subtotal</th>\n" +
                 "                    </tr>\n" +
                 "                    <tr></tr>";
+        int product = 0;
         int totalNumber = 0;
         double totalPrice = 0;
         for (Item i : items) {
@@ -52,6 +53,7 @@ public class BagProductView {
                         "                        <td width=\"10%\"><input type=\"hidden\" name=\"productID\" value=" + i.getProduct().getProductID() + "><button class=\"w3-button\" formaction=\"RemoveBagItem\" formmethod=\"post\" style=\"font-size: small\" type=\"submit\">REMOVE</button></form></td>\n" +
                         "                    </tr>";
                 totalPrice += ((i.getNumber()) * (i.getProduct().getPrice()));
+                product+=1;
             } else {
                 totalNumber += 1;
                 totalPrice += i.getProduct().getPrice();
@@ -78,6 +80,7 @@ public class BagProductView {
                         "            id=\"Prod1Tol\" name=\"Prod1Tol\" type=\"hidden\" value=\"0\"/></td>\n" +
                         "    <td width=\"10%\"><form><input type=\"hidden\" name=\"customizedID\" value="+i.getProduct().getCustomizeID()+"><button class=\"w3-button\" formaction=\"RemoveCustomizedBagItem\" formmethod=\"post\" style=\"font-size: small\" type=\"submit\">REMOVE</button></form></td>\n" +
                         "</tr>";
+                product+=1;
             }
         }
 
@@ -94,7 +97,7 @@ public class BagProductView {
                 "                        <td></td>\n" +
                 "                        <td></td>\n" +
                 "                        <td></td>\n";
-        if(items.size()!=0){
+        if(product!=0){
             view+=  "                        <td>\n" +
                     "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"UpdateBagItem\" formmethod=\"post\" type=\"submit\">Update</button>\n" +
                     "                        </td>\n" +

@@ -7,8 +7,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static java.lang.Integer.*;
-
 /**
  * Create by Intellij IDEA
  * Project : Mr.WordSmith
