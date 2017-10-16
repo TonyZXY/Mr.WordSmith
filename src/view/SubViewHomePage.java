@@ -18,7 +18,7 @@ public class SubViewHomePage {
                 "        </center>\n" +
                 "        <form action=\"Sub\" method=\"post\">\n" +
                 "            <div class=\"w3-col\" style=\"width:25%\">\n" +
-                "                <input class=\"w3-input w3-border w3-round\" style=\"height: 80%\" name=\"email\" type=\"text\"\n" +
+                "                <input class=\"w3-input w3-border w3-round\" style=\"height: 80%\" name=\"email\" type=\"email\" pattern=\"[^ @]*@[^ @]*\"\n" +
                 "                       placeholder=\"Email Address\">\n" +
                 "            </div>\n" +
                 "            <div class=\"w3-col\" style=\"width:10%\">\n" +

@@ -254,13 +254,13 @@
                         <label>Email</label>
                         <%
                             String Email;
-                            if(session.getAttribute("EmailInput")!=null){
+                            if(session.getAttribute("emailInput")!=null){
                                 Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" value=\""+
-                                        session.getAttribute("EmailInput")+"\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                                        session.getAttribute("emailInput")+"\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
                             }else {
                                 Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
                             }
-                            session.removeAttribute("EmailInput");
+                            session.removeAttribute("emailInput");
                         %>
                         <%=Email%>
                         <%--<input class="w3-input" type="text" name="Email" value="" required="required" pattern="[^ @]*@[^ @]*">--%>
@@ -294,6 +294,7 @@
                             }
                         </script>
                     </p>
+                    <p>
                     <%
                         String RegisterMessage = null;
                         String RegisterDisplay = "";
@@ -303,6 +304,7 @@
                         }
                     %>
                     <%=RegisterDisplay%>
+                    </p>
                     <p>
                         <button class="w3-btn w3-black" type="submit">Register</button>
                     </p>
