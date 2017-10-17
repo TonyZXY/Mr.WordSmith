@@ -203,22 +203,22 @@
 
                     <div class="w3-row-padding">
                         <div class="w3-half">
-                            <label>First Name</label>
+                            <label>* First Name</label>
                             <input class="w3-input w3-border" type="text" name="FN" required="required">
                         </div>
                         <div class="w3-half">
-                            <label>Last Name</label>
+                            <label>* Last Name</label>
                             <input class="w3-input w3-border" type="text" name="LN" required="required">
                         </div>
                     </div>
                     <br>
                     <div class="w3-row-padding">
                         <div class="w3-half">
-                            <label>Contact Phone</label>
+                            <label>* Contact Phone</label>
                             <input class="w3-input w3-border" type="text" name="PN" required="required">
                         </div>
                         <div class="w3-half">
-                            <label>Postcode</label>
+                            <label>* Postcode</label>
                             <input class="w3-input w3-border" type="text" name="postCode" required="required">
                         </div>
                     </div>
@@ -226,7 +226,7 @@
 
                     <div class="w3-row-padding">
                         <div class="w3-half">
-                            <label>Shipping Address</label>
+                            <label>* Shipping Address</label>
                             <input class="w3-input w3-border" type="text" name="address" required="required">
                         </div>
 
@@ -257,13 +257,13 @@
                                 <br>
                                 <div class="w3-row-padding">
                                     <form >
-                                        <label>Card Number</label>
+                                        <label>* Card Number</label>
                                         <input class="w3-input w3-border" type="text" name="cardNumber"required="required"><br>
-                                        <label>Expiry Date</label>
+                                        <label>* Expiry Date</label>
                                         <input class="w3-input w3-border" type="text" name="Date" required="required"><br>
-                                        <label>CVV</label>
+                                        <label>* CVV</label>
                                         <input class="w3-input w3-border" type="text" name="CVV"required="required"><br>
-                                        <label>Name on Card</label>
+                                        <label>* Name on Card</label>
                                         <input class="w3-input w3-border" type="text" name="name"required="required">
                                     </form><br>
                                     <center><button onclick="document.getElementById('id04').style.display='block'"formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
