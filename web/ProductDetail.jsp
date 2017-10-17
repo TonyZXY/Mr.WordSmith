@@ -229,13 +229,13 @@
                     </div>
                 </div>
                 <!-- line -->
-                <div class="w3-panel w3-border-bottom w3-border-grey"
-                     style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px">
-                </div>
+
+                <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
+
                 <form action="AddProduct" method="post">
                     <div class="w3-row-padding">
                         <input type="hidden" name="pid" value="<%=string%>">
-                        <p>Quantity &nbsp;<input type="number" input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10"/></p>
+                        <p>Quantity &nbsp;<input type="number" input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10" /></p>
                         <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%>
                             AUD</strong></a>
                         <a class="w3-container" style="width: 60%"><p></p></a>
@@ -257,6 +257,7 @@
                     %>
                     <%=button%>
                 </form>
+
                 <!-- modal (order placed successfully)-->
                 <div id="id05" class="w3-modal">
                     <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:300px">
@@ -266,7 +267,7 @@
                         <form class="w3-container" action="">
                             <div class="w3-section" align="center"><br><br>
                                 <img src="images/icon.jpg" style="width: 18%">
-                                <i><b><p style="font-family: Times"> Item added successfully!  </p></b></i><br><br><br>
+                                <i><b><p style="font-family: Times"> Item added successfully!</p></b></i><br><br><br>
                             </div>
                         </form>
                     </div>
@@ -274,7 +275,6 @@
             </div>
         </div>
     </div>
-    
 
     <!-- product description bar-->
     <div class="w3-padding w3-black" style="margin-top: 80px;max-width:100%">
@@ -290,8 +290,8 @@
         <p style="font-size: small">Lined</p>
         <p style="font-size: small">Size: A5</p>
         <p style="font-size: small">Shade: Black</p>
-    </div>
-    <br><br><br>
+
+    </div><br><br><br>
 </div></div>
 
     <!-- Footer -->
@@ -316,13 +316,11 @@
                     <p style="font-size:70%"> FAQ</p>
                     <p style="font-size:70%"> Privacy policy</p>
                 </div>
-                <div class="w3-third w3-center w3-large" style="height:250px">
-                    <br><br>
+                <div class="w3-third w3-center w3-large" style="height:250px"><br><br>
                     <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
                     <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
                     <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
-
                 </div>
             </div>
         </div>
