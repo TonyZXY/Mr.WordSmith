@@ -11,6 +11,9 @@
     User user = null;
     user = (User)session.getAttribute("user");
     session.setAttribute("Redirect","Blog.jsp");
+
+    String message = (String)session.getAttribute("Message");
+    String link = (String)session.getAttribute("MessageRedirect");
 %>
 
 <!doctype html>
@@ -177,8 +180,8 @@
                         <table align="center">
                             <tr>
                                 <td width="50%" style="align: right"><img src="images/message%20icon.jpg" style="width:50%;align:right" alt="Avatar"></td>
-                                <td width="50%"style="text-align: left;font-size: x-large"><b><p> Your item added successfully !</p></b>
-                                    <a href=""><p style="text-align: left;font-family: Times"><i> Check out more details here.</i></p></a>
+                                <td width="50%"style="text-align: left;font-size: x-large"><b><p><%=message%></p></b>
+                                    <p style="text-align: left;font-family: Times"><i>It will Redirect in 5 seconds, if not click<a href="<%=link%>"> here</a>.</i></p>
                                 </td>
 
                             </tr>

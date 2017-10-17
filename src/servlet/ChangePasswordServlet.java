@@ -21,6 +21,11 @@ public class ChangePasswordServlet extends HttpServlet {
         boolean success = ChangePassword.changePassword(user,old_password,new_password);
         if(success){
             request.getSession().setAttribute("PasswordInfo","You have successfully change your password");
+
+            //TODO
+//        request.getSession().setAttribute("Message","You have successfully change your password.");
+//        request.getSession().setAttribute("MessageRedirect","Account.jsp");
+//        response.sendRedirect("Message.jsp");
         }else {
             request.getSession().setAttribute("PasswordInfo","Old Password Incorrect");
         }

@@ -40,6 +40,11 @@ public class AddNewStaffServlet extends HttpServlet {
 
         DatabaseStaff.insertNewStaff(staff);
 
+        //TODO
+//        request.getSession().setAttribute("Message","New staff add successfully.");
+//        request.getSession().setAttribute("MessageRedirect","StuffManagement.jsp");
+//        response.sendRedirect("Message.jsp");
+
         response.sendRedirect("StuffManagement.jsp");
     }
 

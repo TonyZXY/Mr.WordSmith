@@ -17,8 +17,14 @@ import java.io.IOException;
 @WebServlet(name = "AdminLogoutServlet",urlPatterns = "/AdminLogout")
 public class AdminLogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession().invalidate();
+
         response.sendRedirect("AdminLogin.jsp");
+
+        //TODO
+//        request.getSession().setAttribute("Message","You have successfully Logout.");
+//        request.getSession().setAttribute("MessageRedirect","AdminLogin.jsp");
+//        response.sendRedirect("AdminLogin.jsp");
+        request.getSession().invalidate();
     }
 
 }

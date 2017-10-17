@@ -55,6 +55,10 @@ public class PlaceOrderServlet extends HttpServlet {
 
         PlaceOrder.placeOrder(order,user);
 
+//        request.getSession().setAttribute("Message","You have successfully checkout your order.");
+//        request.getSession().setAttribute("MessageRedirect","index.jsp");
+//        response.sendRedirect("Message.jsp");
+
 
         response.sendRedirect("index.jsp");
 

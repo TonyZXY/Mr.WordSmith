@@ -46,6 +46,10 @@ public class RegisterServlet extends HttpServlet {
 //            request.getSession().setAttribute("user", user);
 //            response.sendRedirect("index.jsp");
             response.sendRedirect("Login.jsp");
+            //TODO change the redirect
+//            request.getSession().setAttribute("Message","You have successfully registered, please Login with your account");
+//            request.getSession().setAttribute("MessageRedirect","Login.jsp");
+//            response.sendRedirect("Message.jsp");
         } else {
             //if yes, ask user log in using their email. and alert user using message.
             request.getSession().setAttribute("message","");
