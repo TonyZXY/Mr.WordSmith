@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: siyayu
+  User: Mr.wordSmith team
   Date: 24/9/17
   Time: 3:10 PM
   To change this template use File | Settings | File Templates.
@@ -358,21 +358,9 @@
 
                 <br>
                 <div class="w3-container">
-                    <center><button class="w3-button w3-white w3-border w3-border-gray w3-round-large"  onclick="document.getElementById('id01').style.display='block'">Preview</button>
+                    <center><a class="w3-btn w3-white w3-border w3-border-gray w3-round-large">Preview</a>
                     </center></div>
-                <!-- modal preview-->
-                <div id="id01" class="w3-modal">
-                    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:800px">
-                        <div class="w3-center"><br>
-                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
-                        </div>
-                        <form class="w3-container" action="">
-                            <div class="w3-section">
-                                <img src="2.0/images/Daily View - Layout 1 (with all options).jpg" style="width: 100%"><br>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+             
                 </center>
 
                 <br><br>
