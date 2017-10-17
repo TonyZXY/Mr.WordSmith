@@ -284,20 +284,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- modal (order placed successfully)-->
-                    <div id="id04" class="w3-modal">
-                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:300px">
-                            <div class="w3-center"><br>
-                                <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
-                            </div>
-                            <form class="w3-container" action="">
-                                <div class="w3-section" align="center"><br><br>
-                                    <img src="images/icon.jpg" style="width: 18%">
-                                    <i><b><p style="font-family: Times">Your Order has been received ! Check your order details in My order</p></b></i><br><br><br>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+
                     </center>
 
                     <br><br>

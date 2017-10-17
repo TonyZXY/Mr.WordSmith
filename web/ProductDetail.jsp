@@ -257,9 +257,6 @@
                     %>
                     <%=button%>
                 </form>
-
-                <!-- modal (order placed successfully)-->
-
             </div>
         </div>
     </div>
