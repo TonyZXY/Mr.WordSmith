@@ -295,16 +295,17 @@
                     <!-- line -->
                     <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
                     <div class="w3-row-padding">
-                        <p>Quantity     1 </p>
+                        <p>Quantity&nbsp;1 </p>
+                        <i><b><p style="font-family: Times">* Please resubmit your custom options if more quantities needed</p></b></i>
                         <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
                         <a class="w3-container" style="width: 60%"><p></p></a>
                     </div>
                     <%
                         String addButton;
                         if(user==null){
-                            addButton = "<center><a href = \"Login.jsp\" class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" style=\"width: 30%\"><center>Add To Bag</center></a></center>";
+                            addButton = "<a href = \"Login.jsp\" class=\"w3-button w3-block w3-black\" style=\"width: 30%;margin-left:0px\"><center>Add To Bag</center></a>";
                         }else {
-                            addButton = "<center><button class=\"w3-button w3-black w3-border w3-border-gray w3-round-large\" formaction=\"AddCustomizeProductToBag\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button></center>";
+                            addButton = "<button class=\"w3-button w3-block w3-black\" formaction=\"AddCustomizeProductToBag\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button>";
                         }
                     %>
                     <%=addButton%>
@@ -359,6 +360,7 @@
                 <br>
                 <div class="w3-container">
                     <center><button formaction="Preview" formmethod="post" class="w3-btn w3-white w3-border w3-border-gray w3-round-large">Preview</button>
+
                     </center></div>
              
                 </center>

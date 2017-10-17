@@ -188,10 +188,12 @@
 
     <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
     <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+    <br><br>
 
 </div>
-    <div align="center"><button class="w3-button w3-block w3-black">Add to bag </button></div><br><br>
+    <div align="center"><button class="w3-button w3-black w3-border w3-border-gray w3-round-large">Add to bag </button></div>
 </div>
+<br><br>
 </div>
 
 

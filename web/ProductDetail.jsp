@@ -250,7 +250,7 @@
                                     "                    </button>";
                         }else {
                             button="<button type=\"submit\" style=\"width:30%; margin-left:0px\"\n" +
-                                    "                            onclick=\"document.getElementById('subscribe').style.display='block'\"\n" +
+                                    "                            onclick=\"document.getElementById('id05').style.display='block'\"\n" +
                                     "                            class=\"w3-button w3-block w3-black\">Add To Bag\n" +
                                     "                    </button>";
                         }
@@ -258,7 +258,11 @@
                     <%=button%>
                 </form>
 
+                <!-- modal (order placed successfully)-->
 
+            </div>
+        </div>
+    </div>
 
     <!-- product description bar-->
     <div class="w3-padding w3-black" style="margin-top: 80px;max-width:100%">
@@ -276,6 +280,7 @@
         <p style="font-size: small">Shade: Black</p>
 
     </div><br><br><br>
+
 </div></div>
 
     <!-- Footer -->
