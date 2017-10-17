@@ -77,7 +77,7 @@
     <center>
         <div class="w3-container w3-card-2 w3-white w3-margin-bottom" style="width: 70%">
             <center><img src="images/icon.jpg" style="width: 15%;margin-top: 5%"></center>
-            <p>Administration System</p>
+            <b><p style="font-family:'Helvetica Neue'">ADMINISTRATION SYSTEM</p></b>
             <form action="AdminLogin" method="post">
                 <br>
                 <input class="w3-input w3-border" type="text" placeholder="Staff ID" style="width: 70%" name="id">
@@ -90,8 +90,6 @@
         </div>
     </center>
 </div>
-
-
 
 </body>
 </html>

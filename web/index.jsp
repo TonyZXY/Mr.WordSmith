@@ -9,7 +9,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 
 <%
     User user = null;
@@ -318,7 +318,7 @@
 
 <div class="w3-row-padding">
     <div class="w3-center w3-padding-64">
-        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>Follow our Instagram </b></span></i>
+        <i><span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-family:Times"><b>Follow Us </b></span></i>
     </div>
     <!-- Grid -->
     <div class="w3-row-padding">
