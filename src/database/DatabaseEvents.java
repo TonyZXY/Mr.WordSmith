@@ -1,12 +1,10 @@
 package database;
 
+import dto.EmailEvent;
 import dto.Event;
 import dto.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class DatabaseEvents {
@@ -47,5 +45,18 @@ public class DatabaseEvents {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+
+    public static ArrayList<EmailEvent> getEvents(Date start){
+        ArrayList<EmailEvent> emailEvents = new ArrayList<>();
+        try{
+            String sql = "SELECT * FROM reminder_list WHERE ";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return emailEvents;
     }
 }

@@ -249,7 +249,7 @@
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
     <!-- The Grid -->
-    <form >
+
     <div class="w3-row-padding">
         <div class="w3-row-padding" style="margin-top: 20px">
             <div class="w3-col w3-container" style="width: 20%"><p></p></div>
@@ -316,7 +316,7 @@
         </div><br><br>
         <!-- Right Column -->
         <div class="w3-two">
-
+            <form id="layout">
             <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
                 <center><h4 class="w3-text-grey w3-padding-16">Custom your layout</h4></center>
                 <center>
@@ -338,18 +338,18 @@
                         <div class="w3-container">
                             <div class="options" style="align-content:center;text-align: left">
                                 <form><center>
-                                    <div class="w3-half" align="center"><input id="optionA" type="checkbox"  name="layout" value="1"><label for="optionA">Lined</label></div>
-                                    <div class="w3-half" align="center"><input id="optionB" type="checkbox"  name="layout" value="2"><label for="optionB">Non-lined</label></div>
-                                    <div class="w3-half" align="center"><input id="optionC" type="checkbox"  name="layout" value="3"><label for="optionC">Page number</label></div>
-                                    <div class="w3-half" align="center"><input id="optionD" type="checkbox"  name="layout" value="4"><label for="optionD">Public holiday </label></div>
-                                    <div class="w3-half" align="center"><input id="optionK" type="checkbox"  name="layout" value="5"><label for="optionK">Local holiday </label></div>
-                                    <div class="w3-half" align="center"><input id="optionE" type="checkbox"  name="layout" value="6"><label for="optionE">Moon cycle</label></div>
-                                    <div class="w3-half" align="center"><input id="optionF" type="checkbox"  name="layout" value="7"><label for="optionF">Sunrise,Sunset</label></div>
-                                    <div class="w3-half" align="center"><input id="optionG" type="checkbox"  name="layout" value="8"><label for="optionG">Page of password</label></div>
-                                    <div class="w3-half" align="center"><input id="optionH" type="checkbox"  name="layout" value="9"><label for="optionH">Page of extra note</label></div>
-                                    <div class="w3-half" align="center"><input id="optionI" type="checkbox"  name="layout" value="10"><label for="optionI">Page of Social media handles</label></div>
-                                    <div class="w3-half" align="center"><input id="optionJ" type="checkbox"  name="layout" value="11"><label for="optionJ">Page of personal info</label></div>
-                                    <div class="w3-half" align="center"><input id="optionL" type="checkbox"  name="layout" value="12"><label for="optionL">Page of To-do list</label></div>
+                                    <div class="w3-half" align="center"><input id="optionA" type="checkbox"  name="option" value="1"><label for="optionA">Lined</label></div>
+                                    <div class="w3-half" align="center"><input id="optionB" type="checkbox"  name="option" value="2"><label for="optionB">Non-lined</label></div>
+                                    <div class="w3-half" align="center"><input id="optionC" type="checkbox"  name="option" value="3"><label for="optionC">Page number</label></div>
+                                    <div class="w3-half" align="center"><input id="optionD" type="checkbox"  name="option" value="4"><label for="optionD">Public holiday </label></div>
+                                    <div class="w3-half" align="center"><input id="optionK" type="checkbox"  name="option" value="5"><label for="optionK">Local holiday </label></div>
+                                    <div class="w3-half" align="center"><input id="optionE" type="checkbox"  name="option" value="6"><label for="optionE">Moon cycle</label></div>
+                                    <div class="w3-half" align="center"><input id="optionF" type="checkbox"  name="option" value="7"><label for="optionF">Sunrise,Sunset</label></div>
+                                    <div class="w3-half" align="center"><input id="optionG" type="checkbox"  name="option" value="8"><label for="optionG">Page of password</label></div>
+                                    <div class="w3-half" align="center"><input id="optionH" type="checkbox"  name="option" value="9"><label for="optionH">Page of extra note</label></div>
+                                    <div class="w3-half" align="center"><input id="optionI" type="checkbox"  name="option" value="10"><label for="optionI">Page of Social media handles</label></div>
+                                    <div class="w3-half" align="center"><input id="optionJ" type="checkbox"  name="option" value="11"><label for="optionJ">Page of personal info</label></div>
+                                    <div class="w3-half" align="center"><input id="optionL" type="checkbox"  name="option" value="12"><label for="optionL">Page of To-do list</label></div>
                                 </center></form>
                             </div>
                         </div>
@@ -358,7 +358,7 @@
 
                 <br>
                 <div class="w3-container">
-                    <center><a class="w3-btn w3-white w3-border w3-border-gray w3-round-large">Preview</a>
+                    <center><button formaction="Preview" formmethod="post" class="w3-btn w3-white w3-border w3-border-gray w3-round-large">Preview</button>
                     </center></div>
              
                 </center>
@@ -367,12 +367,13 @@
 
                 <!-- End Right Column -->
             </div>
-
+            </form>
             <!-- End Grid -->
         </div>
 
         <!-- End Page Container -->
     </div>
+
 
 </div>
 </div>
@@ -434,8 +435,12 @@
             }
             x[slideIndex - 1].style.display = "block";
         }
-    </script>
 
+    </script>
+<script type="text/javascript">
+    var layout = document.getElementById("layout");
+
+</script>
 
 </body>
 </html>
