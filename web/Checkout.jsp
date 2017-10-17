@@ -189,7 +189,7 @@
 
         <!-- The Grid -->
         <div class="w3-row-padding">
-            <form>
+            <form name="cardForm" action="/MakePayment" onsubmit="return validateForm()" method="post">
 
                 <!-- Left Column -->
                 <div class="w3-half">
@@ -256,22 +256,21 @@
                                 <hr>
                                 <br>
                                 <div class="w3-row-padding">
-                                    <form>
+                                    <form >
                                         <label>Card Number</label>
-                                        <input class="w3-input w3-border" type="text" name="cardNumber" required="required" pattern=".*\S+.*"><br>
+                                        <input class="w3-input w3-border" type="text" name="cardNumber"required="required"><br>
                                         <label>Expiry Date</label>
-                                        <input class="w3-input w3-border" type="text" name="Date" required="required"  pattern=".*\S+.*"><br>
+                                        <input class="w3-input w3-border" type="text" name="Date" required="required"><br>
                                         <label>CVV</label>
-                                        <input class="w3-input w3-border" type="text" name="CVV"required="required" pattern=".*\S+.*"><br>
+                                        <input class="w3-input w3-border" type="text" name="CVV"required="required"><br>
                                         <label>Name on Card</label>
-                                        <input class="w3-input w3-border" type="text" name="name"required="required"  pattern=".*\S+.*">
-                                    </form>
-                                    <br>
+                                        <input class="w3-input w3-border" type="text" name="name"required="required">
+                                    </form><br>
                                     <center><button onclick="document.getElementById('id04').style.display='block'"formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
                                 </div>
                             </div>
                         </div>
-                        <!-- afterpay -->
+                   <!-- afterpay -->
                         <div class="w3-container w3-half">
                             <a href="#afterpay" onclick="myFunction('Demo2')" class="w3-btn w3-bar-item w3-block"><img
                                     src="images/B2.jpg" style="width: 60%"></a>
@@ -358,7 +357,6 @@
                     <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
                     <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
-
                 </div>
             </div>
         </div>
@@ -380,6 +378,60 @@
             }
         }
     </script>
+
+<script>
+    function validateForm() {
+
+        var card = document.forms["cardForm"]["cardNumber"].value;
+        var cvv = document.forms["cardForm"]["CVV"].value;
+        var date = document.forms["cardForm"]["Date"].value;
+        var cardname = document.forms["cardForm"]["name"].value;
+        var Fname = document.forms["cardForm"]["FN"].value;
+        var Lname = document.forms["cardForm"]["LN"].value;
+        var phone = document.forms["cardForm"]["PN"].value;
+        var code = document.forms["cardForm"]["postCode"].value;
+        var address = document.forms["cardForm"]["address"].value;
+
+
+        if (card == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (cvv == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (date == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (cardname == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (Fname == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (Lname == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (phone == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (code == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+        if (address == "") {
+            alert(" * required fields must be filled out");
+            return false;
+        }
+    }
+    </script>
+
 
 </body>
 </html>
