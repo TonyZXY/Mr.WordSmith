@@ -1,4 +1,5 @@
-<%@ page import="dto.User" %><%--
+<%@ page import="dto.User" %>
+<%@ page import="view.PreviewView" %><%--
   Created by IntelliJ IDEA.
   User: TonyZheng
   Date: 17/10/17
@@ -10,6 +11,8 @@
 
     User user = null;
     user = (User) session.getAttribute("user");
+
+    String[] layout = (String[])session.getAttribute("layout");
 %>
 <!doctype html>
 <html lang="en-US">
@@ -133,19 +136,21 @@
 <!-- Slideshow -->
 <div class="w3-content w3-display-container">
 
-    <div class="w3-display-container mySlides">
-        <img src="image/DAILY_VIEW/dailylayouta1234567.jpg" style="width:100%">
 
-    </div>
+    <%=PreviewView.view(layout)%>
+    <%--<div class="w3-display-container mySlides">--%>
+        <%--<img src="image/DAILY_VIEW/dailylayouta1234567.jpg" style="width:100%">--%>
 
-    <div class="w3-display-container mySlides">
-        <img src="image/EXTRA_PAGES/8Password Pages.jpg" style="width:100%">
+    <%--</div>--%>
 
-    </div>
-    <div class="w3-display-container mySlides">
-        <img src="image/EXTRA_PAGES/10Social Media Pages.jpg" style="width:100%">
+    <%--<div class="w3-display-container mySlides">--%>
+        <%--<img src="image/EXTRA_PAGES/8Password Pages.jpg" style="width:100%">--%>
 
-    </div>
+    <%--</div>--%>
+    <%--<div class="w3-display-container mySlides">--%>
+        <%--<img src="image/EXTRA_PAGES/10Social Media Pages.jpg" style="width:100%">--%>
+
+    <%--</div>--%>
 
 
     <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>

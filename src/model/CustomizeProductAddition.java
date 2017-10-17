@@ -5,7 +5,7 @@ import dto.CustomizedProduct;
 import dto.User;
 
 public class CustomizeProductAddition {
-    public static CustomizedProduct AddNewCustomizeProduct(String[] layout,String[] options){
+    public static CustomizedProduct AddNewCustomizeProduct(String[] layout){
         CustomizedProduct product = new CustomizedProduct();
         for (String s: layout) {
             switch (s) {
@@ -17,10 +17,6 @@ public class CustomizeProductAddition {
                 case "dailylayoutb":
                     product.setLayout(s);
                     break;
-            }
-        }
-        for (String s:options){
-            switch (s){
                 case "1":
                     product.setOption1(true);
                     break;
@@ -68,8 +64,8 @@ public class CustomizeProductAddition {
         return product;
     }
 
-    public static void customizeAdd(User user,String[] layout,String[] option){
-        CustomizedProduct customizedProduct = AddNewCustomizeProduct(layout,option);
+    public static void customizeAdd(User user,String[] layout){
+        CustomizedProduct customizedProduct = AddNewCustomizeProduct(layout);
 
         DatabaseProduct.AddCustomizeProductToBag(user,customizedProduct);
     }

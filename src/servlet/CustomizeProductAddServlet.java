@@ -15,10 +15,9 @@ public class CustomizeProductAddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String[] selected = request.getParameterValues("layout");
-        String[] options = request.getParameterValues("option");
         User user = (User) request.getSession().getAttribute("user");
 
-        CustomizeProductAddition.customizeAdd(user, selected, options);
+        CustomizeProductAddition.customizeAdd(user, selected);
 
         response.sendRedirect("CustomizeProduct.jsp?pid=MWE004");
 
