@@ -1,7 +1,7 @@
 <%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
-  User: keqinzheng
+  User: Mr.wordSmith
   Date: 2017/9/24
   Time: 下午5:37
   To change this template use File | Settings | File Templates.
@@ -37,7 +37,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
+<!-- style of text and titles and CSS -->
 <style>
 
     html, body, h1, h2, h3, h4 {
@@ -111,7 +111,7 @@
                 }
             %>
             <%=links%>
-
+            <!-- logout/bag/account and login -->
             <%--<div class="w3-right s3">--%>
             <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
             <%--</div>--%>
@@ -133,6 +133,7 @@
             <br>
             <br>
             <br>
+          <!-- social media button -->
             <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
             <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
             <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
