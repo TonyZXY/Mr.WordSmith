@@ -10,8 +10,16 @@ import java.io.IOException;
 @WebServlet(name = "LogoutServlet",urlPatterns = "/Logout")
 public class LogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession().invalidate();
+
         response.sendRedirect("index.jsp");
+
+        //TODO
+//        request.getSession().setAttribute("Message","You have successfully logout.");
+//        request.getSession().setAttribute("MessageRedirect","index.jsp");
+//        response.sendRedirect("Message.jsp");
+
+
+        request.getSession().invalidate();
     }
 
 }

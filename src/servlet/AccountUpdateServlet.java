@@ -45,14 +45,20 @@ public class AccountUpdateServlet extends HttpServlet {
             user.setAddress(address);
         }
 
-        //@TODO
 
         DatabaseUser.updateUserDetail(user);
 
         request.getSession().removeAttribute("user");
 
         request.getSession().setAttribute("user",user);
-        response.sendRedirect("Account.jsp");
+
+        //TODO
+        request.getSession().setAttribute("Message","User profile update successfully.");
+        request.getSession().setAttribute("MessageRedirect","Account.jsp");
+        response.sendRedirect("Message.jsp");
+
+
+//        response.sendRedirect("Account.jsp");
 
     }
 

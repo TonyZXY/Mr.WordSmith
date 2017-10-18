@@ -25,9 +25,15 @@ public class AddProductToBagServlet extends HttpServlet {
         } else {
 
             DatabaseBagItems.AddBagItem(user, productID, Integer.valueOf(quantity));
-
             String link = "ProductDetail.jsp?pid=" + productID;
-            response.sendRedirect(link);
+
+          //TODO
+        request.getSession().setAttribute("Message","Product Successfully add to your Shopping Bag");
+        request.getSession().setAttribute("MessageRedirect",link);
+        response.sendRedirect("Message.jsp");
+
+
+//            response.sendRedirect(link);
         }
     }
 

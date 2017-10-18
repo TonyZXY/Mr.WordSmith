@@ -191,7 +191,7 @@
     <br><br>
 
 </div>
-    <div align="center"><button class="w3-button w3-black w3-border w3-border-gray w3-round-large">Add to bag </button></div>
+    <div align="center"><button class="w3-button w3-black w3-border w3-border-gray w3-round-large" formaction="AddCustomizeProductAfterPreview" formmethod="post" type="submit">Add to bag </button></div>
 </div>
 <br><br>
 </div>

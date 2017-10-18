@@ -13,7 +13,7 @@
 <%
     String string = request.getParameter("pid");
     Product product = DatabaseProduct.getProduct(string);
-    session.setAttribute("Redirect","ProductDetail.jsp?pid="+string);
+    session.setAttribute("Redirect", "ProductDetail.jsp?pid=" + string);
 %>
 <% User user = null;
     user = (User) session.getAttribute("user");
@@ -55,7 +55,8 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
-    html,body{
+
+    html, body {
 
         font-family: "Lato", sans-serif;
         margin: 0;
@@ -63,23 +64,29 @@
         height: 100%;
 
     }
+
     .content {
         min-height: 100%;
     }
+
     .content-inside {
         padding: 20px;
         padding-bottom: 40px;
     }
+
     .footer {
         height: 40px;
         margin-top: -40px;
     }
+
     .mySlides {
         display: none
     }
+
     .w3-tag, .fa {
         cursor: pointer
     }
+
     .w3-tag {
         height: 15px;
         width: 15px;
@@ -115,9 +122,9 @@
                 } else {
                     links = "<div class=\"w3-right\">\n" +
                             "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                            "    </div>\n"+
-                            "<div class=\"w3-right\">"+
-                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                            "    </div>\n" +
+                            "<div class=\"w3-right\">" +
+                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
                             "</div>";
                 }
             %>
@@ -144,10 +151,18 @@
             <br>
             <br>
             <br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-            <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                    class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+                    style="margin-left: 10px; margin-right: 20px "></i></a>
+            <a herf="https://www.instagram.com" target="_blank "><i
+                    class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"
+                    target="_blank "></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
 
         </div>
     </div>
@@ -173,14 +188,14 @@
         </div>
     </div>
 
-<!-- title -->
-<div class="w3-row w3-container">
-    <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Product</span>
+    <!-- title -->
+    <div class="w3-row w3-container">
+        <div class="w3-left w3-padding-32">
+            <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Product</span>
+        </div>
     </div>
-</div>
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px"></div>
+    <!-- line-->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px"></div>
 
     <!-- product picture-->
     <div class="w3-row-padding" style="margin-top: 20px">
@@ -230,26 +245,27 @@
                 </div>
                 <!-- line -->
 
-                <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
+                <div class="w3-panel w3-border-bottom w3-border-grey"
+                     style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
 
                 <form action="AddProduct" method="post">
                     <div class="w3-row-padding">
                         <input type="hidden" name="pid" value="<%=string%>">
-                        <p>Quantity &nbsp;<input type="number" input id="Prodty" name="ProdQty" type="number" value="0" min="0" max="10" /></p>
+                        <p>Quantity &nbsp;<input type="number" input id="Prodty" name="ProdQty" type="number" value="0"
+                                                 min="0" max="10"/></p>
                         <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%>
                             AUD</strong></a>
                         <a class="w3-container" style="width: 60%"><p></p></a>
                     </div>
                     <br><br>
                     <%
-                        String button ;
-                        if(user==null){
-                            button = "<button href=\"Login.jsp\" style=\"width:30%; margin-left:0px\"\n" +
-                                    "                            onclick=\"document.getElementById('subscribe').style.display='block'\"\n" +
-                                    "                            class=\"w3-button w3-block w3-black\">Add To Bag\n" +
-                                    "                    </button>";
-                        }else {
-                            button="<button type=\"submit\" style=\"width:30%; margin-left:0px\"\n" +
+                        String button;
+                        if (user == null) {
+                            button = "<button class=\"w3-button w3-block w3-black\" formaction=\"CheckLogin\" " +
+                                    "formmethod=\"post\" type=\"submit\" style=\"width: 30%\"><center>" +
+                                    "Add to bag</center></button>";
+                        } else {
+                            button = "<button type=\"submit\" style=\"width:30%; margin-left:0px\"\n" +
                                     "                            onclick=\"document.getElementById('id05').style.display='block'\"\n" +
                                     "                            class=\"w3-button w3-block w3-black\">Add To Bag\n" +
                                     "                    </button>";
@@ -276,11 +292,13 @@
         <p style="font-size: small">Size: A5</p>
         <p style="font-size: small">Shade: Black</p>
 
-    </div><br><br><br>
+    </div>
+    <br><br><br>
 
-</div></div>
+</div>
+</div>
 
-    <!-- Footer -->
+<!-- Footer -->
 <footer>
     <div class="footer">
         <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
@@ -290,9 +308,12 @@
                         <a href="AboutUs.jsp"><i>
                             <p2 style="font-family:Times"><b>About Us</b></p2>
                         </i></a><br><br>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox
+                            210, Abbotsford, VIC 3067</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i>
+                            +610425752986</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au
+                        </p>
                     </div>
                 </center>
                 <div class="w3-third w3-center w3-large " style="height:250px"><br>
@@ -303,9 +324,12 @@
                     <p style="font-size:70%"> Privacy policy</p>
                 </div>
                 <div class="w3-third w3-center w3-large" style="height:250px"><br><br>
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                            class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
                 </div>
             </div>

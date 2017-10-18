@@ -6,7 +6,7 @@
 
 <%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
+  User: Mr.wordSmith team
   Date: 10/9/17
   Time: 1:42 PM
   To change this template use File | Settings | File Templates.
@@ -51,7 +51,7 @@
     <![endif]-->
 
 </head>
-
+<!-- style of text and titles (css)-->
 <style>
 
     html,body{
@@ -114,6 +114,7 @@
         }
     %>
     <%=links%>
+   <!-- logout/ bag/ account,login -->
     <%--<div class="w3-right s3">--%>
         <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
     <%--</div>--%>
@@ -135,6 +136,7 @@
     <br>
     <br>
     <br>
+   <!-- social media button -->
     <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
     <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
     <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
@@ -144,7 +146,7 @@
 </div>
 
 
-<!-- function bar -->
+<!-- function bar (1/5 of each selection) -->
 <div class="w3-bar-item" style="max-width:100%;margin-bottom:10px">
     <div class="w3-row w3-large w3-black">
         <div class="w3-col " style="width:20%">

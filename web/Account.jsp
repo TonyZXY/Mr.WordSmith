@@ -3,7 +3,7 @@
 <%@ page import="view.OrderListViewAccountPage" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Yuqi Qiu / 3537646
+  User: Mr.wordSmith team
   Date: 9/9/17
   Time: 12:42 PM
   To change this template use File | Settings | File Templates.
@@ -33,6 +33,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+  <!-- style of text and css -->
 <style>
 
     html, body, h1, h2, h3, h4 {
@@ -107,7 +108,7 @@
                 }
             %>
             <%=links%>
-
+            <!-- logout/bag/account-->
             <%--<div class="w3-right s3">--%>
             <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
             <%--</div>--%>
@@ -129,6 +130,7 @@
             <br>
             <br>
             <br>
+          <!-- social media button-->
             <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
             <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
             <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
@@ -172,7 +174,7 @@
         <button class="w3-bar-item w3-button tablink w3-center" onclick="openFile(event, 'Change Password')">Change Password</button>
     </div>
 
-    <!-- information -->
+    <!-- personnal information -->
 
     <div class="w3-col w3-container" style="width:70%" align="left">
         <div class="w3-padding" style="margin-left: 40px"><h4 style="font-family:Times"><i><b>Welcome Mr.wordSmith</b></i></h4></div>
@@ -210,7 +212,7 @@
             </table>
         </div>
 
-
+<!--edit personal details-->
         <div id="My profile" class="w3-container name" style="display:none">
             <div class="w3-col w3-container" style="width:70%">
                 <form class="w3-container" style="font-size: small" action="UpdateAccountDetails" method="post"><br>
@@ -246,7 +248,7 @@
                 </form>
             </div>
         </div>
-
+<!-- add important date & important date information -->
         <div id="My important date" class="w3-container name" style="display:none">
             <div class="w3-col w3-container" style="width:70%">
                 <br>
@@ -306,7 +308,7 @@
                 </form>
             </div>
         </div>
-
+<!-- check orders-->
         <div id="My order" class="w3-container name" style="display:none">
 
             <div class="w3-col w3-container" style="width:70%">
@@ -377,7 +379,7 @@
                 </form>
             </div>
         </div>
-
+<!-- change password-->
         <div id="Change Password" class="w3-container name" style="display:none">
             <div class="w3-col w3-container" style="width:70%">
                 <div class="w3-padding" style="margin-left: 40px"></div>

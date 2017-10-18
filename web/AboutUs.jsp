@@ -36,6 +36,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+  <!-- style of the txt -->
 <style>
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
@@ -78,7 +79,8 @@
     <div class="content-inside">
         <!-- Links (sit on top) -->
         <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
-            <div class="w3-third">
+          <!-- company's logo -->  
+          <div class="w3-third">
                 <img src="images/icon.jpg" style="width: 18%;margin-left: 10%">
             </div>
             <!-- logout -->
@@ -107,7 +109,7 @@
                 }
             %>
             <%=links%>
-
+            <!-- button of Bag -->
             <%--<div class="w3-right s3">--%>
             <%--<a href="#bag" class="w3-button w3-block"><b>Logout</b></a>--%>
             <%--</div>--%>
@@ -129,6 +131,7 @@
             <br>
             <br>
             <br>
+          <!-- social media button-->
             <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
             <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
             <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
@@ -137,7 +140,7 @@
         </div>
     </div>
 
-    <!-- function bar -->
+    <!-- function bar(1/5 each selection) -->
     <div class="w3-bar-item" style="max-width:100%;margin-top:0px;">
         <div class="w3-row w3-large w3-black">
             <div class="w3-col " style="width:20%">
@@ -158,7 +161,7 @@
         </div>
     </div>
 
-<!-- title -->
+<!-- title(about us) -->
 <div class="w3-row w3-container">
     <div class="w3-left w3-padding-32">
         <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">About Us</span>

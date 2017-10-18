@@ -1,7 +1,7 @@
 <%@ page import="dto.Staff" %>
 <%@ page import="java.util.Objects" %><%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
+  User: Mr.wordSmith team
   Date: 5/10/17
   Time: 10:50 AM
   To change this template use File | Settings | File Templates.
@@ -34,6 +34,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+  <!-- style of text and title-->
 <style>
     html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
     .mySlides {display:none}
@@ -62,7 +63,7 @@
     </div>
 </div>
 
-<!-- function bar -->
+<!-- function bar （1/5 of each selection）-->
 
 <div class="w3-bar-item" style="max-width:100%;margin-top:0px;">
     <div class="w3-row w3-large w3-black">
