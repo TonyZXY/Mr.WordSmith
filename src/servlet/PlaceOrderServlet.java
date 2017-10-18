@@ -18,15 +18,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
 
-@WebServlet(name = "PlaceOrderServlet",urlPatterns = "/MakePayment")
+@WebServlet(name = "PlaceOrderServlet", urlPatterns = "/MakePayment")
 public class PlaceOrderServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String payment = request.getParameter("payment");
 
-        User user = (User)request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
         ArrayList<Item> bag = DatabaseBagItems.getBagForCheckOut(user);
         Double discount = 1.0;
-        if(DatabaseOrderList.getDiscount(user)){
+        if (DatabaseOrderList.getDiscount(user)) {
             discount = 0.85;
         }
         String FN = request.getParameter("FN");
@@ -35,7 +35,7 @@ public class PlaceOrderServlet extends HttpServlet {
         String post = request.getParameter("post");
         String address = request.getParameter("address");
         Date time = new Date(Calendar.getInstance().getTimeInMillis());
-        if(Objects.equals(payment, "card")){
+        if (Objects.equals(payment, "card")) {
             String cardNumber = request.getParameter("cardNumber");
             String date = request.getParameter("date");
             String CVV = request.getParameter("CVV");
@@ -53,10 +53,10 @@ public class PlaceOrderServlet extends HttpServlet {
         order.setDiscount(discount);
         order.setPayment(payment);
 
-        PlaceOrder.placeOrder(order,user);
+        PlaceOrder.placeOrder(order, user);
 
-        request.getSession().setAttribute("Message","You have successfully checkout your order.");
-        request.getSession().setAttribute("MessageRedirect","index.jsp");
+        request.getSession().setAttribute("Message", "You have successfully checkout your order.");
+        request.getSession().setAttribute("MessageRedirect", "index.jsp");
         response.sendRedirect("Message.jsp");
 
 

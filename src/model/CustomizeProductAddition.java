@@ -5,9 +5,9 @@ import dto.CustomizedProduct;
 import dto.User;
 
 public class CustomizeProductAddition {
-    public static CustomizedProduct AddNewCustomizeProduct(String[] layout){
+    public static CustomizedProduct AddNewCustomizeProduct(String[] layout) {
         CustomizedProduct product = new CustomizedProduct();
-        for (String s: layout) {
+        for (String s : layout) {
             switch (s) {
                 case "weeklylayouta":
                 case "weeklylayoutb":
@@ -64,9 +64,9 @@ public class CustomizeProductAddition {
         return product;
     }
 
-    public static void customizeAdd(User user,String[] layout){
+    public static void customizeAdd(User user, String[] layout) {
         CustomizedProduct customizedProduct = AddNewCustomizeProduct(layout);
 
-        DatabaseProduct.AddCustomizeProductToBag(user,customizedProduct);
+        DatabaseProduct.AddCustomizeProductToBag(user, customizedProduct);
     }
 }

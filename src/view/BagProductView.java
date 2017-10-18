@@ -53,34 +53,34 @@ public class BagProductView {
                         "                        <td width=\"10%\"><input type=\"hidden\" name=\"productID\" value=" + i.getProduct().getProductID() + "><button class=\"w3-button\" formaction=\"RemoveBagItem\" formmethod=\"post\" style=\"font-size: small\" type=\"submit\">REMOVE</button></form></td>\n" +
                         "                    </tr>";
                 totalPrice += ((i.getNumber()) * (i.getProduct().getPrice()));
-                product+=1;
+                product += 1;
             } else {
                 totalNumber += 1;
                 totalPrice += i.getProduct().getPrice();
                 view += "<tr height=\"45%\">\n" +
                         "    <td width=\"25%\" align=\"center\"><img\n" +
-                        "            src=\""+i.getProduct().getProductImg1()+"\"\n" +
+                        "            src=\"" + i.getProduct().getProductImg1() + "\"\n" +
                         "            width=\"65%\"></td>\n" +
                         "    <td style=\"font-size: small\" width=\"25%\" align=\"left\">\n" +
-                        "        Name:"+i.getProduct().getProductName()+"<input type=\"hidden\" name=\"Prod1name\"\n" +
+                        "        Name:" + i.getProduct().getProductName() + "<input type=\"hidden\" name=\"Prod1name\"\n" +
                         "                                id=\"Prod1name\"\n" +
                         "                                value=\"Prod1name\"/><br>\n" +
-                        "        Product code:"+i.getProduct().getProductID()+"<input type=\"hidden\"\n" +
+                        "        Product code:" + i.getProduct().getProductID() + "<input type=\"hidden\"\n" +
                         "                                  name=\"Prod1name\"\n" +
                         "                                  id=\"Prod1code\"\n" +
                         "                                  value=\"Prod1code\"/><br>\n" +
-                        "        Customize ID: "+i.getProduct().getCustomizeID() +"\n" +
+                        "        Customize ID: " + i.getProduct().getCustomizeID() + "\n" +
                         "\n" +
-                        "    <td width=\"15%\" align=\"center\" style=\"font-size: small\">$ "+i.getProduct().getPrice()+"<input style=\"font-size: small\"\n" +
+                        "    <td width=\"15%\" align=\"center\" style=\"font-size: small\">$ " + i.getProduct().getPrice() + "<input style=\"font-size: small\"\n" +
                         "                                                                          type=\"hidden\" name=\"Prod1Price\"\n" +
                         "                                                                          id=\"Prod1Price\" value=\"10\"/>\n" +
                         "    </td>\n" +
                         "    <td width=\"15%\" align=\"center\">1</td>\n" +
-                        "    <td width=\"15%\" align=\"center\"><p id=\"Prod1SubTol\" style=\"font-size: small\">$ "+i.getProduct().getPrice()+"</p><input\n" +
+                        "    <td width=\"15%\" align=\"center\"><p id=\"Prod1SubTol\" style=\"font-size: small\">$ " + i.getProduct().getPrice() + "</p><input\n" +
                         "            id=\"Prod1Tol\" name=\"Prod1Tol\" type=\"hidden\" value=\"0\"/></td>\n" +
-                        "    <td width=\"10%\"><form><input type=\"hidden\" name=\"customizedID\" value="+i.getProduct().getCustomizeID()+"><button class=\"w3-button\" formaction=\"RemoveCustomizedBagItem\" formmethod=\"post\" style=\"font-size: small\" type=\"submit\">REMOVE</button></form></td>\n" +
+                        "    <td width=\"10%\"><form><input type=\"hidden\" name=\"customizedID\" value=" + i.getProduct().getCustomizeID() + "><button class=\"w3-button\" formaction=\"RemoveCustomizedBagItem\" formmethod=\"post\" style=\"font-size: small\" type=\"submit\">REMOVE</button></form></td>\n" +
                         "</tr>";
-                product+=1;
+                product += 1;
             }
         }
 
@@ -92,13 +92,13 @@ public class BagProductView {
                 "                        <th><p id=\"Price\">$ " + df.format(totalPrice) + "</p><input id=\"TolPrice\" name=\"TolPrice\" type=\"hidden\" value=\"0\"/></th>\n" +
                 "                    </tr>";
 
-        view+="<tr>\n" +
+        view += "<tr>\n" +
                 "                        <td></td>\n" +
                 "                        <td></td>\n" +
                 "                        <td></td>\n" +
                 "                        <td></td>\n";
-        if(product!=0){
-            view+=  "                        <td>\n" +
+        if (product != 0) {
+            view += "                        <td>\n" +
                     "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"UpdateBagItem\" formmethod=\"post\" type=\"submit\">Update</button>\n" +
                     "                        </td>\n" +
                     "                        <td>\n" +
@@ -108,8 +108,8 @@ public class BagProductView {
                     "                </table>\n" +
                     "\n" +
                     "            </form>";
-        }else {
-            view+=  "                        <td>\n" +
+        } else {
+            view += "                        <td>\n" +
                     "                            <button align=\"right\" class=\"w3-btn w3-black\" formaction=\"UpdateBagItem\" formmethod=\"post\" type=\"submit\">Update</button>\n" +
                     "                        </td>\n" +
                     "                    </tr>\n" +

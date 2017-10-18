@@ -16,12 +16,12 @@ import java.io.IOException;
  * Date : 13/10/17
  */
 
-@WebServlet(name = "UpdateStockLevelServlet",urlPatterns = "/UpdateStockLevel")
+@WebServlet(name = "UpdateStockLevelServlet", urlPatterns = "/UpdateStockLevel")
 public class UpdateStockLevelServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pid = request.getParameter("Update");
         int number = Integer.valueOf(request.getParameter("number"));
-        StaffsFunc.UpdateStockLevel(pid,number);
+        StaffsFunc.UpdateStockLevel(pid, number);
 
         response.sendRedirect("StockControl.jsp");
     }

@@ -48,12 +48,12 @@ public class DatabaseUser {
             String Address = user.getAddress();
 //            String password = user.getPassword();
 
-            String sql = "UPDATE Users SET first_name ='"+FN+"', last_name ='"+LN+"', birthday ='"+DoB+"', address ='"+Address+"', phone ='"+Phone+"' WHERE user_id ='"+UserID+"';";
+            String sql = "UPDATE Users SET first_name ='" + FN + "', last_name ='" + LN + "', birthday ='" + DoB + "', address ='" + Address + "', phone ='" + Phone + "' WHERE user_id ='" + UserID + "';";
             Connection connection = DatabaseConnection.getInstence().getConnection();
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -86,7 +86,7 @@ public class DatabaseUser {
             statement.execute();
 
             Statement statement1 = connection.createStatement();
-            statement1.execute("INSERT INTO bagTables VALUES ('"+userID+"',0,0,0,'',0,0,0,0,0,0,'');");
+            statement1.execute("INSERT INTO bagTables VALUES ('" + userID + "',0,0,0,'',0,0,0,0,0,0,'');");
 
 
         } catch (SQLException e) {
@@ -94,11 +94,11 @@ public class DatabaseUser {
         }
     }
 
-    public static void changePassword(User user){
-        try{
+    public static void changePassword(User user) {
+        try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate("UPDATE users SET password ='"+user.getPassword()+"' WHERE user_id = '"+user.getUserID()+"';");
-        }catch (Exception e){
+            statement.executeUpdate("UPDATE users SET password ='" + user.getPassword() + "' WHERE user_id = '" + user.getUserID() + "';");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

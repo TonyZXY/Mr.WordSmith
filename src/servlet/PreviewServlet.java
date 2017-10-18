@@ -19,7 +19,7 @@ import java.io.PrintWriter;
 public class PreviewServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] selected = request.getParameterValues("layout");
-        request.getSession().setAttribute("layout",selected);
+        request.getSession().setAttribute("layout", selected);
 
         response.sendRedirect("Preview.jsp");
 

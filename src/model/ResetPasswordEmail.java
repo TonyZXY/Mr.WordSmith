@@ -18,22 +18,22 @@ import java.util.Properties;
  */
 
 public class ResetPasswordEmail {
-    public static void sendResetEmail(User user){
+    public static void sendResetEmail(User user) {
         String to = user.getEmail();
         String from = "resetpassword@mrwordsmith.com";
         String host = "localhost";
         Properties properties = System.getProperties();
-        properties.setProperty("mail.smtp.host",host);
+        properties.setProperty("mail.smtp.host", host);
         Session session = Session.getDefaultInstance(properties);
-        try{
+        try {
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));
-            message.addRecipient(Message.RecipientType.TO ,new InternetAddress(to));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject("This is Subject");
-            message.setText("This is text, and password = "+user.getPassword());
+            message.setText("This is text, and password = " + user.getPassword());
 
             Transport.send(message);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

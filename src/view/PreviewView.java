@@ -68,80 +68,104 @@ public class PreviewView {
             }
         }
 
-        if(Objects.equals(lay, "weeklylayouta") && !opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "weeklylayouta") && !opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayouta.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(Objects.equals(lay,"weeklylayouta") && opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "weeklylayouta") && opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayouta1234567.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(Objects.equals(lay,"weeklylayoutb") && !opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "dailylayouta") && !opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
+                    "        <img src=\"images/dailylayouta.jpg\" style=\"width:100%\">\n" +
+                    "\n" +
+                    "    </div>";
+        }
+        if (Objects.equals(lay, "dailylayouta") && opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
+                    "        <img src=\"images/dailylayouta1234567.jpg\" style=\"width:100%\">\n" +
+                    "\n" +
+                    "    </div>";
+        }
+        if (Objects.equals(lay, "dailylayoutb") && !opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
+                    "        <img src=\"images/dailylayoutb.jpg\" style=\"width:100%\">\n" +
+                    "\n" +
+                    "    </div>";
+        }
+        if (Objects.equals(lay, "dailylayoutb") && opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
+                    "        <img src=\"images/dailylayoutb1234567.jpg\" style=\"width:100%\">\n" +
+                    "\n" +
+                    "    </div>";
+        }
+        if (Objects.equals(lay, "weeklylayoutb") && !opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayoutb.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(Objects.equals(lay,"weeklylayoutb") && opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "weeklylayoutb") && opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayoutb1234567.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(Objects.equals(lay,"weeklylayoutc") && !opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "weeklylayoutc") && !opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayoutc.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(Objects.equals(lay,"weeklylayoutc") && opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "weeklylayoutc") && opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayoutc1234567.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(Objects.equals(lay,"weeklylayoutd") && !opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "weeklylayoutd") && !opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayoutd.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(Objects.equals(lay,"weeklylayoutd") && opt){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (Objects.equals(lay, "weeklylayoutd") && opt) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/weeklylayoutd1234567.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(password){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (password) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/8Password Pages.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(note){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (note) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/9Notes Pages.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(social){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (social) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/10Social Media Pages.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(info){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (info) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/11Personal Info Pages.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";
         }
-        if(todo){
-            view +="<div class=\"w3-display-container mySlides\">\n" +
+        if (todo) {
+            view += "<div class=\"w3-display-container mySlides\">\n" +
                     "        <img src=\"images/12To Do List Pages.jpg\" style=\"width:100%\">\n" +
                     "\n" +
                     "    </div>";

@@ -55,7 +55,8 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
-    html,body{
+
+    html, body {
 
         font-family: "Lato", sans-serif;
         margin: 0;
@@ -63,23 +64,29 @@
         height: 100%;
 
     }
+
     .content {
         min-height: 100%;
     }
+
     .content-inside {
         padding: 20px;
         padding-bottom: 40px;
     }
+
     .footer {
         height: 40px;
         margin-top: -40px;
     }
+
     .mySlides {
         display: none
     }
+
     .w3-tag, .fa {
         cursor: pointer
     }
+
     .w3-tag {
         height: 15px;
         width: 15px;
@@ -115,9 +122,9 @@
                 } else {
                     links = "<div class=\"w3-right\">\n" +
                             "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                            "    </div>\n"+
-                            "<div class=\"w3-right\">"+
-                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                            "    </div>\n" +
+                            "<div class=\"w3-right\">" +
+                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
                             "</div>";
                 }
             %>
@@ -144,10 +151,18 @@
             <br>
             <br>
             <br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-            <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                    class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+                    style="margin-left: 10px; margin-right: 20px "></i></a>
+            <a herf="https://www.instagram.com" target="_blank "><i
+                    class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"
+                    target="_blank "></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
 
         </div>
     </div>
@@ -173,15 +188,15 @@
         </div>
     </div>
 
-<!-- title -->
-<div class="w3-row w3-container">
-    <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Checkout</span>
+    <!-- title -->
+    <div class="w3-row w3-container">
+        <div class="w3-left w3-padding-32">
+            <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Checkout</span>
+        </div>
     </div>
-</div>
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
-</div>
+    <!-- line-->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
+    </div>
 
 
     <!-- Page Container -->
@@ -251,36 +266,56 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <button onclick="Redirect()" formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
+                                <button onclick="Redirect()" formaction="MakePayment" formmethod="post" name="payment"
+                                        value="Paypal" type="submit" class="w3-btn w3-black"
+                                        style="width: 50%;align:center">Paypal
+                                </button>
                                 <br>
                                 <hr>
                                 <br>
                                 <div class="w3-row-padding">
-                                    <form >
+                                    <form>
                                         <label>* Card Number</label>
-                                        <input class="w3-input w3-border" type="text" name="cardNumber"required="required"><br>
+                                        <input class="w3-input w3-border" type="text" name="cardNumber"
+                                               required="required"><br>
                                         <label>* Expiry Date</label>
-                                        <input class="w3-input w3-border" type="text" name="Date" required="required"><br>
+                                        <input class="w3-input w3-border" type="text" name="Date"
+                                               required="required"><br>
                                         <label>* CVV</label>
-                                        <input class="w3-input w3-border" type="text" name="CVV"required="required"><br>
+                                        <input class="w3-input w3-border" type="text" name="CVV"
+                                               required="required"><br>
                                         <label>* Name on Card</label>
-                                        <input class="w3-input w3-border" type="text" name="name"required="required">
-                                    </form><br>
-                                    <center><button onclick=""formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
+                                        <input class="w3-input w3-border" type="text" name="name" required="required">
+                                    </form>
+                                    <br>
+                                    <center>
+                                        <button onclick="" formmethod="post" formaction="MakePayment" name="payment"
+                                                value="card" type="submit" class="w3-btn w3-black" style="width: 50%">
+                                            Pay Card
+                                        </button>
+                                    </center>
                                 </div>
                             </div>
                         </div>
-                   <!-- afterpay -->
+                        <!-- afterpay -->
                         <div class="w3-container w3-half">
                             <a href="#afterpay" onclick="myFunction('Demo2')" class="w3-btn w3-bar-item w3-block"><img
                                     src="images/B2.jpg" style="width: 60%"></a>
                             <div id="Demo2" class="w3-hide w3-container">
                                 <br>
                                 <div class="w3-justify">
-                                    <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay in 4 equal fortnightly payments with no interest.</b><br><br>Available to customers in Australia with a debit or credit card. When you click 'Place Order' with Afterpay, you will be redirected to Afterpay to complete your order.</p>
+                                    <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay
+                                        in 4 equal fortnightly payments with no interest.</b><br><br>Available to
+                                        customers in Australia with a debit or credit card. When you click 'Place Order'
+                                        with Afterpay, you will be redirected to Afterpay to complete your order.</p>
                                 </div>
                                 <br><br>
-                                <center><button onclick="" formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
+                                <center>
+                                    <button onclick="" formaction="MakePayment" formmethod="post" name="payment"
+                                            value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">
+                                        AfterPay
+                                    </button>
+                                </center>
                             </div>
                         </div>
                     </div>
@@ -302,7 +337,7 @@
 </div>
 <br><br>
 
-    <!-- Footer -->
+<!-- Footer -->
 <footer>
     <div class="footer">
         <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
@@ -312,9 +347,12 @@
                         <a href="AboutUs.jsp"><i>
                             <p2 style="font-family:Times"><b>About Us</b></p2>
                         </i></a><br><br>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox
+                            210, Abbotsford, VIC 3067</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i>
+                            +610425752986</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au
+                        </p>
                     </div>
                 </center>
                 <div class="w3-third w3-center w3-large " style="height:250px"><br>
@@ -326,9 +364,12 @@
                 </div>
                 <div class="w3-third w3-center w3-large" style="height:250px">
                     <br><br>
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                            class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
                 </div>
             </div>
@@ -336,23 +377,23 @@
     </div>
 </footer>
 
-    <!-- Active Accordions -->
-    <script>
-        function myFunction(id) {
-            var x = document.getElementById(id);
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-                x.previousElementSibling.className =
-                    x.previousElementSibling.className.replace("w3-black", "w3-red");
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-                x.previousElementSibling.className =
-                    x.previousElementSibling.className.replace("w3-red", "w3-black");
-            }
+<!-- Active Accordions -->
+<script>
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace("w3-black", "w3-red");
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace("w3-red", "w3-black");
         }
-    </script>
-    <!-- validate info -->
-    <script>
+    }
+</script>
+<!-- validate info -->
+<script>
     function validateForm() {
 
         var card = document.forms["cardForm"]["cardNumber"].value;
@@ -403,9 +444,9 @@
             return false;
         }
     }
-    </script>
+</script>
 
-    <!-- redirect to message page -->
+<!-- redirect to message page -->
 
 
 </body>

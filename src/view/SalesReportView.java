@@ -12,13 +12,13 @@ import java.util.HashMap;
  */
 
 public class SalesReportView {
-    public static String getview(HashMap<Product,Integer> salesReport){
+    public static String getview(HashMap<Product, Integer> salesReport) {
         String view = "";
-        for (Product p:salesReport.keySet()) {
+        for (Product p : salesReport.keySet()) {
             view += "<tr>\n" +
-                    "                    <td>"+p.getProductID()+"</td>\n" +
-                    "                    <td>"+p.getProductName()+"</td>\n" +
-                    "                    <td>"+salesReport.get(p)+"</td>\n" +
+                    "                    <td>" + p.getProductID() + "</td>\n" +
+                    "                    <td>" + p.getProductName() + "</td>\n" +
+                    "                    <td>" + salesReport.get(p) + "</td>\n" +
                     "                </tr>";
         }
         System.out.println("View sent");

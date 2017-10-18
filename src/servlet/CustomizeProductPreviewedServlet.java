@@ -17,7 +17,7 @@ import java.io.IOException;
  * Date : 17/10/17
  */
 
-@WebServlet(name = "CustomizeProductPreviewedServlet",urlPatterns = "/AddCustomizeProductAfterPreview")
+@WebServlet(name = "CustomizeProductPreviewedServlet", urlPatterns = "/AddCustomizeProductAfterPreview")
 public class CustomizeProductPreviewedServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] layout = (String[]) request.getSession().getAttribute("layout");
@@ -25,13 +25,11 @@ public class CustomizeProductPreviewedServlet extends HttpServlet {
 
         CustomizeProductAddition.customizeAdd(user, layout);
 
-        request.getSession().setAttribute("Message","Customized product successfully add into your shopping bag.");
-        request.getSession().setAttribute("MessageRedirect","CustomizeProduct.jsp?pid=MWE004");
+        request.getSession().setAttribute("Message", "Customized product successfully add into your shopping bag.");
+        request.getSession().setAttribute("MessageRedirect", "CustomizeProduct.jsp?pid=MWE004");
         response.sendRedirect("Message.jsp");
 
 //        response.sendRedirect("CustomizeProduct.jsp?pid=MWE004");
-
-
 
 
     }

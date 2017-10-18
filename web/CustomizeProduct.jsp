@@ -12,11 +12,11 @@
 <%
     String string = request.getParameter("pid");
     Product product = DatabaseProduct.getProduct(string);
-    session.setAttribute("Redirect","CustomizeProduct.jsp?pid=MWE004");
+    session.setAttribute("Redirect", "CustomizeProduct.jsp?pid=MWE004");
 %>
 <%
     User user = null;
-    user = (User)session.getAttribute("user");
+    user = (User) session.getAttribute("user");
 %>
 <!doctype html>
 <html lang="en-US">
@@ -48,7 +48,8 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
-    html,body{
+
+    html, body {
 
         font-family: "Lato", sans-serif;
         margin: 0;
@@ -56,17 +57,21 @@
         height: 100%;
 
     }
+
     .content {
         min-height: 100%;
     }
+
     .content-inside {
         padding: 20px;
         padding-bottom: 40px;
     }
+
     .footer {
         height: 40px;
         margin-top: -40px;
     }
+
     .mySlides {
         display: none
     }
@@ -81,17 +86,19 @@
         padding: 0;
         margin-top: 6px
     }
-    .justify{
+
+    .justify {
         text-align: left;
     }
 
     .options {
         position: relative;
         left: 50%;
-        -webkit-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
 
     }
+
     input[type="checkbox"],
     input[type="radio"] {
         position: absolute;
@@ -99,6 +106,7 @@
         z-index: -1;
         vertical-align: middle;
     }
+
     label {
         position: relative;
         display: inline-block;
@@ -109,6 +117,7 @@
         line-height: 36px;
         cursor: pointer;
     }
+
     label::before {
         content: " ";
         position: absolute;
@@ -121,15 +130,18 @@
         border-radius: 4px;
         z-index: -1;
     }
+
     input[type="radio"] + label::before {
         border-radius: 18px;
     }
+
     /* Checked */
     input[type="checkbox"]:checked + label,
     input[type="radio"]:checked + label {
         padding-left: 10px;
         color: #fff;
     }
+
     input[type="checkbox"]:checked + label::before,
     input[type="radio"]:checked + label::before {
         top: 0;
@@ -137,6 +149,7 @@
         height: 100%;
         background: #3c3c3c;
     }
+
     /* Transition */
     label,
     label::before {
@@ -145,9 +158,6 @@
     }
 
 </style>
-
-
-
 
 
 <body>
@@ -177,9 +187,9 @@
                 } else {
                     links = "<div class=\"w3-right\">\n" +
                             "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                            "    </div>\n"+
-                            "<div class=\"w3-right\">"+
-                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                            "    </div>\n" +
+                            "<div class=\"w3-right\">" +
+                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
                             "</div>";
                 }
             %>
@@ -206,10 +216,18 @@
             <br>
             <br>
             <br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-            <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                    class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+                    style="margin-left: 10px; margin-right: 20px "></i></a>
+            <a herf="https://www.instagram.com" target="_blank "><i
+                    class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"
+                    target="_blank "></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
 
         </div>
     </div>
@@ -235,152 +253,249 @@
         </div>
     </div>
 
-<!-- title -->
-<div class="w3-row w3-container">
-    <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Customizable Product</span>
-    </div>
-</div>
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
-</div>
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-    <!-- The Grid -->
-
-    <div class="w3-row-padding">
-        <form>
-        <div class="w3-row-padding" style="margin-top: 20px">
-            <div class="w3-col w3-container" style="width: 20%"><p></p></div>
-            <div class="w3-col w3-container " style="width: 30%">
-                <%--<img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg" style="width:75%; margin-top: 50px">--%>
-                <%="<img src=\""+product.getProductImg1()+"\" style=\"width:75%; margin-top: 50px\">"%>
-            </div>
-            <div class="w3-col w3-container" style="width:50%">
-                <div class="w3-container">
-                    <h4><strong><%=product.getProductName()%></strong></h4><br>
-                    <h8><small><a class="w3-text-gray">product code: <%=product.getProductID()%>   Size: A5</a></small></h8>
-                </div>
-                <br>
-                <div class="w3-container">
-                    <p>Shades</p>
-                    <!-- line -->
-                    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 10px;margin-bottom: 20px; margin-right: 100px">
-                    </div>
-                    <!-- Photo grid (modal) -->
-                    <div class="w3-row-padding">
-                        <div class="w3-quarter">
-                            <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
-                        </div>
-
-                        <div class="w3-quarter">
-                            <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
-                        </div>
-
-                        <div class="w3-quarter">
-                            <%="<img src=\""+product.getProductImg2()+"\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
-                        </div>
-                    </div>
-
-
-                    <!-- Modal for full size images on click-->
-                    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-                        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-                        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                            <img id="img01" class="w3-image">
-                            <p id="caption"></p>
-                        </div>
-                    </div>
-                    <!-- line -->
-                    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
-                    <div class="w3-row-padding">
-                        <p>Quantity&nbsp;1 </p>
-                        <i><b><p style="font-family: Times">* Please resubmit your custom options if more quantities needed</p></b></i>
-                        <a class="w3-right w3-xlarge" style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
-                        <a class="w3-container" style="width: 60%"><p></p></a>
-                    </div>
-                    <%
-                        String addButton;
-                        if(user==null){
-                            addButton = "<button class=\"w3-button w3-block w3-black\" formaction=\"CheckLogin\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\"><center>Add to bag</center></button>";
-                        }else {
-                            addButton = "<button class=\"w3-button w3-block w3-black\" formaction=\"AddCustomizeProductToBag\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button>";
-                        }
-                    %>
-                    <%=addButton%>
-
-                </div>
-
-            </div>
-
-        </div><br><br>
-        <!-- Right Column -->
-        <div class="w3-two">
-            <form id="layout">
-            <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-                <center><h4 class="w3-text-grey w3-padding-16">Custom your layout</h4></center>
-                <center>
-                    <div class="w3-container"><center>
-                        <div class="options">
-                                <div class="w3-half" align="center"><input id="option1" type="radio" value="weeklylayouta" name="layout" style="text-align: justify;width: 50%" checked><label for="option1">Weekly Layout A</label></div>
-                                <div class="w3-half" align="center"><input id="option2" type="radio" value="weeklylayoutb" name="layout" style="text-align: justify;width: 50%"><label for="option2">Weekly Layout B</label></div>
-                                <div class="w3-half" align="center"><input id="option3" type="radio" value="weeklylayoutc" name="layout" style="text-align: justify;width: 50%"><label for="option3">Weekly Layout C</label></div>
-                                <div class="w3-half" align="center"><input id="option4" type="radio" value="weeklylayoutd" name="layout" style="text-align: justify;width: 50%"><label for="option4">Weekly Layout D</label></div>
-                                <div class="w3-half" align="center"><input id="option5" type="radio" value="dailylayouta" name="layout" style="text-align: justify;width: 50%"><label for="option5">Daily Layout A</label></div>
-                                <div class="w3-half" align="center"><input id="option6" type="radio" value="dailylayoutb" name="layout" style="text-align: justify;width: 50%"><label for="option6">Daily Layout B</label></div>
-                        </div>
-                </center></div>
-                    <br>
-
-                    <div class="w3-container w3-white"><center>
-                        <h4 class="w3-text-grey w3-padding-16"><center>Custom your display elements</center></h4><br>
-
-                        <div class="w3-container">
-                            <div class="options" style="align-content:center;text-align: left">
-                                <form><center>
-                                    <div class="w3-half" align="center"><input id="optionA" type="checkbox"  name="layout" value="1"><label for="optionA">Lined</label></div>
-                                    <div class="w3-half" align="center"><input id="optionB" type="checkbox"  name="layout" value="2"><label for="optionB">Non-lined</label></div>
-                                    <div class="w3-half" align="center"><input id="optionC" type="checkbox"  name="layout" value="3"><label for="optionC">Page number</label></div>
-                                    <div class="w3-half" align="center"><input id="optionD" type="checkbox"  name="layout" value="4"><label for="optionD">Public holiday </label></div>
-                                    <div class="w3-half" align="center"><input id="optionK" type="checkbox"  name="layout" value="5"><label for="optionK">Local holiday </label></div>
-                                    <div class="w3-half" align="center"><input id="optionE" type="checkbox"  name="layout" value="6"><label for="optionE">Moon cycle</label></div>
-                                    <div class="w3-half" align="center"><input id="optionF" type="checkbox"  name="layout" value="7"><label for="optionF">Sunrise,Sunset</label></div>
-                                    <div class="w3-half" align="center"><input id="optionG" type="checkbox"  name="layout" value="8"><label for="optionG">Page of password</label></div>
-                                    <div class="w3-half" align="center"><input id="optionH" type="checkbox"  name="layout" value="9"><label for="optionH">Page of extra note</label></div>
-                                    <div class="w3-half" align="center"><input id="optionI" type="checkbox"  name="layout" value="10"><label for="optionI">Page of Social media handles</label></div>
-                                    <div class="w3-half" align="center"><input id="optionJ" type="checkbox"  name="layout" value="11"><label for="optionJ">Page of personal info</label></div>
-                                    <div class="w3-half" align="center"><input id="optionL" type="checkbox"  name="layout" value="12"><label for="optionL">Page of To-do list</label></div>
-                                </center></form>
-                            </div>
-                        </div>
-                    </center></div>
-                <br><br>
-
-                <br>
-                <div class="w3-container">
-                    <center><button formaction="Preview" formmethod="post" class="w3-btn w3-white w3-border w3-border-gray w3-round-large">Preview</button>
-
-                    </center></div>
-             
-                </center>
-
-                <br><br>
-
-                <!-- End Right Column -->
-            </div>
-            </form>
-            <!-- End Grid -->
+    <!-- title -->
+    <div class="w3-row w3-container">
+        <div class="w3-left w3-padding-32">
+            <span class="w3-xlarge w3-border-dark-grey w3-padding-16"
+                  style="margin-left: 100px">Customizable Product</span>
         </div>
-        </form>
-        <!-- End Page Container -->
+    </div>
+    <!-- line-->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
     </div>
 
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
+        <!-- The Grid -->
+
+        <div class="w3-row-padding">
+            <form>
+                <div class="w3-row-padding" style="margin-top: 20px">
+                    <div class="w3-col w3-container" style="width: 20%"><p></p></div>
+                    <div class="w3-col w3-container " style="width: 30%">
+                        <%--<img src="http://assets1.blurb.com/pages/website-assets/homepage/childrens-books-1d6bda0f8b82256656c458d713ddf4bcaafccf34747947be11cf054a3a5919ee.jpg" style="width:75%; margin-top: 50px">--%>
+                        <%="<img src=\"" + product.getProductImg1() + "\" style=\"width:75%; margin-top: 50px\">"%>
+                    </div>
+                    <div class="w3-col w3-container" style="width:50%">
+                        <div class="w3-container">
+                            <h4><strong><%=product.getProductName()%>
+                            </strong></h4><br>
+                            <h8>
+                                <small><a class="w3-text-gray">product code: <%=product.getProductID()%>   Size: A5</a>
+                                </small>
+                            </h8>
+                        </div>
+                        <br>
+                        <div class="w3-container">
+                            <p>Shades</p>
+                            <!-- line -->
+                            <div class="w3-panel w3-border-bottom w3-border-grey"
+                                 style="margin-top: 10px;margin-bottom: 20px; margin-right: 100px">
+                            </div>
+                            <!-- Photo grid (modal) -->
+                            <div class="w3-row-padding">
+                                <div class="w3-quarter">
+                                    <%="<img src=\"" + product.getProductImg2() + "\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
+                                </div>
+
+                                <div class="w3-quarter">
+                                    <%="<img src=\"" + product.getProductImg2() + "\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
+                                </div>
+
+                                <div class="w3-quarter">
+                                    <%="<img src=\"" + product.getProductImg2() + "\" style=\"width:100%\" onclick=\"onClick(this)\" alt=\"\" class=\"w3-hover-opacity\">"%>
+                                </div>
+                            </div>
+
+
+                            <!-- Modal for full size images on click-->
+                            <div id="modal01" class="w3-modal w3-black" style="padding-top:0"
+                                 onclick="this.style.display='none'">
+                                <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+                                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                                    <img id="img01" class="w3-image">
+                                    <p id="caption"></p>
+                                </div>
+                            </div>
+                            <!-- line -->
+                            <div class="w3-panel w3-border-bottom w3-border-grey"
+                                 style="margin-top: 20px;margin-bottom: 20px; margin-right: 100px"></div>
+                            <div class="w3-row-padding">
+                                <p>Quantity&nbsp;1 </p>
+                                <i><b><p style="font-family: Times">* Please resubmit your custom options if more
+                                    quantities needed</p></b></i>
+                                <a class="w3-right w3-xlarge"
+                                   style="margin-right: 100px"><strong>$<%=product.getPrice()%> AUD</strong></a>
+                                <a class="w3-container" style="width: 60%"><p></p></a>
+                            </div>
+                            <%
+                                String addButton;
+                                if (user == null) {
+                                    addButton = "<button class=\"w3-button w3-block w3-black\" formaction=\"CheckLogin\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\"><center>Add to bag</center></button>";
+                                } else {
+                                    addButton = "<button class=\"w3-button w3-block w3-black\" formaction=\"AddCustomizeProductToBag\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button>";
+                                }
+                            %>
+                            <%=addButton%>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <br><br>
+                <!-- Right Column -->
+                <div class="w3-two">
+                    <form id="layout">
+                        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+                            <center><h4 class="w3-text-grey w3-padding-16">Custom your layout</h4></center>
+                            <center>
+                                <div class="w3-container">
+                                    <center>
+                                        <div class="options">
+                                            <div class="w3-half" align="center"><input id="option1" type="radio"
+                                                                                       value="weeklylayouta"
+                                                                                       name="layout"
+                                                                                       style="text-align: justify;width: 50%"
+                                                                                       checked><label for="option1">Weekly
+                                                Layout A</label></div>
+                                            <div class="w3-half" align="center"><input id="option2" type="radio"
+                                                                                       value="weeklylayoutb"
+                                                                                       name="layout"
+                                                                                       style="text-align: justify;width: 50%"><label
+                                                    for="option2">Weekly Layout B</label></div>
+                                            <div class="w3-half" align="center"><input id="option3" type="radio"
+                                                                                       value="weeklylayoutc"
+                                                                                       name="layout"
+                                                                                       style="text-align: justify;width: 50%"><label
+                                                    for="option3">Weekly Layout C</label></div>
+                                            <div class="w3-half" align="center"><input id="option4" type="radio"
+                                                                                       value="weeklylayoutd"
+                                                                                       name="layout"
+                                                                                       style="text-align: justify;width: 50%"><label
+                                                    for="option4">Weekly Layout D</label></div>
+                                            <div class="w3-half" align="center"><input id="option5" type="radio"
+                                                                                       value="dailylayouta"
+                                                                                       name="layout"
+                                                                                       style="text-align: justify;width: 50%"><label
+                                                    for="option5">Daily Layout A</label></div>
+                                            <div class="w3-half" align="center"><input id="option6" type="radio"
+                                                                                       value="dailylayoutb"
+                                                                                       name="layout"
+                                                                                       style="text-align: justify;width: 50%"><label
+                                                    for="option6">Daily Layout B</label></div>
+                                        </div>
+                                    </center>
+                                </div>
+                                <br>
+
+                                <div class="w3-container w3-white">
+                                    <center>
+                                        <h4 class="w3-text-grey w3-padding-16">
+                                            <center>Custom your display elements</center>
+                                        </h4>
+                                        <br>
+
+                                        <div class="w3-container">
+                                            <div class="options" style="align-content:center;text-align: left">
+                                                <form>
+                                                    <center>
+                                                        <div class="w3-half" align="center"><input id="optionA"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="1"><label
+                                                                for="optionA">Lined</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionB"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="2"><label
+                                                                for="optionB">Non-lined</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionC"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="3"><label
+                                                                for="optionC">Page number</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionD"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="4"><label
+                                                                for="optionD">Public holiday </label></div>
+                                                        <div class="w3-half" align="center"><input id="optionK"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="5"><label
+                                                                for="optionK">Local holiday </label></div>
+                                                        <div class="w3-half" align="center"><input id="optionE"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="6"><label
+                                                                for="optionE">Moon cycle</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionF"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="7"><label
+                                                                for="optionF">Sunrise,Sunset</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionG"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="8"><label
+                                                                for="optionG">Page of password</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionH"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="9"><label
+                                                                for="optionH">Page of extra note</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionI"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="10"><label
+                                                                for="optionI">Page of Social media handles</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionJ"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="11"><label
+                                                                for="optionJ">Page of personal info</label></div>
+                                                        <div class="w3-half" align="center"><input id="optionL"
+                                                                                                   type="checkbox"
+                                                                                                   name="layout"
+                                                                                                   value="12"><label
+                                                                for="optionL">Page of To-do list</label></div>
+                                                    </center>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </center>
+                                </div>
+                                <br><br>
+
+                                <br>
+                                <div class="w3-container">
+                                    <center>
+                                        <button formaction="Preview" formmethod="post"
+                                                class="w3-btn w3-white w3-border w3-border-gray w3-round-large">Preview
+                                        </button>
+
+                                    </center>
+                                </div>
+
+                            </center>
+
+                            <br><br>
+
+                            <!-- End Right Column -->
+                        </div>
+                    </form>
+                    <!-- End Grid -->
+                </div>
+            </form>
+            <!-- End Page Container -->
+        </div>
+
+
+    </div>
 </div>
-</div>
-    <!-- Footer -->
+<!-- Footer -->
 <footer>
     <div class="footer">
         <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
@@ -390,9 +505,12 @@
                         <a href="AboutUs.jsp"><i>
                             <p2 style="font-family:Times"><b>About Us</b></p2>
                         </i></a><br><br>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox
+                            210, Abbotsford, VIC 3067</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i>
+                            +610425752986</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au
+                        </p>
                     </div>
                 </center>
                 <div class="w3-third w3-center w3-large " style="height:250px"><br>
@@ -404,9 +522,12 @@
                 </div>
                 <div class="w3-third w3-center w3-large" style="height:250px">
                     <br><br>
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                            class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
 
                 </div>
@@ -414,32 +535,32 @@
         </div>
     </div>
 </footer>
-  
+
 <!-- Script -->
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
         }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
+        if (n < 1) {
+            slideIndex = x.length
         }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
 
-    </script>
+</script>
 <script type="text/javascript">
     var layout = document.getElementById("layout");
 

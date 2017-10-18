@@ -12,7 +12,7 @@
 <%
     User user = null;
     user = (User) session.getAttribute("user");
-    session.setAttribute("Redirect","ProductList.jsp");
+    session.setAttribute("Redirect", "ProductList.jsp");
 %>
 <html lang="en-US">
 <style>
@@ -49,7 +49,8 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
-    html,body{
+
+    html, body {
 
         font-family: "Lato", sans-serif;
         margin: 0;
@@ -57,23 +58,29 @@
         height: 100%;
 
     }
+
     .content {
         min-height: 100%;
     }
+
     .content-inside {
         padding: 20px;
         padding-bottom: 40px;
     }
+
     .footer {
         height: 40px;
         margin-top: -40px;
     }
+
     .mySlides {
         display: none
     }
+
     .w3-tag, .fa {
         cursor: pointer
     }
+
     .w3-tag {
         height: 15px;
         width: 15px;
@@ -109,9 +116,9 @@
                 } else {
                     links = "<div class=\"w3-right\">\n" +
                             "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                            "    </div>\n"+
-                            "<div class=\"w3-right\">"+
-                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                            "    </div>\n" +
+                            "<div class=\"w3-right\">" +
+                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
                             "</div>";
                 }
             %>
@@ -138,10 +145,18 @@
             <br>
             <br>
             <br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-            <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                    class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+                    style="margin-left: 10px; margin-right: 20px "></i></a>
+            <a herf="https://www.instagram.com" target="_blank "><i
+                    class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"
+                    target="_blank "></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
 
         </div>
     </div>
@@ -166,110 +181,110 @@
             </div>
         </div>
     </div>
-<!-- title -->
-<div class="w3-row w3-container">
-    <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Shop</span>
+    <!-- title -->
+    <div class="w3-row w3-container">
+        <div class="w3-left w3-padding-32">
+            <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Shop</span>
+        </div>
     </div>
-</div>
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
-</div>
+    <!-- line-->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
+    </div>
 
     <!-- products-->
     <%--<div class="w3-row-padding">--%>
 
-        <%--<div class="w3-col w3-container" style="width:5%"><p></p></div>--%>
+    <%--<div class="w3-col w3-container" style="width:5%"><p></p></div>--%>
 
-        <%--<%=ProductPicProductListPage.getProducts()%>--%>
-        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<a href="ProductDetail.jsp?pid=1">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<p><b><center>product 1</center></b></p>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--<%=ProductPicProductListPage.getProducts()%>--%>
+    <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<a href="ProductDetail.jsp?pid=1">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<p><b><center>product 1</center></b></p>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
 
-        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<p><b><center>product 2</center></b></p>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<p><b><center>product 2</center></b></p>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
 
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<p><b><center>product 3</center></b></p>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<p><b><center>product 4</center></b></p>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-        <%--<div class="w3-col w3-container" style="width:5%"><p></p></div>--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<p><b><center>product 3</center></b></p>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="w3-col w3-container w3-margin-bottom" style="width: 22.5%">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<img src="https://cdn.shopify.com/s/files/1/1012/7888/t/9/assets/logo.png?18127308992302308980" alt="Norway" style="width:100%" class="w3-hover-opacity">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="w3-container w3-white">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<p><b><center>product 4</center></b></p>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<center><p>$ 40</p></center>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+    <%--<div class="w3-col w3-container" style="width:5%"><p></p></div>--%>
     <%--</div>--%>
     <%--<br><br><br><br><br><br><br>--%>
 
-  
-  
-  <!-- product list new -->
-  <div class="w3-row-padding">
-    <!-- Grid -->
-    <div class="w3-row-padding" id="plans">
 
-        <%=ProductPicProductListPage.getProducts()%>
+    <!-- product list new -->
+    <div class="w3-row-padding">
+        <!-- Grid -->
+        <div class="w3-row-padding" id="plans">
 
-        <%--This part code used to demo the static page of the home page product part--%>
+            <%=ProductPicProductListPage.getProducts()%>
 
-        <%--<div class="w3-third w3-margin-bottom">--%>
-        <%--<a href="ProductDetail.jsp?pid=1">--%>
-        <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
-        <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
-        <%--<div class="w3-container w3-white">--%>
-        <%--<p><b>--%>
-        <%--<center>product 1</center>--%>
-        <%--</b></p>--%>
-        <%--</div>--%>
-        <%--</ul>--%>
-        <%--</a>--%>
-        <%--</div>--%>
+            <%--This part code used to demo the static page of the home page product part--%>
 
-        <%--<div class="w3-third w3-margin-bottom">--%>
-        <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
-        <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
-        <%--<div class="w3-container w3-white">--%>
-        <%--<p><b>--%>
-        <%--<center>product 2</center>--%>
-        <%--</b></p>--%>
-        <%--</div>--%>
+            <%--<div class="w3-third w3-margin-bottom">--%>
+            <%--<a href="ProductDetail.jsp?pid=1">--%>
+            <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
+            <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+            <%--<div class="w3-container w3-white">--%>
+            <%--<p><b>--%>
+            <%--<center>product 1</center>--%>
+            <%--</b></p>--%>
+            <%--</div>--%>
+            <%--</ul>--%>
+            <%--</a>--%>
+            <%--</div>--%>
 
-        <%--</ul>--%>
-        <%--</div>--%>
+            <%--<div class="w3-third w3-margin-bottom">--%>
+            <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
+            <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+            <%--<div class="w3-container w3-white">--%>
+            <%--<p><b>--%>
+            <%--<center>product 2</center>--%>
+            <%--</b></p>--%>
+            <%--</div>--%>
 
-        <%--<div class="w3-third w3-margin-bottom">--%>
-        <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
-        <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
-        <%--<div class="w3-container w3-white">--%>
-        <%--<p><b>--%>
-        <%--<center>product 3</center>--%>
-        <%--</b></p>--%>
-        <%--</div>--%>
+            <%--</ul>--%>
+            <%--</div>--%>
 
-        <%--</ul>--%>
-        <%--</div>--%>
+            <%--<div class="w3-third w3-margin-bottom">--%>
+            <%--<ul class="w3-ul w3-center w3-hover-shadow">--%>
+            <%--<img src="images/Product 1 - Front.png" alt="Norway" style="width:100%" class="w3-hover-opacity">--%>
+            <%--<div class="w3-container w3-white">--%>
+            <%--<p><b>--%>
+            <%--<center>product 3</center>--%>
+            <%--</b></p>--%>
+            <%--</div>--%>
+
+            <%--</ul>--%>
+            <%--</div>--%>
+        </div>
     </div>
 </div>
-</div></div>
+</div>
 
-    <!-- Footer -->
+<!-- Footer -->
 <footer>
     <div class="footer">
         <div class="w3-row w3-section" style="background-color:#F8F8F8;margin-bottom:70px">
@@ -279,9 +294,12 @@
                         <a href="AboutUs.jsp"><i>
                             <p2 style="font-family:Times"><b>About Us</b></p2>
                         </i></a><br><br>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox
+                            210, Abbotsford, VIC 3067</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i>
+                            +610425752986</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au
+                        </p>
                     </div>
                 </center>
                 <div class="w3-third w3-center w3-large " style="height:250px"><br>
@@ -293,9 +311,12 @@
                 </div>
                 <div class="w3-third w3-center w3-large" style="height:250px">
                     <br><br>
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                            class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
 
                 </div>
@@ -303,7 +324,6 @@
         </div>
     </div>
 </footer>
-
 
 
 </body>

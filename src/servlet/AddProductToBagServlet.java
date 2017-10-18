@@ -20,17 +20,17 @@ public class AddProductToBagServlet extends HttpServlet {
             String link = "Login.jsp";
             String redirect = "ProductDetail.jsp?pid=" + productID;
             request.getSession().setAttribute("Login", "Please Login Before Adding Items");
-            request.getSession().setAttribute("Redirect",redirect);
+            request.getSession().setAttribute("Redirect", redirect);
             response.sendRedirect(link);
         } else {
 
             DatabaseBagItems.AddBagItem(user, productID, Integer.valueOf(quantity));
             String link = "ProductDetail.jsp?pid=" + productID;
 
-          //TODO
-        request.getSession().setAttribute("Message","Product Successfully add to your Shopping Bag");
-        request.getSession().setAttribute("MessageRedirect",link);
-        response.sendRedirect("Message.jsp");
+            //TODO
+            request.getSession().setAttribute("Message", "Product Successfully add to your Shopping Bag");
+            request.getSession().setAttribute("MessageRedirect", link);
+            response.sendRedirect("Message.jsp");
 
 
 //            response.sendRedirect(link);

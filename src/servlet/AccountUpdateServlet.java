@@ -14,7 +14,7 @@ import java.util.Objects;
 @WebServlet(name = "AccountUpdateServlet", urlPatterns = "/UpdateAccountDetails")
 public class AccountUpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        User user = (User)request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
         String FN = request.getParameter("FN");
         String LN = request.getParameter("LN");
         String DoB = request.getParameter("DoB");
@@ -22,13 +22,13 @@ public class AccountUpdateServlet extends HttpServlet {
         String Phone = request.getParameter("PN");
         String address = request.getParameter("AD");
 //        String password = request.getParameter("PWD");
-        if(!Objects.equals(FN, "")){
+        if (!Objects.equals(FN, "")) {
             user.setFirstName(FN);
         }
-        if(!Objects.equals(LN, "")){
+        if (!Objects.equals(LN, "")) {
             user.setLastName(LN);
         }
-        if(!Objects.equals(DoB, "")){
+        if (!Objects.equals(DoB, "")) {
             user.setBirthday(DoB);
         }
 //        if(!Objects.equals(Email, "")){
@@ -38,10 +38,10 @@ public class AccountUpdateServlet extends HttpServlet {
 //        if(!Objects.equals(password,"")){
 //            user.setPassword(password);
 //        }
-        if(!Objects.equals(Phone, "")){
+        if (!Objects.equals(Phone, "")) {
             user.setPhone(Phone);
         }
-        if(!Objects.equals(address, "")){
+        if (!Objects.equals(address, "")) {
             user.setAddress(address);
         }
 
@@ -50,11 +50,11 @@ public class AccountUpdateServlet extends HttpServlet {
 
         request.getSession().removeAttribute("user");
 
-        request.getSession().setAttribute("user",user);
+        request.getSession().setAttribute("user", user);
 
         //TODO
-        request.getSession().setAttribute("Message","User profile update successfully.");
-        request.getSession().setAttribute("MessageRedirect","Account.jsp");
+        request.getSession().setAttribute("Message", "User profile update successfully.");
+        request.getSession().setAttribute("MessageRedirect", "Account.jsp");
         response.sendRedirect("Message.jsp");
 
 

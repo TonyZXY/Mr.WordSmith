@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CheckOutServlet",urlPatterns = "/CheckOut")
+@WebServlet(name = "CheckOutServlet", urlPatterns = "/CheckOut")
 public class CheckOutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.sendRedirect("Checkout.jsp");

@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "UpdateBagItemServlet",urlPatterns = "/UpdateBagItem")
+@WebServlet(name = "UpdateBagItemServlet", urlPatterns = "/UpdateBagItem")
 public class UpdateBagItemServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Item> items = (ArrayList<Item>) request.getSession().getAttribute("bagItem");
-        User user = (User)request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
 
         for (Item item : items) {
             if (request.getParameter(item.getProduct().getProductID()) != null) {
@@ -25,7 +25,7 @@ public class UpdateBagItemServlet extends HttpServlet {
             }
         }
 
-        DatabaseBagItems.updateBagItems(items,user);
+        DatabaseBagItems.updateBagItems(items, user);
 
 
         response.sendRedirect("Bag.jsp");

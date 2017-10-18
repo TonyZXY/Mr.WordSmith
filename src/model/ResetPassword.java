@@ -11,7 +11,7 @@ import dto.User;
  */
 
 public class ResetPassword {
-    public static void resetPassword(String email){
+    public static void resetPassword(String email) {
         User user = DatabaseUser.getUser(email);
         ResetPasswordEmail.sendResetEmail(user);
         System.out.println(user.getPassword());

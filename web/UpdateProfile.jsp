@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    Staff staff = (Staff)session.getAttribute("staff");
+    Staff staff = (Staff) session.getAttribute("staff");
 %>
 <!doctype html>
 <html lang="en-US">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
 
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-    <script>var __adobewebfontsappname__="dreamweaver"</script>
+    <script>var __adobewebfontsappname__ = "dreamweaver"</script>
     <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,10 +34,24 @@
     <![endif]-->
 </head>
 <style>
-    html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-    .mySlides {display:none}
-    .w3-tag, .fa {cursor:pointer}
-    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    html, body, h1, h2, h3, h4 {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    .w3-tag, .fa {
+        cursor: pointer
+    }
+
+    .w3-tag {
+        height: 15px;
+        width: 15px;
+        padding: 0;
+        margin-top: 6px
+    }
 </style>
 <body>
 
@@ -78,27 +92,33 @@
     <div class="w3-padding" style="margin-left: 40px"></div>
     <div style="margin-left: 40px">
 
-    <form class="w3-container" action="UpdateProfile" method="post">
+        <form class="w3-container" action="UpdateProfile" method="post">
 
-        <div class="w3-section">
-            <label><b>Email</b></label>
-            <input class="w3-input w3-border w3-margin-bottom" type="email" placeholder="Email" name="email" style="width: 50%">
-            <label><b>Address</b></label>
-            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Address" name="address" style="width: 50%">
-            <label><b>Phone Number</b></label>
-            <input class="w3-input w3-border w3-margin-bottom" type="tel" placeholder="Phone Number" name="phone" style="width: 50%">
-            <label><b>Password</b></label>
-            <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password" style="width: 50%">
-            <br>
-            <br>
+            <div class="w3-section">
+                <label><b>Email</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="email" placeholder="Email" name="email"
+                       style="width: 50%">
+                <label><b>Address</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Address" name="address"
+                       style="width: 50%">
+                <label><b>Phone Number</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="tel" placeholder="Phone Number" name="phone"
+                       style="width: 50%">
+                <label><b>Password</b></label>
+                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password"
+                       style="width: 50%">
+                <br>
+                <br>
 
-            <button class="w3-button w3-block w3-black w3-section w3-padding" type="submit" style="width: 20%">Update</button>
-        </div>
-        <!-- modal (add new staffs)-->
+                <button class="w3-button w3-block w3-black w3-section w3-padding" type="submit" style="width: 20%">
+                    Update
+                </button>
+            </div>
+            <!-- modal (add new staffs)-->
 
-    </form>
+        </form>
 
-</div>
+    </div>
 </div>
 </div>
 </body>

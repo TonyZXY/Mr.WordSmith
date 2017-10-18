@@ -80,40 +80,40 @@ public class DatabaseStaff {
         }
     }
 
-    public static void updateStaffDetail(Staff staff){
-        try{
-            String sql = "UPDATE stuffs SET email = '"+staff.getEmail()+"', address = '"+staff.getAddress()+"', phone = '"+staff.getPhoneNumber()+"', password = '"+staff.getPassword()+"' WHERE stuff_id = '"+staff.getStuffID()+"';";
+    public static void updateStaffDetail(Staff staff) {
+        try {
+            String sql = "UPDATE stuffs SET email = '" + staff.getEmail() + "', address = '" + staff.getAddress() + "', phone = '" + staff.getPhoneNumber() + "', password = '" + staff.getPassword() + "' WHERE stuff_id = '" + staff.getStuffID() + "';";
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void insertNewStaff(Staff staff){
-        try{
+    public static void insertNewStaff(Staff staff) {
+        try {
             String sql = "INSERT INTO stuffs (stuff_id,password,email,address,first_name,last_name,phone,admin) VALUES (?,?,?,?,?,?,?,?)";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setInt(1,Integer.valueOf(staff.getStuffID()));
-            statement.setString(2,staff.getPassword());
-            statement.setString(3,staff.getEmail());
-            statement.setString(4,staff.getAddress());
-            statement.setString(5,staff.getFirst_name());
-            statement.setString(6,staff.getLast_name());
-            statement.setString(7,staff.getPhoneNumber());
-            statement.setString(8,staff.getAdmin());
+            statement.setInt(1, Integer.valueOf(staff.getStuffID()));
+            statement.setString(2, staff.getPassword());
+            statement.setString(3, staff.getEmail());
+            statement.setString(4, staff.getAddress());
+            statement.setString(5, staff.getFirst_name());
+            statement.setString(6, staff.getLast_name());
+            statement.setString(7, staff.getPhoneNumber());
+            statement.setString(8, staff.getAdmin());
             statement.execute();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static ArrayList<Staff> getAllStaff(){
+    public static ArrayList<Staff> getAllStaff() {
         ArrayList<Staff> staffs = new ArrayList<>();
-        try{
+        try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM stuffs;");
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Staff staff = new Staff();
                 staff.setStuffID(resultSet.getString("stuff_id"));
                 staff.setPassword(resultSet.getString("password"));
@@ -125,17 +125,17 @@ public class DatabaseStaff {
                 staff.setPhoneNumber(resultSet.getString("phone"));
                 staffs.add(staff);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return staffs;
     }
 
-    public static void removeStaff(String id){
-        try{
+    public static void removeStaff(String id) {
+        try {
             Statement statement = connection.createStatement();
-            statement.execute("DELETE FROM stuffs WHERE stuff_id = '"+id+"';");
-        }catch (Exception e){
+            statement.execute("DELETE FROM stuffs WHERE stuff_id = '" + id + "';");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -9,10 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     User user = null;
-    user = (User)session.getAttribute("user");
+    user = (User) session.getAttribute("user");
 
-    String message = (String)session.getAttribute("Message");
-    String link = (String)session.getAttribute("MessageRedirect");
+    String message = (String) session.getAttribute("Message");
+    String link = (String) session.getAttribute("MessageRedirect");
 %>
 
 <!doctype html>
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
 
     <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-    <script>var __adobewebfontsappname__="dreamweaver"</script>
+    <script>var __adobewebfontsappname__ = "dreamweaver"</script>
     <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +45,8 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
-    html,body{
+
+    html, body {
 
         font-family: "Lato", sans-serif;
         margin: 0;
@@ -53,23 +54,29 @@
         height: 100%;
 
     }
+
     .content {
         min-height: 100%;
     }
+
     .content-inside {
         padding: 20px;
         padding-bottom: 40px;
     }
+
     .footer {
         height: 40px;
         margin-top: -40px;
     }
+
     .mySlides {
         display: none
     }
+
     .w3-tag, .fa {
         cursor: pointer
     }
+
     .w3-tag {
         height: 15px;
         width: 15px;
@@ -106,9 +113,9 @@
                 } else {
                     links = "<div class=\"w3-right\">\n" +
                             "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                            "    </div>\n"+
-                            "<div class=\"w3-right\">"+
-                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                            "    </div>\n" +
+                            "<div class=\"w3-right\">" +
+                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
                             "</div>";
                 }
             %>
@@ -135,10 +142,18 @@
             <br>
             <br>
             <br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-            <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                    class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+                    style="margin-left: 10px; margin-right: 20px "></i></a>
+            <a herf="https://www.instagram.com" target="_blank "><i
+                    class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"
+                    target="_blank "></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
 
         </div>
     </div>
@@ -165,8 +180,6 @@
     </div>
 
 
-
-
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
         <br><br>
@@ -174,26 +187,31 @@
         <!-- The Grid -->
         <div class="w3-row-padding" align="center">
 
-                <div class="w3-container w3-white">
-                    <div class="w3-container">
-                        <table align="center">
-                            <tr>
-                                <td width="50%" style="align: right"><img src="images/message%20icon.jpg" style="width:50%;align:right" alt="Avatar"></td>
-                                <td width="50%"style="text-align: left;font-size: x-large"><b><p><%=message%></p></b>
-                                    <p style="text-align: left;font-family: Times"><i>It will Redirect in 5 seconds, if not click<a href="<%=link%>"> here</a>.</i></p>
-                                </td>
+            <div class="w3-container w3-white">
+                <div class="w3-container">
+                    <table align="center">
+                        <tr>
+                            <td width="50%" style="align: right"><img src="images/message%20icon.jpg"
+                                                                      style="width:50%;align:right" alt="Avatar"></td>
+                            <td width="50%" style="text-align: left;font-size: x-large"><b><p><%=message%>
+                            </p></b>
+                                <p style="text-align: left;font-family: Times"><i>It will Redirect in 5 seconds, if not
+                                    click<a href="<%=link%>"> here</a>.</i></p>
+                            </td>
 
-                            </tr>
-                        </table>
-                    </div>
-                </div><br>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br>
 
 
-        <!-- End Grid -->
+            <!-- End Grid -->
+        </div>
+
+        <!-- End Page Container -->
     </div>
-
-    <!-- End Page Container -->
-</div><br><br><br><br>
+    <br><br><br><br>
 
 </div>
 </div>
@@ -208,9 +226,12 @@
                         <a href="AboutUs.jsp"><i>
                             <p2 style="font-family:Times"><b>About Us</b></p2>
                         </i></a><br><br>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox
+                            210, Abbotsford, VIC 3067</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i>
+                            +610425752986</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au
+                        </p>
                     </div>
                 </center>
                 <div class="w3-third w3-center w3-large " style="height:250px"><br>
@@ -222,9 +243,12 @@
                 </div>
                 <div class="w3-third w3-center w3-large" style="height:250px">
                     <br><br>
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                            class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
 
                 </div>
@@ -236,12 +260,13 @@
 <script>
 
     var time;
+
     function redirect() {
-        time = setTimeout(back,5000);
+        time = setTimeout(back, 5000);
     }
 
     function back() {
-        window.location.href="<%=link%>";
+        window.location.href = "<%=link%>";
     }
 </script>
 

@@ -45,19 +45,19 @@ public class ProductPicProductListPage {
         return view;
     }
 
-    public static String getProducts(){
+    public static String getProducts() {
         String view = "";
         ArrayList<Product> products = DatabaseProduct.getProductList();
 
-        for (Product p:products){
-            if(!Objects.equals(p.getProductID(),"MWE004")){
+        for (Product p : products) {
+            if (!Objects.equals(p.getProductID(), "MWE004")) {
                 view += "<div class=\"w3-third w3-margin-bottom\">\n" +
-                        "            <a href=\"ProductDetail.jsp?pid=" +p.getProductID() +"\">\n" +
+                        "            <a href=\"ProductDetail.jsp?pid=" + p.getProductID() + "\">\n" +
                         "                <ul class=\"w3-ul w3-center w3-hover-shadow\">\n" +
-                        "                    <img src=\""+p.getProductImg1()+"\" alt=\"Norway\" style=\"width:100%\" class=\"w3-hover-opacity\">\n" +
+                        "                    <img src=\"" + p.getProductImg1() + "\" alt=\"Norway\" style=\"width:100%\" class=\"w3-hover-opacity\">\n" +
                         "                    <div class=\"w3-container w3-white\">\n" +
                         "                        <p><b>\n" +
-                        "                            <center>"+p.getProductName()+"</center>\n" +
+                        "                            <center>" + p.getProductName() + "</center>\n" +
                         "                        </b></p>\n" +
                         "                <center><p>$ " + p.getPrice() + "</p></center>\n" +
                         "                    </div>\n" +
@@ -69,10 +69,10 @@ public class ProductPicProductListPage {
                 view += "<div class=\"w3-third w3-margin-bottom\">\n" +
                         "            <a href=\"CustomizeProduct.jsp?pid=MWE004\">\n" +
                         "                <ul class=\"w3-ul w3-center w3-hover-shadow\">\n" +
-                        "                    <img src=\""+p.getProductImg1()+"\" alt=\"Norway\" style=\"width:100%\" class=\"w3-hover-opacity\">\n" +
+                        "                    <img src=\"" + p.getProductImg1() + "\" alt=\"Norway\" style=\"width:100%\" class=\"w3-hover-opacity\">\n" +
                         "                    <div class=\"w3-container w3-white\">\n" +
                         "                        <p><b>\n" +
-                        "                            <center>"+p.getProductName()+"</center>\n" +
+                        "                            <center>" + p.getProductName() + "</center>\n" +
                         "                        </b></p>\n" +
                         "                <center><p>$ " + p.getPrice() + "</p></center>\n" +
                         "                    </div>\n" +

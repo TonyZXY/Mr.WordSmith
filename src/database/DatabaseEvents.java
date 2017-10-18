@@ -9,15 +9,16 @@ import java.util.ArrayList;
 
 public class DatabaseEvents {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
-    public static ArrayList getEvent(User user){
+
+    public static ArrayList getEvent(User user) {
         ArrayList<Event> events = new ArrayList<>();
-        try{
+        try {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM reminder_list WHERE userid ='"+user.getUserID()+"';");
-            while (resultSet.next()){
-                events.add(new Event(resultSet.getString("time"),resultSet.getString("message"),resultSet.getString("reminder_id")));
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM reminder_list WHERE userid ='" + user.getUserID() + "';");
+            while (resultSet.next()) {
+                events.add(new Event(resultSet.getString("time"), resultSet.getString("message"), resultSet.getString("reminder_id")));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return events;
@@ -35,26 +36,26 @@ public class DatabaseEvents {
             String query = "INSERT INTO reminder_list (reminder_id,userid,time,message) VALUES (?,?,?,?)";
 
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1,String.valueOf(eventID));
-            statement.setString(2,userID);
-            statement.setString(3,event.getDate());
-            statement.setString(4,event.getMessage());
+            statement.setString(1, String.valueOf(eventID));
+            statement.setString(2, userID);
+            statement.setString(3, event.getDate());
+            statement.setString(4, event.getMessage());
 
             statement.execute();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
-    public static ArrayList<EmailEvent> getEvents(Date start){
+    public static ArrayList<EmailEvent> getEvents(Date start) {
         ArrayList<EmailEvent> emailEvents = new ArrayList<>();
-        try{
+        try {
             String sql = "SELECT * FROM reminder_list WHERE ";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return emailEvents;

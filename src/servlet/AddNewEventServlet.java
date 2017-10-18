@@ -15,18 +15,18 @@ import java.io.IOException;
 public class AddNewEventServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Event event = new Event();
-        User user = (User)request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
         String userID = user.getUserID();
         String EventTime = request.getParameter("time");
         String message = request.getParameter("message");
         event.setDate(EventTime);
         event.setMessage(message);
 
-        DatabaseEvents.addNewEvent(userID,event);
+        DatabaseEvents.addNewEvent(userID, event);
 
         //TODO
-        request.getSession().setAttribute("Message","Important Date Add successfully.");
-        request.getSession().setAttribute("MessageRedirect","Account.jsp");
+        request.getSession().setAttribute("Message", "Important Date Add successfully.");
+        request.getSession().setAttribute("MessageRedirect", "Account.jsp");
         response.sendRedirect("Message.jsp");
 
 //        response.sendRedirect("Account.jsp");

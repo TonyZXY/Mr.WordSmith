@@ -1,5 +1,5 @@
 package database;
-   
+
 import dto.CustomizedProduct;
 import dto.Item;
 import dto.User;
@@ -39,9 +39,9 @@ public class DatabaseBagItems {
                     }
 //                    items.add(new Item(DatabaseProduct.getProduct("MWE004"),
 //                            CustomizedProduct.getNumberFromIDs(ids)));
-                }else {
+                } else {
                     Statement statement1 = connection.createStatement();
-                    statement1.execute("INSERT INTO bagTables (bag_id,MWE004) VALUES ('"+userID+"','');");
+                    statement1.execute("INSERT INTO bagTables (bag_id,MWE004) VALUES ('" + userID + "','');");
                 }
 
             }
@@ -111,12 +111,12 @@ public class DatabaseBagItems {
         }
     }
 
-    public static void RemoveAllCustomizedProduct(User user){
-        try{
-            String sql = "UPDATE bagTables SET MWE004 = '' WHERE bag_id = '"+user.getUserID()+"';";
+    public static void RemoveAllCustomizedProduct(User user) {
+        try {
+            String sql = "UPDATE bagTables SET MWE004 = '' WHERE bag_id = '" + user.getUserID() + "';";
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

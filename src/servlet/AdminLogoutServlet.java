@@ -14,7 +14,7 @@ import java.io.IOException;
  * Date : 12/10/17
  */
 
-@WebServlet(name = "AdminLogoutServlet",urlPatterns = "/AdminLogout")
+@WebServlet(name = "AdminLogoutServlet", urlPatterns = "/AdminLogout")
 public class AdminLogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -9,7 +9,7 @@ public class Item {
     private Product product;
     private int number;
 
-    public Item(){
+    public Item() {
     }
 
     public Item(Product product, int number) {

@@ -133,38 +133,49 @@
     <!-- modal (add new staffs)-->
     <center>
         <div class="w3-container">
-            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-round">Add new staff</button>
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-round">
+                Add new staff
+            </button>
 
             <div id="id01" class="w3-modal">
                 <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
 
                     <div class="w3-center"><br>
-                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-black w3-display-topright" title="Close Modal">&times;</span>
+                        <span onclick="document.getElementById('id01').style.display='none'"
+                              class="w3-button w3-xlarge w3-hover-black w3-display-topright"
+                              title="Close Modal">&times;</span>
 
-                    </div><br><br>
+                    </div>
+                    <br><br>
 
                     <form class="w3-container" action="AddNewStaffServlet" method="post">
                         <div class="w3-section">
 
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="Staff ID"
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"
+                                   placeholder="Staff ID"
                                    name="id" required="required" style="width: 80%">
 
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="First Name"
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"
+                                   placeholder="First Name"
                                    name="FirstName" required="required" style="width: 80%">
 
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="Last Name"
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"
+                                   placeholder="Last Name"
                                    name="LastName" required="required" style="width: 80%">
 
-                            <input class="w3-input w3-border w3-margin-bottom" type="email" width="40%"placeholder="Email"
+                            <input class="w3-input w3-border w3-margin-bottom" type="email" width="40%"
+                                   placeholder="Email"
                                    name="email" required="required" style="width: 80%">
 
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"placeholder="Address"
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" width="40%"
+                                   placeholder="Address"
                                    name="address" required="required" style="width: 80%">
 
-                            <input class="w3-input w3-border w3-margin-bottom" type="tel" width="40%"placeholder="Phone Number"
+                            <input class="w3-input w3-border w3-margin-bottom" type="tel" width="40%"
+                                   placeholder="Phone Number"
                                    name="phone" required="required" style="width: 80%">
 
-                            <input class="w3-input w3-border" type="password" width="40%"placeholder="Password"
+                            <input class="w3-input w3-border" type="password" width="40%" placeholder="Password"
                                    name="password" required="required" style="width: 80%">
                             <br><label>*Admin type</label>
                             <select name="admin" id="">
@@ -173,9 +184,12 @@
                             </select>
                             <br>
                             <br>
-                            <button class="w3-button w3-block w3-black w3-section w3-padding" type="submit" style="width: 50%">Add</button>
+                            <button class="w3-button w3-block w3-black w3-section w3-padding" type="submit"
+                                    style="width: 50%">Add
+                            </button>
                         </div>
-                    </form><br>
+                    </form>
+                    <br>
 
                 </div>
             </div>

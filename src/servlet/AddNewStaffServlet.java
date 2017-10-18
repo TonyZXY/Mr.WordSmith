@@ -17,7 +17,7 @@ import java.io.IOException;
  * Date : 13/10/17
  */
 
-@WebServlet(name = "AddNewStaffServlet",urlPatterns = "/AddNewStaffServlet")
+@WebServlet(name = "AddNewStaffServlet", urlPatterns = "/AddNewStaffServlet")
 public class AddNewStaffServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Staff staff = new Staff();
@@ -41,8 +41,8 @@ public class AddNewStaffServlet extends HttpServlet {
         DatabaseStaff.insertNewStaff(staff);
 
         //TODO
-        request.getSession().setAttribute("Message","New staff add successfully.");
-        request.getSession().setAttribute("MessageRedirect","StuffManagement.jsp");
+        request.getSession().setAttribute("Message", "New staff add successfully.");
+        request.getSession().setAttribute("MessageRedirect", "StuffManagement.jsp");
         response.sendRedirect("Message.jsp");
 
 //        response.sendRedirect("StuffManagement.jsp");

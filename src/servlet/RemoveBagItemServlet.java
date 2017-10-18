@@ -16,7 +16,7 @@ public class RemoveBagItemServlet extends HttpServlet {
         String productID = request.getParameter("productID");
         User user = (User) request.getSession().getAttribute("user");
 
-        DatabaseBagItems.updateBagItem(productID,0,user);
+        DatabaseBagItems.updateBagItem(productID, 0, user);
 
 
         response.sendRedirect("Bag.jsp");

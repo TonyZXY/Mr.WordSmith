@@ -37,7 +37,7 @@ public class Event {
         this.message = message;
     }
 
-    public Event(){
+    public Event() {
 
     }
 

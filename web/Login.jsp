@@ -10,7 +10,7 @@
 
 <%
     User user = null;
-    user = (User)session.getAttribute("user");
+    user = (User) session.getAttribute("user");
 %>
 
 <!doctype html>
@@ -50,7 +50,8 @@
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
     }
-    html,body{
+
+    html, body {
 
         font-family: "Lato", sans-serif;
         margin: 0;
@@ -58,23 +59,29 @@
         height: 100%;
 
     }
+
     .content {
         min-height: 100%;
     }
+
     .content-inside {
         padding: 20px;
         padding-bottom: 40px;
     }
+
     .footer {
         height: 40px;
         margin-top: -40px;
     }
+
     .mySlides {
         display: none
     }
+
     .w3-tag, .fa {
         cursor: pointer
     }
+
     .w3-tag {
         height: 15px;
         width: 15px;
@@ -110,9 +117,9 @@
                 } else {
                     links = "<div class=\"w3-right\">\n" +
                             "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
-                            "    </div>\n"+
-                            "<div class=\"w3-right\">"+
-                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n"+
+                            "    </div>\n" +
+                            "<div class=\"w3-right\">" +
+                            "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
                             "</div>";
                 }
             %>
@@ -139,10 +146,18 @@
             <br>
             <br>
             <br>
-            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="fa fa-facebook-official w3-hover-opacity w3-large w3-right" style="margin-left: 10px; margin-right: 20px "></i></a>
-            <a herf="https://www.instagram.com" target="_blank "><i class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px" target="_blank "></i></a>
-            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right" style="margin-left: 10px"></i></a>
+            <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                    class="fa fa-facebook-official w3-hover-opacity w3-large w3-right"
+                    style="margin-left: 10px; margin-right: 20px "></i></a>
+            <a herf="https://www.instagram.com" target="_blank "><i
+                    class="fa fa-instagram w3-hover-opacity w3-large w3-right" style="margin-left: 10px"
+                    target="_blank "></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+               target="_blank "><i class="fa fa-twitter w3-hover-opacity w3-large w3-right"
+                                   style="margin-left: 10px"></i></a>
 
         </div>
     </div>
@@ -168,46 +183,51 @@
         </div>
     </div>
 
-<!-- title -->
-<div class="w3-row w3-container">
-    <div class="w3-left w3-padding-32">
-        <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Login/ Register</span>
+    <!-- title -->
+    <div class="w3-row w3-container">
+        <div class="w3-left w3-padding-32">
+            <span class="w3-xlarge w3-border-dark-grey w3-padding-16" style="margin-left: 100px">Login/ Register</span>
+        </div>
     </div>
-</div>
-<!-- line-->
-<div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
-</div>
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <!-- line-->
+    <div class="w3-panel w3-border-bottom w3-border-grey" style="margin-bottom: 50px">
+    </div>
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-    <!-- The Grid -->
-    <div class="w3-row-padding">
+        <!-- The Grid -->
+        <div class="w3-row-padding">
 
-        <!-- Left Column -->
-        <div class="w3-half">
-            <!-- login -->
-            <div class="w3-row">
-                <div class="w3-col w3-container">
-                    <form class="w3-container" action="Login" method="post">
-                        <br><br><br><br>
-                        <h3 style="font-family: Times">
-                            <i><b><center>Have an account already?</center></b></i>
-                        </h3>
-                        <h5 style="font-family: Times">
-                            <i><center>Happy to see you!</center></i>
-                        </h5>
-                        <br><br>
-                        <p>
-                            <label>Email</label>
-                            <input class="w3-input" type="email" name="UserName" required="required" pattern="[^ @]*@[^ @]*"></p>
-                        <p>
-                            <label>Password</label>
-                            <input class="w3-input" name="Password" required="required" type="password"></p>
-                        <p>
-                            <u><a href="ResetPassword.jsp"><label>Forgot your Password?</label></a></u>
+            <!-- Left Column -->
+            <div class="w3-half">
+                <!-- login -->
+                <div class="w3-row">
+                    <div class="w3-col w3-container">
+                        <form class="w3-container" action="Login" method="post">
+                            <br><br><br><br>
+                            <h3 style="font-family: Times">
+                                <i><b>
+                                    <center>Have an account already?</center>
+                                </b></i>
+                            </h3>
+                            <h5 style="font-family: Times">
+                                <i>
+                                    <center>Happy to see you!</center>
+                                </i>
+                            </h5>
+                            <br><br>
+                            <p>
+                                <label>Email</label>
+                                <input class="w3-input" type="email" name="UserName" required="required"
+                                       pattern="[^ @]*@[^ @]*"></p>
+                            <p>
+                                <label>Password</label>
+                                <input class="w3-input" name="Password" required="required" type="password"></p>
+                            <p>
+                                <u><a href="ResetPassword.jsp"><label>Forgot your Password?</label></a></u>
 
 
-                        <%
+                                    <%
                             String LoginMessage = null;
                             String LoginDisplay = "";
                             LoginMessage = (String) session.getAttribute("message");
@@ -215,110 +235,116 @@
                                 LoginDisplay = "<label class=\"w3-red\"> " + LoginMessage + "<label>";
                             }
                         %>
-                        <%=LoginDisplay%>
+                                    <%=LoginDisplay%>
 
-                        <p>
-                            <button class="w3-btn w3-black" type="submit">Login</button>
-                        </p>
+                            <p>
+                                <button class="w3-btn w3-black" type="submit">Login</button>
+                            </p>
+                            <br><br>
+
+                        </form>
+                    </div>
+                    <br>
+                </div>
+
+                <!-- End Left Column -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="w3-half">
+
+                <!-- register -->
+                <div class="w3-col w3-container">
+                    <form class="w3-container" action="Register" method="post">
+                        <br><br><br><br>
+                        <h3 style="font-family: Times">
+                            <i><b>
+                                <center>Don't have an account?</center>
+                            </b></i>
+                        </h3>
+                        <h5 style="font-family: Times">
+                            <i>
+                                <center>Join us!</center>
+                            </i>
+                        </h5>
                         <br><br>
+                        <p>
+                            <label>Firstname</label>
+                            <input class="w3-input" type="text" name="FirstName" required="required"></p>
+                        <p>
+                            <label>Lastname</label>
+                            <input class="w3-input" type="text" name="LastName" required="required"></p>
+                        <p>
+                            <label>Email</label>
+                            <%
+                                String Email;
+                                if (session.getAttribute("emailInput") != null) {
+                                    Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" value=\"" +
+                                            session.getAttribute("emailInput") + "\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                                } else {
+                                    Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
+                                }
+                                session.removeAttribute("emailInput");
+                            %>
+                            <%=Email%>
+                            <%--<input class="w3-input" type="text" name="Email" value="" required="required" pattern="[^ @]*@[^ @]*">--%>
+                            <%--<input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">--%>
+                        </p>
+                        <p>
+                            <label>Address</label>
+                            <input class="w3-input" type="text" name="Address" required="required"></p>
+                        <p>
+                            <label>Date of birth</label>
+                            <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday" required="required">
+                        </p>
+                        <p>
+                            <label>Phone Number</label>
+                            <input class="w3-input" type="tel" required="required" name="PhoneNumber"></p>
+                        <p>
+                            <label>Password</label>
+                            <input class="w3-input" type="password" name="Password" id="setpwd"></p>
+                        <p>
+                            <label>Confirm Password</label>
+                            <input class="w3-input" type="password" id="cfmpwd" required="required"
+                                   oninput="validatePassword(this)">
+                            <script language='javascript' type='text/javascript'>
+                                var pwd = document.getElementById("setpwd")
+                                    , confirmpwd = document.getElementById("cfmpwd");
 
+                                function validatePassword() {
+                                    if (pwd.value != confirmpwd.value) {
+                                        confirmpwd.setCustomValidity("Passwords Don't Match");
+                                    } else {
+                                        confirmpwd.setCustomValidity('');
+                                    }
+                                }
+                            </script>
+                        </p>
+                        <p>
+                            <%
+                                String RegisterMessage = null;
+                                String RegisterDisplay = "";
+                                RegisterMessage = (String) session.getAttribute("RegisterMessage");
+                                if (RegisterMessage != null) {
+                                    RegisterDisplay = "<label class=\"w3-red\"> " + RegisterMessage + "<label>";
+                                }
+                            %>
+                            <%=RegisterDisplay%>
+                        </p>
+                        <p>
+                            <button class="w3-btn w3-black" type="submit">Register</button>
+                        </p>
                     </form>
                 </div>
-                <br>
+
+                <!-- End Right Column -->
             </div>
 
-            <!-- End Left Column -->
+            <!-- End Grid -->
         </div>
 
-        <!-- Right Column -->
-        <div class="w3-half">
-
-            <!-- register -->
-            <div class="w3-col w3-container">
-                <form class="w3-container" action="Register" method="post">
-                    <br><br><br><br>
-                    <h3 style="font-family: Times">
-                    <i><b><center>Don't have an account?</center></b></i>
-                        </h3>
-                    <h5 style="font-family: Times">
-                        <i><center>Join us!</center></i>
-                    </h5 >
-                    <br><br>
-                    <p>
-                        <label>Firstname</label>
-                        <input class="w3-input" type="text" name="FirstName" required="required"></p>
-                    <p>
-                        <label>Lastname</label>
-                        <input class="w3-input" type="text" name="LastName" required="required"></p>
-                    <p>
-                        <label>Email</label>
-                        <%
-                            String Email;
-                            if(session.getAttribute("emailInput")!=null){
-                                Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" value=\""+
-                                        session.getAttribute("emailInput")+"\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
-                            }else {
-                                Email = "<input class=\"w3-input\" type=\"email\" name=\"Email\" required=\"required\" pattern=\"[^ @]*@[^ @]*\">";
-                            }
-                            session.removeAttribute("emailInput");
-                        %>
-                        <%=Email%>
-                        <%--<input class="w3-input" type="text" name="Email" value="" required="required" pattern="[^ @]*@[^ @]*">--%>
-                        <%--<input class="w3-input" type="text" name="Email" required="required" pattern="[^ @]*@[^ @]*">--%>
-                    </p>
-                    <p>
-                        <label>Address</label>
-                        <input class="w3-input" type="text" name="Address" required="required"></p>
-                    <p>
-                        <label>Date of birth</label>
-                        <input class="w3-input" type="date" placeholder="DD-MM" name="Birthday" required="required"></p>
-                    <p>
-                        <label>Phone Number</label>
-                        <input class="w3-input" type="tel" required="required" name="PhoneNumber"></p>
-                    <p>
-                        <label>Password</label>
-                        <input class="w3-input" type="password" name="Password" id="setpwd"></p>
-                    <p>
-                        <label>Confirm Password</label>
-                        <input class="w3-input" type="password" id="cfmpwd" required="required"
-                               oninput="validatePassword(this)">
-                        <script language='javascript' type='text/javascript'>
-                            var pwd = document.getElementById("setpwd")
-                                , confirmpwd = document.getElementById("cfmpwd");
-                            function validatePassword() {
-                                if (pwd.value != confirmpwd.value) {
-                                    confirmpwd.setCustomValidity("Passwords Don't Match");
-                                } else {
-                                    confirmpwd.setCustomValidity('');
-                                }
-                            }
-                        </script>
-                    </p>
-                    <p>
-                    <%
-                        String RegisterMessage = null;
-                        String RegisterDisplay = "";
-                        RegisterMessage = (String) session.getAttribute("RegisterMessage");
-                        if (RegisterMessage != null) {
-                            RegisterDisplay = "<label class=\"w3-red\"> " + RegisterMessage + "<label>";
-                        }
-                    %>
-                    <%=RegisterDisplay%>
-                    </p>
-                    <p>
-                        <button class="w3-btn w3-black" type="submit">Register</button>
-                    </p>
-                </form>
-            </div>
-
-            <!-- End Right Column -->
-        </div>
-
-        <!-- End Grid -->
+        <!-- End Page Container -->
     </div>
-
-    <!-- End Page Container -->
-</div>
 </div>
 </div>
 <br><br>
@@ -332,9 +358,12 @@
                         <a href="AboutUs.jsp"><i>
                             <p2 style="font-family:Times"><b>About Us</b></p2>
                         </i></a><br><br>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox 210, Abbotsford, VIC 3067</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i> +610425752986</p>
-                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-map-marker" style="width:30px"></i>POBox
+                            210, Abbotsford, VIC 3067</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-phone" style="width:30px"></i>
+                            +610425752986</p>
+                        <p text-align="right" style="font-size:70%"><i class="fa fa-envelope" style="width:30px"></i>customercare@mrwordsmith.com.au
+                        </p>
                     </div>
                 </center>
                 <div class="w3-third w3-center w3-large " style="height:250px"><br>
@@ -346,9 +375,12 @@
                 </div>
                 <div class="w3-third w3-center w3-large" style="height:250px">
                     <br><br>
-                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i class="w3-xlarge fa fa-facebook-official"></i><br></a>
-                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
-                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>" target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
+                    <a href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>" target="_blank "><i
+                            class="w3-xlarge fa fa-facebook-official"></i><br></a>
+                    <a href="https://pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $imageurl; ?>&description=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-pinterest-p"></i><br></a>
+                    <a href="https://twitter.com/intent/tweet?url=<?php echo $url; ?>&text=<?php echo $title; ?>"
+                       target="_blank "><i class="w3-xlarge fa fa-twitter"></i><br></a>
                     <a herf="https://www.instagram.com" target="_blank "><i class="w3-xlarge fa fa-instagram"></i></a>
 
                 </div>

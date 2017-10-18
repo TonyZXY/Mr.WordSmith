@@ -13,7 +13,7 @@ public class StaffsFunc {
 
     private static Staff staff = null;
 
-    public static boolean login(String id,String password){
+    public static boolean login(String id, String password) {
         staff = DatabaseStaff.getStuff(id);
         return Objects.equals(password, staff.getPassword());
     }
@@ -23,13 +23,13 @@ public class StaffsFunc {
     }
 
 
-    public static HashMap getSalesReport(Date start,Date end){
-        HashMap<Product,Integer> report = DatabaseStaff.getSalesReport(start,end);
+    public static HashMap getSalesReport(Date start, Date end) {
+        HashMap<Product, Integer> report = DatabaseStaff.getSalesReport(start, end);
         System.out.println("model sent");
         return report;
     }
 
-    public static void UpdateStockLevel(String pid,int num){
-        DatabaseProduct.updateStockLevel(pid,num);
+    public static void UpdateStockLevel(String pid, int num) {
+        DatabaseProduct.updateStockLevel(pid, num);
     }
 }

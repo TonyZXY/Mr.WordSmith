@@ -52,17 +52,17 @@
         margin-top: 6px
     }
 
-    body{
-        height:100%;
-        width:100%;
-        width:1000px;
-        height:800px;
-        background-image:url("images/Ad 4.jpg");
-        background-repeat:no-repeat;
-        background-size:cover;
+    body {
+        height: 100%;
+        width: 100%;
+        width: 1000px;
+        height: 800px;
+        background-image: url("images/Ad 4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
 
-        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/Ad 4.jpg",sizingMethod= scale);
-        -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/Ad 4.jpg',sizingMethod='scale')";
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/Ad 4.jpg", sizingMethod=scale);
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/Ad 4.jpg',sizingMethod='scale')";
     }
 
 </style>
@@ -82,9 +82,11 @@
                 <br>
                 <input class="w3-input w3-border" type="text" placeholder="Staff ID" style="width: 70%" name="id">
                 <br>
-                <input class="w3-input w3-border" type="password" placeholder="Password" style="width: 70%" name="password"><br>
+                <input class="w3-input w3-border" type="password" placeholder="Password" style="width: 70%"
+                       name="password"><br>
                 <p>
-                    <button type="submit" class="w3-btn w3-black" style="width: 70%">LOGIN</button></p>
+                    <button type="submit" class="w3-btn w3-black" style="width: 70%">LOGIN</button>
+                </p>
                 <br>
             </form>
         </div>

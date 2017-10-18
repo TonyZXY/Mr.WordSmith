@@ -23,7 +23,7 @@ import java.util.HashMap;
  * Date : 12/10/17
  */
 
-@WebServlet(name = "SalesReportServlet",urlPatterns = "/SalesReport")
+@WebServlet(name = "SalesReportServlet", urlPatterns = "/SalesReport")
 public class SalesReportServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String start = request.getParameter("start");
@@ -32,9 +32,9 @@ public class SalesReportServlet extends HttpServlet {
         try {
             Date startDate = new Date(simpleDateFormat.parse(start).getTime());
             Date endDate = new Date(simpleDateFormat.parse(end).getTime());
-            HashMap<Product,Integer> report = StaffsFunc.getSalesReport(startDate,endDate);
+            HashMap<Product, Integer> report = StaffsFunc.getSalesReport(startDate, endDate);
             System.out.println("Servlet sent");
-            request.getSession().setAttribute("report",report);
+            request.getSession().setAttribute("report", report);
             response.sendRedirect("SalesReport.jsp");
             //TODO redirect sent
         } catch (ParseException e) {

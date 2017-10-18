@@ -16,7 +16,7 @@ import java.io.IOException;
  * Date : 13/10/17
  */
 
-@WebServlet(name = "RemoveStaffServlet",urlPatterns = "/RemoveStaff")
+@WebServlet(name = "RemoveStaffServlet", urlPatterns = "/RemoveStaff")
 public class RemoveStaffServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
