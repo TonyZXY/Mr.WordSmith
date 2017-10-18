@@ -251,7 +251,7 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <button onclick="document.getElementById('id04').style.display='block'" formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
+                                <button onclick="Redirect()" formaction="MakePayment" formmethod="post" name="payment" value="Paypal" type="submit" class="w3-btn w3-black" style="width: 50%;align:center">Paypal</button>
                                 <br>
                                 <hr>
                                 <br>
@@ -266,7 +266,7 @@
                                         <label>* Name on Card</label>
                                         <input class="w3-input w3-border" type="text" name="name"required="required">
                                     </form><br>
-                                    <center><button onclick="document.getElementById('id04').style.display='block'"formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
+                                    <center><button onclick=""formmethod="post" formaction="MakePayment" name="payment" value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card</button></center>
                                 </div>
                             </div>
                         </div>
@@ -280,7 +280,7 @@
                                     <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay in 4 equal fortnightly payments with no interest.</b><br><br>Available to customers in Australia with a debit or credit card. When you click 'Place Order' with Afterpay, you will be redirected to Afterpay to complete your order.</p>
                                 </div>
                                 <br><br>
-                                <center><button onclick="document.getElementById('id04').style.display='block'" formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%" >AfterPay</button> </center>
+                                <center><button onclick="" formaction="MakePayment" formmethod="post" name="payment" value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">AfterPay</button> </center>
                             </div>
                         </div>
                     </div>
@@ -351,8 +351,8 @@
             }
         }
     </script>
-
-<script>
+    <!-- validate info -->
+    <script>
     function validateForm() {
 
         var card = document.forms["cardForm"]["cardNumber"].value;
@@ -404,6 +404,8 @@
         }
     }
     </script>
+
+    <!-- redirect to message page -->
 
 
 </body>

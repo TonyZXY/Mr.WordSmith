@@ -38,6 +38,8 @@
     <![endif]-->
 </head>
 
+
+
 <style>
 
     html, body, h1, h2, h3, h4 {
@@ -76,7 +78,7 @@
     }
 </style>
 
-<body>
+<body onload="redirect()">
 <div class="content">
     <div class="content-inside">
 
@@ -230,6 +232,18 @@
         </div>
     </div>
 </footer>
+
+<script>
+
+    var time;
+    function redirect(){
+        time =setTimeout(back,5000)
+    }
+    function back(){
+        window.location.href="<%=(String)request.getAttribute("MessageRedirect") %>";
+    }
+</script>
+
 
 </body>
 
