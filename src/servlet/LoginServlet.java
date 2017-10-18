@@ -24,7 +24,9 @@ public class LoginServlet extends HttpServlet {
             User user = Login.getUser();
             request.getSession().setAttribute("user", user);
             if(request.getSession().getAttribute("Redirect")!=null){
+                System.out.println("Login redirect: "+request.getSession().getAttribute("Redirect"));
                 response.sendRedirect((String)request.getSession().getAttribute("Redirect"));
+
                 request.getSession().removeAttribute("Redirect");
             }else {
                 response.sendRedirect("index.jsp");

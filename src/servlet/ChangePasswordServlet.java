@@ -23,13 +23,13 @@ public class ChangePasswordServlet extends HttpServlet {
             request.getSession().setAttribute("PasswordInfo","You have successfully change your password");
 
             //TODO
-//        request.getSession().setAttribute("Message","You have successfully change your password.");
-//        request.getSession().setAttribute("MessageRedirect","Account.jsp");
-//        response.sendRedirect("Message.jsp");
+        request.getSession().setAttribute("Message","You have successfully change your password.");
+        request.getSession().setAttribute("MessageRedirect","Account.jsp");
+        response.sendRedirect("Message.jsp");
         }else {
             request.getSession().setAttribute("PasswordInfo","Old Password Incorrect");
         }
-        response.sendRedirect("Account.jsp");
+//        response.sendRedirect("Account.jsp");
     }
 
 }

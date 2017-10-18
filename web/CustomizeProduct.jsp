@@ -251,6 +251,7 @@
     <!-- The Grid -->
 
     <div class="w3-row-padding">
+        <form>
         <div class="w3-row-padding" style="margin-top: 20px">
             <div class="w3-col w3-container" style="width: 20%"><p></p></div>
             <div class="w3-col w3-container " style="width: 30%">
@@ -303,7 +304,7 @@
                     <%
                         String addButton;
                         if(user==null){
-                            addButton = "<a href = \"Login.jsp\" class=\"w3-button w3-block w3-black\" style=\"width: 30%;margin-left:0px\"><center>Add To Bag</center></a>";
+                            addButton = "<button class=\"w3-button w3-block w3-black\" formaction=\"CheckLogin\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\"><center>Add to bag</center></button>";
                         }else {
                             addButton = "<button class=\"w3-button w3-block w3-black\" formaction=\"AddCustomizeProductToBag\" formmethod=\"post\" type=\"submit\" style=\"width: 30%\" onclick=\"document.getElementById('subscribe').style.display='block'\"><center>Add to bag</center></button>";
                         }
@@ -372,7 +373,7 @@
             </form>
             <!-- End Grid -->
         </div>
-
+        </form>
         <!-- End Page Container -->
     </div>
 

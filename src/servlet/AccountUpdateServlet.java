@@ -53,12 +53,12 @@ public class AccountUpdateServlet extends HttpServlet {
         request.getSession().setAttribute("user",user);
 
         //TODO
-//        request.getSession().setAttribute("Message","User profile update successfully.");
-//        request.getSession().setAttribute("MessageRedirect","Account.jsp");
-//        response.sendRedirect("Message.jsp");
+        request.getSession().setAttribute("Message","User profile update successfully.");
+        request.getSession().setAttribute("MessageRedirect","Account.jsp");
+        response.sendRedirect("Message.jsp");
 
 
-        response.sendRedirect("Account.jsp");
+//        response.sendRedirect("Account.jsp");
 
     }
 

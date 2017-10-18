@@ -10,7 +10,6 @@
 <%
     User user = null;
     user = (User)session.getAttribute("user");
-    session.setAttribute("Redirect","Blog.jsp");
 
     String message = (String)session.getAttribute("Message");
     String link = (String)session.getAttribute("MessageRedirect");
@@ -79,7 +78,7 @@
     }
 </style>
 
-<body>
+<body onload="redirect()">
 <div class="content">
     <div class="content-inside">
 
@@ -233,6 +232,18 @@
         </div>
     </div>
 </footer>
+
+<script>
+
+    var time;
+    function redirect() {
+        time = setTimeout(back,5000);
+    }
+
+    function back() {
+        window.location.href="<%=link%>";
+    }
+</script>
 
 </body>
 

@@ -15,11 +15,11 @@ public class ResetPasswordServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
 
-        response.sendRedirect("index.jsp");
+//        response.sendRedirect("index.jsp");
         //TODO
-//        request.getSession().setAttribute("Message","Your password send to your Email address.");
-//        request.getSession().setAttribute("MessageRedirect","index.jsp");
-//        response.sendRedirect("Message.jsp");
+        request.getSession().setAttribute("Message","Your password send to your Email address.");
+        request.getSession().setAttribute("MessageRedirect","index.jsp");
+        response.sendRedirect("Message.jsp");
 
 
         ResetPassword.resetPassword(email);

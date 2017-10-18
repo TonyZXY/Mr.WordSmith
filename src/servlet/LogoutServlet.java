@@ -18,6 +18,7 @@ public class LogoutServlet extends HttpServlet {
 //        request.getSession().setAttribute("MessageRedirect","index.jsp");
 //        response.sendRedirect("Message.jsp");
 
+
         request.getSession().invalidate();
     }
 
