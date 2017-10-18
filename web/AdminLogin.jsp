@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
+  User: Mr.wordSmith team
   Date: 5/10/17
   Time: 11:47 AM
   To change this template use File | Settings | File Templates.
@@ -30,7 +30,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
+<!-- style of text and title -->
 <style>
     html, body, h1, h2, h3, h4 {
         font-family: "Lato", sans-serif
@@ -71,7 +71,7 @@
 <!-- Links (sit on top) -->
 
 
-<!-- bar -->
+<!--function bar -->
 
 <div class="w3-display-middle w3-large" style="max-width: 50%;max-height: 100%">
     <center>
