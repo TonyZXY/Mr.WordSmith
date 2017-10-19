@@ -195,8 +195,7 @@
                                                                       style="width:50%;align:right" alt="Avatar"></td>
                             <td width="50%" style="text-align: left;font-size: x-large"><b><p><%=message%>
                             </p></b>
-                                <p style="text-align: left;font-family: Times"><i>It will Redirect in 5 seconds, if not
-                                    click<a href="<%=link%>"> here</a>.</i></p>
+                                <p style="text-align: left;font-family: Times"><i>You will be redirected in 5 seconds, click<a href="<%=link%>"> here if there is no action</a>.</i></p>
                             </td>
 
                         </tr>
