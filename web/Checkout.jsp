@@ -266,15 +266,17 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
+                                <form>
                                 <button formaction="MakePayment" formmethod="post" name="payment"
                                         value="Paypal" type="submit" class="w3-btn w3-black"
                                         style="width: 50%;align:center">Paypal
                                 </button>
+                                </form>
                                 <br>
                                 <hr>
                                 <br>
                                 <div class="w3-row-padding">
-                                    <form onsubmit="return validateForm()" name="cardForm">
+                                    <form name="cardForm">
                                         <label>* Card Number</label>
                                         <input class="w3-input w3-border" type="text" name="cardNumber"
                                                required="required"><br>
@@ -327,7 +329,7 @@
 
                     <!-- End Right Column -->
                 </div>
-            </form>
+
 
             <!-- End Grid -->
         </div>

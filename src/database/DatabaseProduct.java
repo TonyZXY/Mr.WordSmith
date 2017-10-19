@@ -155,8 +155,8 @@ public class DatabaseProduct {
             statement.setString(17, product.getLayout());
             statement.execute();
 
-            Statement selectcustomize = connection.createStatement();
-            ResultSet select = selectcustomize.executeQuery("SELECT MWE004 FROM bagTables WHERE bag_id='" + user.getUserID() + "';");
+            Statement selectCustomize = connection.createStatement();
+            ResultSet select = selectCustomize.executeQuery("SELECT MWE004 FROM bagTables WHERE bag_id='" + user.getUserID() + "';");
             String custList;
             while (select.next()) {
                 custList = select.getString(1);

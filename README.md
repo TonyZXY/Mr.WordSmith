@@ -11,4 +11,6 @@ Tomcat Server 8.5.20<br>
 MySQL server 5.7.19<br>
 Java JDK 1.8+ or Java JRE 1.8+<br>
 <br>
-This project programed in 
+This project programed using Intellij IDEA.
+
+

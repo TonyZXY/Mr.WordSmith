@@ -31,9 +31,7 @@ public class PlaceOrder {
             } else {
                 DatabaseBagItems.RemoveAllCustomizedProduct(user);
             }
-
         }
-
 
     }
 }
