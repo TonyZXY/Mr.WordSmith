@@ -209,7 +209,6 @@
             brand. It's an exciting process, just ask us!</p>
     </div>
 </div>
-</div>
 <!-- Footer -->
 <footer>
     <div class="footer">

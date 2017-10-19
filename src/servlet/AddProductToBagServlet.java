@@ -28,7 +28,7 @@ public class AddProductToBagServlet extends HttpServlet {
             String link = "ProductDetail.jsp?pid=" + productID;
 
             //TODO
-            request.getSession().setAttribute("Message", "Product Successfully add to your Shopping Bag");
+            request.getSession().setAttribute("Message", "Item added successfully! Check them out in your shopping bag!");
             request.getSession().setAttribute("MessageRedirect", link);
             response.sendRedirect("Message.jsp");
 

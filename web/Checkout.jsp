@@ -204,7 +204,7 @@
 
         <!-- The Grid -->
         <div class="w3-row-padding">
-            <form name="cardForm" action="/MakePayment" onsubmit="return validateForm()" method="post">
+            <form action="MakePayment"  method="post">
 
                 <!-- Left Column -->
                 <div class="w3-half">
@@ -266,15 +266,17 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <button onclick="Redirect()" formaction="MakePayment" formmethod="post" name="payment"
+                                <form>
+                                <button formaction="MakePayment" formmethod="post" name="payment"
                                         value="Paypal" type="submit" class="w3-btn w3-black"
                                         style="width: 50%;align:center">Paypal
                                 </button>
+                                </form>
                                 <br>
                                 <hr>
                                 <br>
                                 <div class="w3-row-padding">
-                                    <form>
+                                    <form name="cardForm">
                                         <label>* Card Number</label>
                                         <input class="w3-input w3-border" type="text" name="cardNumber"
                                                required="required"><br>
@@ -286,14 +288,15 @@
                                                required="required"><br>
                                         <label>* Name on Card</label>
                                         <input class="w3-input w3-border" type="text" name="name" required="required">
-                                    </form>
+
                                     <br>
                                     <center>
-                                        <button onclick="" formmethod="post" formaction="MakePayment" name="payment"
+                                        <button  formmethod="post" formaction="MakePayment" name="payment"
                                                 value="card" type="submit" class="w3-btn w3-black" style="width: 50%">
                                             Pay Card
                                         </button>
                                     </center>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +329,7 @@
 
                     <!-- End Right Column -->
                 </div>
-            </form>
+
 
             <!-- End Grid -->
         </div>
