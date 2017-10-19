@@ -299,15 +299,17 @@
                         </p>
                         <p>
                             <label>Phone Number</label>
-                            <input class="w3-input" type="tel" required="required" name="PhoneNumber"></p>
+                            <input class="w3-input" type="number" required="required" name="PhoneNumber"></p>
                         <p>
                             <label>Password</label>
-                            <input class="w3-input" type="password" name="Password" id="setpwd"></p>
+                            <input class="w3-input" type="password" name="Password" id="setpwd" required="required"></p>
                         <p>
                             <label>Confirm Password</label>
                             <input class="w3-input" type="password" id="cfmpwd" required="required"
                                    oninput="validatePassword(this)">
+
                             <script language='javascript' type='text/javascript'>
+
                                 var pwd = document.getElementById("setpwd")
                                     , confirmpwd = document.getElementById("cfmpwd");
 
