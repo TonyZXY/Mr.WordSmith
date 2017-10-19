@@ -203,37 +203,25 @@
             <div style="margin-left: 40px">
                 <table cellspacing="2" cellpadding="1">
                     <tr>
-                        <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden"
-                                                                                                name="firstname"
-                                                                                                id="firstname"
-                                                                                                value=""/>
+                        <td style="font-size: small">First Name: <%=user.getFirstName()%><input type="hidden"name="firstname" id="firstname" value=""/>
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden"
-                                                                                              name="lastname"
-                                                                                              id="lastname" value=""/>
+                        <td style="font-size: small">Last Name: <%=user.getLastName()%><input type="hidden" name="lastname" id="lastname" value=""/>
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden"
-                                                                                                  name="dob"
-                                                                                                  id="dob" value=""/>
+                        <td style="font-size: small">Date Of Birth: <%=user.getBirthday()%><input type="hidden" name="dob" id="dob" value=""/>
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email"
-                                                                                       id="email"
-                                                                                       value=""/></td>
+                        <td style="font-size: small">Email: <%=user.getEmail()%><input type="hidden" name="email" id="email" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone"
-                                                                                       id="phone"
-                                                                                       value=""/></td>
+                        <td style="font-size: small">Phone: <%=user.getPhone()%><input type="hidden" name="phone" id="phone" value=""/></td>
                     </tr>
                     <tr>
-                        <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address"
-                                                                                           id="address" value=""/>
+                        <td style="font-size: small">Address: <%=user.getAddress()%><input type="hidden" name="address" id="address" value=""/>
                         </td>
                     </tr>
                 </table>
@@ -253,10 +241,10 @@
                             <input class="w3-input" type="text" name="LN"></p>
                         <p>
                             <label>Date Of Birth</label>
-                            <input class="w3-input" placeholder="DD-MM" type="text" name="DoB"></p>
+                            <input class="w3-input" placeholder="DD-MM" type="date" name="DoB"></p>
                         <p>
                             <label>Phone</label>
-                            <input class="w3-input" type="text" name="PN"></p>
+                            <input class="w3-input" type="number" name="PN"></p>
                         <p>
                             <label>Address</label>
                             <input class="w3-input" type="text" name="AD"></p>
