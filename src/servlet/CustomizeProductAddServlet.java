@@ -19,7 +19,7 @@ public class CustomizeProductAddServlet extends HttpServlet {
 
         CustomizeProductAddition.customizeAdd(user, selected);
 
-        request.getSession().setAttribute("Message", "Customized product successfully add into your shopping bag.");
+        request.getSession().setAttribute("Message", "Item added successfully! Check them out in your shopping bag!");
         request.getSession().setAttribute("MessageRedirect", "CustomizeProduct.jsp?pid=MWE004");
         response.sendRedirect("Message.jsp");
 
