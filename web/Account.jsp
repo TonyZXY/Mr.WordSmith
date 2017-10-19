@@ -313,7 +313,7 @@
                     <form action="AddNewEvent" method="post">
                         <p style="font-size: small">
                             <label>Date</label>
-                            <input class="w3-input" name="date" type="text" placeholder="DD/MM"></p>
+                            <input class="w3-input" name="date" type="date" placeholder="DD-MM"></p>
                         <p style="font-size: small">
                             <label>Event</label>
                             <input class="w3-input" name="message" type="text"></p>
@@ -413,6 +413,7 @@
                             <label>Confirm Password</label>
                             <input class="w3-input" type="password" name="" id="cfmpwd" oninput="validatePassword(this)"
                                    required="required">
+
                             <script language='javascript' type='text/javascript'>
                                 var pwd = document.getElementById("setpwd")
                                     , confirmpwd = document.getElementById("cfmpwd");
