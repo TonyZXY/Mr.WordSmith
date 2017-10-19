@@ -313,7 +313,7 @@
                     <form action="AddNewEvent" method="post">
                         <p style="font-size: small">
                             <label>Date</label>
-                            <input class="w3-input" name="time" type="text" placeholder="DD/MM"></p>
+                            <input class="w3-input" name="date" type="text" placeholder="DD/MM"></p>
                         <p style="font-size: small">
                             <label>Event</label>
                             <input class="w3-input" name="message" type="text"></p>
