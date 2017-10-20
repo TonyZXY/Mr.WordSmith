@@ -186,7 +186,7 @@
         if (user == null) {
             view = SubViewHomePage.view();
         } else {
-            view = "";
+            view = "<br><br>";
         }
     %>
     <%=view%>
