@@ -299,7 +299,7 @@
                         </p>
                         <p>
                             <label>Phone Number</label>
-                            <input class="w3-input" type="tel" required="required" name="PhoneNumber"></p>
+                            <input class="w3-input" type="tel" required="required" name="PhoneNumber" pattern="[0-9]{10}"></p>
                         <p>
                             <label>Password</label>
                             <input class="w3-input" type="password" name="Password" id="setpwd"></p>

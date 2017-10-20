@@ -34,6 +34,7 @@ public class PlaceOrderServlet extends HttpServlet {
         String PN = request.getParameter("PN");
         String post = request.getParameter("post");
         String address = request.getParameter("address");
+        System.out.println(address);
         Date time = new Date(Calendar.getInstance().getTimeInMillis());
         if (Objects.equals(payment, "card")) {
             String cardNumber = request.getParameter("cardNumber");
