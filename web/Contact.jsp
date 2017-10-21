@@ -1,4 +1,5 @@
 <%@ page import="dto.User" %>
+<%@ page import="view.PageContent" %>
 <%--
   Created by IntelliJ IDEA.
   User: s3607997
@@ -186,117 +187,135 @@
              style="max-width: 35%;align:center"><br><br><br>
         <h3 class="w3-wide"><b>FAQ</b></h3><br>
         <p align="left" style="font-family:Times"><i>What types of payment do you accept?</i><br><br>
-            You can use most major credit cards, PayPal or AfterPay (available in Australia only). If your form of
-            payment is not accepted please contact us at <u>customercare@mrwordsmith.com.au</u> and we will do our best
-            to assist you with your purchase.</p>
+            <%=PageContent.view("payment")%>
+            <%--You can use most major credit cards, PayPal or AfterPay (available in Australia only). If your form of--%>
+            <%--payment is not accepted please contact us at <u>customercare@mrwordsmith.com.au</u> and we will do our best--%>
+            <%--to assist you with your purchase.</p>--%></p>
         <br>
         <p align="left" style="font-family:Times"><i>Do you ship internationally?</i><br><br>
-            Mr Wordsmith will ship to most countries. We have a flat rate fee of $10 AUD for shipping outside of
-            Australia for orders below $100 AUD. Shipping is included for orders over $100 AUD. If you are having
-            trouble entering your delivery details on our site please email us at <u>customercare@mrwordsmith.com.au</u>and
-            we will endeavour to assist you.</p>
+            <%=PageContent.view("shipinternational")%>
+            <%--Mr Wordsmith will ship to most countries. We have a flat rate fee of $10 AUD for shipping outside of--%>
+            <%--Australia for orders below $100 AUD. Shipping is included for orders over $100 AUD. If you are having--%>
+            <%--trouble entering your delivery details on our site please email us at <u>customercare@mrwordsmith.com.au</u>and--%>
+            <%--we will endeavour to assist you.--%>
+        </p>
         <br>
         <p align="left" style="font-family:Times"><i>Can I use multiple promo codes?</i><br><br>
-            Only one promo code can be used per transaction. Keep that second one for your next purchase!</p>
+            <%=PageContent.view("promotecode")%>
+            <%--Only one promo code can be used per transaction. Keep that second one for your next purchase!--%>
+        </p>
 
         <br>
         <p align="left" style="font-family:Times"><i>How long will my order take to arrive?</i><br><br>
-            All orders placed by 2.00pm AEST Monday to Friday will be shipped that same day (excluding Australian public
-            holidays). Within Australia you can expect delivery within 2 to 3 business days. International orders are
-            shipped using express air shipping and can be expected within 3 to 10 business days after placing your
-            order.</p>
+            <%=PageContent.view("orderarrival")%>
+            <%--All orders placed by 2.00pm AEST Monday to Friday will be shipped that same day (excluding Australian public--%>
+            <%--holidays). Within Australia you can expect delivery within 2 to 3 business days. International orders are--%>
+            <%--shipped using express air shipping and can be expected within 3 to 10 business days after placing your--%>
+            <%--order.--%>
+        </p>
 
         <br>
         <p align="left" style="font-family:Times"><i>How can I track my parcel?</i><br><br>
-            Once your order has been picked and packed you will be sent an email with the tracking information. If you
-            have any queries regarding the tracking of your order please contact us at <u>customercare@mrwordsmith.com.au.</u>
+            <%=PageContent.view("trackparcel")%>
+            <%--Once your order has been picked and packed you will be sent an email with the tracking information. If you--%>
+            <%--have any queries regarding the tracking of your order please contact us at <u>customercare@mrwordsmith.com.au.</u>--%>
         </p>
         <br>
         <p align="left" style="font-family:Times"><i>Help, the item I received is damaged or faulty!</i><br><br>
-            Once your order has been picked and packed you will be sent an email with the tracking information. If you
-            have any queries regarding the tracking of your order please contact us at<u>customercare@mrwordsmith.com.au.</u>
+            <%=PageContent.view("ifdamage")%>
+            <%--Once your order has been picked and packed you will be sent an email with the tracking information. If you--%>
+            <%--have any queries regarding the tracking of your order please contact us at<u>customercare@mrwordsmith.com.au.</u>--%>
         </p>
         <br>
         <p align="left" style="font-family:Times"><i>How do I return an item?</i><br><br>
-            If the item you purchased is just not quite right for you we will accept returns within 21 days of purchase.
-            Please ensure that you complete a returns form, then we will process your return within 21 days and refund
-            you (excluding the original shipping cost) or process your exchange. Mr. Wordsmith will not be held liable
-            for any loss of products being returned and encourage the use of registered post. Please refer to our
-            returns section for full detail
+            <%=PageContent.view("ifreturn")%>
+            <%--If the item you purchased is just not quite right for you we will accept returns within 21 days of purchase.--%>
+            <%--Please ensure that you complete a returns form, then we will process your return within 21 days and refund--%>
+            <%--you (excluding the original shipping cost) or process your exchange. Mr. Wordsmith will not be held liable--%>
+            <%--for any loss of products being returned and encourage the use of registered post. Please refer to our--%>
+            <%--returns section for full detail--%>
         </p><br><br>
         <h3 align="center"><b>Privacy Policy</b></h3><br>
-        <p align="left" style="font-family:Times">The team at Mr Wordsmith are committed to providing a quality shopping
-            experience. We have adopted the National Privacy Principles (NPPs) contained in the Privacy Act 1988 (Cth)
-            (the Privacy Act). The NPPs govern the way in which we collect, use, disclose, store, secure and dispose of
-            your Personal Information. A copy of the Australian Privacy Principles may be obtained from the website of
-            The Office of the Federal Privacy Commissioner at www.privacy.gov.au.
+        <p align="left" style="font-family:Times">
+            <%=PageContent.view("pilicy")%>
+            <%--The team at Mr Wordsmith are committed to providing a quality shopping--%>
+            <%--experience. We have adopted the National Privacy Principles (NPPs) contained in the Privacy Act 1988 (Cth)--%>
+            <%--(the Privacy Act). The NPPs govern the way in which we collect, use, disclose, store, secure and dispose of--%>
+            <%--your Personal Information. A copy of the Australian Privacy Principles may be obtained from the website of--%>
+            <%--The Office of the Federal Privacy Commissioner at www.privacy.gov.au.--%>
         </p>
         <p align="left" style="font-family:Times"><i>What is Personal Information and why do we collect it?</i><br><br>
-            Personal Information is information or an opinion that identifies an individual. Examples of Personal
-            Information we collect include: names, gender, addresses, email addresses and phone numbers. We collect your
-            Personal Information for the primary purpose of providing our services to you, providing information to our
-            clients and marketing. We may also use your Personal Information for secondary purposes closely related to
-            the primary purpose, in circumstances where you would reasonably expect such use or disclosure. You may
-            unsubscribe from our mailing/marketing lists at any time by contacting us in writing. When we collect
-            Personal Information we will, where appropriate and where possible, explain to you why we are collecting the
-            information and how we plan to use it. We may also collect information about how you use our website(s) or
-            applications to help us better serve you. As an example, we may do this when you click on a link from our
-            website(s) or visit a website which displays any one of our advertisements. This information is derived from
-            cookies that identify the computer you used to access our website(s) or applications, and the cookies
-            collect your server address; the time and date of your visit to the website; the pages and documents you
-            have accessed or viewed and the type of browser you are using. When we use cookies and other tracking
-            technologies to collect your personal and non-personally identifiable information we are collecting this
-            information so that we can better understand your browsing and purchasing behaviour, analyse and track
-            website usage data, determine the popularity of certain content; deliver advertising and content targeted to
-            your interest on our website, better understand your online activity, improve our website and your online
-            experience, count the number of visits, and for other legitimate internal business purposes. <br><br> We
-            have engaged Google to provide advertisements on our behalf and to provide analytics services. Google may
-            use cookies and other tracking technologies to collect non-personally identifiable information for
-            re-marketing, traffic, demographics and interest reporting purposes via Google advertising cookies and
-            anonymous identifiers. If you have consented (“opted-in”) in accordance with NPPs, your personal information
-            may be merged with non-personally identifiable information collected through any Google advertising product
-            or feature to be used by us for re-marketing, traffic, demographics and interest reporting purposes.
+            <%=PageContent.view("personalinfo")%>
+            <%--Personal Information is information or an opinion that identifies an individual. Examples of Personal--%>
+            <%--Information we collect include: names, gender, addresses, email addresses and phone numbers. We collect your--%>
+            <%--Personal Information for the primary purpose of providing our services to you, providing information to our--%>
+            <%--clients and marketing. We may also use your Personal Information for secondary purposes closely related to--%>
+            <%--the primary purpose, in circumstances where you would reasonably expect such use or disclosure. You may--%>
+            <%--unsubscribe from our mailing/marketing lists at any time by contacting us in writing. When we collect--%>
+            <%--Personal Information we will, where appropriate and where possible, explain to you why we are collecting the--%>
+            <%--information and how we plan to use it. We may also collect information about how you use our website(s) or--%>
+            <%--applications to help us better serve you. As an example, we may do this when you click on a link from our--%>
+            <%--website(s) or visit a website which displays any one of our advertisements. This information is derived from--%>
+            <%--cookies that identify the computer you used to access our website(s) or applications, and the cookies--%>
+            <%--collect your server address; the time and date of your visit to the website; the pages and documents you--%>
+            <%--have accessed or viewed and the type of browser you are using. When we use cookies and other tracking--%>
+            <%--technologies to collect your personal and non-personally identifiable information we are collecting this--%>
+            <%--information so that we can better understand your browsing and purchasing behaviour, analyse and track--%>
+            <%--website usage data, determine the popularity of certain content; deliver advertising and content targeted to--%>
+            <%--your interest on our website, better understand your online activity, improve our website and your online--%>
+            <%--experience, count the number of visits, and for other legitimate internal business purposes. <br><br> We--%>
+            <%--have engaged Google to provide advertisements on our behalf and to provide analytics services. Google may--%>
+            <%--use cookies and other tracking technologies to collect non-personally identifiable information for--%>
+            <%--re-marketing, traffic, demographics and interest reporting purposes via Google advertising cookies and--%>
+            <%--anonymous identifiers. If you have consented (“opted-in”) in accordance with NPPs, your personal information--%>
+            <%--may be merged with non-personally identifiable information collected through any Google advertising product--%>
+            <%--or feature to be used by us for re-marketing, traffic, demographics and interest reporting purposes.--%>
         </p>
         <br><br>
         <h3 align="center"><b>Sensitive Information</b></h3><br>
         <p align="left" style="font-family:Times">
-            Don’t worry, we do not collect your financial information or retain credit card numbers used to purchase
-            products or services as this information is collected by a financial institution that has their own privacy
-            policy. If you receive a request to provide sensitive personal information (such as credit card details) in
-            an email, do not provide this information because the request may be fraudulent. You can help us identify
-            attempts at fraud- if anything suspicious occurs, please contact us immediately.
+            <%=PageContent.view("sensitiveinfo")%>
+            <%--Don’t worry, we do not collect your financial information or retain credit card numbers used to purchase--%>
+            <%--products or services as this information is collected by a financial institution that has their own privacy--%>
+            <%--policy. If you receive a request to provide sensitive personal information (such as credit card details) in--%>
+            <%--an email, do not provide this information because the request may be fraudulent. You can help us identify--%>
+            <%--attempts at fraud- if anything suspicious occurs, please contact us immediately.--%>
         </p>
         <br><br>
         <h3 align="center"><b>Third Parties</b></h3><br>
         <p align="left" style="font-family:Times">
-            Where reasonable and practicable to do so, we will collect your Personal Information only from you. However
-            in some circumstances we may be provided with information by third parties. In such a case we will take
-            reasonable steps to ensure that you are made aware of the information provided to us by the third party.
+            <%=PageContent.view("thirdparties")%>
+            <%--Where reasonable and practicable to do so, we will collect your Personal Information only from you. However--%>
+            <%--in some circumstances we may be provided with information by third parties. In such a case we will take--%>
+            <%--reasonable steps to ensure that you are made aware of the information provided to us by the third party.--%>
         </p>
         <br><br>
         <h3 align="center"><b>Disclosure of Personal Information</b></h3><br>
         <p align="left" style="font-family:Times">
-            Your Personal Information may be disclosed in a number of circumstances including the following: <br>
-            • Third parties where you consent to the use<br>
-            • Where required or authorised by law.
+            <%=PageContent.view("disclosure")%>
+            <%--Your Personal Information may be disclosed in a number of circumstances including the following: <br>--%>
+            <%--• Third parties where you consent to the use<br>--%>
+            <%--• Where required or authorised by law.--%>
         </p>
         <br><br>
         <h3 align="center"><b>Security of Personal Information</b></h3><br>
         <p align="left" style="font-family:Times">
-            Your Personal Information is stored in a manner that reasonably protects it from misuse and loss and from
-            unauthorized access, modification or disclosure. When your Personal Information is no longer needed for the
-            purpose for which it was obtained, we will take reasonable steps to destroy or permanently de-identify your
-            Personal Information. However, most of the Personal Information is or will be stored in client files which
-            will be kept by us for a minimum of 7 years.
+            <%=PageContent.view("securityinfo")%>
+            <%--Your Personal Information is stored in a manner that reasonably protects it from misuse and loss and from--%>
+            <%--unauthorized access, modification or disclosure. When your Personal Information is no longer needed for the--%>
+            <%--purpose for which it was obtained, we will take reasonable steps to destroy or permanently de-identify your--%>
+            <%--Personal Information. However, most of the Personal Information is or will be stored in client files which--%>
+            <%--will be kept by us for a minimum of 7 years.--%>
         </p>
         <br><br>
         <h3 align="center"><b>Access to your Personal Information</b></h3><br>
         <p align="left" style="font-family:Times">
-            You may access the Personal Information we hold about you and to update and/or correct it, subject to
-            certain exceptions. In order to protect your Personal Information we will require identification from you
-            before releasing the requested information and your request must come to us in writing. Cat&I won’t charge
-            any fee for your access request, but may charge an administrative fee for onerous requests or where you have
-            requested us to provide a copy of your Personal Information in hard copy.
+            <%=PageContent.view("accessinfo")%>
+            <%--You may access the Personal Information we hold about you and to update and/or correct it, subject to--%>
+            <%--certain exceptions. In order to protect your Personal Information we will require identification from you--%>
+            <%--before releasing the requested information and your request must come to us in writing. Cat&I won’t charge--%>
+            <%--any fee for your access request, but may charge an administrative fee for onerous requests or where you have--%>
+            <%--requested us to provide a copy of your Personal Information in hard copy.--%>
         </p>
         <br><br>
         <h3 align="center"><b>Policy Updates</b></h3><br>
@@ -306,9 +325,10 @@
         <br><br>
         <h3 align="center"><b>Privacy Policy Complaints and Enquiries</b></h3><br>
         <p align="left" style="font-family:Times">
-            If you have any queries or complaints about our Privacy Policy please contact us with your concerns and we
-            will endeavour to respond to your request within 30 days. Our contact details for all privacy related
-            matters are: <br> Mr Wordsmith Pty Ltd<br>PO Box 210Abottsford, Victoria, Australia 3067<br><i>customercare@mrwordsmith.com.au</i>
+            <%=PageContent.view("policyenquiries")%>
+            <%--If you have any queries or complaints about our Privacy Policy please contact us with your concerns and we--%>
+            <%--will endeavour to respond to your request within 30 days. Our contact details for all privacy related--%>
+            <%--matters are: <br> Mr Wordsmith Pty Ltd<br>PO Box 210Abottsford, Victoria, Australia 3067<br><i>customercare@mrwordsmith.com.au</i>--%>
         </p>
     </div>
 </div>

@@ -1,4 +1,5 @@
 <%@ page import="dto.User" %>
+<%@ page import="view.PageContent" %>
 <%--
   Created by IntelliJ IDEA.
   User: Mr.wordSmith team
@@ -193,20 +194,26 @@
         <img src="https://78.media.tumblr.com/437298bdc84379ff011473ce2b64d0e6/tumblr_owzhpf0Pqo1tmp67mo1_1280.jpg"
              style="max-width: 35%;align:center"><br><br><br>
         <h2 align="center">Branding</h2><br>
-        <p align="left" style="font-family:Times">Your branding is the difference between success and failure Your
-            branding
-            is just as important as your product (if not more so)!In an increasingly saturated marketplace, it is more
-            important than ever to have a unique and engaging presence. Strategic design and branding can help cut
-            through
-            the clutter and showcase your product in the best possible light.</p>
+        <p align="left" style="font-family:Times">
+            <%=PageContent.view("branding")%>
+            <%--Your branding is the difference between success and failure Your--%>
+            <%--branding--%>
+            <%--is just as important as your product (if not more so)!In an increasingly saturated marketplace, it is more--%>
+            <%--important than ever to have a unique and engaging presence. Strategic design and branding can help cut--%>
+            <%--through--%>
+            <%--the clutter and showcase your product in the best possible light.--%>
+        </p>
         <br>
         <h2 align="center">Graphic design</h2><br>
-        <p align="left" style="font-family:Times">Not just a skill but an art form.This is how you visually communicate
-            with
-            your audience, your brand cannot function without excellent graphic design!We meticulously navigate every
-            stage
-            of the creative process to ensure we produce premium quality outputs that pinpoint the very essence of your
-            brand. It's an exciting process, just ask us!</p>
+        <p align="left" style="font-family:Times">
+            <%=PageContent.view("design")%>
+            <%--Not just a skill but an art form.This is how you visually communicate--%>
+            <%--with--%>
+            <%--your audience, your brand cannot function without excellent graphic design!We meticulously navigate every--%>
+            <%--stage--%>
+            <%--of the creative process to ensure we produce premium quality outputs that pinpoint the very essence of your--%>
+            <%--brand. It's an exciting process, just ask us!--%>
+        </p>
     </div>
 </div>
 <!-- Footer -->
