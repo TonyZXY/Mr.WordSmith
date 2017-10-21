@@ -113,7 +113,7 @@
                             "</div>";
                 } else {
                     links = "<div class=\"w3-right\">\n" +
-                            "        <a href=\"Bag.jsp\" class=\"w3-button w3-block\"><b>Bag</b></a>\n" +
+                            "        <button formaction=\"CheckLogin\" formmethod=\"post\" class=\"w3-button w3-block\"><b>Bag</b></button>\n" +
                             "    </div>\n" +
                             "<div class=\"w3-right\">" +
                             "<a href=\"Login.jsp\" class=\"w3-button w3-block\"><b>Login/Register</b></a>\n" +
