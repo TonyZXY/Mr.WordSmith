@@ -1,7 +1,7 @@
 <%@ page import="dto.Item" %>
 <%@ page import="dto.User" %>
 <%@ page import="java.util.ArrayList" %>
-<%--  
+<%--
   Created by IntelliJ IDEA.
   User: tonyzheng
   Date: 14/9/17
@@ -39,7 +39,17 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
 
+        function onClick(element) {
+
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
 </head>
 <style>
     html, body, h1, h2, h3, h4 {
@@ -194,65 +204,125 @@
 
         <!-- The Grid -->
         <div class="w3-row-padding">
-
-            <form name="shipForm" action="MakePayment"  method="post" onsubmit="validateForm()">
+            <form action="MakePayment"  method="post">
 
                 <!-- Left Column -->
                 <div class="w3-half">
 
                     <!-- shipping details -->
-                    <div class="w3-container">
-                        <div class="w3-col w3-container"><p></p></div>
-                        <h5><b>1. Shipping Details</b></h5>
-                    </div>
-                    <br>
-
-                    <div class="w3-row-padding">
-                        <div class="w3-half">
-                            <label>* First Name</label>
-                            <input class="w3-input w3-border" type="text" name="FN" required="required">
+                        <div class="w3-container">
+                            <div class="w3-col w3-container"><p></p></div>
+                            <h5><b>1. Shipping details</b></h5>
                         </div>
-                        <div class="w3-half">
-                            <label>* Last Name</label>
-                            <input class="w3-input w3-border" type="text" name="LN" required="required">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="w3-row-padding">
-                        <div class="w3-half">
-                            <label>* Contact Phone</label>
-                            <input class="w3-input w3-border" type="text" name="PN" required="required">
-                        </div>
-                        <div class="w3-half">
-                            <label>* Postcode</label>
-                            <input class="w3-input w3-border" type="text" name="postCode" required="required">
-                        </div>
-                    </div>
-                    <br>
+                        <br>
+                        <div class="w3-container">
+                        <table cellspacing="5" cellpadding="10">
+                            <tr>
+                                <td style="font-size: small">* First Name: <input type="hidden"name="firstname" id="firstname" value=""/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: small">* Last Name: <input type="hidden" name="lastname" id="lastname" value=""/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: small">* Contact Phone: <input type="hidden" name="phone" id="phone" value=""/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: small">* Postcode <input type="hidden" name="postcode" id="postcode" value=""/></td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: small">* Shipping Address<input type="hidden" name="shippingAddress" id="shippingAddress" value=""/></td>
+                            </tr>
 
-                    <div class="w3-row-padding">
-                        <div class="w3-half">
-                            <label>* Shipping Address</label>
-                            <input class="w3-input w3-border" type="text" name="address" required="required">
+                        </table>
                         </div>
-
-                    </div>
-                    <br>
-                    <center>
-
-                        <button  formmethod="post" formaction="" name=""
-                             value="card" type="submit" class="w3-btn w3-black" style="width: 30%">
-                        Continue
-                        </button>
-
-                     </center>
 
                     <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
                     <!-- End Left Column -->
                 </div>
-            </form>
-            <!-- End Grid -->
+
+
+                <!-- Right Column -->
+                <div class="w3-half">
+                    <div class="w3-container">
+                        <div class="w3-col w3-container"><p></p></div>
+                        <h5><b>2. Payment Method</b></h5>
+                    </div>
+                    <br>
+                    <div class="w3-container">
+                        <!-- paypal and card-->
+                        <div class="w3-container w3-half">
+                            <a href="#paypal" onclick="myFunction('Demo1')" class="w3-bar-item w3-btn w3-block"><img
+                                    src="images/B1.jpg" style="width: 60%"></a>
+                            <div id="Demo1" class="w3-hide w3-container">
+                                <br>
+                                <form>
+                                    <button formaction="MakePayment" formmethod="post" name="payment"
+                                            value="Paypal" type="submit" class="w3-btn w3-black"
+                                            style="width: 50%;align:center">Paypal
+                                    </button>
+                                </form>
+                                <br>
+                                <hr>
+                                <br>
+                                <div class="w3-row-padding">
+                                    <form name="cardForm" onsubmit="validateForm()"formaction="MakePayment">
+                                        <label>* Card Number</label>
+                                        <input class="w3-input w3-border" type="text" name="cardNumber"
+                                               required="required"><br>
+                                        <label>* Expiry Date</label>
+                                        <input class="w3-input w3-border" type="text" name="Date"
+                                               required="required"><br>
+                                        <label>* CVV</label>
+                                        <input class="w3-input w3-border" type="text" name="CVV"
+                                               required="required"><br>
+                                        <label>* Name on Card</label>
+                                        <input class="w3-input w3-border" type="text" name="name" required="required">
+                                        <br>
+                                        <center>
+                                            <button  formmethod="post" formaction="MakePayment" name="payment"
+                                                     value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card
+                                            </button>
+                                        </center>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- afterpay -->
+                        <div class="w3-container w3-half">
+                            <a href="#afterpay" onclick="myFunction('Demo2')" class="w3-btn w3-bar-item w3-block"><img
+                                    src="images/B2.jpg" style="width: 60%"></a>
+                            <div id="Demo2" class="w3-hide w3-container">
+                                <br>
+                                <div class="w3-justify">
+                                    <p style="text-align: left"><b>With Afterpay you can recieve your order now and pay
+                                        in 4 equal fortnightly payments with no interest.</b><br><br>Available to
+                                        customers in Australia with a debit or credit card. When you click 'Place Order'
+                                        with Afterpay, you will be redirected to Afterpay to complete your order.</p>
+                                </div>
+                                <br><br>
+                                <center>
+                                    <button onclick="" formaction="MakePayment" formmethod="post" name="payment"
+                                            value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">
+                                        AfterPay
+                                    </button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                    </center>
+
+                    <br><br>
+
+                    <!-- End Right Column -->
+                </div>
+
+        </form>
+                <!-- End Grid -->
         </div>
 
         <!-- End Page Container -->
@@ -301,38 +371,48 @@
     </div>
 </footer>
 
+<!-- Active Accordions -->
+<script>
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace("w3-black", "w3-red");
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace("w3-red", "w3-black");
+        }
+    }
+</script>
 
 <!-- validate info -->
 <script>
     function validateForm() {
 
+        var card = document.forms["cardForm"]["cardNumber"].value;
+        var cvv = document.forms["cardForm"]["CVV"].value;
+        var date = document.forms["cardForm"]["Date"].value;
 
-        var Fname = document.forms["shipForm"]["FN"].value;
-        var Lname = document.forms["shipForm"]["LN"].value;
-        var phone = document.forms["shipForm"]["PN"].value;
-        var code = document.forms["shipForm"]["postCode"].value;
-        var address = document.forms["shipForm"]["address"].value;
 
-        if (Fname == "") {
+        if (card == "") {
             alert(" * required fields must be filled out");
             return false;
         }
-        if (Lname == "") {
+        if (cvv == "") {
             alert(" * required fields must be filled out");
             return false;
         }
-        if (phone == "") {
+        if (date == "") {
             alert(" * required fields must be filled out");
             return false;
         }
-        if (code == "") {
+        if (cardname == "") {
             alert(" * required fields must be filled out");
             return false;
         }
-        if (address == "") {
-            alert(" * required fields must be filled out");
-            return false;
-        }
+
     }
 </script>
 
@@ -341,13 +421,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
