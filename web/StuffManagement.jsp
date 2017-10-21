@@ -1,7 +1,8 @@
 <%@ page import="database.DatabaseStaff" %>
 <%@ page import="dto.Staff" %>
 <%@ page import="view.StaffManagementView" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%--
   Created by IntelliJ IDEA.
   User: TonyZheng
   Date: 12/10/17
@@ -57,6 +58,36 @@
         padding: 0;
         margin-top: 6px
     }
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: #FF3300;
+    }
+    .logoutbtn {
+        background-color: #FF3300;
+        border: none;
+        color: white;
+    }
 </style>
 <body>
 
@@ -66,40 +97,28 @@
     <div class="w3-third">
         <img src="images/icon.jpg" style="width: 15%;margin-left: 10%">
     </div>
-    <br><br><br>
-    <div class="w3-container w3-right">
-        <form>
-            <button formaction="AdminLogout" formmethod="post" class="w3-btn w3-black">
-                Logout
-            </button>
-        </form>
-    </div>
 </div>
 
-<!-- function bar -->
+<!-- function bar （1/5 of each selection）-->
 
-<div class="w3-bar-item" style="max-width:100%;margin-top:0px;">
-    <div class="w3-row w3-large w3-black">
-        <div class="w3-col w3-third">
-            <a href="SalesReport.jsp" class="w3-button w3-block">Sale Report</a>
-        </div>
-        <div class="w3-col w3-third">
-            <a href="StockControl.jsp" class="w3-button w3-block">Stock Control</a>
-        </div>
-        <div class="w3-col w3-third">
-            <a class="w3-button w3-block">Staff Management</a>
-        </div>
+<div style="max-width:100%;margin-top:0px;">
+    <ul>
+        <li><a href="SalesReport.jsp">Sale Report</a></li>
+        <li><a href="StockControl.jsp">Stock Control</a></li>
+        <li><a href="EditPageContent.jsp">Edit Content</a></li>
+        <li><a href="StuffManagement.jsp">Staff Management</a></li>
 
-    </div>
+        <li style="float:right"><a class="active">
+            <form><button formaction="AdminLogout" class="logoutbtn"formmethod="post">> LOG OUT</button></form>
+        </a></li>
+    </ul>
 </div>
 
 <!-- imformation-->
 <div class="w3-container">
-
-
     <br>
     <h5>
-        <center>STAFF MANAGEMENT</center>
+        <center>Staff</center>
     </h5>
     <hr>
     <table class="w3-table">

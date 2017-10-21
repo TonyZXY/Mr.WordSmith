@@ -17,11 +17,11 @@ public class StockControlView {
         for (Product product : products) {
             view += "<tr>\n" +
                     "<form>\n" +
-                    "                <td>" + product.getProductID() + "</td>\n" +
-                    "                <td>" + product.getProductName() + "</td>\n" +
-                    "                <td>" + product.getStock() + "</td>\n" +
-                    "                <td><input class=\"w3-input w3-border\" type=\"number\" style=\"width: auto\" name=\"number\"></td>\n" +
-                    "                <td><button formaction=\"UpdateStockLevel\" formmethod=\"post\" type=\"submit\" class=\"w3-btn w3-black\" value=\"" + product.getProductID() + "\" name=\"Update\">Update</button></td>\n" +
+                    "                <td style=\"width:20%\">" + product.getProductID() + "</td>\n" +
+                    "                <td style=\"width:20%\">" + product.getProductName() + "</td>\n" +
+                    "                <td style=\"width:20%\">" + product.getStock() + "</td>\n" +
+                    "                <td><input class=\"w3-input w3-border\" type=\"number\" style=\"width:10%\" name=\"number\"></td>\n" +
+                    "                <td><button formaction=\"UpdateStockLevel\" formmethod=\"post\" type=\"submit\" class=\"w3-button\" value=\"" + product.getProductID() + "\" name=\"Update\">Update</button></td>\n" +
                     "</form>\n" +
                     "            </tr>";
         }

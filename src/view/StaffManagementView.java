@@ -23,7 +23,7 @@ public class StaffManagementView {
                     "                <td>" + staff.getPhoneNumber() + "</td>\n" +
                     "                <td>" + staff.getAdmin() + "</td>";
             if (!Objects.equals(staff.getAdmin(), "Admin")) {
-                view += "<td><button class=\"w3-btn w3-black w3-round\" style=\"width: auto\" formmethod=\"post\" formaction=\"RemoveStaff\" name=\"id\" value=\"" + staff.getStuffID() + "\">REMOVE</button></td>\n" +
+                view += "<td><button class=\"w3-button\" style=\"width:10%\" formmethod=\"post\" formaction=\"RemoveStaff\" name=\"id\" value=\"" + staff.getStuffID() + "\">REMOVE</button></td>\n" +
                         "                </form>\n" +
                         "            </tr>";
             } else {

@@ -25,9 +25,9 @@ public class AddNewEventServlet extends HttpServlet {
         DatabaseEvents.addNewEvent(userID, event);
 
         //TODO
-        request.getSession().setAttribute("Message", "Important Date Add successfully.");
-        request.getSession().setAttribute("MessageRedirect", "Account.jsp");
-        response.sendRedirect("Message.jsp");
+//        request.getSession().setAttribute("Message", "Important Date Add successfully.");
+//        request.getSession().setAttribute("MessageRedirect", "Account.jsp");
+//        response.sendRedirect("Message.jsp");
 
 //        response.sendRedirect("Account.jsp");
     }
