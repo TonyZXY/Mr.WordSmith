@@ -191,7 +191,7 @@
     <!-- The Band Section -->
 
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-        <img src="https://78.media.tumblr.com/437298bdc84379ff011473ce2b64d0e6/tumblr_owzhpf0Pqo1tmp67mo1_1280.jpg"
+        <img src="/images/Contact.jpg"
              style="max-width: 35%;align:center"><br><br><br>
         <h2 align="center">Branding</h2><br>
         <p align="left" style="font-family:Times">
