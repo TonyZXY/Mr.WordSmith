@@ -28,7 +28,7 @@ public class OrderListViewAccountPage {
         return view;
     }
 
-    private static double calcuateTotalPrice(Order order) {
+    public static double calcuateTotalPrice(Order order) {
         ArrayList<Item> items = order.getOrderList();
         double total = 0;
         for (Item item : items) {

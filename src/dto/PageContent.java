@@ -36,7 +36,7 @@ public class PageContent {
         this.content = content;
     }
 
-    private static String label(String name){
+    public static String label(String name){
         String lable = "";
         switch (name){
             case "payment":

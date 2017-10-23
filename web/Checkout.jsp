@@ -240,11 +240,12 @@
                     <br>
                     <center>
 
-                        <button  formmethod="post" formaction="" name=""
-                             value="card" type="submit" class="w3-btn w3-black" style="width: 30%">
-                        Continue
-                        </button>
+                        <%--<button  formmethod="post" formaction="MakePayment" name=""--%>
+                             <%--value="card" type="submit" class="w3-btn w3-black" style="width: 30%">--%>
+                        <%--Continue--%>
+                        <%--</button>--%>
 
+                        <input type="submit" class="w3-btn w3-black" style="width: 30%" value="Continue">
                      </center>
 
                     <br><br><br><br><br><br><br><br><br><br><br><br><br>

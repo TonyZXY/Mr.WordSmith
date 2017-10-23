@@ -124,4 +124,14 @@ public class DatabaseOrderList {
             e.printStackTrace();
         }
     }
+
+    public static void updatePayment(Order order){
+        try{
+            String sql = "UPDATE order_list SET payment = '"+order.getPayment()+"' WHERE order_id = '"+order.getOrderID()+"';";
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

@@ -21,8 +21,6 @@ import java.util.Objects;
 @WebServlet(name = "PlaceOrderServlet", urlPatterns = "/MakePayment")
 public class PlaceOrderServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String payment = request.getParameter("payment");
-
         User user = (User) request.getSession().getAttribute("user");
         ArrayList<Item> bag = DatabaseBagItems.getBagForCheckOut(user);
         Double discount = 1.0;
@@ -32,17 +30,10 @@ public class PlaceOrderServlet extends HttpServlet {
         String FN = request.getParameter("FN");
         String LN = request.getParameter("LN");
         String PN = request.getParameter("PN");
-        String post = request.getParameter("post");
+        String post = request.getParameter("postCode");
         String address = request.getParameter("address");
         System.out.println(address);
         Date time = new Date(Calendar.getInstance().getTimeInMillis());
-        if (Objects.equals(payment, "card")) {
-            String cardNumber = request.getParameter("cardNumber");
-            String date = request.getParameter("date");
-            String CVV = request.getParameter("CVV");
-            String name = request.getParameter("name");
-            payment = cardNumber;
-        }
         Order order = new Order();
         order.setTime(time);
         order.setShippingAddress(address);
@@ -52,15 +43,17 @@ public class PlaceOrderServlet extends HttpServlet {
         order.setContactNumber(PN);
         order.setPostCode(post);
         order.setDiscount(discount);
-        order.setPayment(payment);
+        int orderID = DatabaseOrderList.getMaxOrderID();
+        order.setOrderID(orderID);
 
+        request.getSession().setAttribute("order",order);
         PlaceOrder.placeOrder(order, user);
 
-        request.getSession().setAttribute("Message", "You have successfully checkout your order.");
-        request.getSession().setAttribute("MessageRedirect", "index.jsp");
-        response.sendRedirect("Message.jsp");
+//        request.getSession().setAttribute("Message", "You have successfully checkout your order.");
+//        request.getSession().setAttribute("MessageRedirect", "index.jsp");
+//        response.sendRedirect("Message.jsp");
 
-
+        response.sendRedirect("Payment.jsp");
 //        response.sendRedirect("index.jsp");
 
 

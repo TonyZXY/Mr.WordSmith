@@ -13,6 +13,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     ArrayList<PageContent> contents = DatabasePageContent.getContents();
+    session.setAttribute("content",contents);
     Staff staff = (Staff) session.getAttribute("staff");
 %>
 <!doctype html>
@@ -205,33 +206,25 @@
 
     <!-- The Grid -->
     <div class="w3-row-padding">
-        <form action="MakePayment"  method="post">
-
-            <!-- Left Column -->
+        <form action="EditContent" method="post">
             <div class="w3-half">
-
-                <!-- shipping details -->
 
                 <div class="w3-container">
                     <div class="w3-col w3-container"><p></p></div>
-                    <h5><b>Select the info to edit</b></h5>
-                </div><br>
-                <div class="w3-container">
-                    <div class="select" tabindex="1">
-                        <input class="selectopt" name="test" type="radio" id="opt1" checked>
-                        <label for="opt1" class="option">About Us</label>
-                        <input class="selectopt" name="test" type="radio" id="opt2">
-                        <label for="opt2" class="option">Contact Us</label>
-                    </div>
-
-                    <br><br>
-
-                    <textarea rows="10" cols="50"></textarea>
-
-                    <br><br>
-                    <button type="submit" class="w3-btn w3-black" style="width: 30%">Submit</button>
+                    <h5><b>Edit Content here</b></h5>
                 </div>
+                <%=view.PageContent.editPageContentView(contents)%>
+                <%--<br>--%>
+                <%--<div class="w3-container">--%>
+                    <%--<label>First line </label>--%>
+                    <%--<br>--%>
+                    <%--<label>Current content</label>--%>
+                    <%--<center></center>--%>
+                    <%--<textarea rows="10" cols="50" name="FirstLine"></textarea>--%>
 
+                    <%--<br><br>--%>
+
+                <button type="submit" class="w3-btn w3-black" style="width: 30%">Submit</button>
                 <!-- End Left Column -->
             </div>
 

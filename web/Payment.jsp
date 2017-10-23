@@ -1,6 +1,8 @@
 <%@ page import="dto.Item" %>
 <%@ page import="dto.User" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="dto.Order" %>
+<%@ page import="view.OrderListViewAccountPage" %>
 <%--
   Created by IntelliJ IDEA.
   User: tonyzheng
@@ -12,7 +14,8 @@
 <%
     User user = null;
     user = (User) session.getAttribute("user");
-    ArrayList<Item> bag = (ArrayList<Item>) session.getAttribute("bagItem");
+    Order order = (Order)session.getAttribute("order");
+
 
 %>
 <!doctype html>
@@ -204,7 +207,6 @@
 
         <!-- The Grid -->
         <div class="w3-row-padding">
-            <form action="MakePayment"  method="post">
 
                 <!-- Left Column -->
                 <div class="w3-half">
@@ -218,22 +220,22 @@
                         <div class="w3-container">
                         <table cellspacing="5" cellpadding="10">
                             <tr>
-                                <td style="font-size: small">* First Name: <input type="hidden"name="firstname" id="firstname" value=""/>
+                                <td style="font-size: small">* First Name: <%=order.getFirstName()%>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-size: small">* Last Name: <input type="hidden" name="lastname" id="lastname" value=""/>
+                                <td style="font-size: small">* Last Name: <%=order.getLastName()%>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-size: small">* Contact Phone: <input type="hidden" name="phone" id="phone" value=""/>
+                                <td style="font-size: small">* Contact Phone: <%=order.getContactNumber()%>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-size: small">* Postcode <input type="hidden" name="postcode" id="postcode" value=""/></td>
+                                <td style="font-size: small">* Postcode <%=order.getPostCode()%>
                             </tr>
                             <tr>
-                                <td style="font-size: small">* Shipping Address<input type="hidden" name="shippingAddress" id="shippingAddress" value=""/></td>
+                                <td style="font-size: small">* Shipping Address <%=order.getShippingAddress()%>
                             </tr>
 
                         </table>
@@ -259,17 +261,35 @@
                                     src="images/B1.jpg" style="width: 60%"></a>
                             <div id="Demo1" class="w3-hide w3-container">
                                 <br>
-                                <form>
-                                    <button formaction="MakePayment" formmethod="post" name="payment"
-                                            value="Paypal" type="submit" class="w3-btn w3-black"
-                                            style="width: 50%;align:center">Paypal
-                                    </button>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="PayPal">
+
+                                    <!-- Identify your business so that you can collect the payments. -->
+                                    <input type="hidden" name="business" value="xyzheng109@gmail.com">
+
+                                    <!-- Specify a Buy Now button. -->
+                                    <input type="hidden" name="cmd" value="_xclick">
+
+                                    <!-- Specify details about the item that buyers will purchase. -->
+                                    <input type="hidden" name="item_name" value="<%=String.valueOf(order.getOrderID())%>">
+                                    <input type="hidden" name="amount" value="<%=String.valueOf(OrderListViewAccountPage.calcuateTotalPrice(order))%>">
+                                    <input type="hidden" name="currency_code" value="AUD">
+
+                                    <!-- Display the payment button. -->
+                                    <input type="image" name="submit" border="0"
+                                           src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_buynow_107x26.png"
+                                           alt="Buy Now" onclick="submitForms()">
+                                    <img alt="" border="0" width="1" height="1"
+                                         src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+
+
                                 </form>
+
+
                                 <br>
                                 <hr>
                                 <br>
                                 <div class="w3-row-padding">
-                                    <form name="cardForm" onsubmit="validateForm()"formaction="MakePayment">
+                                    <form name="cardForm" onsubmit="validateForm()" action="Payment">
                                         <label>* Card Number</label>
                                         <input class="w3-input w3-border" type="text" name="cardNumber"
                                                required="required"><br>
@@ -283,9 +303,7 @@
                                         <input class="w3-input w3-border" type="text" name="name" required="required">
                                         <br>
                                         <center>
-                                            <button  formmethod="post" formaction="MakePayment" name="payment"
-                                                     value="card" type="submit" class="w3-btn w3-black" style="width: 50%">Pay Card
-                                            </button>
+                                            <input type="submit" name="payment" value="Pay Card" class="w3-btn w3-black" style="width: 50%">
                                         </center>
                                     </form>
                                 </div>
@@ -304,12 +322,12 @@
                                         with Afterpay, you will be redirected to Afterpay to complete your order.</p>
                                 </div>
                                 <br><br>
+                                <form action="Payment" method="post">
                                 <center>
-                                    <button onclick="" formaction="MakePayment" formmethod="post" name="payment"
-                                            value="AfterPay" type="submit" class="w3-btn w3-black" style="width: 50%">
-                                        AfterPay
-                                    </button>
+                                    <input type="hidden" name="payment" value="AfterPay">
+                                    <input type="submit" value="AfterPay" class="w3-btn w3-black" style="width: 50%">
                                 </center>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -320,8 +338,6 @@
 
                     <!-- End Right Column -->
                 </div>
-
-        </form>
                 <!-- End Grid -->
         </div>
 

@@ -3,9 +3,11 @@ package database;
 import dto.PageContent;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Create by Intellij IDEA
@@ -42,5 +44,22 @@ public class DatabasePageContent {
             contents.add(new PageContent(s,getContent(s)));
         }
         return contents;
+    }
+
+    public static void updateContent(HashMap<String,PageContent> contents){
+        for(PageContent content:contents.values()){
+            try{
+                String sql1 = "UPDATE Content SET content = ? WHERE name= ?";
+                PreparedStatement preparedStatement = connection.prepareStatement(sql1);
+                preparedStatement.setString(1,content.getContent());
+                preparedStatement.setString(2,content.getName());
+                preparedStatement.executeUpdate();
+//                String sql = "UPDATE Content SET content = '"+content.getContent()+"' WHERE name = '"+content.getName()+"';";
+//                Statement statement = connection.createStatement();
+//                statement.executeUpdate(sql);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
     }
 }
