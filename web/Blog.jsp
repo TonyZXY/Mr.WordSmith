@@ -37,6 +37,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <!-- style of text and titles and CSS -->
 <style>
 
