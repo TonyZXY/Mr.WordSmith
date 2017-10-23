@@ -536,7 +536,7 @@
     </div>
 </footer>
 
-<!-- Script -->
+<!-- Script slides-->
 <script>
     var slideIndex = 1;
     showDivs(slideIndex);
