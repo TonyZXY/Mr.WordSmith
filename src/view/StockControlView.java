@@ -20,7 +20,7 @@ public class StockControlView {
                     "                <td style=\"width:20%\">" + product.getProductID() + "</td>\n" +
                     "                <td style=\"width:20%\">" + product.getProductName() + "</td>\n" +
                     "                <td style=\"width:20%\">" + product.getStock() + "</td>\n" +
-                    "                <td><input class=\"w3-input w3-border\" type=\"number\" style=\"width:20%\" name=\"number\"></td>\n" +
+                    "                <td><input class=\"w3-input w3-border\" type=\"number\" style=\"width:50%\" name=\"number\"></td>\n" +
                     "                <td><button formaction=\"UpdateStockLevel\" formmethod=\"post\" type=\"submit\" class=\"w3-button\" value=\"" + product.getProductID() + "\" name=\"Update\">Update</button></td>\n" +
                     "</form>\n" +
                     "            </tr>";
