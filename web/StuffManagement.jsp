@@ -91,6 +91,7 @@
 </style>
 <body>
 
+
 <!-- Links (sit on top) -->
 
 <div class="w3-panel w3-padding-16 w3-white" style="max-width:100%;margin-top:0px;margin-bottom:0px">
@@ -190,7 +191,7 @@
                                    placeholder="Address"
                                    name="address" required="required" style="width: 80%">
 
-                            <input class="w3-input w3-border w3-margin-bottom" type="tel" width="40%"
+                            <input class="w3-input w3-border w3-margin-bottom" type="number" width="40%"
                                    placeholder="Phone Number"
                                    name="phone" required="required" style="width: 80%">
 
