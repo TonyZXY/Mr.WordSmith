@@ -2,7 +2,7 @@
 <%@ page import="view.PageContent" %>
 <%--
   Created by IntelliJ IDEA.
-  User: s3607997
+  User: Mr.wordSmith team
   Date: 10/9/17
   Time: 1:43 PM
   To change this template use File | Settings | File Templates.

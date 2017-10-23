@@ -1,7 +1,7 @@
 <%@ page import="dto.User" %>
 <%--
   Created by IntelliJ IDEA.
-  User: tonyzheng
+  User: Mr.wordSmith team(RMIT)
   Date: 27/9/17
   Time: 7:55 PM
   To change this template use File | Settings | File Templates.<!-- Links (sit on top) -->

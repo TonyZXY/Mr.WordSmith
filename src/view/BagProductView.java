@@ -1,5 +1,6 @@
 package view;
 
+import database.DatabaseBagItems;
 import dto.Item;
 import dto.User;
 
@@ -8,6 +9,12 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class BagProductView {
+
+    public static String getView(User user){
+        ArrayList<Item> items = DatabaseBagItems.getBag(user.getUserID());
+        String view = getBagView(items);
+        return view;
+    }
 
     public static String getBagView(ArrayList<Item> items) {
         DecimalFormat df = new DecimalFormat("0.00");

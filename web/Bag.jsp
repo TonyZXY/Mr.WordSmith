@@ -190,7 +190,7 @@
                     session.setAttribute("Redirect", "Bag.jsp");
                     view = "Please <a href=\"Login.jsp\">Login</a> before checking shopping bag";
                 } else {
-                    view = BagProductView.getBagView(bag);
+                    view = BagProductView.getView(user);
                 }
 
             %>
