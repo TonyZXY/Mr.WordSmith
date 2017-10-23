@@ -164,11 +164,11 @@ public class DatabaseProduct {
                 if (!Objects.equals(custList, null) || !Objects.equals(custList, "")) {
                     custList += "," + customizedID;
                     Statement update = connection.createStatement();
-                    update.executeUpdate("UPDATE bagTables SET MWE004 = '" + custList + "';");
+                    update.executeUpdate("UPDATE bagTables SET MWE004 = '" + custList + "' WHERE bag_id='"+user.getUserID()+"';");
                 } else {
                     custList += customizedID;
                     Statement update = connection.createStatement();
-                    update.executeUpdate("UPDATE bagTables SET MWE004 = '" + custList + "';");
+                    update.executeUpdate("UPDATE bagTables SET MWE004 = '" + custList + "' WHERE bag_id = '"+user.getUserID()+"';");
                 }
             }
 
