@@ -3,6 +3,7 @@ package database;
 import dto.User;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DatabaseUser {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
@@ -101,5 +102,30 @@ public class DatabaseUser {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<User> getAllUsers(){
+        ArrayList<User> users = new ArrayList<>();
+        try{
+            String sql = "SELECT * FROM users;";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                User user = new User();
+                user.setUserID(resultSet.getString("user_id"));
+                user.setFirstName(resultSet.getString("first_name"));
+                user.setLastName(resultSet.getString("last_name"));
+                user.setEmail(resultSet.getString("email"));
+                user.setAddress(resultSet.getString("address"));
+                user.setPhone(resultSet.getString("phone"));
+                user.setBirthday(resultSet.getString("birthday"));
+                user.setPassword(resultSet.getString("password"));
+                user.setSubs(resultSet.getBoolean("sub"));
+                users.add(user);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return users;
     }
 }

@@ -6,6 +6,7 @@ import dto.User;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class DatabaseEvents {
     private static Connection connection = DatabaseConnection.getInstence().getConnection();
@@ -49,12 +50,33 @@ public class DatabaseEvents {
     }
 
 
-    public static ArrayList<EmailEvent> getEvents(Date start) {
+    public static ArrayList<EmailEvent> getEvents() {
+        ArrayList<User> users = DatabaseUser.getAllUsers();
         ArrayList<EmailEvent> emailEvents = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM reminder_list WHERE ";
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
+            Calendar calendar = Calendar.getInstance();
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+            int month = calendar.get(Calendar.MONTH);
+            EmailEvent emailEvent = new EmailEvent();
+            for(User user:users) {
+                for (int i = 0; i < 10; i++) {
+                    String date = (day+i)+"-"+month;
+                    String sql = "SELECT * FROM reminder_list WHERE time ='"+date+"' AND userid = '"+user.getUserID()+"';";
+                    Statement statement = connection.createStatement();
+                    ResultSet resultSet = statement.executeQuery(sql);
+                    ArrayList<Event> events = new ArrayList<>();
+                    while (resultSet.next()){
+                        Event event = new Event();
+                        event.setMessage(resultSet.getString("message"));
+                        event.setDate(resultSet.getString("time"));
+                        event.setEventID(resultSet.getString("reminder_id"));
+                        events.add(event);
+                    }
+                    emailEvent.setEvents(events);
+                    emailEvent.setUserID(user.getUserID());
+                }
+                emailEvents.add(emailEvent);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
