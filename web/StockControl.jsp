@@ -14,7 +14,6 @@
 <%
     Staff staff = (Staff) session.getAttribute("staff");
     ArrayList<Product> products = DatabaseProduct.getProductList();
-    Product p = DatabaseProduct.getProduct("MWE001");
 %>
 <!doctype html>
 <html lang="en-US">
