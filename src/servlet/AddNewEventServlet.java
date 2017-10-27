@@ -29,6 +29,6 @@ public class AddNewEventServlet extends HttpServlet {
 //        request.getSession().setAttribute("MessageRedirect", "Account.jsp");
 //        response.sendRedirect("Message.jsp");
 
-//        response.sendRedirect("Account.jsp");
+        response.sendRedirect("Account.jsp");
     }
 }

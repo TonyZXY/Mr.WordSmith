@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.StringTokenizer;
 
 public class DatabaseBagItems {
@@ -133,7 +134,9 @@ public class DatabaseBagItems {
 
     public static void updateBagItems(ArrayList<Item> items, User user) {
         for (Item item : items) {
-            updateBagItem(item.getProduct().getProductID(), item.getNumber(), user);
+            if(!Objects.equals(item.getProduct().getProductID(), "MWE004")) {
+                updateBagItem(item.getProduct().getProductID(), item.getNumber(), user);
+            }
         }
     }
 
